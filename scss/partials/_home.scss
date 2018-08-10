@@ -1,0 +1,87 @@
+/*! =Home page
+------------------------------------------------------------------------- */
+body.home,
+body.home.must-see-white-bkg {
+	background: $body-bg;
+	color: $body-font-color;
+}
+.home .content-sidebar-wrap {
+	padding: 0;
+	margin: 0;
+	background: none;
+	font-size: rem-calc(16);
+}
+.home .content-sidebar-wrap.row,
+.home div[class*='home-middle-'].full .row {
+	max-width: none;
+}
+.home .content-sidebar-wrap.row > .columns,
+.home div[class*='home-middle-'].full .row > .columns {
+	padding: 0;
+}
+.home .content-sidebar-wrap.row .row {
+	max-width: $row-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+.home .content-sidebar-wrap.row .home-top,
+.home .content-sidebar-wrap.row div[class*='home-middle-'] {
+	background-attachment: scroll;
+	background-color: $body-bg;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: $body-font-color;
+}
+// Headings and body
+.home .content-sidebar-wrap div[class*='home-'],
+.home .content-sidebar-wrap div[class*='home-'] h1,
+.home .content-sidebar-wrap div[class*='home-'] h2,
+.home .content-sidebar-wrap div[class*='home-'] h3,
+.home .content-sidebar-wrap div[class*='home-'] h4,
+.home .content-sidebar-wrap div[class*='home-'] h5,
+.home .content-sidebar-wrap div[class*='home-'] h6,
+.home .content-sidebar-wrap div[class*='home-'] label,
+.home div[class*='home-'] blockquote,
+.home div[class*='home-'] blockquote p {
+	color: $body-font-color;
+}
+// Anchors
+.home a,
+.home .widget article h2.entry-title a {
+	color: $primary-color;
+}
+.home .bg-gradient a,
+.home .widget article h2.entry-title a {
+	color: $body-font-color-secondary;
+}
+.home .bg-gradient a:hover,
+.home .bg-gradient a:focus {
+	color: scale-color($body-font-color-secondary, $lightness: -14%);
+}
+
+
+/*! Fadeup Effect
+---------------------------------------------------------------------------------------------------- */
+
+.fadeup-effect {
+	opacity: 0;
+	overflow: hidden;
+	-webkit-animation-duration: 0.7s;
+	animation-duration: 0.7s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+.home div[class*='home-middle-'].full .fadeup-effect {
+	opacity: 1;
+	animation-name: none;
+}
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
