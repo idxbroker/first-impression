@@ -1,0 +1,341 @@
+/*! =Background (alternates)
+------------------------------------------------------------------------- */
+.bg-primary {
+	background-color: $primary-color;
+}
+.bg-gradient p,
+.bg-gradient a,
+.bg-gradient label {
+	color: $body-font-color-secondary;
+}
+.bg-gradient {
+	background: #3fa5db; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #3fa5db 0%, #5087c8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #3fa5db 0%,#5087c8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #3fa5db 0%,#5087c8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fa5db', endColorstr='#5087c8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+/*! =Structure
+------------------------------------------------------------------------- */
+.structural-wrap {
+	width: 100%;
+	max-width: $row-width;
+}
+.inner-wrap {
+	position: relative;
+	z-index: 1;
+}
+.site-inner {
+	position: relative;
+	z-index: 2;
+}
+.content-sidebar-wrap {
+	margin: 0 auto;
+	padding: 2rem 0;
+	background: $body-bg;
+}
+body:not(.home) .site-inner {
+	padding: 1rem 0;
+	background-color: $body-bg;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	box-shadow: 0px 7px 7px rgba(0,0,0,0.2);
+}
+
+/*! =Alignments
+------------------------------------------------------------------------- */
+.alignleft,
+.content .alignleft,
+.pull-left {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright,
+.content .alignright,
+.pull-right {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter,
+.content .aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/*! =Image Galleries
+------------------------------------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5rem;
+}
+.gallery figure {
+	margin: 0 0 1rem;
+	padding: 0 0.275rem;
+}
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+.gallery-caption {}
+
+
+/*! =Image Captions
+------------------------------------------------------------------------- */
+.wp-caption,
+.content figure.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+.wp-caption-text {
+	font-size: rem-calc(12);
+	line-height: 1.2;
+	text-align: center;
+	margin: 0.8075rem 0;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075rem 0;
+}
+
+
+/*! =Communities page template
+------------------------------------------------------------------------- */
+.page-template-page_communities-php .masonry-item {
+	width: 320px;
+}
+.page-template-page_communities-php .masonry-item h2 {
+	font-size: rem-calc(28);
+}
+.page-template-page_communities-php .masonry-item img {
+	margin-bottom: 10px;
+}
+
+
+/*! =Links
+------------------------------------------------------------------------- */
+button,
+a.button,
+.widget h2.entry-title a,
+.ae-iconbox a {
+	text-decoration: none;
+}
+
+
+/*! =Headings
+------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: -1px;
+}
+
+.home .widget h2,
+.home .widget h3,
+.home .widget h4,
+.home .widget h5,
+.home .widget h6,
+.off-canvas .widget .widget-title {
+	color: $body-font-color;
+}
+article h3,
+article h5 {
+	font-family: $paragraph-font-family;
+	font-weight: $font-weight-normal;
+	letter-spacing: normal;
+}
+article h5,
+h6 {
+	text-transform: uppercase;
+}
+h1.entry-title,
+h2.entry-title a {
+	text-decoration: none;
+}
+
+/*! =Buttons
+------------------------------------------------------------------------- */
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+.widget .idx-omnibar-form button,
+#IDX-main .IDX-btn,
+#IDX-main .IDX-btn:link,
+#IDX-main .IDX-btn-default {
+	@include button;
+	letter-spacing: -1px;
+	text-decoration: none;
+}
+.bg-gradient .button,
+.bg-gradient button,
+.bg-gradient input[type="button"],
+.bg-gradient input[type="submit"] {
+	background: none;
+	border: 2px solid #fff;
+}
+.bg-gradient .button:hover,
+.bg-gradient button:hover,
+.bg-gradient input[type="button"]:hover,
+.bg-gradient input[type="submit"]:hover,
+.bg-gradient .button:focus,
+.bg-gradient button:focus,
+.bg-gradient input[type="button"]:focus,
+.bg-gradient input[type="submit"]:focus {
+	background: scale-color($primary-color, $lightness: -14%);
+}
+
+.widget .idx-omnibar-form button {
+	margin: 0;
+	height: auto;
+}
+
+/*! =Blockquotes
+------------------------------------------------------------------------- */
+blockquote {
+	font-style: italic;
+}
+blockquote cite {
+	font-style: normal;
+}
+
+/*! =Accessibility
+------------------------------------------------------------------------- */
+/*! Text meant only for screen readers */
+.screen-reader-text,
+.screen-reader-shortcut {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /*! Above WP toolbar */
+}
+
+/*! Skip Links
+---------------------------------------------------------------------------------------------------- */
+.equity-skip-link {
+	margin: 0;
+}
+
+.equity-skip-link li {
+	height: 0;
+	width: 0;
+	list-style: none;
+}
+
+/*! Display outline on focus */
+:focus {
+	color: #000;
+	outline: #ccc solid 1px;
+}
+
+/*! =Gravity Forms
+------------------------------------------------------------------------- */
+.gform_wrapper select[multiple=multiple] {
+	background-image: none;
+	height: auto;
+}
+.gform_wrapper .gfield_radio li input[type=radio] {
+	margin: 0 0 0.2rem 0.1rem;
+}
+
+/*! =Beaver Builder
+------------------------------------------------------------------------- */
+
+
+/*! =Admin bar fix (due to position: relative; on body)
+------------------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		top: -46px;
+	}
+}
+
+/*! =Animations
+------------------------------------------------------------------------- */
+
+/*! Flip animation */
+@keyframes nav-flip {
+	from {
+		transform: rotate(0deg);
+  	}
+	to {
+		transform: rotate(-180deg);
+		top: 50%;
+  	}
+}
+@keyframes nav-flip-side {
+	from {
+		transform: rotate(0deg);
+  	}
+	to {
+		transform: rotate(-180deg);
+  	}
+}
+
+/*! Fadeup */
+@-webkit-keyframes fadeInUp {
+	from { opacity: 0; -webkit-transform: translateY(20px); }
+	to { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
