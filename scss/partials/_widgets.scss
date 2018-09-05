@@ -241,6 +241,31 @@ section.equity-post-carousel article .entry-content {
 
 /*! =IDX Carousel
 ------------------------------------------------------------------------- */
+.impress-carousel, .equity-idx-carousel {
+	 .carousel-property {
+		width: 235px;
+		margin: 0 auto;
+	}
+
+	.carousel-photo {
+		width: 235px;
+		height: 235px;
+		border-radius: 100%;
+		overflow: hidden;
+		position: relative;
+		img {
+			display: inline;
+			margin: 0 auto;
+			height: 100%;	
+		}
+	}
+
+	.beds-baths span+span {
+		margin-left: 10px;
+	}
+}
+
+/*
 .equity-idx-carousel,
 .impress-carousel {
 	position: relative;
@@ -263,6 +288,7 @@ section.equity-post-carousel article .entry-content {
 	margin-bottom: 10px;
 	width: 100%;
 	opacity: 1;
+	border-radius: 100%;
 }
 .equity-idx-carousel .property-details,
 .impress-carousel .property-details {
@@ -418,6 +444,7 @@ section.equity-post-carousel article .entry-content {
 	width: auto;
 	margin: 0 auto;
 }
+*/
 @media #{$large-up} {
 	.equity-idx-carousel .property-details span.price,
 	.impress-carousel .property-details span.price {

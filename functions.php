@@ -192,6 +192,17 @@ function equity_child_home() {
 		$widget_area_count++;
 	}
 }
+//remove_action( 'equity_header', 'equity_header_markup_open', 5 );
+//remove_action( 'equity_header', 'equity_header_markup_close', 15 );
+remove_action( 'equity_header', 'equity_do_header' );
+add_action( 'equity_header', 'test_header' );
+function test_header() {
+	?>
+	<div>
+		Testin' headers
+	</div>
+	<?php
+}
 
 add_action( 'equity_before_footer', 'must_see_before_footer', 1 );
 function must_see_before_footer() {
@@ -261,26 +272,22 @@ function must_see_equity_idx_carousel_property_html( $output, $prop, $instance, 
 
 	$output = sprintf(
 		'<div class="carousel-property">
-			<a href="%2$s" class="carousel-photo" target="%12$s">
-				<img class="owl-lazy lazyOwl" data-src="%3$s" alt="%4$s" />
-				
-				<div class="property-details">
-					<span class="price">%1$s</span>
-					<ul class="beds-baths-sqft">
-						%7$s
-						%8$s
-						%9$s
-						%10$s
-					</ul>
-					<p class="address">
-						<span class="street">%4$s</span>
-						<span class="cityname">%5$s</span>,
-						<span class="state"> %6$s</span>
-					</p>
+			<a href="%2$s" target="%11$s">
+				<div class="carousel-photo">
+					<img class="owl-lazy lazyOwl" data-src="%3$s" alt="%4$s" />
 				</div>
-				<div class="hover-cover"><p><i class="fa fa-eye"></i>View Property</p></div>
+				<div class="property-details">
+					<div class="price">%1$s</div>
+					<div class="address">%4$s</div>
+					<div class="city-state">%5$s, %6$s</div>
+					<div class="beds-baths">
+						<span>%7$s</span>
+						<span>%8$s</span>
+					</div>
+					<div class="sqft">%9$s</div>
+				</div>
 			</a>
-			%11$s
+			%10$s
 		</div>',
 		$prop['listingPrice'],
 		$url,
@@ -288,10 +295,10 @@ function must_see_equity_idx_carousel_property_html( $output, $prop, $instance, 
 		(isset($prop['address']) && $prop['address'] != null) ? $prop['address'] : '',
 		$prop['cityName'],
 		$prop['state'],
-		(isset($prop['bedrooms']) && '0' !== $prop['bedrooms']) ? '<li class="beds" title="Bedrooms">' . $prop['bedrooms'] .' <span class="label">Bedrooms</span></li>' : '',
-		(isset($prop['totalBaths']) && 0 !== $prop['totalBaths']) ? '<li class="baths" title="Bathrooms">' . $prop['totalBaths'] .' <span class="label">Bathrooms</span></li>' : '',
-		(isset($prop['sqFt']) && '0' !== $prop['sqFt']) ? '<li class="sqft" title="Sq Ft">' . $prop['sqFt'] .' <span class="label">Sq Ft</span></li>' : '',
-		(isset($prop['acres']) && '0' !== $prop['acres'] ) ? '<li class="acres" title="Acres">' . $prop['acres'] . ' <span class="label">Acres</span></li>' : '',
+		(isset($prop['bedrooms']) && '0' !== $prop['bedrooms']) ? $prop['bedrooms'] .' Beds' : '',
+		(isset($prop['totalBaths']) && '0' !== $prop['totalBaths']) ?  $prop['totalBaths'] . ' Baths' : '',
+		(isset($prop['sqFt']) && '0' !== $prop['sqFt']) ? $prop['sqFt'] . ' Sq Ft' : '',
+		// (isset($prop['acres']) && '0' !== $prop['acres'] ) ? '<li class="acres" title="Acres">' . $prop['acres'] . ' <span class="label">Acres</span></li>' : '',
 		$disclaimer,
 		$target
 	);
