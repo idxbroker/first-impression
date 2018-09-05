@@ -9,21 +9,13 @@ module.exports = function(grunt) {
         includePaths: ['scss/partials', '../equity/foundation/scss'],
         implementation: sass
       },
-      // dist: {
-      //   options: {
-      //     outputStyle: 'compressed'
-      //   },
-      //   files: {
-      //     'style-editor.css': 'scss/style-editor.css.scss',
-      //     'style.min.css': 'scss/style.css.scss'
-      //   }
-      // },
       dist: {
         options: {
-          outputStyle: 'expanded'
+          outputStyle: 'compressed'
         },
         files: {
-          'style.css': 'scss/style.css.scss'
+          'style-editor.css': 'scss/style-editor.css.scss',
+          'style.min.css': 'scss/style.css.scss'
         }
       }
     },
