@@ -1,28 +1,31 @@
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
       options: {
-        includePaths: ['scss/partials', '../equity/foundation/scss']
-      },
-      dist: {
-        options: {
-          outputStyle: 'compressed'
-        },
-        files: {
-          'style-editor.css': 'scss/style-editor.css.scss',
-          'style.min.css': 'scss/style.css.scss'
-        }
+        includePaths: ['scss/partials', '../equity/foundation/scss'],
+        implementation: sass
       },
       // dist: {
       //   options: {
-      //     outputStyle: 'expanded'
+      //     outputStyle: 'compressed'
       //   },
       //   files: {
-      //     'style.css': 'scss/style.css.scss'
+      //     'style-editor.css': 'scss/style-editor.css.scss',
+      //     'style.min.css': 'scss/style.css.scss'
       //   }
-      // }
+      // },
+      dist: {
+        options: {
+          outputStyle: 'expanded'
+        },
+        files: {
+          'style.css': 'scss/style.css.scss'
+        }
+      }
     },
 
     wpcss: {
