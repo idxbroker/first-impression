@@ -160,7 +160,7 @@ function equity_child_home() {
 
 	<div class="home-top">
 		<div class="row">
-			<div class="columns small-12 small-centered">
+			<div class="columns small-10 large-8 small-centered omnibar-top">
 				<?php equity_widget_area( 'home-top' ); ?>
 			</div><!-- end .columns .small-12 -->
 		</div><!-- .end .row -->
@@ -277,7 +277,7 @@ function must_see_equity_idx_carousel_property_html( $output, $prop, $instance, 
 					<img class="owl-lazy lazyOwl" data-src="%3$s" alt="%4$s" />
 				</div>
 				<div class="property-details">
-					<div class="price">%1$s</div>
+					<h3 class="price">%1$s</h3>
 					<div class="address">%4$s</div>
 					<div class="city-state">%5$s, %6$s</div>
 					<div class="beds-baths">

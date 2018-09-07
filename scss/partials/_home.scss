@@ -63,6 +63,16 @@ body.home.must-see-white-bkg {
 	color: scale-color($body-font-color-secondary, $lightness: -14%);
 }
 
+.home-top {
+	position: relative;
+	height: 650px;
+	background-size: cover;
+	background-position: center;
+	.omnibar-top {
+		margin-top: 500px;
+	}
+}
+
 
 /*! Fadeup Effect
 ---------------------------------------------------------------------------------------------------- */
