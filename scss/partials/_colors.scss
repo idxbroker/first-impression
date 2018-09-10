@@ -83,7 +83,7 @@ body.must-see-white-bkg .sidebar-primary label,
 body.must-see-light.must-see-white-bkg .sidebar-primary .property-details ul,
 body.must-see-light.must-see-white-bkg .sidebar-primary .property-details p,
 body.must-see-light.must-see-white-bkg .sidebar-primary .hover-cover > p {
-	color: $body-font-color;
+	color: red;
 }
 body.must-see-light.home div[class*='home-middle-'].bg-primary .widget h4,
 body.must-see-light.home div[class*='home-middle-'].bg-primary p,
@@ -105,7 +105,7 @@ body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-nav a:focus,
 body.must-see-white-bkg .sidebar-primary .property-details ul,
 body.must-see-white-bkg .sidebar-primary .property-details p,
 body.must-see-white-bkg .sidebar-primary .hover-cover > p {
-	color: $body-font-color-secondary;
+	color: red;
 }
 body.must-see-light.home .bg-primary a,
 body.must-see-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active {

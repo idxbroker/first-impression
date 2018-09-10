@@ -29,6 +29,30 @@ body {
   cursor: $cursor-auto-value;
 }
 
+.impress-carousel-widget h4,
+.singleTestimonialWidget h4,
+.contact-us h4 {
+  color: #258BB7;
+  text-align: center;
+  font-size: 2rem;
+  margin: 50px 0;
+  &:before, &:after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 5px;
+    vertical-align: middle;
+    background: #258BB7;
+    border-radius: 5px;
+  }
+  &:before {
+    margin-right: 10px;
+  }
+  &:after {
+    margin-left: 10px;
+  }
+}
+
 a:hover { cursor: $cursor-pointer-value; }
 
 // Grid Defaults to get images and embeds to work properly
