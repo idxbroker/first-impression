@@ -231,7 +231,7 @@ function must_see_home_middle_widget_class( $widget_area_count, $home_widget_are
 
 	switch ( $widget_area_count ) {
 		case 2:
-			$class .= ' bg-gradient';
+			$class .= ' bg-gradient buying-selling-area';
 			break;
 		case 4:
 			$class .= ' bg-gradient';

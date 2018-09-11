@@ -1,3 +1,9 @@
+/** New stuff ***/
+$blue-text: #258BB7;
+$dark-text: #4C5051;
+$light-text: #FFFFFF;
+/** End new stuff **/
+
 // Required to fix Safari issue with carousel script
 html {
     -webkit-font-smoothing: antialiased;
@@ -27,30 +33,6 @@ body {
   line-height: $base-line-height; // Set to $base-line-height to take on browser default of 150%
   position: relative;
   cursor: $cursor-auto-value;
-}
-
-.impress-carousel-widget h4,
-.singleTestimonialWidget h4,
-.contact-us h4 {
-  color: #258BB7;
-  text-align: center;
-  font-size: 2rem;
-  margin: 50px 0;
-  &:before, &:after {
-    content: "";
-    display: inline-block;
-    width: 100px;
-    height: 5px;
-    vertical-align: middle;
-    background: #258BB7;
-    border-radius: 5px;
-  }
-  &:before {
-    margin-right: 10px;
-  }
-  &:after {
-    margin-left: 10px;
-  }
 }
 
 a:hover { cursor: $cursor-pointer-value; }

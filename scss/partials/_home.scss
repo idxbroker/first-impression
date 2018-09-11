@@ -63,6 +63,8 @@ body.home.must-see-white-bkg {
 	color: scale-color($body-font-color-secondary, $lightness: -14%);
 }
 
+/** New stuff ***/
+
 .home-top {
 	position: relative;
 	height: 650px;
@@ -72,6 +74,100 @@ body.home.must-see-white-bkg {
 		margin-top: 500px;
 	}
 }
+
+.IDX_Omnibar_Widget {
+	.awesomplete {
+
+		line-height: 50px !important;
+	}
+	.idx-omnibar-input {
+		border-radius: 5px;
+		height: 50px !important;
+	}
+	button {
+		border-radius: 0 5px 5px 0 !important;
+		background: none !important;
+		color: black !important;
+		height: 50px !important;
+	}
+}
+
+.property-details {
+
+}
+
+.impress-carousel-widget h4,
+.singleTestimonialWidget h4,
+.contact-us h4 {
+  color: $blue-text !important;
+  text-align: center;
+  font-size: 2rem;
+  margin: 50px 0;
+  &:before, &:after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 5px;
+    vertical-align: middle;
+    background: #258BB7;
+    border-radius: 5px;
+  }
+  &:before {
+    margin-right: 10px;
+  }
+  &:after {
+    margin-left: 10px;
+  }
+}
+
+.property-details {
+	color: $dark-text;
+	.price {
+		color: $blue-text !important;
+	}
+	.address, .city-state {
+		font-weight: bold;
+	}
+}
+
+.bg-gradient {
+	h4 {
+		color: $light-text !important;
+	}
+}
+
+.buying-selling-area {
+	> .row {
+		padding: 50px 0;
+	}
+	section:first-child h4 {
+		font-size: 2rem;
+	}
+
+	section+section {
+		h4 {
+			font-size: 1.5rem;
+		}
+		h4:after {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 3px;
+			margin: 20px 0;
+			border-radius: 5px;
+			background: #fff;
+		}
+		.button {
+			font-size: 1.2rem;
+			letter-spacing: .075rem;
+			width: 200px;
+			border-radius: 5px;
+		}
+
+	}
+}
+
+/** End new stuff **/
 
 
 /*! Fadeup Effect
