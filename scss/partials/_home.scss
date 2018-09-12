@@ -98,7 +98,8 @@ body.home.must-see-white-bkg {
 
 .impress-carousel-widget h4,
 .singleTestimonialWidget h4,
-.contact-us h4 {
+.contact-us h4,
+.featured-communities .widget_text h4 {
   color: $blue-text !important;
   text-align: center;
   font-size: 2rem;
@@ -164,6 +165,38 @@ body.home.must-see-white-bkg {
 			border-radius: 5px;
 		}
 
+	}
+}
+
+.featured-communities {
+	.widget_text {
+		display: block;
+		width: 100% !important;
+		float: none !important;
+	}
+	.featured-page {
+		position: relative;
+		h4 {
+			font-size: 1.5rem;
+		}
+		h4:after {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 3px;
+			margin: 20px 0;
+			border-radius: 5px;
+			background: #fff;
+		}
+		article {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			// Need opaque layer psuedoelement here
+		}
 	}
 }
 
