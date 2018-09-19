@@ -21,12 +21,6 @@
 	    margin-bottom: 0;
 	}
 
-	.flexible-widgets.widget-full .widget,
-	.flexible-widgets.widget-halves.uneven .widget:last-of-type {
-	    float: none;
-	    width: 100%;
-	}
-
 	.flexible-widgets.widget-fourths .widget {
 	    width: 25%;
 	}

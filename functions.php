@@ -37,7 +37,13 @@ if ( ! get_theme_mod( 'footer_widgets' ) ) {
 remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' );
 
 // Add large square size image for featured pages on homepage.
-add_image_size( 'large-square', '500', '500', true );
+add_image_size( 'large-square', '800', '800', false );
+function remove_img_attributes( $html ) {
+$html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+return $html;
+}
+add_filter( 'post_thumbnail_html', 'remove_img_attributes', 10 );
+add_filter( 'image_send_to_editor', 'remove_img_attributes', 10 );
 
 // Create additional color style options
 add_theme_support( 'equity-style-selector', array(
@@ -154,6 +160,17 @@ equity_register_widget_area(
 // Home page - return false to not display welcome screen.
 add_filter( 'equity_display_welcome_screen', '__return_false' );
 
+function is_community_area($arr) {
+	if ( $arr ) {
+		foreach ($arr as $widget) {
+			if ( strpos($widget, 'featured-page') !== false) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 // Home page - markup and default widgets.
 function equity_child_home() {
 	?>
@@ -167,12 +184,23 @@ function equity_child_home() {
 	</div><!-- end .home-top -->
 
 	<?php
+	// Get widget data to added specific classes.
+	$widgets = wp_get_sidebars_widgets();
+
 	// Loop through registered widget areas and output markup.
 	$home_widget_areas = get_theme_mod( 'home_widget_areas', 5 );
 	$widget_area_count = 1;
 	while ( $widget_area_count <= $home_widget_areas ) {
+		$common_classes = 'flexible-widgets columns small-12 widget-area ';
+		$widget_area = $widgets["home-middle-$widget_area_count"];
+		$fullscreen = '';
+		if (is_community_area($widget_area)) {
+			$common_classes = 'flexible-widgets columns small-12 widget-area widget-halves featured-communities ';
+			$fullscreen = ' must-see-fullscreen';
+		}
+
 		?>
-		<div class="<?php echo esc_attr( must_see_home_middle_widget_class( $widget_area_count, $home_widget_areas ) ); ?>">
+		<div class="<?php echo esc_attr( must_see_home_middle_widget_class( $widget_area_count, $home_widget_areas ) ); echo $fullscreen; ?>">
 			<div class="row">
 				<?php
 				$classes = equity_widget_area_class( sprintf( 'home-middle-%d', $widget_area_count ) );
@@ -181,7 +209,7 @@ function equity_child_home() {
 				}
 				equity_widget_area( sprintf( 'home-middle-%d', $widget_area_count ),
 					array(
-						'before' => '<div class="flexible-widgets columns small-12 widget-area ' . $classes . '">',
+						'before' => '<div class="' . $common_classes . $classes . '">',
 						'after'  => '</div>',
 					)
 				);
@@ -232,9 +260,6 @@ function must_see_home_middle_widget_class( $widget_area_count, $home_widget_are
 	switch ( $widget_area_count ) {
 		case 2:
 			$class .= ' bg-gradient buying-selling-area'; // THIS IS BAD AND WE NEED TO FIND A BETTER WAY TO STYLE STUFF
-			break;
-		case 3:
-			$class .= ' featured-communities';
 			break;
 		case 4:
 			$class .= ' bg-gradient';
