@@ -37,7 +37,8 @@ if ( ! get_theme_mod( 'footer_widgets' ) ) {
 remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' );
 
 // Add large square size image for featured pages on homepage.
-add_image_size( 'large-square', '800', '800', false );
+add_image_size( 'huge-square', '800', '800', true );
+add_image_size( 'large-square', '500', '500', true );
 function remove_img_attributes( $html ) {
 $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
 return $html;
