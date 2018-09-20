@@ -57,7 +57,7 @@ add_theme_support( 'equity-style-selector', array(
 // Load fonts.
 add_filter( 'equity_google_fonts', 'must_see_fonts' );
 function must_see_fonts( $equity_google_fonts ) {
-	$equity_google_fonts = 'PT+Sans:400,700|Raleway:600';
+	$equity_google_fonts = 'PT+Sans:400,700|Raleway:500,600';
 	return $equity_google_fonts;
 }
 

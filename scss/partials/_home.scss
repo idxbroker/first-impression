@@ -134,6 +134,9 @@ body.home.must-see-white-bkg {
 .bg-gradient {
 	h4 {
 		color: $light-text !important;
+  		&:before, &:after {
+    		background: $light-text;
+  		}
 	}
 }
 
@@ -188,6 +191,7 @@ body.home.must-see-white-bkg {
 		height: calc(100vw / 2);
 		h4 {
 			font-size: 2.2rem;
+			font-weight: 500;
 			color: $light-text !important;
 			width: 300px;
 			margin: 0 auto;
