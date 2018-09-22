@@ -260,7 +260,7 @@ function must_see_home_middle_widget_class( $widget_area_count, $home_widget_are
 
 	switch ( $widget_area_count ) {
 		case 2:
-			$class .= ' bg-gradient buying-selling-area'; // THIS IS BAD AND WE NEED TO FIND A BETTER WAY TO STYLE STUFF
+			$class .= ' bg-gradient buying-selling-area'; // TODO: THIS IS BAD AND WE NEED TO FIND A BETTER WAY TO STYLE STUFF
 			break;
 		case 4:
 			$class .= ' bg-gradient';
@@ -272,6 +272,27 @@ function must_see_home_middle_widget_class( $widget_area_count, $home_widget_are
 	$class = apply_filters( 'must_see_home_middle_widget_class', $class, $widget_area_count, $home_widget_areas );
 
 	return $class;
+}
+
+add_filter( 'get_the_content_limit', 'must_see_get_the_content_limit', 10, 5 );
+
+/**
+ * Filters the default markup of Equity Featured Page 'more link' text.
+ *
+ * @param  string $output         The default HTML output.
+ * @param  string $content        The description text.
+ * @param  string $link           The link HTML.
+ * @param  string $max_characters The maximum number of characters to return.
+ * @return [type]                 The modified HTML to output.
+ */
+function must_see_get_the_content_limit( $output, $content, $link, $max_characters ) {
+	$ellipsis = '';
+	$content_length = strlen( get_the_content( '', true ) );
+	if ( $content_length < $max_characters ) {
+		$ellipsis = '&#x02026;';
+	}
+	// This removes all occurrences of hex encoded ellipsis if content length is greater than except limit.
+	return str_replace( $ellipsis, '', $output );
 }
 
 /**
