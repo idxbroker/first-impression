@@ -356,6 +356,40 @@ div[class*='home-middle-'] {
 	}
 }
 
+
+.must-see-map-section {
+	.impress-idx-dashboard-widget {
+	}
+	.IDX-mapWidgetWrap {
+		position: relative;
+		height: 700px !important;
+		.IDX-mapHeader {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}
+		.IDX-mapCount {
+			font-family: $header-font-family;
+			font-weight: 400;
+			font-size: 1.1rem;
+			color: #4C5051;
+			float: right !important;
+			padding-right: 25px;
+			padding-top: 5px;
+		}
+		.IDX-mapTab {
+			float: left !important;
+			border-radius: 0px;
+			border: none;
+			border-bottom-right-radius: 6px;
+			box-shadow: 1px 1px 3px #666;
+		}
+		.leaflet-control-zoom {
+			margin-top: 50px !important;
+		}
+	}
+}
+
 /** End new stuff **/
 
 
