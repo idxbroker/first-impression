@@ -30,7 +30,7 @@ add_theme_support( 'equity-accessibility', array( 'skip-links' ) );
 
 // Set default footer widgets
 if ( ! get_theme_mod( 'footer_widgets' ) ) {
-	set_theme_mod( 'footer_widgets', 3 );
+	set_theme_mod( 'footer_widgets', 1 );
 }
 
 // Remove header right widget area.
@@ -238,8 +238,8 @@ function must_see_before_footer() {
 	?>
 	<div class="contact-us">
 		<div class="row">
+			<h4 class="widget-title"><?php echo get_theme_mod( 'contact_us_title', 'Contact Us' ); ?></h4>
 			<div class="columns small-12">
-				<h4 class="widget-title"><?php echo get_theme_mod( 'contact_us_title', 'Contact Us' ); ?></h4>
 				<?php equity_widget_area( 'contact-us' ); ?>
 			</div><!-- end .columns .small-12 -->
 		</div><!-- .end .row -->
