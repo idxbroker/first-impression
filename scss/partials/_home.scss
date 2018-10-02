@@ -96,6 +96,7 @@ body.home.must-see-white-bkg {
 
 .impress-carousel-widget h4,
 .singleTestimonialWidget h4,
+.listTestimonialsWidget h4,
 .contact-us > div > h4,
 .featured-communities .widget_text h4 {
   color: $blue-text !important;
@@ -276,7 +277,7 @@ body.home.must-see-white-bkg {
 }
 
 div[class*='home-middle-'] {
-	.singleTestimonialWidget {
+	.singleTestimonialWidget, .listTestimonialsWidget {
 		margin: 0 auto;
 		max-width: 900px;
 	}
