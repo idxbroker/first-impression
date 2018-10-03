@@ -195,6 +195,11 @@ section.equity-post-carousel article .entry-content {
 		margin: 0 auto;
 	}
 
+	.owl-item {
+		@media (min-width: 450px) and (max-width: 550px) {
+		}
+	}
+
 	.carousel-photo {
 		width: 235px;
 		height: 235px;
