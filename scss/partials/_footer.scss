@@ -66,16 +66,15 @@ footer.site-footer .footer-widgets .widget .agent-email-wrap i {
 	color: $light-text;
 }
 footer.site-footer .footer-widgets .widget a {
-	color: $secondary-color;
-	text-decoration: underline;
+	color: $light-text;
+	text-decoration: none;
 }
 footer.site-footer .footer-widgets .widget a:hover,
 footer.site-footer a:hover {
-	color: scale-color($secondary-color, $lightness: -14%);
+	color: $primary-color !important;
 }
 footer.site-footer .footer-widgets ul,
 footer.site-footer .footer-widgets ol {
-	margin: 0 0 0 20px;
 }
 footer.site-footer .footer-widgets li {
 	text-align: left;
