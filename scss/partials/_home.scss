@@ -110,6 +110,9 @@ body.home.must-see-white-bkg {
 	@media #{$medium-up} {
 		font-size: 2rem;
 	}
+	@media (max-width: 750px) and (min-width: 640px) {
+		font-size: 1.75rem;
+	}
 	margin: 50px 0;
 	@media #{$medium-up} {
 		&:before, &:after {
@@ -204,28 +207,34 @@ body.home.must-see-white-bkg {
 		position: relative;
 		height: 100vw;
     	width: 100%;
+    	overflow: hidden;
 		@media #{$medium-up} {
 			height: calc(100vw / 2);
     		width: 50% !important;
 		}
 		h4 {
-			font-size: 2.2rem;
+			font-size: 1.7rem;
+			letter-spacing: .2px;
+			@media #{$medium-up} {
+				font-size: 2.2rem;
+			}
 			font-weight: 500;
 			color: $light-text !important;
 			width: 300px;
 			margin: 0 auto;
-			margin-top: 40%;
+			margin-top: calc(50% - 70px);
 		}
-		@media #{$medium-up} {
-			h4:after {
-				content: "";
-				display: block;
-				width: 100px;
-				height: 3px;
+		h4:after {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 3px;
+			margin: 10px 0;
+			@media #{$medium-up} {
 				margin: 20px 0;
-				border-radius: 5px;
-				background: #fff;
 			}
+			border-radius: 5px;
+			background: #fff;
 		}
 		article {
 			position: absolute;
@@ -269,7 +278,7 @@ body.home.must-see-white-bkg {
 			.entry-content {
 				width: 300px;
 				margin: 0 auto;
-				margin-top: 50%;
+				margin-top: calc(50%);
 				p {
 					color: $light-text;
 				}
@@ -278,13 +287,19 @@ body.home.must-see-white-bkg {
 					font-family: $header-font-family;
 					letter-spacing: .05rem;
 					text-transform: uppercase;
-					font-size: 1.25rem;
+					font-size: 1rem;
+					@media (min-width: 930px) {
+						font-size: 1.25rem;
+					}
 					line-height: 2.5em;
 					color: $light-text;
 					text-align: center;
 					width: 100%;
 					margin-top: 15px;
-					padding: 5px;
+					padding: 2px;
+					@media (min-width: 930px) {
+						padding: 5px;
+					}
 					border: 2px solid $light-text;
 					border-radius: 4px;
 					&:hover {
@@ -307,21 +322,35 @@ div[class*='home-middle-'] {
 		}
 	}
 	.easy_testimonial {
+		text-align: center;
+		@media #{$medium-up} {
+			text-align: left;
+		}
 		.testimonial_body p {
 			color: $light-text;
+			@media #{$medium-up} {
+				margin-left: 200px;
+			}
 		}
 		.testimonial_author {
+			@media #{$medium-up} {
+				margin-left: 200px;
+			}
 			cite {
 				color: $light-text;
 				&:before {
-					float: left;
 					padding-right: 5px;
+				}
+				span:first-child {
+					display: inline;
 				}
 			}
 		}
-		.testimonial-client {
-		}
 		img {
+			float: none;
+			@media #{$medium-up} {
+				float: left;
+			}
 			width: 150px;
 			height: 150px;
 			border-radius: 100% !important;
@@ -435,6 +464,7 @@ div[class*='home-middle-'] {
 
 footer.site-footer {
 	background: #4C5051;
+	color: #fff;
 }
 
 /** End new stuff **/

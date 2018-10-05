@@ -224,6 +224,7 @@ function equity_child_home() {
 //remove_action( 'equity_header', 'equity_header_markup_open', 5 );
 //remove_action( 'equity_header', 'equity_header_markup_close', 15 );
 remove_action( 'equity_header', 'equity_do_header' );
+/*
 add_action( 'equity_header', 'test_header' );
 function test_header() {
 	?>
@@ -232,6 +233,7 @@ function test_header() {
 	</div>
 	<?php
 }
+*/
 
 add_action( 'equity_before_footer', 'must_see_before_footer', 1 );
 function must_see_before_footer() {
