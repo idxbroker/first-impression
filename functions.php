@@ -30,7 +30,7 @@ add_theme_support( 'equity-accessibility', array( 'skip-links' ) );
 
 // Set default footer widgets
 if ( ! get_theme_mod( 'footer_widgets' ) ) {
-	set_theme_mod( 'footer_widgets', 1 );
+	set_theme_mod( 'footer_widgets', 3 );
 }
 
 // Remove header right widget area.
@@ -145,7 +145,9 @@ equity_register_widget_area(
 
 // Home page - return false to not display welcome screen.
 add_filter( 'equity_display_welcome_screen', '__return_false' );
-
+/*
+?><pre><?php print_r($arr); ?></pre><?php
+*/
 function is_community_area($arr) {
 	if ( $arr ) {
 		foreach ($arr as $widget) {
@@ -247,7 +249,7 @@ function must_see_home_middle_widget_class( $widget_area_count, $home_widget_are
 
 	switch ( $widget_area_count ) {
 		case 2:
-			$class .= ' bg-gradient buying-selling-area'; // TODO: THIS IS BAD AND WE NEED TO FIND A BETTER WAY TO STYLE STUFF
+			$class .= ' bg-gradient'; // TODO: THIS IS BAD AND WE NEED TO FIND A BETTER WAY TO STYLE STUFF
 			break;
 		case 4:
 			$class .= ' bg-gradient';

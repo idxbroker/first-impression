@@ -152,12 +152,14 @@ body.home.must-see-white-bkg {
 	}
 }
 
-.buying-selling-area {
-	> .row {
+div[class^="home-middle-"] {
+	section.widget_text {
 		padding: 50px 0;
 	}
-	section:first-child h4 {
-		font-size: 2rem;
+	section:first-child  {
+		.widgettitle {
+			font-size: 2rem;
+		}
 	}
 
 	section+section {
@@ -202,6 +204,9 @@ body.home.must-see-white-bkg {
 	.widget_text {
     	width: 100% !important;
     	float: none !important;
+    	h4 {
+    		margin: 0px;
+    	}
 	}
 	.featured-page {
 		position: relative;
@@ -369,7 +374,7 @@ div[class*='home-middle-'] {
 .featured-communities.flexible-widgets.widget-halves .widget.widget_text {
 }
 
-.must-see-map-section {
+.impress-idx-dashboard-widget-section {
 	.impress-idx-dashboard-widget {
 	}
 	.IDX-mapWidgetWrap {

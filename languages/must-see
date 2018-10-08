@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Must See 2 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-10-06 23:29:36+00:00\n"
+"POT-Creation-Date: 2018-10-08 16:14:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,29 +56,29 @@ msgstr ""
 msgid "<i class=\\\"fa fa-caret-right\\\"></i><span>Next</span>"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:121
 msgid "Home Top"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:122
 msgid ""
 "This is the top section of the Home page. Not all widgets are designed to "
 "work here. Recommended to use IMPress Omnibar Search widget."
 msgstr ""
 
-#: functions.php:147
+#: functions.php:132
 msgid "Home Middle %d"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:133
 msgid "This is the Home Middle %d widget area."
 msgstr ""
 
-#: functions.php:156
+#: functions.php:141
 msgid "Contact Us"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:142
 msgid "This is the Contact Us section above the footer."
 msgstr ""
 
