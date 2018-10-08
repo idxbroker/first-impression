@@ -114,21 +114,6 @@ function child_listing_scroller_next_link( $listing_scroller_next_link_text ) {
 remove_action( 'equity_before_footer', 'equity_footer_widget_areas' );
 add_action( 'equity_footer', 'equity_footer_widget_areas', 6 );
 
-// Filter footer widget class for 8/4 column layout with 2 widgets. Other widget configs use equal widths (default).
-add_filter( 'equity_footer_widgets_class', 'must_see_footer_widgets_class', 10, 3 );
-function must_see_footer_widgets_class( $span_class, $counter, $footer_widgets ) {
-
-	if ( 2 === (int) $footer_widgets ) {
-		if ( 1 === $counter ) {
-			$span_class = 'columns small-12 medium-6 large-8';
-		} else {
-			$span_class = 'columns small-12 medium-6 large-4';
-		}
-	}
-
-	return $span_class;
-}
-
 // Register home-top widget area.
 equity_register_widget_area(
 	array(
@@ -356,6 +341,12 @@ function must_see_equity_idx_carousel_property_html( $output, $prop, $instance, 
 	);
 
 	return $output;
+}
+
+add_filter( 'equity_attr_site-footer', 'sp_custom_footer' );
+
+function sp_custom_footer( $attributes ) {
+	return $attributes;
 }
 
 
