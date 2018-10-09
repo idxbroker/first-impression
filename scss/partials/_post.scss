@@ -88,3 +88,10 @@ body.fl-builder .post-edit-link {
 	font-size: rem-calc(14);
 	margin: 0.875rem 0;
 }
+
+/** New Stuff **/
+.single-post {
+	.site-container, .site-inner, .content-sidebar-wrap {
+		background: $inner-page-bg;
+	}
+}

@@ -249,7 +249,7 @@ function must_see_home_middle_widget_class( $widget_area_count, $home_widget_are
 
 	switch ( $widget_area_count ) {
 		case 2:
-			$class .= ' bg-gradient'; // TODO: THIS IS BAD AND WE NEED TO FIND A BETTER WAY TO STYLE STUFF
+			$class .= ' bg-gradient';
 			break;
 		case 4:
 			$class .= ' bg-gradient';
