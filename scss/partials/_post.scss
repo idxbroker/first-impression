@@ -8,8 +8,18 @@
 	margin: 0 0 1.825rem;
 }
 .content article h1.entry-title {
+	color: $blue-text;
+	line-height: 30px;
 	margin: 0 0 0.5rem;
-	border-bottom: 1px solid #D8D8D8;
+	&:after {
+		content: "";
+		display: block;
+		width: 125px;
+		height: 5px;
+		margin: 20px 0;
+		border-radius: 5px;
+		background: $blue-text;
+	}
 }
 .content figure {
 	margin: 0;
@@ -41,7 +51,6 @@ footer .entry-meta i {
 header .entry-meta i {
 	display: none;
 }
-
 
 /*! =After Entry Widget Area
 ------------------------------------------------------------------------- */
@@ -90,8 +99,34 @@ body.fl-builder .post-edit-link {
 }
 
 /** New Stuff **/
-.single-post {
+body.single-post {
+	color: #000;
 	.site-container, .site-inner, .content-sidebar-wrap {
 		background: $inner-page-bg;
+	}
+	.site-inner {
+		box-shadow: none;
+	}
+	article {
+		h2 {
+			color: $blue-text;
+			margin-top: 50px;
+		}
+		p {
+			font-size: 1.15rem;
+		}
+		ul, ol, dl {
+			font-size: 1.15rem;
+		}
+		blockquote {
+			color: $blue-text;
+			border-left: 0;
+			p {
+				color: $blue-text;
+			}
+		}
+	}
+	.contact-us {
+		display: none;
 	}
 }

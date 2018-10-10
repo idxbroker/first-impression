@@ -85,3 +85,22 @@ footer.site-footer .footer-widgets .widget-title {
 	color: $light-text;
 }
 
+/** NEW STUFF **/
+footer.site-footer {
+	background: #4C5051;
+	color: #fff;
+	.footer-widgets {
+		border: none !important;
+		padding-bottom: 10px !important;
+		width: 100%;
+		max-width: $row-width;
+		margin: 0 auto !important;
+	}
+	&>div+div {
+		display: none;
+	}
+	ul {
+		list-style: none;
+		margin-left: 0;
+	}
+}

@@ -186,38 +186,6 @@ section.equity-post-carousel article .entry-content {
 	display: none;
 }
 
-
-/*! =IDX Carousel
-------------------------------------------------------------------------- */
-.impress-carousel, .equity-idx-carousel {
-	 .carousel-property {
-		width: 235px;
-		margin: 0 auto;
-	}
-
-	.owl-item {
-		@media (min-width: 450px) and (max-width: 550px) {
-		}
-	}
-
-	.carousel-photo {
-		width: 235px;
-		height: 235px;
-		border-radius: 100%;
-		overflow: hidden;
-		position: relative;
-		img {
-			display: inline;
-			margin: 0 auto;
-			height: 100%;	
-		}
-	}
-
-	.beds-baths span+span {
-		margin-left: 10px;
-	}
-}
-
 /*
 .equity-idx-carousel,
 .impress-carousel {
@@ -855,4 +823,26 @@ table#wp-calendar {
 
 .widget-title, .widgettitle {
 	
+}
+
+.sidebar {
+	.impress-carousel-widget {
+		.impress-carousel {
+			background: #fff;
+			.carousel-photo {
+				min-height: 275.25px;
+			}
+			a {
+				color: #000;
+				font-size: 1rem;
+				.address, .city-state {
+					font-weight: 700;
+					color: #4C5051;
+				}
+			}
+		}
+		h3.price {
+			color: $blue-text;
+		}
+	}
 }

@@ -186,6 +186,35 @@ body.home.must-see-white-bkg {
 			}
 		}
 	}
+	
+	.impress-carousel, .equity-idx-carousel {
+		 .carousel-property {
+			width: 235px;
+			margin: 0 auto;
+		}
+
+		.owl-item {
+			@media (min-width: 450px) and (max-width: 550px) {
+			}
+		}
+
+		.carousel-photo {
+			width: 235px;
+			height: 235px;
+			border-radius: 100%;
+			overflow: hidden;
+			position: relative;
+			img {
+				display: inline;
+				margin: 0 auto;
+				height: 100%;	
+			}
+		}
+
+		.beds-baths span+span {
+			margin-left: 10px;
+		}
+	}
 
 	.must-see-fullscreen {
 		.row {
