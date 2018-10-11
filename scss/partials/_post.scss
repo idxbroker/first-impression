@@ -11,6 +11,7 @@
 	color: $blue-text;
 	line-height: 30px;
 	margin: 0 0 0.5rem;
+	font-size: rem-calc(32);
 	&:after {
 		content: "";
 		display: block;
@@ -111,12 +112,10 @@ body.single-post {
 		h2 {
 			color: $blue-text;
 			margin-top: 50px;
+			font-size: rem-calc(26);
 		}
 		p {
-			font-size: 1.15rem;
-		}
-		ul, ol, dl {
-			font-size: 1.15rem;
+			font-size: rem-calc(16);
 		}
 		blockquote {
 			color: $blue-text;
@@ -124,6 +123,9 @@ body.single-post {
 			p {
 				color: $blue-text;
 			}
+		}
+		a {
+			text-decoration: underline;
 		}
 	}
 	.contact-us {
