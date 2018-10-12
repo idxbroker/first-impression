@@ -45,7 +45,7 @@ body.home.must-see-white-bkg {
 .home .content-sidebar-wrap div[class*='home-'] h5,
 .home .content-sidebar-wrap div[class*='home-'] h6,
 .home .content-sidebar-wrap div[class*='home-'] label {
-	color: $body-font-color;
+	color: $blue-text;
 }
 // Anchors
 .home a,
@@ -104,42 +104,33 @@ body.home.must-see-white-bkg {
 	.listTestimonialsWidget h4,
 	.contact-us > div > h4,
 	.featured-communities .widget_text h4 {
+		position: relative;
 		color: $blue-text !important;
 		text-align: center;
-		font-size: 1.5rem;
+		font-size: rem-calc(32);
+		overflow: hidden;
 		@media #{$medium-up} {
-			font-size: 2rem;
-		}
-		@media (max-width: 750px) and (min-width: 640px) {
-			font-size: 1.75rem;
+			font-size: rem-calc(32);
 		}
 		margin: 50px 0;
 		@media #{$medium-up} {
 			&:before, &:after {
 				content: "";
-				display: inline-block;
-				width: 100px;
-				height: 5px;
+				top: 50%;
+				transform: translateY(-50%);
+				position: absolute;
+				width: 80px;
+				height: 3px;
 				vertical-align: middle;
 				background: #258BB7;
 				border-radius: 5px;
 			}
 			&:before {
-				margin-right: 10px;
+				margin-left: -105px;
 			}
 			&:after {
-				margin-left: 10px;
+				margin-left: 25px;
 			}
-		}
-	}
-
-	.property-details {
-		color: $dark-text;
-		.price {
-			color: $blue-text !important;
-		}
-		.address, .city-state {
-			font-weight: bold;
 		}
 	}
 
@@ -163,30 +154,29 @@ body.home.must-see-white-bkg {
 		}
 
 		section+section {
-			@media #{$small-only} {
-				margin-top: 40px;
-			}
 			h4 {
-				font-size: 1.5rem;
+				font-size: rem-calc(24);
 			}
 			h4:after {
 				content: "";
 				display: block;
-				width: 100px;
+				width: 85px;
 				height: 3px;
-				margin: 20px 0;
+				margin: 30px 0;
 				border-radius: 5px;
 				background: #fff;
 			}
 			.button {
-				font-size: 1.2rem;
-				letter-spacing: .075rem;
-				width: 200px;
+				font-size: rem-calc(20);
+				letter-spacing: .025em;
+				width: 225px;
+				line-height: 55px;
+				padding: 0;
 				border-radius: 5px;
 			}
 		}
 	}
-	
+
 	.impress-carousel, .equity-idx-carousel {
 		 .carousel-property {
 			width: 235px;
@@ -247,10 +237,9 @@ body.home.must-see-white-bkg {
 	    		width: 50% !important;
 			}
 			h4 {
-				font-size: 1.7rem;
-				letter-spacing: .2px;
+				font-size: rem-calc(36);
 				@media #{$medium-up} {
-					font-size: 2.2rem;
+					font-size: rem-calc(40);
 				}
 				font-weight: 500;
 				color: $light-text !important;
@@ -261,14 +250,14 @@ body.home.must-see-white-bkg {
 			h4:after {
 				content: "";
 				display: block;
-				width: 100px;
+				width: 90px;
 				height: 3px;
-				margin: 10px 0;
+				margin: 30px 0;
+				border-radius: 5px;
+				background: #fff;
 				@media #{$medium-up} {
 					margin: 20px 0;
 				}
-				border-radius: 5px;
-				background: #fff;
 			}
 			article {
 				position: absolute;
@@ -315,24 +304,25 @@ body.home.must-see-white-bkg {
 					margin-top: calc(50%);
 					p {
 						color: $light-text;
+						font-size: rem-calc(20);
 					}
 					a {
 						display: block;
 						font-family: $header-font-family;
-						letter-spacing: .05rem;
+						letter-spacing: .025em;
 						text-transform: uppercase;
-						font-size: 1rem;
+						font-size: rem-calc(22);
 						@media (min-width: 930px) {
 							font-size: 1.25rem;
 						}
-						line-height: 2.5em;
+						line-height: rem-calc(60);
 						color: $light-text;
 						text-align: center;
 						width: 100%;
 						margin-top: 15px;
-						padding: 2px;
+						padding: 0 2px;
 						@media (min-width: 930px) {
-							padding: 5px;
+							padding: 0 5px;
 						}
 						border: 2px solid $light-text;
 						border-radius: 4px;
@@ -476,33 +466,6 @@ body.home.must-see-white-bkg {
 	.impress-idx-signup-widget {
 		button {
 			width: 200px;
-		}
-	}
-
-	.footer-widgets {
-
-	}
-
-	footer.site-footer {
-		background: #4C5051;
-		color: #fff;
-		.footer-widgets {
-			border: none !important;
-			padding-bottom: 10px !important;
-			width: 100%;
-			max-width: $row-width;
-			margin: 0 auto !important;
-		}
-		&>div+div {
-			display: none;
-		}
-		ul {
-			list-style: none;
-			margin-left: 0;
-		}
-		li {
-		}
-		a {
 		}
 	}
 

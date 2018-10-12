@@ -835,14 +835,24 @@ table#wp-calendar {
 			a {
 				color: #000;
 				font-size: 1rem;
-				.address, .city-state {
-					font-weight: 700;
-					color: #4C5051;
-				}
 			}
 		}
-		h3.price {
-			color: $blue-text;
+	}
+}
+
+.impress-carousel-widget {
+	.property-details {
+		font-size: rem-calc(18);
+		color: $dark-text;
+		.price {
 		}
+		.address, .city-state {
+			font-weight: bold;
+			color: #4C5051;
+		}
+	}
+	h3.price {
+		font-size: rem-calc(28);
+		color: $blue-text;
 	}
 }
