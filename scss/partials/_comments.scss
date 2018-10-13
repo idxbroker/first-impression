@@ -38,3 +38,42 @@
 	background: #fafafa;
 	padding: 1rem;
 }
+
+/*** New Stuff ***/
+.entry-comments {
+	> h3 {
+		font-size: rem-calc(22);
+		color: $blue-text;
+	}
+	.comment-header {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		img {
+			position: absolute;
+			top: 0;
+			border-radius: 100%;
+		}
+	}
+	.comment-author {
+		order: 2;
+		// Author name
+		span:first-of-type {
+			padding-left: 60px;
+			color: $blue-text;
+		}
+		.says:after {
+			content: ":";
+		}
+	}
+	.comment-meta {
+		order: 1;
+		padding-left: 60px;
+		color: $blue-text;
+		font-size: 14px;
+		text-transform: uppercase;
+		a.comment-time-link {
+			text-decoration: none;
+		}
+	}
+}

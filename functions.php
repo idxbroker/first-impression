@@ -351,6 +351,19 @@ function sp_custom_footer( $attributes ) {
 	return $attributes;
 }
 
+add_filter( 'equity_author_box_gravatar_size', 'must_see_gravatar_size' );
+function must_see_gravatar_size( $size ) {
+    return 80;
+}
+
+add_filter( 'get_avatar', 'must_see_get_avatar', 10, 5 );
+
+function must_see_get_avatar( $avatar, $id_or_email, $size, $default, $alt )
+{
+	// TODO: Doesn't work, need to find out how to set
+	$size = 80;
+    return $avatar;
+}
 
 // Includes
 
