@@ -8,9 +8,6 @@
 	list-style-type: none;
 }
 .entry-comments .comment article {
-	background: #fafafa;
-	padding: 1.4rem;
-	margin: 0 0 1.2rem;
 }
 .entry-comments .comment-author {
 	font-size: rem-calc(14);
@@ -45,6 +42,15 @@
 		font-size: rem-calc(22);
 		color: $blue-text;
 	}
+	> .comment-list > li+li {
+		border-top: 2px solid #e6e6e6;
+		padding-top: 35px;
+	}
+	// Individual comment box
+	article {
+		background-color: transparent;
+		margin-bottom: 35px;
+	}
 	.comment-header {
 		position: relative;
 		display: flex;
@@ -57,6 +63,7 @@
 	}
 	.comment-author {
 		order: 2;
+		font-size: rem-calc(16);
 		// Author name
 		span:first-of-type {
 			padding-left: 60px;
@@ -72,8 +79,19 @@
 		color: $blue-text;
 		font-size: 14px;
 		text-transform: uppercase;
-		a.comment-time-link {
+		a {
 			text-decoration: none;
+		}
+	}
+	.comment-content {
+		a {
+			text-decoration: none;
+		}
+	}
+	.comment-reply {
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
 		}
 	}
 }
