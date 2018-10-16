@@ -639,7 +639,10 @@ section.equity-post-carousel article .entry-content {
 }
 
 .equity-idx-search-widget .equity-qs-links {
-	font-size: 15px;
+	font-family: $header-font-family;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	letter-spacing: .02px;
 }
 
 .equity-idx-search-widget .equity-qs-links .advanced-search,
@@ -776,11 +779,12 @@ table#wp-calendar {
 		display: none;
 	}
 	select, input[type="text"], input[type="email"] {
+		font-family: $header-font-family;
 		background: #fff;
 		box-shadow: none;
 		border: 2px solid #e6e6e6;
 		border-radius: 5px;
-		font-size: 1rem;
+		font-size: rem-calc(16);
 		height: 45.5px;
 		font-weight: 400;
 		margin-bottom: 30px;
@@ -794,8 +798,8 @@ table#wp-calendar {
 		width: 100%;
 		font-weight: 400;
 		text-transform: uppercase;
-		font-size: 1.1rem;
-		letter-spacing: .5px;
+		font-size: rem-calc(18);
+		letter-spacing: .02px;
 		line-height: 44.5px;
 		padding: 0;
 		color: $primary-color;
@@ -812,10 +816,6 @@ table#wp-calendar {
 		.fa-search {
 			display: none;
 		}
-	}
-	.equity-qs-links {
-		text-transform: uppercase;
-		letter-spacing: .4px;
 	}
 }
 

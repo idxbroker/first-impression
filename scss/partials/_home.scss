@@ -80,8 +80,12 @@ body.home.must-see-white-bkg {
 	}
 
 	.IDX_Omnibar_Widget {
+		margin: 50px auto;
 		.awesomplete {
 			line-height: 50px !important;
+			ul {
+				z-index: 10002;
+			}
 		}
 		.idx-omnibar-input {
 			border-radius: 5px;
@@ -96,6 +100,21 @@ body.home.must-see-white-bkg {
 			border-radius: 0 5px 5px 0 !important;
 			i {
 			}
+		}
+		label {
+			display: none;
+		}
+		.idx-omnibar-extra {
+			input {
+				border-radius: 5px;
+			}
+		}
+		.idx-omnibar-price-container {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		h4 {
+			display: none;
 		}
 	}
 
@@ -449,8 +468,9 @@ body.home.must-see-white-bkg {
 						width: 500px;
 	  				}
 					h4 {
-						font-size: .9rem;
+						font-size: rem-calc(18);
 						font-weight: 700;
+						letter-spacing: .01px;
 						color: $blue-text;
 					}
 				}
