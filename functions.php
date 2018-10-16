@@ -139,7 +139,7 @@ equity_register_widget_area(
 	array(
 		'id'           => 'contact-us',
 		'name'         => __( 'Contact Us', 'must-see' ),
-		'description'  => __( 'This is the Contact Us section above the footer.' , 'must-see' ),
+		'description'  => __( 'This is the Contact Us section above the footer. Recommended to use Text and IMPress Lead Signup/Register widgets.' , 'must-see' ),
 	)
 );
 
@@ -179,16 +179,17 @@ function equity_child_home() {
 	$home_widget_areas = get_theme_mod( 'home_widget_areas', 5 );
 	$widget_area_count = 1;
 	while ( $widget_area_count <= $home_widget_areas ) {
+		$z_index = ' must-see-z-index-' . ($home_widget_areas - $widget_area_count + 1) . ' ';
 		$common_classes = 'flexible-widgets columns small-12 widget-area ';
 		$widget_area = $widgets["home-middle-$widget_area_count"];
 		$fullscreen = '';
 		if (is_community_area($widget_area)) {
 			$common_classes = 'flexible-widgets columns small-12 widget-area widget-halves featured-communities ';
-			$fullscreen = ' must-see-fullscreen';
+			$fullscreen = 'must-see-fullscreen ';
 		}
 
 		?>
-		<div class="<?php echo esc_attr( must_see_home_middle_widget_class( $widget_area_count, $home_widget_areas ) ); echo $fullscreen; ?>">
+		<div class="<?php echo esc_attr( must_see_home_middle_widget_class( $widget_area_count, $home_widget_areas ) ); echo esc_attr($z_index); echo esc_attr($fullscreen); ?>">
 			<div class="row">
 				<?php
 				$classes = equity_widget_area_class( sprintf( 'home-middle-%d', $widget_area_count ) );

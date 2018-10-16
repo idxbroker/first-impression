@@ -104,3 +104,12 @@ footer.site-footer {
 		margin-left: 0;
 	}
 }
+
+footer.site-footer .footer-widgets .IDX_Omnibar_Widget {
+	* {
+		color: rgb(56,54,54);
+	}
+	.awesomplete ul {
+		display: none;
+	}
+}

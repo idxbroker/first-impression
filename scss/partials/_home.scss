@@ -47,6 +47,16 @@ body.home.must-see-white-bkg {
 .home .content-sidebar-wrap div[class*='home-'] label {
 	color: $blue-text;
 }
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient,
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h1,
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h2,
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h3,
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h4,
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h5,
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h6,
+	.home .content-sidebar-wrap div[class*='home-'].bg-gradient label {
+		color: $light-text;
+	}
 // Anchors
 .home a,
 .home .widget article h2.entry-title a {
@@ -84,7 +94,6 @@ body.home.must-see-white-bkg {
 		.awesomplete {
 			line-height: 50px !important;
 			ul {
-				z-index: 10002;
 			}
 		}
 		.idx-omnibar-input {
@@ -168,15 +177,18 @@ body.home.must-see-white-bkg {
 		}
 		section:first-child  {
 			.widgettitle {
-				font-size: 2rem;
 			}
 		}
 
-		section+section {
+		section {
+			h2 {
+				font-size: rem-calc(32);
+				line-height: rem-calc(38.4);
+			}
 			h4 {
 				font-size: rem-calc(24);
 			}
-			h4:after {
+			h2:after, h4:after {
 				content: "";
 				display: block;
 				width: 85px;
@@ -503,7 +515,6 @@ body.home.must-see-white-bkg {
 
 .fadeup-effect {
 	opacity: 0;
-	overflow: hidden;
 	-webkit-animation-duration: 0.7s;
 	animation-duration: 0.7s;
 	-webkit-animation-fill-mode: both;
@@ -519,4 +530,13 @@ body.home.must-see-white-bkg {
 .fadeInUp {
 	-webkit-animation-name: fadeInUp;
 	animation-name: fadeInUp;
+}
+
+.bg-gradient {
+	.property-details {
+		h3, .address, .city-state {
+			color: #fff;
+		}
+		color: #fff;
+	}
 }
