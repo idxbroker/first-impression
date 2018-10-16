@@ -56,10 +56,6 @@ body.home.must-see-white-bkg {
 .home .widget article h2.entry-title a {
 	color: $body-font-color-secondary;
 }
-.home .bg-gradient a:hover,
-.home .bg-gradient a:focus {
-	color: scale-color($body-font-color-secondary, $lightness: -14%);
-}
 
 /** New stuff ***/
 .home {
@@ -92,10 +88,14 @@ body.home.must-see-white-bkg {
 			height: 50px !important;
 		}
 		button {
-			border-radius: 0 5px 5px 0 !important;
 			background: none !important;
 			color: black !important;
 			height: 50px !important;
+			padding: 0 20px;
+			border: none;
+			border-radius: 0 5px 5px 0 !important;
+			i {
+			}
 		}
 	}
 

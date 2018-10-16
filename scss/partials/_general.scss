@@ -199,7 +199,7 @@ input[type="submit"],
 #IDX-main .IDX-btn,
 #IDX-main .IDX-btn:link,
 #IDX-main .IDX-btn-default {
-	width: 255px;
+	padding: 0 30px;
 	font-family: $header-font-family;
 	font-size: rem-calc(18);
 	color: $blue-text;
@@ -210,11 +210,13 @@ input[type="submit"],
 	border: 1px solid $blue-text;
 	border-radius: 5px;
 	background: #fff;
-	&:hover {
+	&:hover, &:focus {
 		// TODO: Find where this is being applied
-		background: #eee !important;
+		background: rgba(0,0,20,.1) !important;
+		color: $blue-text;
 	}
 }
+
 .bg-gradient .button,
 .bg-gradient button,
 .bg-gradient input[type="button"],
@@ -230,7 +232,7 @@ input[type="submit"],
 .bg-gradient button:focus,
 .bg-gradient input[type="button"]:focus,
 .bg-gradient input[type="submit"]:focus {
-	background: scale-color($primary-color, $lightness: -14%);
+	background: rgba(0,0,0,.1);
 }
 
 .widget .idx-omnibar-form button {
@@ -352,20 +354,8 @@ blockquote cite {
 	to { opacity: 1; transform: translateY(0); }
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="color"]:focus,
+/** NEW STUFF **/
+
 textarea:focus {
 	background: #fff;
 	border-color: $blue-text;

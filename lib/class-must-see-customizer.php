@@ -614,14 +614,14 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			);
 
 			//* Primary color hover
-			$primary_hover = equity_color_brightness( get_theme_mod( 'primary_color', '#3561b6' ), '-', 14 );
+			$primary_hover = get_theme_mod( 'primary_color', '#eee' );
 			if ( get_theme_mod( 'primary_tone' ) ) {
 				echo '
 					body.must-see-light a:hover,
 					body.must-see-light a:focus,
 					body.must-see-light #IDX-main.IDX-wrapper-standard a:hover,
 					body.must-see-light #IDX-main.IDX-wrapper-standard a:focus {
-						color: ' . $primary_hover . ';
+						color: #207FA8;
 					}';
 
 				//* Primary color hover - backgrounds
@@ -671,7 +671,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					a:focus,
 					#IDX-main.IDX-wrapper-standard a:hover,
 					#IDX-main.IDX-wrapper-standard a:focus {
-						color: ' . $primary_hover . ';
+						color: #207FA8;
 					}';
 
 				//* Primary color hover - backgrounds
