@@ -194,9 +194,6 @@ body.home.must-see-white-bkg {
 				font-size: rem-calc(20);
 				letter-spacing: .025em;
 				width: auto;
-				min-width: 225px;
-				line-height: 55px;
-				padding: 0 10px;
 				border-radius: 5px;
 			}
 		}
@@ -424,24 +421,31 @@ body.home.must-see-white-bkg {
 				display: flex;
 	  			align-items: stretch;
 	  		}
-			section {
-				&.widget_text {
-					color: #000;
-					@media #{$medium-up} {
-						padding: 0 50px;
-						width: 500px;
-	  				}
-					h4 {
-						font-size: rem-calc(18);
-						font-weight: 700;
-						letter-spacing: .01px;
-						color: $blue-text;
-					}
-				}
-				&.impress-idx-signup-widget {
-					width: 100%;
+	  		.widget {
+	  			flex-grow: 1;
+	  		}
+			.widget_text {
+				color: $dark-text;
+				h4 {
+					font-size: rem-calc(18);
+					font-weight: 700;
+					letter-spacing: .01px;
+					color: $blue-text;
 				}
 			}
+			.impress-idx-signup-widget {
+			}
+	  		section:first-child:nth-last-child(2).widget,
+	  		section:first-child:nth-last-child(2) ~ .widget {
+				@media #{$medium-up} {
+		  			width: 500px;
+					padding: 0 50px;
+  				}
+	  		}
+	  		section:first-child:nth-last-child(2).impress-idx-signup-widget,
+	  		section:first-child:nth-last-child(2) ~ .impress-idx-signup-widget {
+	  			width: 100%;
+	  		}
 		}
 	}
 
