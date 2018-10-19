@@ -917,3 +917,35 @@ div.easy_testimonial_image_wrapper {
 		border-radius: 100% !important;
 	}
 }
+
+.impress-idx-dashboard-widget {
+}
+.IDX-mapWidgetWrap {
+	position: relative;
+	.IDX-mapHeader {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+	.IDX-mapCount {
+		font-family: $header-font-family;
+		font-weight: 400;
+		font-size: 1.1rem;
+		color: #4C5051;
+		float: right !important;
+		padding-right: 25px;
+		padding-top: 5px;
+	}
+	.IDX-mapTab {
+		float: left !important;
+		border-radius: 0px;
+		border: none;
+		border-bottom-right-radius: 5px;
+		box-shadow: 1px 1px 3px #666;
+	}
+	.leaflet-control-zoom {
+		margin-top: 50px !important;
+	}
+	div[id*='IDX-mapLoading'] {
+	}
+}

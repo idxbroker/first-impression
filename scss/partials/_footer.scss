@@ -90,7 +90,7 @@ footer.site-footer .footer-widgets .widget-title {
 /** NEW STUFF **/
 footer.site-footer {
 	background: #4C5051;
-	color: $light-text;;
+	color: $light-text;
 	.footer-widgets {
 		border: none !important;
 		padding-bottom: 10px !important;
@@ -109,7 +109,7 @@ footer.site-footer {
 
 footer.site-footer .footer-widgets .IDX_Omnibar_Widget {
 	* {
-		color: rgb(56,54,54);
+		color: $dark-text;
 	}
 	.awesomplete ul {
 		display: none;
@@ -121,5 +121,11 @@ footer.site-footer .button {
 	border-color: $light-text;
 	&:hover {
 		color: $light-text;
+	}
+}
+
+footer.site-footer {
+	.IDX-mapWidgetWrap * {
+		color: $dark-text;
 	}
 }

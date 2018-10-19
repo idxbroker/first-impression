@@ -126,6 +126,7 @@ body.home.must-see-white-bkg {
 	}
 
 
+	.impress-idx-dashboard-widget h4,
 	section.impress-carousel-widget h4,
 	.singleTestimonialWidget h4,
 	.listTestimonialsWidget h4,
@@ -164,6 +165,7 @@ body.home.must-see-white-bkg {
 	}
 
 	div[class^="home-middle-"].bg-gradient, footer {
+		.impress-idx-dashboard-widget h4,
 		.impress-carousel-widget h4,
 		.singleTestimonialWidget h4,
 		.listTestimonialsWidget h4,
@@ -380,38 +382,32 @@ body.home.must-see-white-bkg {
 	.featured-communities.flexible-widgets.widget-halves .widget.widget_text {
 	}
 
-	.impress-idx-dashboard-widget-section {
-		.impress-idx-dashboard-widget {
+	.IDX-mapWidgetWrap {
+		position: relative;
+		height: 700px !important;
+		.IDX-mapHeader {
+			position: absolute;
+			top: 0;
+			z-index: 1;
 		}
-		.IDX-mapWidgetWrap {
-			position: relative;
-			height: 700px !important;
-			.IDX-mapHeader {
-				position: absolute;
-				top: 0;
-				z-index: 1;
-			}
-			.IDX-mapCount {
-				font-family: $header-font-family;
-				font-weight: 400;
-				font-size: 1.1rem;
-				color: #4C5051;
-				float: right !important;
-				padding-right: 25px;
-				padding-top: 5px;
-			}
-			.IDX-mapTab {
-				float: left !important;
-				border-radius: 0px;
-				border: none;
-				border-bottom-right-radius: 5px;
-				box-shadow: 1px 1px 3px #666;
-			}
-			.leaflet-control-zoom {
-				margin-top: 50px !important;
-			}
-			div[id*='IDX-mapLoading'] {
-			}
+		.IDX-mapCount {
+			font-family: $header-font-family;
+			font-weight: 400;
+			font-size: 1.1rem;
+			color: #4C5051;
+			float: right !important;
+			padding-right: 25px;
+			padding-top: 5px;
+		}
+		.IDX-mapTab {
+			float: left !important;
+			border-radius: 0px;
+			border: none;
+			border-bottom-right-radius: 5px;
+			box-shadow: 1px 1px 3px #666;
+		}
+		.leaflet-control-zoom {
+			margin-top: 50px !important;
 		}
 	}
 
@@ -529,4 +525,17 @@ div[class^="home-middle-"].bg-gradient, footer {
 .fadeInUp {
 	-webkit-animation-name: fadeInUp;
 	animation-name: fadeInUp;
+}
+
+.must-see-fullscreen {
+	.widget-area {
+		.widget {
+			clear: both;
+			width: 100%;
+			max-width: 100%;
+		}
+		section.widget.impress-idx-dashboard-widget {
+			padding: 0;
+		}
+	}
 }
