@@ -765,7 +765,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			);
 
 			//* Secondary color - hover
-			$secondary_hover = equity_color_brightness( get_theme_mod( 'secondary_color', '#ced82a' ), '-', 14 );
+			$secondary_hover = '#258BB7';
 			if ( get_theme_mod( 'primary_tone' ) ) {
 				echo '
 				body.must-see-light footer a:hover,

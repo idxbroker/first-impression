@@ -200,10 +200,10 @@ input[type="submit"],
 #IDX-main .IDX-btn:link,
 #IDX-main .IDX-btn-default {
 	padding: 0 30px;
+	line-height: 100%;
+	min-height: 50px;
 	font-family: $header-font-family;
-	font-size: rem-calc(18);
 	color: $blue-text;
-	line-height: 44px;
 	letter-spacing: .02px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -212,9 +212,13 @@ input[type="submit"],
 	background: #fff;
 	&:hover, &:focus {
 		// TODO: Find where this is being applied
-		background: rgba(0,0,20,.1) !important;
+		background: rgba(0,0,20,.1);
 		color: $blue-text;
 	}
+}
+
+button.large, .button.large {
+	font-size: rem-calc(18);
 }
 
 .bg-gradient .button,

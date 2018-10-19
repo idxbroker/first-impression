@@ -107,8 +107,6 @@ body.home.must-see-white-bkg {
 			padding: 0 20px;
 			border: none;
 			border-radius: 0 5px 5px 0 !important;
-			i {
-			}
 		}
 		label {
 			display: none;
@@ -127,13 +125,14 @@ body.home.must-see-white-bkg {
 		}
 	}
 
-	.impress-carousel-widget h4,
+
+	section.impress-carousel-widget h4,
 	.singleTestimonialWidget h4,
 	.listTestimonialsWidget h4,
 	.contact-us > div > h4,
-	.featured-communities .widget_text h4 {
+	div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle {
 		position: relative;
-		color: $blue-text !important;
+		color: $blue-text;
 		text-align: center;
 		font-size: rem-calc(32);
 		overflow: hidden;
@@ -143,6 +142,7 @@ body.home.must-see-white-bkg {
 		margin: 50px 0;
 		@media #{$medium-up} {
 			&:before, &:after {
+				display: inline-block;
 				content: "";
 				top: 50%;
 				transform: translateY(-50%);
@@ -150,8 +150,9 @@ body.home.must-see-white-bkg {
 				width: 80px;
 				height: 3px;
 				vertical-align: middle;
-				background: #258BB7;
+				background: $blue-text;
 				border-radius: 5px;
+				margin: 0;
 			}
 			&:before {
 				margin-left: -105px;
@@ -162,25 +163,24 @@ body.home.must-see-white-bkg {
 		}
 	}
 
-	.bg-gradient {
-		h4 {
-			color: $light-text !important;
+	div[class^="home-middle-"].bg-gradient, footer {
+		.impress-carousel-widget h4,
+		.singleTestimonialWidget h4,
+		.listTestimonialsWidget h4,
+		.contact-us > div > h4,
+		.featured-communities .widget_text h4.widgettitle {
+			color: $light-text;
 	  		&:before, &:after {
-	    		background: $light-text;
+	    		background: $light-text !important;
 	  		}
 		}
 	}
 
 	div[class^="home-middle-"] {
-		section.widget_text {
+		.widget_text {
 			padding: 50px 0;
 		}
-		section:first-child  {
-			.widgettitle {
-			}
-		}
-
-		section {
+		.widget_text {
 			h2 {
 				font-size: rem-calc(32);
 				line-height: rem-calc(38.4);
@@ -188,21 +188,13 @@ body.home.must-see-white-bkg {
 			h4 {
 				font-size: rem-calc(24);
 			}
-			h2:after, h4:after {
-				content: "";
-				display: block;
-				width: 85px;
-				height: 3px;
-				margin: 30px 0;
-				border-radius: 5px;
-				background: #fff;
-			}
 			.button {
 				font-size: rem-calc(20);
 				letter-spacing: .025em;
-				width: 225px;
+				width: auto;
+				min-width: 225px;
 				line-height: 55px;
-				padding: 0;
+				padding: 0 10px;
 				border-radius: 5px;
 			}
 		}
@@ -255,7 +247,7 @@ body.home.must-see-white-bkg {
 	    	width: 100% !important;
 	    	float: none !important;
 	    	h4 {
-	    		margin: 0px;
+	    		margin: 0px !important;
 	    	}
 		}
 		.featured-page {
@@ -367,49 +359,13 @@ body.home.must-see-white-bkg {
 	}
 
 	div[class*='home-middle-'] {
-		.singleTestimonialWidget, .listTestimonialsWidget {
-			margin: 0 auto;
-			max-width: 900px;
+	}
+	div[class*='home-middle-'].bg-gradient, footer {
+		.easy_testimonial_title {
+			color: $light-text;
 		}
-		.easy_testimonial_image_wrapper {
-			img {
-				margin-right: 50px;
-			}
-		}
-		.easy_testimonial {
-			text-align: center;
-			@media #{$medium-up} {
-				text-align: left;
-			}
-			.testimonial_body p {
-				color: $light-text;
-				@media #{$medium-up} {
-					margin-left: 200px;
-				}
-			}
-			.testimonial_author {
-				@media #{$medium-up} {
-					margin-left: 200px;
-				}
-				cite {
-					color: $light-text;
-					&:before {
-						padding-right: 5px;
-					}
-					span:first-child {
-						display: inline;
-					}
-				}
-			}
-			img {
-				float: none;
-				@media #{$medium-up} {
-					float: left;
-				}
-				width: 150px;
-				height: 150px;
-				border-radius: 100% !important;
-			}
+		.easy_testimonial .testimonial_body p, .easy_testimonial .testimonial_author cite {
+			color: $light-text;
 		}
 	}
 
@@ -507,6 +463,49 @@ body.home.must-see-white-bkg {
 		}
 	}	
 }
+
+
+
+div[class^="home-middle-"], .contact-us, footer {
+	.widget_text, .impress-idx-signup-widget, {
+		h2, h4 {
+			color: $blue-text;
+			&:after {
+				content: "";
+				display: block;
+				width: 85px;
+				height: 3px;
+				margin: 20px 0;
+				border-radius: 5px;
+				background: $blue-text;	
+			}
+		}
+	}
+}
+
+
+// All bg-gradient color swaps
+div[class^="home-middle-"].bg-gradient, footer {
+	.widget_text, .impress-idx-signup-widget, {
+		h2, h4 {
+			color: $light-text;
+			&:after {
+				background: $light-text;
+			}
+		}
+	}
+	.property-details {
+		h3, .address, .city-state {
+			color: $light-text;
+		}
+		color: $light-text;
+	}
+	section {
+		h2:after, h4:after {
+			background: $light-text;
+		}
+	}
+}
 /** End new stuff **/
 
 
@@ -530,13 +529,4 @@ body.home.must-see-white-bkg {
 .fadeInUp {
 	-webkit-animation-name: fadeInUp;
 	animation-name: fadeInUp;
-}
-
-.bg-gradient {
-	.property-details {
-		h3, .address, .city-state {
-			color: #fff;
-		}
-		color: #fff;
-	}
 }

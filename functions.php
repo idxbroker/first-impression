@@ -366,6 +366,15 @@ function must_see_get_avatar( $avatar, $id_or_email, $size, $default, $alt )
     return $avatar;
 }
 
+function my_enqueue($hook) {
+    if ( 'widgets.php' != $hook ) {
+        return;
+    }
+
+    wp_enqueue_script( 'remove_widget_options', get_stylesheet_directory_uri() . '/lib/js/adminWidgets.js' );
+}
+add_action( 'admin_enqueue_scripts', 'my_enqueue' );
+
 // Includes
 
 # Theme Customizatons
