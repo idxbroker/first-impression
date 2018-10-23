@@ -39,10 +39,12 @@ remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' )
 // Add large square size image for featured pages on homepage.
 add_image_size( 'huge-square', '800', '800', true );
 add_image_size( 'large-square', '500', '500', true );
+
 function remove_img_attributes( $html ) {
-$html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
-return $html;
+	$html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+	return $html;
 }
+
 add_filter( 'post_thumbnail_html', 'remove_img_attributes', 10 );
 add_filter( 'image_send_to_editor', 'remove_img_attributes', 10 );
 
@@ -374,6 +376,20 @@ function my_enqueue($hook) {
     wp_enqueue_script( 'remove_widget_options', get_stylesheet_directory_uri() . '/lib/js/adminWidgets.js' );
 }
 add_action( 'admin_enqueue_scripts', 'my_enqueue' );
+
+// Add post thumbnail support
+add_action( 'equity_before_content', 'must_see_featured_image' );
+function must_see_featured_image() {
+	if ( ! is_singular( array( 'post', 'page' ) ) ) {
+		return;
+	}
+	if ( ! has_post_thumbnail() ) {
+		return;
+	}
+	echo '<div class="must-see-featured-image">';
+		equity_image( array( 'size' => 'must-see-featured-thumb' ) );
+	echo '</div>';
+}
 
 // Includes
 
