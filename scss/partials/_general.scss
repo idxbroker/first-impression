@@ -199,11 +199,16 @@ input[type="submit"],
 #IDX-main .IDX-btn,
 #IDX-main .IDX-btn:link,
 #IDX-main .IDX-btn-default {
-	padding: 0 30px;
-	font-family: $header-font-family;
+	// Styled for medium by default
 	font-size: rem-calc(18);
+	letter-spacing: 0.02;
+	min-height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px 30px;
+	font-family: $header-font-family;
 	color: $blue-text;
-	line-height: 44px;
 	letter-spacing: .02px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -212,9 +217,16 @@ input[type="submit"],
 	background: #fff;
 	&:hover, &:focus {
 		// TODO: Find where this is being applied
-		background: rgba(0,0,20,.1) !important;
+		background: rgba(0,0,20,.1);
 		color: $blue-text;
 	}
+}
+
+button.large, .button.large {
+	font-size: rem-calc(20);
+	line-height: rem-calc(28);
+	letter-spacing: 0.025;
+	min-height: 60px;
 }
 
 .bg-gradient .button,
@@ -360,3 +372,18 @@ textarea:focus {
 	background: #fff;
 	border-color: $blue-text;
 }
+
+div[class^="home-middle-"] { position: relative };
+.must-see-z-index-1  { z-index: 1 };
+.must-see-z-index-2  { z-index: 2 };
+.must-see-z-index-3  { z-index: 3 };
+.must-see-z-index-4  { z-index: 4 };
+.must-see-z-index-5  { z-index: 5 };
+.must-see-z-index-6  { z-index: 6 };
+.must-see-z-index-7  { z-index: 7 };
+.must-see-z-index-8  { z-index: 8 };
+.must-see-z-index-9  { z-index: 9 };
+.must-see-z-index-10 { z-index: 10 };
+.must-see-z-index-11 { z-index: 11 };
+.must-see-z-index-12 { z-index: 12 };
+.must-see-z-index-13 { z-index: 13 };

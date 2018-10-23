@@ -639,7 +639,10 @@ section.equity-post-carousel article .entry-content {
 }
 
 .equity-idx-search-widget .equity-qs-links {
-	font-size: 15px;
+	font-family: $header-font-family;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	letter-spacing: .02px;
 }
 
 .equity-idx-search-widget .equity-qs-links .advanced-search,
@@ -772,15 +775,19 @@ table#wp-calendar {
 
 /** new stuff **/
 .impress-idx-signup-widget, .equity-idx-search-widget {
+	> p {
+		padding-bottom: 20px;
+	}
 	label {
 		display: none;
 	}
-	select, input[type="text"], input[type="email"] {
+	select, input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+		font-family: $header-font-family;
 		background: #fff;
 		box-shadow: none;
 		border: 2px solid #e6e6e6;
 		border-radius: 5px;
-		font-size: 1rem;
+		font-size: rem-calc(16);
 		height: 45.5px;
 		font-weight: 400;
 		margin-bottom: 30px;
@@ -794,15 +801,29 @@ table#wp-calendar {
 		width: 100%;
 		font-weight: 400;
 		text-transform: uppercase;
-		font-size: 1.1rem;
-		letter-spacing: .5px;
+		font-size: rem-calc(18);
+		letter-spacing: .02px;
 		line-height: 44.5px;
 		padding: 0;
 		color: $primary-color;
 		background: #fff;
 		border: 1px solid $primary-color;
 		border-radius: 5px;
-		&:hover {
+	}
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-idx-signup-widget, .equity-idx-search-widget {
+		input {
+			color: $dark-text;
+			border-color: $light-text;
+		}
+		button {
+			color: $dark-text;
+			border-color: $light-text;
+			&:hover, &:active {
+				background: #eee;
+			}
 		}
 	}
 }
@@ -812,10 +833,6 @@ table#wp-calendar {
 		.fa-search {
 			display: none;
 		}
-	}
-	.equity-qs-links {
-		text-transform: uppercase;
-		letter-spacing: .4px;
 	}
 }
 
@@ -852,5 +869,83 @@ table#wp-calendar {
 	h3.price {
 		font-size: rem-calc(28);
 		color: $blue-text;
+	}
+}
+
+
+.singleTestimonialWidget, .listTestimonialsWidget {
+	margin: 0 auto;
+	max-width: 900px;
+}
+div.easy_testimonial_image_wrapper {
+	img.wp-post-image {
+		margin-right: 50px;
+	}
+}
+.easy_testimonial {
+	text-align: center;
+	@media #{$medium-up} {
+		text-align: left;
+	}
+	.testimonial_body p {
+		color: $dark-text;
+		@media #{$medium-up} {
+			margin-left: 200px;
+		}
+	}
+	.testimonial_author {
+		@media #{$medium-up} {
+			margin-left: 200px;
+		}
+		cite {
+			color: $blue-text;
+			&:before {
+				padding-right: 5px;
+			}
+			span:first-child {
+				display: inline;
+			}
+		}
+	}
+	img {
+		float: none;
+		@media #{$medium-up} {
+			float: left;
+		}
+		width: 150px;
+		height: 150px;
+		border-radius: 100% !important;
+	}
+}
+
+.impress-idx-dashboard-widget {
+}
+.IDX-mapWidgetWrap {
+	position: relative;
+	.IDX-mapHeader {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+	.IDX-mapCount {
+		font-family: $header-font-family;
+		font-weight: 400;
+		font-size: 1.1rem;
+		color: #4C5051;
+		float: right !important;
+		padding-right: 25px;
+		padding-top: 5px;
+	}
+	.IDX-mapTab {
+		float: left !important;
+		border-radius: 0px;
+		border: none;
+		border-bottom-right-radius: 5px;
+		box-shadow: 1px 1px 3px #666;
+	}
+	.leaflet-control-zoom {
+		margin-top: 50px !important;
+	}
+	div[id*='IDX-mapLoading'] {
 	}
 }
