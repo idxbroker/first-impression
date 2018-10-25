@@ -213,7 +213,6 @@ function equity_child_home() {
 }
 //remove_action( 'equity_header', 'equity_header_markup_open', 5 );
 //remove_action( 'equity_header', 'equity_header_markup_close', 15 );
-remove_action( 'equity_header', 'equity_do_header' );
 /*
 add_action( 'equity_header', 'test_header' );
 function test_header() {
@@ -390,6 +389,8 @@ function must_see_featured_image() {
 		equity_image( array( 'size' => 'must-see-featured-thumb' ) );
 	echo '</div>';
 }
+
+// Header
 
 // Includes
 

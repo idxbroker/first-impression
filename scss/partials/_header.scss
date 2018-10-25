@@ -5,6 +5,7 @@ header.site-header {
 	color: $body-font-color;
 	background: $body-bg;
 	width: 100%;
+	z-index: 10;
 }
 header.site-header:after {
 	content: "";
@@ -12,14 +13,12 @@ header.site-header:after {
 	clear: both;
 }
 header.site-header .title-area {
+	position: relative;
+	text-align: center;
 	padding-left: 0;
 	padding-right: 0;
-	padding-top: 0.8rem;
-	padding-bottom: 0.8rem;
-	text-align: center;
 }
 body.sticky .sticky-header header.site-header .title-area {
-	padding: 0.7rem 0;
 }
 header.site-header .site-title {
 	font-family: $header-font-family;
@@ -27,9 +26,13 @@ header.site-header .site-title {
 	line-height: 1;
 	letter-spacing: -1px;
 	margin: 0;
+	height: 100px;
 }
 header.site-header .site-title img {
-	max-height: 80px;
+	display: block;
+	max-height: 100px;
+	margin: 0 auto;
+	z-index: 11;
 }
 header .site-title a,
 header .site-title a:hover {
@@ -181,6 +184,10 @@ a.off-canvas-toggle:before {
 	color: $body-font-color-secondary;
 }
 
+.site-title {
+	background: $blue-text;
+}
+
 @media #{$medium-up} {
 	body.top-bar-enabled a.off-canvas-toggle {
 		top: 30px;
@@ -188,7 +195,12 @@ a.off-canvas-toggle:before {
 	a.off-canvas-toggle {
 		font-size: rem-calc(24);
 	}
-}
-@media #{$large-up} {
-
+	.site-title {
+		text-align: center;
+		background: #fff;
+	}
+	.site-title a {
+		display: inline-block;
+		background: #333;
+	}
 }

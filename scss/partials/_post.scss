@@ -137,19 +137,28 @@ body.single-post {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-	padding: 0 30px;
-	padding-bottom: 30%;
+	width: 100%; // For backwards compatibility
+	width: calc(100% - 60px);
+	padding-bottom: 50%;
+	margin: 0 30px;
 	margin-bottom: 55px;
 	overflow: hidden;
 	@media #{$medium-up} {
 	}
 	img {
-		position: absolute;
-		width: 100%;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+        position: absolute;
+        // Browser compatible version of object-cover
+        top: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        margin: auto;
+        min-width: 100%;
+        min-height: 100%;
+        // Remove all inline width/height stylings
+        width: auto;
+        height: auto;
 		max-width: none;
+		max-height: none;
 	}
 }
