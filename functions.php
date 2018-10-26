@@ -34,7 +34,7 @@ if ( ! get_theme_mod( 'footer_widgets' ) ) {
 }
 
 // Remove header right widget area.
-// remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' );
+remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' );
 
 // Add large square size image for featured pages on homepage.
 add_image_size( 'huge-square', '800', '800', true );
@@ -234,7 +234,7 @@ add_action( 'equity_header', 'social_icons' );
 
 function social_icons() {
 	?>
-	<div class="social-icons-header"><?php equity_widget_area( 'nav-social-icons' ); ?></div>
+	<div class="social-icons-header"><?php echo do_shortcode('[social_icons]'); ?></div>
 	<?php
 }
 

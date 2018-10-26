@@ -144,9 +144,21 @@ body.sticky .sticky-header .nav-header-right ul > li.menu-item-has-children > a:
 
 }
 
+header {
+	position: relative;
+}
+
 .social-icons-header {
-	display: absolute;
+	position: absolute;
 	top: 0;
 	bottom: 0;
 	right: 0;
+	.agent-social-icons a {
+		font-size: 2rem;
+		line-height: 100px;
+		margin-right: 45px;
+	}
+	.fa-rss {
+		display: none;
+	}
 }
