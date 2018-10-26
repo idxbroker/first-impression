@@ -27,7 +27,14 @@ body.sticky .menu-toggle {
 }
 .nav-header-right li {
 	display: inline-block;
+	width: 235px;
 	list-style-type: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	a {
+		display: inline;
+		white-space: nowrap;
+	}
 }
 
 .nav-header-right li ul {
@@ -48,7 +55,7 @@ body.sticky .menu-toggle {
 .nav-header-right .sub-menu {
 	position: absolute;
 	top: 0px;
-	left: 400px;
+	left: 235px;
 }
 
 .nav-header-right .sub-menu a {
@@ -76,7 +83,7 @@ body.sticky .menu-toggle {
 	font-family: $body-font-family;
 	font-size: rem-calc(18);
 	font-weight: $paragraph-font-weight;
-	line-height: 40px;
+	line-height: 33px;
 }
 
 .nav-header-right a:focus,
@@ -84,20 +91,17 @@ body.sticky .menu-toggle {
 .nav-header-right .current-menu-item > a {
 	color: $body-font-color;
 }
-.nav-header-right ul > li.menu-item-has-children {
-	padding-right: 5px;
-}
 .nav-header-right ul > li.menu-item-has-children > a:after {
+	display: inline-block;
 	color: $blue-text;
 	content: "\f105";
 	font-family: 'FontAwesome';
 	font-weight: normal;
 	width: 8px;
 	height: 8px;
-	margin-left: 10px;
+	margin-left: 15px;
 }
 .nav-header-right ul > li.menu-item-has-children > a:hover:after {
-	animation: nav-flip-side 0.2s ease-in-out both;
 }
 
 .nav-header-right .sub-menu .sub-menu:before {
@@ -111,6 +115,7 @@ body.sticky .menu-toggle {
 .nav-header-right ul > .menu-item:hover > .sub-menu,
 .nav-header-right ul > .menu-item:focus > .sub-menu {
 	display: block;
+	height: 100%;
 }
 
 .nav-header-right ul > .menu-item > .sub-menu > .menu-item:first-child {
@@ -124,11 +129,9 @@ body.sticky .menu-toggle {
 }
 
 .nav-header-right ul > .menu-item .sub-menu > .menu-item:last-child {
-	padding-bottom: 5px;
 }
 
 body.sticky .sticky-header .nav-header-right ul > li a {
-	padding: 15px 20px 11px;
 }
 body.sticky .sticky-header .nav-header-right ul > li.menu-item-has-children > a:after {
 	top: 1.1rem;
@@ -139,4 +142,11 @@ body.sticky .sticky-header .nav-header-right ul > li.menu-item-has-children > a:
 }
 @media #{$large-up} {
 
+}
+
+.social-icons-header {
+	display: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
 }

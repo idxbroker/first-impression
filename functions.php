@@ -19,7 +19,7 @@ function child_dequeue_foundation_stylesheet() {
 }
 
 // Add Theme Support.
-add_theme_support( 'equity-after-entry-widget-area' );
+// add_theme_support( 'equity-after-entry-widget-area' );
 add_theme_support( 'equity-menus', array(
 	'header-right' => __( 'Header Right', 'must-see' ),
 ) );
@@ -34,7 +34,7 @@ if ( ! get_theme_mod( 'footer_widgets' ) ) {
 }
 
 // Remove header right widget area.
-remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' );
+// remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' );
 
 // Add large square size image for featured pages on homepage.
 add_image_size( 'huge-square', '800', '800', true );
@@ -223,6 +223,20 @@ function test_header() {
 	<?php
 }
 */
+
+equity_register_widget_area( array(
+	'id'          => 'nav-social-icons',
+	'name'        => __( 'Social Icons', 'must-see' ),
+	'description' => __( 'This section is for social icons in your header.', 'must-see' ),
+) );
+
+add_action( 'equity_header', 'social_icons' );
+
+function social_icons() {
+	?>
+	<div class="social-icons-header"><?php equity_widget_area( 'nav-social-icons' ); ?></div>
+	<?php
+}
 
 add_action( 'equity_before_footer', 'must_see_before_footer', 1 );
 function must_see_before_footer() {
