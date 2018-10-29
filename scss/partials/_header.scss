@@ -6,10 +6,6 @@ header.site-header {
 	background: $body-bg;
 	width: 100%;
 	z-index: 10;
-	font-size: .5rem;
-	@media #{$medium-up} {
-		font-size: 1rem;
-	}
 }
 header.site-header:after {
 	content: "";
@@ -31,24 +27,25 @@ body.sticky .sticky-header header.site-header .title-area {
 header.site-header .site-title {
 	font-family: $header-font-family;
 	font-size: rem-calc(40);
-	line-height: 1;
+	line-height: 100px;
 	letter-spacing: -1px;
 	margin: 0;
 	@media #{$medium-up} {
 		height: 100px;
+		color: $light-text;
 	}
 }
 header.site-header .site-title a {
 	display: inline-block;
 	z-index: 11;
+	color: $light-text;
+	@media #{$medium-up} {
+		color: $dark-text;
+	}
 }
 
 header.site-header .site-title img {
 	max-height: 150px;
-}
-header .site-title a,
-header .site-title a:hover {
-	color: $body-font-color;
 }
 header .site-title a:focus {
 	color: $secondary-color;
@@ -220,4 +217,22 @@ a.off-canvas-toggle:before {
 
 .header-widget-area {
 	display: none;
+}
+
+.social-icons-header {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	.agent-social-icons a {
+		line-height: 100px;
+		margin-right: 20px;
+		font-size: 24px;
+		@media (max-width: 850px) and (min-width: 641px) {
+			margin-right: 10px;
+		}
+	}
+	.fa-rss {
+		display: none;
+	}
 }
