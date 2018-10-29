@@ -1,5 +1,5 @@
 .nav-header-right {
-	// display: none;
+	display: none;
 	position: absolute;
 	width: 100%;
 	padding: 50px 0;
@@ -16,7 +16,7 @@ a.menu-toggle {
 	display: block;
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	bottom: 120px;
 	left: 38px;
 	color: $blue-text;
 	font-size: rem-calc(25);
@@ -24,6 +24,7 @@ a.menu-toggle {
 	@media #{$medium-up} {
 		font-size: rem-calc(50);
 		line-height: $top-bar-height-large;
+		bottom: 0;
 	}
 }
 body.sticky .menu-toggle {

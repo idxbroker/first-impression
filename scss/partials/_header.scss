@@ -36,11 +36,13 @@ header.site-header .site-title {
 	margin: 0;
 	height: 100px;
 }
-header.site-header .site-title img {
-	display: block;
-	max-height: 100px;
-	margin: 0 auto;
+header.site-header .site-title a {
+	display: inline-block;
 	z-index: 11;
+}
+
+header.site-header .site-title img {
+	max-height: 100px;
 }
 header .site-title a,
 header .site-title a:hover {
@@ -198,6 +200,7 @@ a.off-canvas-toggle:before {
 	padding: 10px 0;
 	@media #{$medium-up} {
 		padding: 0;
+		background: #fff;
 	}
 }
 
@@ -210,11 +213,6 @@ a.off-canvas-toggle:before {
 	}
 	.site-title {
 		text-align: center;
-		background: #fff;
-	}
-	.site-title a {
-		display: inline-block;
-		background: #333;
 	}
 }
 
