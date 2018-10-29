@@ -1,5 +1,5 @@
 .nav-header-right {
-	// display: none;
+	display: none;
 	position: absolute;
 	width: 100%;
 	padding: 50px 0;
@@ -58,19 +58,8 @@ body.sticky .menu-toggle {
 	left: 235px;
 }
 
-.nav-header-right .sub-menu a {
-	color: $body-font-color;
-}
-
 .nav-header-right .sub-menu li:last-child a {
 	border-bottom: none;
-}
-
-.nav-header-right .menu-item a:focus,
-.nav-header-right .menu-item a:hover,
-.nav-header-right .sub-menu a:focus,
-.nav-header-right .sub-menu a:hover {
-	color: $body-font-color;
 }
 
 .nav-header-right .menu-item:focus,
@@ -86,11 +75,6 @@ body.sticky .menu-toggle {
 	line-height: 33px;
 }
 
-.nav-header-right a:focus,
-.nav-header-right a:hover,
-.nav-header-right .current-menu-item > a {
-	color: $body-font-color;
-}
 .nav-header-right ul > li.menu-item-has-children > a:after {
 	display: inline-block;
 	color: $blue-text;
