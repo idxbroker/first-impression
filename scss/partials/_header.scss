@@ -6,6 +6,10 @@ header.site-header {
 	background: $body-bg;
 	width: 100%;
 	z-index: 10;
+	font-size: .5rem;
+	@media #{$medium-up} {
+		font-size: 1rem;
+	}
 }
 header.site-header:after {
 	content: "";
@@ -17,6 +21,10 @@ header.site-header .title-area {
 	text-align: center;
 	padding-left: 0;
 	padding-right: 0;
+	margin-top: $top-bar-height;
+	@media #{$medium-up} {
+		margin-top: 0;
+	}
 }
 body.sticky .sticky-header header.site-header .title-area {
 }
@@ -184,8 +192,13 @@ a.off-canvas-toggle:before {
 	color: $body-font-color-secondary;
 }
 
-.site-title {
+.title-area  {
 	background: $blue-text;
+	color: $light-text;
+	padding: 10px 0;
+	@media #{$medium-up} {
+		padding: 0;
+	}
 }
 
 @media #{$medium-up} {

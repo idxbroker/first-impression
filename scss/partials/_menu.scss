@@ -4,9 +4,13 @@
 	width: 100%;
 	padding: 50px 0;
 	margin: 0;
-	top: 100%;
+	top: $top-bar-height;
 	left: 0;
-	background: rgba(255, 255, 255, .9);
+	background: rgba(245, 245, 245, 1);
+	@media #{$medium-up} {
+		top: 100%;
+		background: rgba(255, 255, 255, .9);
+	}
 }
 a.menu-toggle {
 	display: block;
@@ -15,8 +19,12 @@ a.menu-toggle {
 	bottom: 0;
 	left: 38px;
 	color: $blue-text;
-	font-size: 50px;
-	line-height: 100px;
+	font-size: rem-calc(25);
+	line-height: $top-bar-height;
+	@media #{$medium-up} {
+		font-size: rem-calc(50);
+		line-height: $top-bar-height-large;
+	}
 }
 body.sticky .menu-toggle {
 	top: 0.7rem;
@@ -118,30 +126,8 @@ body.sticky .menu-toggle {
 	height: 100%;
 }
 
-.nav-header-right ul > .menu-item > .sub-menu > .menu-item:first-child {
-}
-
-.nav-header-right .sub-menu a {
-}
-
 .nav-header-right ul > .menu-item > .sub-menu > .menu-item:last-child {
 	border-radius: 0 0 3px 3px;
-}
-
-.nav-header-right ul > .menu-item .sub-menu > .menu-item:last-child {
-}
-
-body.sticky .sticky-header .nav-header-right ul > li a {
-}
-body.sticky .sticky-header .nav-header-right ul > li.menu-item-has-children > a:after {
-	top: 1.1rem;
-}
-
-@media #{$medium-up} {
-	
-}
-@media #{$large-up} {
-
 }
 
 header {
@@ -154,9 +140,14 @@ header {
 	bottom: 0;
 	right: 0;
 	.agent-social-icons a {
-		font-size: 2rem;
-		line-height: 100px;
-		margin-right: 45px;
+		font-size: 1rem;
+		line-height: $top-bar-height;
+		margin-right: 20px;
+		@media #{$medium-up} {
+			font-size: 2rem;
+			line-height: $top-bar-height-large;
+			margin-right: 45px;
+		}
 	}
 	.fa-rss {
 		display: none;
