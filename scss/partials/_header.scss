@@ -34,7 +34,9 @@ header.site-header .site-title {
 	line-height: 1;
 	letter-spacing: -1px;
 	margin: 0;
-	height: 100px;
+	@media #{$medium-up} {
+		height: 100px;
+	}
 }
 header.site-header .site-title a {
 	display: inline-block;
@@ -42,7 +44,7 @@ header.site-header .site-title a {
 }
 
 header.site-header .site-title img {
-	max-height: 100px;
+	max-height: 150px;
 }
 header .site-title a,
 header .site-title a:hover {
