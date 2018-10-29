@@ -224,12 +224,6 @@ function test_header() {
 }
 */
 
-equity_register_widget_area( array(
-	'id'          => 'nav-social-icons',
-	'name'        => __( 'Social Icons', 'must-see' ),
-	'description' => __( 'This section is for social icons in your header.', 'must-see' ),
-) );
-
 add_action( 'equity_header', 'social_icons' );
 
 function social_icons() {
