@@ -94,10 +94,27 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 	//* Colors
 	private function colors( $wp_customize ) {
 		$wp_customize->add_section(
+			'preset_colors',
+			array(
+				'title'    => __( 'Preset Colors', 'must-see' ),
+				'priority' => 200,
+			)
+		);
+
+		$wp_customize->add_section(
 			'colors',
 			array(
-				'title'    => __( 'Custom Colors', 'must-see' ),
-				'priority' => 200,
+				'title'       => __( 'Custom Colors', 'must-see' ),
+				'description' => __('NOTICE: These changes will not be saved unless you change the "Color Preset" to "Custom"'),
+				'priority'    => 200,
+			)
+		);
+
+		$wp_customize->add_setting(
+			'preset_color_scheme',
+			array(
+				'default' => 'blue',
+				'type'    => 'theme_mod',
 			)
 		);
 
@@ -120,6 +137,27 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				)
 			);
 		}
+
+
+		$wp_customize->add_control(
+			'preset_color_scheme',
+			array(
+				'label'    => __( 'Preset Color Scheme', 'must-see' ),
+				'section'  => 'preset_colors',
+				'type'     => 'select',
+				'choices'  => array(
+					'blue'      => __( 'Blue' ),
+					'green'     => __( 'Green' ),
+					'red'       => __( 'Red' ),
+					'tangerine' => __( 'Tangerine' ),
+					'white_blue' => __( 'White Blue' ),
+					'custom'    => __( 'Use custom colors' )
+
+				),
+				'settings' => 'preset_color_scheme',
+				'priority' => 100,
+			)
+		);
 
 		//* Primary Color
 		$wp_customize->add_control(
@@ -844,6 +882,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			$font_secondary_color = get_theme_mod('font_secondary_color', '#ffffff');
 			$gradient_start = get_theme_mod('gradient_start', '#3fa5db');
 			$gradient_end = get_theme_mod('gradient_end', '#5087c8');
+
 			echo ".bg-gradient {
 				background: linear-gradient(135deg, $gradient_start 0%, $gradient_end 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			}";

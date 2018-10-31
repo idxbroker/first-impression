@@ -48,14 +48,6 @@ function remove_img_attributes( $html ) {
 add_filter( 'post_thumbnail_html', 'remove_img_attributes', 10 );
 add_filter( 'image_send_to_editor', 'remove_img_attributes', 10 );
 
-// Create additional color style options
-add_theme_support( 'equity-style-selector', array(
-	'must-see-blue'   => __( 'Blue', 'must-see' ),
-	'must-see-red'    => __( 'Red', 'must-see' ),
-	'must-see-tan'    => __( 'Tan', 'must-see' ),
-	'must-see-custom' => __( 'Use Customizer', 'must-see' ),
-) );
-
 // Load fonts.
 add_filter( 'equity_google_fonts', 'must_see_fonts' );
 function must_see_fonts( $equity_google_fonts ) {
@@ -396,6 +388,52 @@ function must_see_featured_image() {
 	echo '<div class="must-see-featured-image">';
 		equity_image( array( 'size' => 'must-see-featured-thumb' ) );
 	echo '</div>';
+}
+
+// Customizer color preset overrides
+add_action('customize_save_after', 'use_preset_colors');
+function use_preset_colors() {
+	$presets = array(
+		'blue' => array(
+			'primary_color'        => '#258bb7',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#3fa5db',
+			'gradient_end'         => '#5087c8'
+		),
+		'green' => array(
+			'primary_color'        => '#2e7e55',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#1a9a59',
+			'gradient_end'         => '#1e844c'
+		),
+		'red' => array(
+			'primary_color'        => '#b82501',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#b82601',
+			'gradient_end'         => '#aa1f03'
+		),
+		'tangerine' => array(
+			'primary_color'        => '#e27121',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#e27121',
+			'gradient_end'         => '#d3671e'
+		),
+		'white_blue' => array(
+			'primary_color'        => '#248ab7',
+			'font_secondary_color' => '#000000',
+			'gradient_start'       => '#f5f5f5',
+			'gradient_end'         => '#f5f5f5'
+		)
+	);
+
+	$preset_color = get_theme_mod( 'preset_color_scheme' );
+	if ($preset_color !== 'custom' && $presets[$preset_color]) {
+		$preset = $presets[$preset_color];
+		set_theme_mod('primary_color', $preset['primary_color']);
+		set_theme_mod('font_secondary_color', $preset['font_secondary_color']);
+		set_theme_mod('gradient_start', $preset['gradient_start']);
+		set_theme_mod('gradient_end', $preset['gradient_end']);
+	}
 }
 
 // Header
