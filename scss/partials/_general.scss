@@ -1,16 +1,5 @@
 /*! =Background (alternates)
 ------------------------------------------------------------------------- */
-.bg-primary {
-	background-color: $primary-color;
-}
-.bg-gradient p,
-.bg-gradient a,
-.bg-gradient label {
-	color: $body-font-color-secondary;
-}
-.bg-gradient {
-	background: linear-gradient(135deg, #3fa5db 0%,#5087c8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
 /*! =Structure
 ------------------------------------------------------------------------- */
 .structural-wrap {
@@ -227,7 +216,7 @@ button.large, .button.large {
 .bg-gradient input[type="button"],
 .bg-gradient input[type="submit"] {
 	background: none;
-	border: 2px solid #fff;
+	border: 2px solid;
 }
 .bg-gradient .button:hover,
 .bg-gradient button:hover,
@@ -379,3 +368,8 @@ div[class^="home-middle-"] { position: relative };
 .must-see-z-index-11 { z-index: 11 };
 .must-see-z-index-12 { z-index: 12 };
 .must-see-z-index-13 { z-index: 13 };
+
+.customize-partial-edit-shortcut-button {
+	height: 30px !important;
+	width: 30px !important;
+}

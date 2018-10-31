@@ -38,14 +38,6 @@ body.home.must-see-white-bkg {
 }
 // Headings and body
 // Anchors
-.home a,
-.home .widget article h2.entry-title a {
-	color: $primary-color;
-}
-.home .bg-gradient a,
-.home .widget article h2.entry-title a {
-	color: $body-font-color-secondary;
-}
 
 /** New stuff ***/
 .home {
@@ -175,15 +167,14 @@ body.home.must-see-white-bkg {
 		}
 
 		.carousel-photo {
+			position: relative;
 			width: 235px;
 			height: 235px;
 			border-radius: 100%;
 			overflow: hidden;
-			position: relative;
 			img {
-				display: inline;
-				margin: 0 auto;
-				height: 100%;	
+				position: relative;
+				height: 100%;
 			}
 		}
 

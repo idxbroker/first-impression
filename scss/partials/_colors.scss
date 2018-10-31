@@ -241,7 +241,9 @@ a.menu-toggle,
 footer.site-footer .footer-widgets .widget a:hover,
 footer.site-footer .footer-widgets .widget a:focus,
 footer.site-footer a:hover,
-footer.site-footer a:focus {
+footer.site-footer a:focus,
+.home a,
+.home .widget article h2.entry-title a {
 	color: $primary-color;
 }
 
@@ -287,7 +289,11 @@ h1:after {
 .bg-gradient .easy_testimonial_title,
 .bg-gradient .easy_testimonial .testimonial_body p,
 .bg-gradient .easy_testimonial .testimonial_author cite,
-.title-area {
+.title-area,
+.home .bg-gradient a,
+.bg-gradient p,
+.bg-gradient a,
+.bg-gradient label {
 	color: $light-text;
 }
 
@@ -312,14 +318,11 @@ h1:after {
 	}
 }
 
-div[class*='home-middle-'].bg-gradient,
-footer.site-footer .footer-widgets {
-	input {
-		border-color: $white;
-	}
-	button {
-		border-color: $white;
-	}
+.bg-gradient .button,
+.bg-gradient button,
+.bg-gradient input[type="button"],
+.bg-gradient input[type="submit"] {
+	border-color: $light-text;
 }
 /*** DARK TEXT ***/
 @media only screen and (min-width: 40.063em) {
@@ -374,7 +377,8 @@ footer.site-footer .easy_testimonial .testimonial_author cite {
 
 footer.site-footer .button
 footer.site-footer input,
-footer.site-footer button, {
+footer.site-footer button,
+footer.site-footer .footer-widgets {
 	border-color: #fff;
 }
 

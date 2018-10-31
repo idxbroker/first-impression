@@ -103,10 +103,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 		//* Setting key and default value array
 		$settings = array(
-			'primary_color'       => '#258BB7',
-			'secondary_color'     => '#258BB7',
-			'primary_tone'        => false,
-			'content_bkg'   => true,
+			'primary_color'        => '#258BB7',
+			'gradient_start'       => '#3fa5db',
+			'gradient_end'         => '#5087c8',
+			'font_secondary_color' => '#FFFFFF',
+			'zoom_property_image'  => false
 		);
 
 		foreach ( $settings as $setting => $default ) {
@@ -135,47 +136,63 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			)
 		);
 
-		//* Secondary Color
+		//* Font Secondary Color
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
-				'secondary_color',
+				'font_secondary_color',
 				array(
-					'label'       => __( 'Secondary Color', 'must-see' ),
-					'description' => __( 'Used for accents.', 'must-see' ),
+					'label'       => __( 'Body Font Secondary Color', 'must-see' ),
+					'description' => __( 'Used dark backgrounds.', 'must-see' ),
 					'section'     => 'colors',
-					'settings'    => 'secondary_color',
+					'settings'    => 'font_secondary_color',
 					'priority'    => 100,
 				)
 			)
 		);
 
-		//* Toggle light/dark tone
+		//* Gradient start color
 		$wp_customize->add_control(
-			new WP_Customize_Control(
+			new WP_Customize_Color_Control(
 				$wp_customize,
-				'primary_tone',
+				'gradient_start',
 				array(
-					'label'       => __( 'Use a light color scheme?', 'must-see' ),
+					'label'       => __( 'Gradient Start Color', 'must-see' ),
+					'description' => __( 'Used for backgrounds in the home page.', 'must-see' ),
 					'section'     => 'colors',
-					'settings'    => 'primary_tone',
-					'type'        => 'checkbox',
-					'priority'    => 200,
+					'settings'    => 'gradient_start',
+					'priority'    => 100,
 				)
 			)
 		);
 
-		//* Toggle light/dark content background
+		//* Gradient end color
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'gradient_end',
+				array(
+					'label'       => __( 'Gradient End Color', 'must-see' ),
+					'description' => __( 'Used for backgrounds in the home page.', 'must-see' ),
+					'section'     => 'colors',
+					'settings'    => 'gradient_end',
+					'priority'    => 100,
+				)
+			)
+		);
+
+		//* Zoom in for property photos with white cropping
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'content_bkg',
+				'zoom_property_image',
 				array(
-					'label'       => __( 'Use a white background on the content area?', 'must-see' ),
-					'section'     => 'colors',
-					'settings'    => 'content_bkg',
+					'label'       => __( 'Zoom in on property carousel image?', 'must-see' ),
+					'description' => __( 'Used for MLS cropped photos with a white background.', 'must-see' ),
+					'section'     => 'title_tagline',
+					'settings'    => 'zoom_property_image',
 					'type'        => 'checkbox',
-					'priority'    => 300,
+					'priority'    => 400,
 				)
 			)
 		);
@@ -551,55 +568,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			}
 
 			//* Primary color - backgrounds
-			if ( get_theme_mod( 'primary_tone' ) ) {
-				self::generate_css('
-					body.must-see-light .bg-primary,
-					body.must-see-light .button,
-					body.must-see-light button,
-					body.must-see-light input[type="button"],
-					body.must-see-light input[type="submit"],
-					body.must-see-light .widget .idx-omnibar-form button,
-					body.must-see-light a.off-canvas-toggle,
-					body.must-see-light .after-entry-widget-area,
-					body.must-see-light.home .content-sidebar-wrap.row div[class*=\'home-middle-\'].bg-primary,
-					body.must-see-light .widget .owl-carousel .owl-nav.owl-controls button.owl-prev,
-					body.must-see-light .widget .owl-carousel .owl-nav.owl-controls button.owl-next,
-					body.must-see-light .ae-iconbox.type-2 i,
-					body.must-see-light .ae-iconbox.type-3 i,
-					body.must-see-light ul.pagination li.current a,
-					body.must-see-light ul.pagination li.current button,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn:link,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn-default,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-navbar-default
-					',
-					'background-color', 'primary_color'
-				);
-			} else {
-				self::generate_css('
-					.bg-primary,
-					.button,
-					button,
-					input[type="button"],
-					input[type="submit"],
-					.widget .idx-omnibar-form button,
-					a.off-canvas-toggle,
-					.after-entry-widget-area,
-					.home .content-sidebar-wrap.row div[class*=\'home-middle-\'].bg-primary,
-					.widget .owl-carousel .owl-nav.owl-controls button.owl-prev,
-					.widget .owl-carousel .owl-nav.owl-controls button.owl-next,
-					.ae-iconbox.type-2 i,
-					.ae-iconbox.type-3 i,
-					ul.pagination li.current a,
-					ul.pagination li.current button,
-					#IDX-main.IDX-wrapper-standard .IDX-btn,
-					#IDX-main.IDX-wrapper-standard .IDX-btn:link,
-					#IDX-main.IDX-wrapper-standard .IDX-btn-default,
-					#IDX-main.IDX-wrapper-standard .IDX-navbar-default
-					',
-					'background-color', 'primary_color'
-				);
-			}
 
 			//* Primary color - borders
 			self::generate_css('
@@ -614,7 +582,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			);
 
 			//* Primary color hover
-			$primary_hover = get_theme_mod( 'primary_color', '#eee' );
+			$primary_hover = '#eee';
 			if ( get_theme_mod( 'primary_tone' ) ) {
 				echo '
 					body.must-see-light a:hover,
@@ -717,83 +685,28 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					}';
 			}
 
-			//* Secondary color
-			if ( get_theme_mod( 'primary_tone' ) ) {
-				self::generate_css('
-					body.must-see-light footer.site-footer a,
-					body.must-see-light .bg-alt a,
-					body.must-see-light .widget article h2.entry-title a,
-					body.must-see-light.home .bg-alt a,
-					body.must-see-light.home .bg-primary a,
-					body.must-see-light.home .widget article h2.entry-title a,
-					body.must-see-light footer.site-footer .footer-widgets .widget a,
-					body.must-see-light .off-canvas .widget a,
-					body.must-see-light .owl-carousel .property-details span.price,
-					body.must-see-light .button.secondary,
-					body.must-see-light button.secondary,
-					body.must-see-light .bg-primary a,
-					body.must-see-light.home div[class*=\'home-middle-\'] .easy-t-cycle-controls span.cycle-pager-active
-					',
-					'color', 'secondary_color'
-				);
-			} else {
-				self::generate_css('
-					footer.site-footer a,
-					.bg-alt a,
-					.widget article h2.entry-title a,
-					.home .bg-alt a,
-					.home .bg-primary a,
-					.home .widget article h2.entry-title a,
-					footer.site-footer .footer-widgets .widget a,
-					.off-canvas .widget a,
-					.owl-carousel .property-details span.price,
-					.button.secondary,
-					button.secondary,
-					.bg-primary a,
-					.home div[class*=\'home-middle-\'] .easy-t-cycle-controls span.cycle-pager-active
-					',
-					'color', 'secondary_color'
-				);
-			}
-
-			//* Secondary color - backgrounds
-			self::generate_css('
-				.home div[class*=\'home-middle-\'] .impress-city-links li .count,
-				#IDX-main #IDX-leadToolsBar
-				',
-				'background-color', 'secondary_color'
-			);
-
 			//* Secondary color - hover
 			$secondary_hover = '#258BB7';
 			if ( get_theme_mod( 'primary_tone' ) ) {
 				echo '
-				body.must-see-light footer a:hover,
-				body.must-see-light footer a:focus,
 				body.must-see-light .bg-alt a:hover,
 				body.must-see-light .bg-alt a:focus,
 				body.must-see-light.home .bg-alt a:hover,
 				body.must-see-light.home .bg-alt a:focus,
 				body.must-see-light.home .widget article h2.entry-title a:hover,
 				body.must-see-light.home .widget article h2.entry-title a:focus,
-				body.must-see-light footer.site-footer .footer-widgets .widget a:hover,
-				body.must-see-light footer.site-footer .footer-widgets .widget a:focus,
 				body.must-see-light .off-canvas .widget a:hover,
 				body.must-see-light .off-canvas .widget a:focus {
 					color: ' . $secondary_hover . ';
 				}';
 			} else {
 				echo '
-					footer a:hover,
-					footer a:focus,
 					.bg-alt a:hover,
 					.bg-alt a:focus,
 					.home .bg-alt a:hover,
 					.home .bg-alt a:focus,
 					.home .widget article h2.entry-title a:hover,
 					.home .widget article h2.entry-title a:focus,
-					footer.site-footer .footer-widgets .widget a:hover,
-					footer.site-footer .footer-widgets .widget a:focus,
 					.off-canvas .widget a:hover,
 					.off-canvas .widget a:focus {
 						color: ' . $secondary_hover . ';
@@ -848,10 +761,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.nav-header-right a,
 				.nav-header-right ul > li.menu-item-has-children > a:after,
 				.testimonial_author cite,
-				footer.site-footer .footer-widgets .widget a:hover,
-				footer.site-footer .footer-widgets .widget a:focus,
-				footer.site-footer a:hover,
-				footer.site-footer a:focus
+				.home a,
+				.home .widget article h2.entry-title a
 				',
 				'color', 'primary_color'
 			);
@@ -885,8 +796,78 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				'background-color', 'primary_color'
 			);
 
-			$primary_color = get_theme_mod('primary_color', 'THIS SHOULD BE A DEFAULT VALUE');
-			// TODO: BUILD GRADIENTS AND STUFF HERE WITH THIS NEW VAR ECHO SYSTEM!!!!
+			self::generate_css('
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h1,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h2,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h3,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h4,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h5,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h6,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient label,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient .impress-idx-dashboard-widget h4,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient section.impress-carousel-widget h4,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient .singleTestimonialWidget h4,
+				.home .content-sidebar-wrap div[class*="home-"].bg-gradient .listTestimonialsWidget h4,
+				.bg-gradient .easy_testimonial_title,
+				.bg-gradient .easy_testimonial .testimonial_body p,
+				.bg-gradient .easy_testimonial .testimonial_author cite,
+				.title-area,
+				.home .bg-gradient a,
+				.bg-gradient p,
+				.bg-gradient a,
+				.bg-gradient label
+				',
+				'color', 'font_secondary_color'
+			);
+
+			self::generate_css('
+				.bg-gradient .title-area,
+				.bg-gradient h4:before, 
+				.bg-gradient h4:after,
+				.bg-gradient h2:after,
+				.bg-gradient h1:after
+			',
+			'background', 'font_secondary_color'
+			);
+
+			self::generate_css('
+				.bg-gradient .button,
+				.bg-gradient button,
+				.bg-gradient input[type="button"],
+				.bg-gradient input[type="submit"]
+			',
+			'border-color', 'font_secondary_color'
+			);
+
+			$primary_color = get_theme_mod('primary_color', '#258bb7');
+			$font_secondary_color = get_theme_mod('font_secondary_color', '#ffffff');
+			$gradient_start = get_theme_mod('gradient_start', '#3fa5db');
+			$gradient_end = get_theme_mod('gradient_end', '#5087c8');
+			echo ".bg-gradient {
+				background: linear-gradient(135deg, $gradient_start 0%, $gradient_end 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			}";
+
+			echo "
+			@media only screen and (min-width: 40.063em) {
+				header.site-header .site-title,
+				header.site-header .site-title a {
+					color: $font_secondary_color;
+				}
+			}
+			";
+
+			if (get_theme_mod('zoom_property_image', false)) {
+				echo "
+					.home .impress-carousel .carousel-photo img,
+					.home .equity-idx-carousel .carousel-photo img {
+						min-width: 200%;
+						min-height: 200%;
+						margin-top: -50%;
+						margin-left: -50%;
+					}
+				";
+			}
 
 			/*** END NEW STUFF ***/
 
