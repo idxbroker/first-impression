@@ -794,7 +794,6 @@ table#wp-calendar {
 		transition: .3s;
 		&:focus {
 			background-color: #fff;
-			border-color: $primary-color;
 		}
 	}
 	button {
@@ -805,22 +804,14 @@ table#wp-calendar {
 		letter-spacing: .02px;
 		line-height: 44.5px;
 		padding: 0;
-		color: $primary-color;
 		background: #fff;
-		border: 1px solid $primary-color;
 		border-radius: 5px;
 	}
 }
 
 div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 	.impress-idx-signup-widget, .equity-idx-search-widget {
-		input {
-			color: $dark-text;
-			border-color: $light-text;
-		}
 		button {
-			color: $dark-text;
-			border-color: $light-text;
 			&:hover, &:active {
 				background: #eee;
 			}
@@ -858,17 +849,12 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 .impress-carousel-widget {
 	.property-details {
 		font-size: rem-calc(18);
-		color: $dark-text;
-		.price {
-		}
 		.address, .city-state {
 			font-weight: bold;
-			color: #4C5051;
 		}
 	}
 	h3.price {
 		font-size: rem-calc(28);
-		color: $blue-text;
 	}
 }
 
@@ -888,7 +874,6 @@ div.easy_testimonial_image_wrapper {
 		text-align: left;
 	}
 	.testimonial_body p {
-		color: $dark-text;
 		@media #{$medium-up} {
 			margin-left: 200px;
 		}
@@ -898,7 +883,6 @@ div.easy_testimonial_image_wrapper {
 			margin-left: 200px;
 		}
 		cite {
-			color: $blue-text;
 			&:before {
 				padding-right: 5px;
 			}
@@ -945,7 +929,5 @@ div.easy_testimonial_image_wrapper {
 	}
 	.leaflet-control-zoom {
 		margin-top: 50px !important;
-	}
-	div[id*='IDX-mapLoading'] {
 	}
 }

@@ -37,26 +37,6 @@ body.home.must-see-white-bkg {
 	color: $body-font-color;
 }
 // Headings and body
-.home .content-sidebar-wrap div[class*='home-'],
-.home .content-sidebar-wrap div[class*='home-'] h1,
-.home .content-sidebar-wrap div[class*='home-'] h2,
-.home .content-sidebar-wrap div[class*='home-'] h3,
-.home .content-sidebar-wrap div[class*='home-'] h4,
-.home .content-sidebar-wrap div[class*='home-'] h5,
-.home .content-sidebar-wrap div[class*='home-'] h6,
-.home .content-sidebar-wrap div[class*='home-'] label {
-	color: $blue-text;
-}
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient,
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h1,
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h2,
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h3,
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h4,
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h5,
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient h6,
-	.home .content-sidebar-wrap div[class*='home-'].bg-gradient label {
-		color: $light-text;
-	}
 // Anchors
 .home a,
 .home .widget article h2.entry-title a {
@@ -133,7 +113,6 @@ body.home.must-see-white-bkg {
 	.contact-us > div > h4,
 	div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle {
 		position: relative;
-		color: $blue-text;
 		text-align: center;
 		font-size: rem-calc(32);
 		overflow: hidden;
@@ -151,7 +130,6 @@ body.home.must-see-white-bkg {
 				width: 80px;
 				height: 3px;
 				vertical-align: middle;
-				background: $blue-text;
 				border-radius: 5px;
 				margin: 0;
 			}
@@ -161,20 +139,6 @@ body.home.must-see-white-bkg {
 			&:after {
 				margin-left: 25px;
 			}
-		}
-	}
-
-	div[class^="home-middle-"].bg-gradient, footer {
-		.impress-idx-dashboard-widget h4,
-		.impress-carousel-widget h4,
-		.singleTestimonialWidget h4,
-		.listTestimonialsWidget h4,
-		.contact-us > div > h4,
-		.featured-communities .widget_text h4.widgettitle {
-			color: $light-text;
-	  		&:before, &:after {
-	    		background: $light-text !important;
-	  		}
 		}
 	}
 
@@ -264,7 +228,7 @@ body.home.must-see-white-bkg {
 					font-size: rem-calc(40);
 				}
 				font-weight: 500;
-				color: $light-text !important;
+				color: #fff !important;
 				width: 300px;
 				margin: 0 auto;
 				margin-top: calc(50% - 70px);
@@ -325,7 +289,7 @@ body.home.must-see-white-bkg {
 					margin: 0 auto;
 					margin-top: calc(50%);
 					p {
-						color: $light-text;
+						color: #fff;
 						font-size: rem-calc(20);
 					}
 					a {
@@ -338,7 +302,7 @@ body.home.must-see-white-bkg {
 							font-size: 1.25rem;
 						}
 						line-height: rem-calc(60);
-						color: $light-text;
+						color: #fff;
 						text-align: center;
 						width: 100%;
 						margin-top: 15px;
@@ -346,7 +310,7 @@ body.home.must-see-white-bkg {
 						@media (min-width: 930px) {
 							padding: 0 5px;
 						}
-						border: 2px solid $light-text;
+						border: 2px solid #fff;
 						border-radius: 4px;
 						&:hover {
 							background: rgba(255,255,255,.4);
@@ -354,17 +318,6 @@ body.home.must-see-white-bkg {
 					}
 				}
 			}
-		}
-	}
-
-	div[class*='home-middle-'] {
-	}
-	div[class*='home-middle-'].bg-gradient, footer {
-		.easy_testimonial_title {
-			color: $light-text;
-		}
-		.easy_testimonial .testimonial_body p, .easy_testimonial .testimonial_author cite {
-			color: $light-text;
 		}
 	}
 
@@ -411,7 +364,7 @@ body.home.must-see-white-bkg {
 	.contact-us {
 		padding-bottom: 50px;
 		section+section {
-		margin-top: 50px;;	
+			margin-top: 50px;
 			@media #{$medium-up} {
 				margin-top: 0;
 	  		}
@@ -425,12 +378,10 @@ body.home.must-see-white-bkg {
 	  			flex-grow: 1;
 	  		}
 			.widget_text {
-				color: $dark-text;
 				h4 {
 					font-size: rem-calc(18);
 					font-weight: 700;
 					letter-spacing: .01px;
-					color: $blue-text;
 				}
 			}
 			.impress-idx-signup-widget {
@@ -469,7 +420,6 @@ body.home.must-see-white-bkg {
 div[class^="home-middle-"], .contact-us, footer {
 	.widget_text, .impress-idx-signup-widget, {
 		h2, h4 {
-			color: $blue-text;
 			&:after {
 				content: "";
 				display: block;
@@ -477,35 +427,12 @@ div[class^="home-middle-"], .contact-us, footer {
 				height: 3px;
 				margin: 20px 0;
 				border-radius: 5px;
-				background: $blue-text;	
 			}
 		}
 	}
 }
 
 
-// All bg-gradient color swaps
-div[class^="home-middle-"].bg-gradient, footer {
-	.widget_text, .impress-idx-signup-widget, {
-		h2, h4 {
-			color: $light-text;
-			&:after {
-				background: $light-text;
-			}
-		}
-	}
-	.property-details {
-		h3, .address, .city-state {
-			color: $light-text;
-		}
-		color: $light-text;
-	}
-	section {
-		h2:after, h4:after {
-			background: $light-text;
-		}
-	}
-}
 /** End new stuff **/
 
 

@@ -1,15 +1,10 @@
-/** New stuff ***/
-$blue-text: #258BB7;
-$dark-text: #4C5051;
-$light-text: #FFFFFF;
-/** End new stuff **/
-
 $body-bg: #fff;
 $body-bg-alt: invert($body-bg);
 $body-font-color: #4C5051;
 $body-font-color-secondary: #fff;
 $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 $anchor-font-secondary-color-hover: scale-color($secondary-color, $lightness: -14%);
+
 body.must-see-light,
 body.must-see-white-bkg {
 	background: $body-bg;
@@ -193,4 +188,313 @@ body.must-see-light.sticky .sticky-header {
 body.must-see-light.home div[class*='home-middle-'].bg-primary .ae-iconbox.type-3 i,
 body.must-see-light.home div[class*='home-middle-'].bg-primary .ae-iconbox.type-3:hover i {
 	border-color: $body-font-color-secondary;
+}
+
+
+/*** BLUE TEXT ***/
+.entry-comments > h3,
+.entry-comments .comment-author span:first-of-type,
+.entry-comments .comment-meta,
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+.widget .idx-omnibar-form button,
+#IDX-main .IDX-btn,
+#IDX-main .IDX-btn:link,
+#IDX-main .IDX-btn-default,
+#IDX-main .IDX-btn-default:hover,
+#IDX-main .IDX-btn-default:focus,
+.home .content-sidebar-wrap div[class*='home-'],
+.home .content-sidebar-wrap div[class*='home-'] h1,
+.home .content-sidebar-wrap div[class*='home-'] h2,
+.home .content-sidebar-wrap div[class*='home-'] h3,
+.home .content-sidebar-wrap div[class*='home-'] h4,
+.home .content-sidebar-wrap div[class*='home-'] h5,
+.home .content-sidebar-wrap div[class*='home-'] h6,
+.home .content-sidebar-wrap div[class*='home-'] label,
+.home .impress-idx-dashboard-widget h4,
+.home section.impress-carousel-widget h4,
+.home .singleTestimonialWidget h4,
+.home .listTestimonialsWidget h4,
+.home .contact-us > div > h4,
+.home div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle {
+	color: $primary-color;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+.widget .idx-omnibar-form button,
+#IDX-main .IDX-btn,
+#IDX-main .IDX-btn:link,
+#IDX-main .IDX-btn-default,
+textarea:focus {
+	border-color: $blue-text;
+}
+
+.title-area  {
+	background: $blue-text;
+}
+
+.home {
+	.impress-idx-dashboard-widget h4,
+	section.impress-carousel-widget h4,
+	.singleTestimonialWidget h4,
+	.listTestimonialsWidget h4,
+	.contact-us > div > h4,
+	div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle {
+		&:before, &:after {
+			background: $blue-text;
+		}
+	}
+	.contact-us {
+		.widget-area {
+			.widget_text {
+				h4 {
+					color: $blue-text;
+				}
+			}
+		}
+	}
+}
+div[class^="home-middle-"], .contact-us, footer {
+	.widget_text, .impress-idx-signup-widget, {
+		h2, h4 {
+			color: $blue-text;
+			&:after {
+				background: $blue-text;	
+			}
+		}
+	}
+}
+a.menu-toggle {
+	color: $blue-text;
+}
+.nav-header-right .menu-item,
+.nav-header-right .sub-menu,
+.nav-header-right .sub-menu a {
+	color: $blue-text;
+}
+.nav-header-right a {
+	color: $blue-text;
+}
+.nav-header-right ul > li.menu-item-has-children > a:after {
+	color: $blue-text;
+}
+.content article h1.entry-title {
+	color: $blue-text;
+	&:after {
+		background: $blue-text;
+	}
+}
+body.single-post {
+	article {
+		h2 {
+			color: $blue-text;
+		}
+		blockquote {
+			color: $blue-text;
+			p {
+				color: $blue-text;
+			}
+		}
+	}
+}
+.impress-idx-signup-widget, .equity-idx-search-widget {
+	select, input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+		&:focus {
+			border-color: $primary-color;
+		}
+	}
+	button {
+		color: $primary-color;
+		border: 1px solid $primary-color;
+	}
+}
+
+.impress-carousel-widget {
+	h3.price {
+		color: $blue-text;
+	}
+}
+.easy_testimonial {
+	.testimonial_author {
+		cite {
+			color: $blue-text;
+		}
+	}
+}
+.sidebar-primary h4.widget-title {
+	color: $blue-text;
+}
+
+/*** LIGHT TEXT ***/
+footer.site-footer .footer-widgets *,
+footer.site-footer .footer-widgets .widget p,
+footer.site-footer .footer-widgets .widget li,
+footer.site-footer .footer-widgets .widget .agent-phone-wrap i,
+footer.site-footer .footer-widgets .widget .agent-email-wrap i {
+	color: $light-text;
+}
+footer.site-footer .footer-widgets .widget a {
+	color: $light-text;
+}
+footer.site-footer .footer-widgets .widget-title {
+	color: $light-text;
+}
+footer.site-footer {
+	color: $light-text;
+}
+footer.site-footer .button {
+	border-color: $light-text;
+	&:hover {
+		color: $light-text;
+	}
+}
+header.site-header .site-title {
+	@media #{$medium-up} {
+		color: $light-text;
+	}
+	a {
+		color: $light-text;
+	}
+}
+.title-area  {
+	color: $light-text;
+}
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient h1,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient h2,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient h3,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient h4,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient h5,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient h6,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient label {
+	color: $light-text;
+}
+.home {
+	div[class^="home-middle-"].bg-gradient, footer {
+		.impress-idx-dashboard-widget h4,
+		.impress-carousel-widget h4,
+		.singleTestimonialWidget h4,
+		.listTestimonialsWidget h4,
+		.contact-us > div > h4,
+		.featured-communities .widget_text h4.widgettitle {
+			color: $light-text;
+	  		&:before, &:after {
+	    		background: $light-text !important;
+	  		}
+		}
+	}
+	div[class*='home-middle-'].bg-gradient, footer {
+		.easy_testimonial_title {
+			color: $light-text;
+		}
+		.easy_testimonial .testimonial_body p, .easy_testimonial .testimonial_author cite {
+			color: $light-text;
+		}
+	}
+}
+// All bg-gradient color swaps
+div[class^="home-middle-"].bg-gradient, footer {
+	.widget_text, .impress-idx-signup-widget, {
+		h2, h4 {
+			color: $light-text;
+			&:after {
+				background: $light-text;
+			}
+		}
+	}
+	.property-details {
+		h3, .address, .city-state {
+			color: $light-text;
+		}
+		color: $light-text;
+	}
+	section {
+		h2:after, h4:after {
+			background: $light-text;
+		}
+	}
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-idx-signup-widget, .equity-idx-search-widget {
+		input {
+			border-color: $light-text;
+		}
+		button {
+			border-color: $light-text;
+		}
+	}
+}
+/*** DARK TEXT ***/
+footer.site-footer .footer-widgets .IDX_Omnibar_Widget {
+	* {
+		color: $dark-text;
+	}
+}
+footer.site-footer {
+	.IDX-mapWidgetWrap * {
+		color: $dark-text;
+	}
+}
+header.site-header .site-title a {
+	@media #{$medium-up} {
+		color: $dark-text;
+	}
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-idx-signup-widget, .equity-idx-search-widget {
+		input {
+			color: $dark-text;
+		}
+		button {
+			color: $dark-text;
+		}
+	}
+}
+
+.impress-carousel-widget {
+	.property-details {
+		color: $dark-text;
+	}
+}
+.easy_testimonial {
+	.testimonial_body p {
+		color: $dark-text;
+	}
+}
+
+/*** TBD ***/
+footer.site-footer .footer-widgets .widget a,
+footer.site-footer a {
+	&:hover, &:focus {
+		color: $primary-color;
+	}
+}
+.home {
+	.contact-us {
+		.widget-area {
+			.widget_text {
+				color: $dark-text;
+			}
+		}
+	}
+}
+body.single-post {
+	color: #000;
+	.site-container, .site-inner, .content-sidebar-wrap {
+		background: $inner-page-bg;
+	}
+}
+.impress-carousel-widget {
+	.property-details {
+		.address, .city-state {
+			color: #4C5051;
+		}
+	}
 }

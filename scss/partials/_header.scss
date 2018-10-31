@@ -32,16 +32,11 @@ header.site-header .site-title {
 	margin: 0;
 	@media #{$medium-up} {
 		height: 100px;
-		color: $light-text;
 	}
 }
 header.site-header .site-title a {
 	display: inline-block;
 	z-index: 11;
-	color: $light-text;
-	@media #{$medium-up} {
-		color: $dark-text;
-	}
 }
 
 header.site-header .site-title img {
@@ -194,8 +189,6 @@ a.off-canvas-toggle:before {
 }
 
 .title-area  {
-	background: $blue-text;
-	color: $light-text;
 	padding: 10px 0;
 	@media #{$medium-up} {
 		padding: 0;

@@ -7,7 +7,6 @@
 	margin: 0 0 1.825rem;
 }
 .content article h1.entry-title {
-	color: $blue-text;
 	line-height: 30px;
 	margin: 0 0 0.5rem;
 	font-size: rem-calc(32);
@@ -18,7 +17,6 @@
 		height: 3px;
 		margin: 20px 0;
 		border-radius: 5px;
-		background: $blue-text;
 	}
 }
 .content figure {
@@ -39,14 +37,14 @@ footer .entry-meta span {
 	margin-right: 10px;
 }
 footer .entry-meta {
-	border-top: 1px solid #efefef;
+	border-top: 1px solid #efefef; // TODO: What is this?
 	border-bottom: 1px solid #efefef;
 	padding: 8px;
 	margin: 0;
 }
 header .entry-meta i,
 footer .entry-meta i {
-	color: scale-color($body-font-color, $lightness: 50%);
+	color: scale-color($body-font-color, $lightness: 50%); // TODO: What is this?
 }
 header .entry-meta i {
 	display: none;
@@ -100,16 +98,11 @@ body.fl-builder .post-edit-link {
 
 /** New Stuff **/
 body.single-post {
-	color: #000;
-	.site-container, .site-inner, .content-sidebar-wrap {
-		background: $inner-page-bg;
-	}
 	.site-inner {
 		box-shadow: none;
 	}
 	article {
 		h2 {
-			color: $blue-text;
 			margin-top: 50px;
 			font-size: rem-calc(26);
 		}
@@ -117,11 +110,7 @@ body.single-post {
 			font-size: rem-calc(16);
 		}
 		blockquote {
-			color: $blue-text;
 			border-left: 0;
-			p {
-				color: $blue-text;
-			}
 		}
 		a {
 			text-decoration: underline;

@@ -208,17 +208,15 @@ input[type="submit"],
 	justify-content: center;
 	padding: 2px 30px;
 	font-family: $header-font-family;
-	color: $blue-text;
 	letter-spacing: .02px;
 	text-transform: uppercase;
 	text-decoration: none;
-	border: 1px solid $blue-text;
+	border: 1px solid;
 	border-radius: 5px;
 	background: #fff;
 	&:hover, &:focus {
 		// TODO: Find where this is being applied
 		background: rgba(0,0,20,.1);
-		color: $blue-text;
 	}
 }
 
@@ -370,7 +368,6 @@ blockquote cite {
 
 textarea:focus {
 	background: #fff;
-	border-color: $blue-text;
 }
 
 div[class^="home-middle-"] { position: relative };
