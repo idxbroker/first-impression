@@ -48,6 +48,7 @@ $font-weight-bold: 700;
 
 // We use these to control various global styles
 $inner-page-bg: #f5f5f5;
+$inner-page-font-color: #000;
 $body-bg: #fff;
 $body-font-color: #555;
 $body-font-family: "PT Sans", "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
@@ -66,7 +67,6 @@ $body-bg-alt: #4c5051;
 
 // We use these as default colors throughout
 /** New stuff ***/
-$blue-text: #258BB7;
 $dark-text: #4C5051;
 $light-text: #FFFFFF;
 /** End new stuff **/
@@ -377,7 +377,7 @@ $list-font-family: $paragraph-font-family;
 
 // We use these to control button text styles.
 $button-font-family: $header-font-family;
-// $button-font-color: #fff;
+$button-font-color: #fff;
 $button-font-color-alt: $body-bg-alt;
 $button-font-tny: rem-calc(12);
 $button-font-sml: rem-calc(16);

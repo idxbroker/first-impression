@@ -192,11 +192,22 @@ body.must-see-light.home div[class*='home-middle-'].bg-primary .ae-iconbox.type-
 
 
 /*** BLUE TEXT ***/
+h1,
+h2,
+h3,
+h4,
+h5,
+blockquote,
+blockquote p,
 .entry-comments > h3,
 .entry-comments .comment-author span:first-of-type,
 .entry-comments .comment-meta,
 .button,
 button,
+button:focus,
+button:hover,
+.widget button:hover,
+.widget button:focus,
 input[type="button"],
 input[type="submit"],
 .widget .idx-omnibar-form button,
@@ -218,7 +229,19 @@ input[type="submit"],
 .home .singleTestimonialWidget h4,
 .home .listTestimonialsWidget h4,
 .home .contact-us > div > h4,
-.home div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle {
+.home .contact-us .widget-area .widget_text h4,
+.impress-carousel-widget .address,
+.impress-carousel-widget .city-state,
+a.menu-toggle,
+.nav-header-right .menu-item,
+.nav-header-right .sub-menu,
+.nav-header-right a,
+.nav-header-right ul > li.menu-item-has-children > a:after,
+.testimonial_author cite,
+footer.site-footer .footer-widgets .widget a:hover,
+footer.site-footer .footer-widgets .widget a:focus,
+footer.site-footer a:hover,
+footer.site-footer a:focus {
 	color: $primary-color;
 }
 
@@ -230,140 +253,25 @@ input[type="submit"],
 #IDX-main .IDX-btn,
 #IDX-main .IDX-btn:link,
 #IDX-main .IDX-btn-default,
-textarea:focus {
-	border-color: $blue-text;
+textarea:focus,
+select:focus,
+select:hover,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+	border-color: $primary-color;
 }
 
-.title-area  {
-	background: $blue-text;
-}
-
-.home {
-	.impress-idx-dashboard-widget h4,
-	section.impress-carousel-widget h4,
-	.singleTestimonialWidget h4,
-	.listTestimonialsWidget h4,
-	.contact-us > div > h4,
-	div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle {
-		&:before, &:after {
-			background: $blue-text;
-		}
-	}
-	.contact-us {
-		.widget-area {
-			.widget_text {
-				h4 {
-					color: $blue-text;
-				}
-			}
-		}
-	}
-}
-div[class^="home-middle-"], .contact-us, footer {
-	.widget_text, .impress-idx-signup-widget, {
-		h2, h4 {
-			color: $blue-text;
-			&:after {
-				background: $blue-text;	
-			}
-		}
-	}
-}
-a.menu-toggle {
-	color: $blue-text;
-}
-.nav-header-right .menu-item,
-.nav-header-right .sub-menu,
-.nav-header-right .sub-menu a {
-	color: $blue-text;
-}
-.nav-header-right a {
-	color: $blue-text;
-}
-.nav-header-right ul > li.menu-item-has-children > a:after {
-	color: $blue-text;
-}
-.content article h1.entry-title {
-	color: $blue-text;
-	&:after {
-		background: $blue-text;
-	}
-}
-body.single-post {
-	article {
-		h2 {
-			color: $blue-text;
-		}
-		blockquote {
-			color: $blue-text;
-			p {
-				color: $blue-text;
-			}
-		}
-	}
-}
-.impress-idx-signup-widget, .equity-idx-search-widget {
-	select, input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
-		&:focus {
-			border-color: $primary-color;
-		}
-	}
-	button {
-		color: $primary-color;
-		border: 1px solid $primary-color;
-	}
-}
-
-.impress-carousel-widget {
-	h3.price {
-		color: $blue-text;
-	}
-}
-.easy_testimonial {
-	.testimonial_author {
-		cite {
-			color: $blue-text;
-		}
-	}
-}
-.sidebar-primary h4.widget-title {
-	color: $blue-text;
+.title-area,
+h4:before, 
+h4:after,
+h2:after,
+h1:after {
+	background: $primary-color;
 }
 
 /*** LIGHT TEXT ***/
-footer.site-footer .footer-widgets *,
-footer.site-footer .footer-widgets .widget p,
-footer.site-footer .footer-widgets .widget li,
-footer.site-footer .footer-widgets .widget .agent-phone-wrap i,
-footer.site-footer .footer-widgets .widget .agent-email-wrap i {
-	color: $light-text;
-}
-footer.site-footer .footer-widgets .widget a {
-	color: $light-text;
-}
-footer.site-footer .footer-widgets .widget-title {
-	color: $light-text;
-}
-footer.site-footer {
-	color: $light-text;
-}
-footer.site-footer .button {
-	border-color: $light-text;
-	&:hover {
-		color: $light-text;
-	}
-}
-header.site-header .site-title {
-	@media #{$medium-up} {
-		color: $light-text;
-	}
-	a {
-		color: $light-text;
-	}
-}
-.title-area  {
-	color: $light-text;
-}
 .home .content-sidebar-wrap div[class*='home-'].bg-gradient,
 .home .content-sidebar-wrap div[class*='home-'].bg-gradient h1,
 .home .content-sidebar-wrap div[class*='home-'].bg-gradient h2,
@@ -371,130 +279,116 @@ header.site-header .site-title {
 .home .content-sidebar-wrap div[class*='home-'].bg-gradient h4,
 .home .content-sidebar-wrap div[class*='home-'].bg-gradient h5,
 .home .content-sidebar-wrap div[class*='home-'].bg-gradient h6,
-.home .content-sidebar-wrap div[class*='home-'].bg-gradient label {
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient label,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient .impress-idx-dashboard-widget h4,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient section.impress-carousel-widget h4,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient .singleTestimonialWidget h4,
+.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4,
+.bg-gradient .easy_testimonial_title,
+.bg-gradient .easy_testimonial .testimonial_body p,
+.bg-gradient .easy_testimonial .testimonial_author cite,
+.title-area {
 	color: $light-text;
 }
-.home {
-	div[class^="home-middle-"].bg-gradient, footer {
-		.impress-idx-dashboard-widget h4,
-		.impress-carousel-widget h4,
-		.singleTestimonialWidget h4,
-		.listTestimonialsWidget h4,
-		.contact-us > div > h4,
-		.featured-communities .widget_text h4.widgettitle {
-			color: $light-text;
-	  		&:before, &:after {
-	    		background: $light-text !important;
-	  		}
-		}
-	}
-	div[class*='home-middle-'].bg-gradient, footer {
-		.easy_testimonial_title {
-			color: $light-text;
-		}
-		.easy_testimonial .testimonial_body p, .easy_testimonial .testimonial_author cite {
-			color: $light-text;
-		}
-	}
+
+.bg-gradient .title-area,
+.bg-gradient h4:before, 
+.bg-gradient h4:after,
+.bg-gradient h2:after,
+.bg-gradient h1:after {
+	background: $light-text;
 }
-// All bg-gradient color swaps
-div[class^="home-middle-"].bg-gradient, footer {
-	.widget_text, .impress-idx-signup-widget, {
-		h2, h4 {
-			color: $light-text;
-			&:after {
-				background: $light-text;
-			}
-		}
-	}
-	.property-details {
-		h3, .address, .city-state {
-			color: $light-text;
-		}
+
+@media only screen and (min-width: 40.063em) {
+	header.site-header .site-title,
+	header.site-header .site-title a {
 		color: $light-text;
-	}
-	section {
-		h2:after, h4:after {
-			background: $light-text;
-		}
 	}
 }
 
-div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
-	.impress-idx-signup-widget, .equity-idx-search-widget {
-		input {
-			border-color: $light-text;
-		}
-		button {
-			border-color: $light-text;
-		}
+@media only screen and (min-width: 40.063em) {
+	div.title-area  {
+		background: $light-text;
+	}
+}
+
+div[class*='home-middle-'].bg-gradient,
+footer.site-footer .footer-widgets {
+	input {
+		border-color: $white;
+	}
+	button {
+		border-color: $white;
 	}
 }
 /*** DARK TEXT ***/
-footer.site-footer .footer-widgets .IDX_Omnibar_Widget {
-	* {
-		color: $dark-text;
-	}
-}
-footer.site-footer {
-	.IDX-mapWidgetWrap * {
-		color: $dark-text;
-	}
-}
-header.site-header .site-title a {
-	@media #{$medium-up} {
+@media only screen and (min-width: 40.063em) {
+	header.site-header .site-title a {
 		color: $dark-text;
 	}
 }
 
-div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
-	.impress-idx-signup-widget, .equity-idx-search-widget {
-		input {
-			color: $dark-text;
-		}
-		button {
-			color: $dark-text;
-		}
-	}
-}
-
-.impress-carousel-widget {
-	.property-details {
-		color: $dark-text;
-	}
-}
-.easy_testimonial {
-	.testimonial_body p {
-		color: $dark-text;
-	}
+div[class*='home-middle-'].bg-gradient input,
+div[class*='home-middle-'].bg-gradient button,
+.impress-carousel-widget .property-details,
+.easy_testimonial .testimonial_body p {
+	color: $dark-text;
 }
 
 /*** TBD ***/
-footer.site-footer .footer-widgets .widget a,
-footer.site-footer a {
-	&:hover, &:focus {
-		color: $primary-color;
-	}
-}
-.home {
-	.contact-us {
-		.widget-area {
-			.widget_text {
-				color: $dark-text;
-			}
-		}
-	}
-}
 body.single-post {
-	color: #000;
-	.site-container, .site-inner, .content-sidebar-wrap {
-		background: $inner-page-bg;
-	}
+	color: $inner-page-font-color;
 }
-.impress-carousel-widget {
-	.property-details {
-		.address, .city-state {
-			color: #4C5051;
-		}
-	}
+body.single-post .site-container, 
+body.single-post .site-inner,
+body.single-post .content-sidebar-wrap {
+	background: $inner-page-bg;
+}
+
+/*** FOOTER ***/
+footer.site-footer .footer-widgets,
+footer.site-footer .footer-widgets .widget p,
+footer.site-footer .footer-widgets .widget li,
+footer.site-footer .footer-widgets .widget .agent-phone-wrap i,
+footer.site-footer .footer-widgets .widget .agent-email-wrap i,
+footer.site-footer .footer-widgets .widget a,
+footer.site-footer .footer-widgets .widget-title,
+footer.site-footer,
+footer.site-footer .button:hover,
+footer.site-footer h1,
+footer.site-footer h2,
+footer.site-footer h3,
+footer.site-footer h4,
+footer.site-footer h5,
+footer.site-footer h6,
+footer.site-footer label,
+footer.site-footer .impress-idx-dashboard-widget h4,
+footer.site-footer section.impress-carousel-widget .property-details *,
+footer.site-footer .singleTestimonialWidget h4,
+footer.site-footer .listTestimonialsWidget h4,
+footer.site-footer .easy_testimonial_title,
+footer.site-footer .easy_testimonial .testimonial_body p,
+footer.site-footer .easy_testimonial .testimonial_author cite {
+	color: #fff;
+}
+
+footer.site-footer .button
+footer.site-footer input,
+footer.site-footer button, {
+	border-color: #fff;
+}
+
+footer.site-footer .title-area,
+footer.site-footer h4:before, 
+footer.site-footer h4:after,
+footer.site-footer h2:after,
+footer.site-footer h1:after {
+	background: #fff;
+}
+
+footer.site-footer input,
+footer.site-footer button
+footer.site-footer .IDX-mapWidgetWrap *,
+footer.site-footer .footer-widgets .IDX_Omnibar_Widget * {
+	color: #4C5051;
 }

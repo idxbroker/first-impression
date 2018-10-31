@@ -9,11 +9,7 @@
 	color: $body-font-color-secondary;
 }
 .bg-gradient {
-	background: #3fa5db; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #3fa5db 0%, #5087c8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #3fa5db 0%,#5087c8 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(135deg, #3fa5db 0%,#5087c8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fa5db', endColorstr='#5087c8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 /*! =Structure
 ------------------------------------------------------------------------- */
@@ -215,7 +211,6 @@ input[type="submit"],
 	border-radius: 5px;
 	background: #fff;
 	&:hover, &:focus {
-		// TODO: Find where this is being applied
 		background: rgba(0,0,20,.1);
 	}
 }

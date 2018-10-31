@@ -103,8 +103,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 		//* Setting key and default value array
 		$settings = array(
-			'primary_color'       => '#3561b6',
-			'secondary_color'     => '#ced82a',
+			'primary_color'       => '#258BB7',
+			'secondary_color'     => '#258BB7',
 			'primary_tone'        => false,
 			'content_bkg'   => true,
 		);
@@ -799,6 +799,96 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 						color: ' . $secondary_hover . ';
 					}';
 			}
+
+			/*** NEW STUFF ***/
+			self::generate_css('
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				blockquote,
+				blockquote p,
+				.entry-comments > h3,
+				.entry-comments .comment-author span:first-of-type,
+				.entry-comments .comment-meta,
+				.button,
+				button,
+				button:focus,
+				button:hover,
+				.widget button:hover,
+				.widget button:focus,
+				input[type="button"],
+				input[type="submit"],
+				.widget .idx-omnibar-form button,
+				#IDX-main .IDX-btn,
+				#IDX-main .IDX-btn:link,
+				#IDX-main .IDX-btn-default,
+				#IDX-main .IDX-btn-default:hover,
+				#IDX-main .IDX-btn-default:focus,
+				.home .content-sidebar-wrap div[class*="home-"],
+				.home .content-sidebar-wrap div[class*="home-"] h1,
+				.home .content-sidebar-wrap div[class*="home-"] h2,
+				.home .content-sidebar-wrap div[class*="home-"] h3,
+				.home .content-sidebar-wrap div[class*="home-"] h4,
+				.home .content-sidebar-wrap div[class*="home-"] h5,
+				.home .content-sidebar-wrap div[class*="home-"] h6,
+				.home .content-sidebar-wrap div[class*="home-"] label,
+				.home .impress-idx-dashboard-widget h4,
+				.home section.impress-carousel-widget h4,
+				.home .singleTestimonialWidget h4,
+				.home .listTestimonialsWidget h4,
+				.home .contact-us > div > h4,
+				.home .contact-us .widget-area .widget_text h4,
+				.impress-carousel-widget .address,
+				.impress-carousel-widget .city-state,
+				a.menu-toggle,
+				.nav-header-right .menu-item,
+				.nav-header-right .sub-menu,
+				.nav-header-right a,
+				.nav-header-right ul > li.menu-item-has-children > a:after,
+				.testimonial_author cite,
+				footer.site-footer .footer-widgets .widget a:hover,
+				footer.site-footer .footer-widgets .widget a:focus,
+				footer.site-footer a:hover,
+				footer.site-footer a:focus
+				',
+				'color', 'primary_color'
+			);
+			self::generate_css('
+				.button,
+				button,
+				input[type="button"],
+				input[type="submit"],
+				.widget .idx-omnibar-form button,
+				#IDX-main .IDX-btn,
+				#IDX-main .IDX-btn:link,
+				#IDX-main .IDX-btn-default,
+				textarea:focus,
+				select:focus,
+				select:hover,
+				input[type="text"]:focus,
+				input[type="email"]:focus,
+				input[type="tel"]:focus,
+				input[type="password"]:focus
+				',
+				'border-color', 'primary_color'
+			);
+
+			self::generate_css('
+				.title-area,
+				h4:before, 
+				h4:after,
+				h2:after,
+				h1:after
+				',
+				'background-color', 'primary_color'
+			);
+
+			$primary_color = get_theme_mod('primary_color', 'THIS SHOULD BE A DEFAULT VALUE');
+			// TODO: BUILD GRADIENTS AND STUFF HERE WITH THIS NEW VAR ECHO SYSTEM!!!!
+
+			/*** END NEW STUFF ***/
 
 			// Site title font size
 			self::generate_css( 'header.site-header .site-title', 'font-size', 'site_title_font_size', '', 'rem' );
