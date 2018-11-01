@@ -180,10 +180,7 @@ h2.entry-title a {
 button,
 input[type="button"],
 input[type="submit"],
-.widget .idx-omnibar-form button,
-#IDX-main .IDX-btn,
-#IDX-main .IDX-btn:link,
-#IDX-main .IDX-btn-default {
+.widget .idx-omnibar-form button {
 	// Styled for medium by default
 	font-size: rem-calc(18);
 	letter-spacing: 0.02;

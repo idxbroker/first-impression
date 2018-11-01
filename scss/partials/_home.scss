@@ -112,6 +112,9 @@ body.home.must-see-white-bkg {
 			font-size: rem-calc(32);
 		}
 		margin: 50px 0;
+		&:before, &:after {
+			display: none;
+		}
 		@media #{$medium-up} {
 			&:before, &:after {
 				display: inline-block;
@@ -175,6 +178,7 @@ body.home.must-see-white-bkg {
 			img {
 				position: relative;
 				height: 100%;
+				object-fit: cover; // No IE support, but the fallback looks decent enough
 			}
 		}
 
@@ -229,7 +233,7 @@ body.home.must-see-white-bkg {
 				display: block;
 				width: 90px;
 				height: 3px;
-				margin: 30px 0;
+				margin: 10px 0;
 				border-radius: 5px;
 				background: #fff;
 				@media #{$medium-up} {

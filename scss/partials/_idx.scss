@@ -1,5 +1,6 @@
 /* =IDX Content
 ------------------------------------------------------------ */
+/*
 #IDX-main {
 	width: 100% !important;
 	font-family: inherit !important;
@@ -15,6 +16,39 @@
 	color: $primary-color;
 	text-decoration: none;
 }
+#idx-mlm-app .app-footer a,
+#idx-mlm-app .app-footer a:hover,
+#idx-mlm-app .app-footer a:focus,
+#IDX-main #IDX-leadToolsBar a,
+#IDX-main #IDX-leadToolsBar a:hover,
+#IDX-main #IDX-leadToolsBar a:focus,
+#IDX-main #idx-mlm-app a.mlm-button,
+#IDX-main #idx-mlm-app a.mlm-button:hover,
+#IDX-main #idx-mlm-app a.mlm-button:focus,
+#IDX-main.IDX-wrapper-standard .IDX-nav a,
+#IDX-main.IDX-wrapper-standard .IDX-nav a:hover,
+#IDX-main.IDX-wrapper-standard .IDX-nav a:focus,
+#IDX-main.IDX-wrapper-standard .IDX-nav a:visited,
+#IDX-main.IDX-wrapper-standard a.IDX-arrow,
+#IDX-main.IDX-wrapper-standard a.select2-search-choice-close {
+	color: $primary-color;
+}
+#IDX-main.IDX-wrapper-standard .IDX-btn,
+#IDX-main.IDX-wrapper-standard .IDX-btn:link,
+#IDX-main.IDX-wrapper-standard .IDX-btn-default {
+	font-size: rem-calc(18);
+	color: $body-font-color-secondary;
+}
+#IDX-main.IDX-wrapper-standard #IDX-detailsTopActions a.IDX-btn,
+#IDX-main.IDX-wrapper-standard #IDX-detailsHotActions a.IDX-btn,
+#IDX-main.IDX-wrapper-standard #IDX-mapSearchFields a.IDX-btn,
+#IDX-main.IDX-wrapper-standard .IDX-pagination-action a.IDX-btn {
+	font-size: rem-calc(14);
+	padding: 0.4rem 0.8rem;
+	color: $body-font-color-secondary;
+	font-family: $body-font-family;
+    font-weight: $paragraph-font-weight;
+}
 #IDX-main.IDX-wrapper-standard #IDX-mapSearchFields a.IDX-btn {
     padding: 0.4rem;
 }
@@ -24,7 +58,17 @@
 #IDX-main #IDX-leadToolsBar {
 	background-color: $secondary-color;
 }
-/* Hide location button on map search. Is removed by IDX system if SSL enabled */
+// Hide location button on map search. Is removed by IDX system if SSL enabled 
 #IDX-main.IDX-wrapper-standard #IDX-userLocation.IDX-btn {
 	display: none;
+}
+*/
+
+.wrapper-fullscreen .content-sidebar-wrap {
+	width: 100%;
+	max-width: 100%;
+	main {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

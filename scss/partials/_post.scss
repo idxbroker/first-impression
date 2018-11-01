@@ -116,9 +116,10 @@ body.single-post {
 			text-decoration: underline;
 		}
 	}
-	.contact-us {
-		display: none;
-	}
+}
+
+body:not(.home) .contact-us {
+	display: none;
 }
 
 .must-see-featured-image {

@@ -579,7 +579,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				//* Primary color - link color
 				self::generate_css( '
 					body.must-see-light a,
-					body.must-see-light #IDX-main.IDX-wrapper-standard a,
 					body.must-see-light header .site-title a:focus,
 					body.must-see-light .ae-iconbox i[class*="fa-"],
 					body.must-see-light .ae-iconbox a i[class*="fa-"],
@@ -593,7 +592,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				//* Primary color - link color
 				self::generate_css( '
 					a,
-					#IDX-main.IDX-wrapper-standard a,
 					header .site-title a:focus,
 					.ae-iconbox i[class*="fa-"],
 					.ae-iconbox a i[class*="fa-"],
@@ -624,9 +622,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			if ( get_theme_mod( 'primary_tone' ) ) {
 				echo '
 					body.must-see-light a:hover,
-					body.must-see-light a:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard a:hover,
-					body.must-see-light #IDX-main.IDX-wrapper-standard a:focus {
+					body.must-see-light a:focus {
 						color: #207FA8;
 					}';
 
@@ -653,30 +649,13 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					body.must-see-light ul.pagination li.current button:focus,
 					body.must-see-light.home div[class*=\'home-middle-\'] .ae-iconbox.type-3:hover > .icon > i,
 					body.must-see-light.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:active i,
-					body.must-see-light.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:focus i,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn:hover,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn:link:hover,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn-default:hover,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn:link:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-btn-default:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>li>a:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>li>a:hover,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>.IDX-active>a,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>.IDX-active>a:focus,
-					body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>.IDX-active>a:hover {
+					body.must-see-light.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:focus i {
 						background-color: ' . $primary_hover . ';
 					}';
 			} else {
 				echo '
 					a:hover,
-					a:focus,
-					#IDX-main.IDX-wrapper-standard a:hover,
-					#IDX-main.IDX-wrapper-standard a:focus {
+					a:focus {
 						color: #207FA8;
 					}';
 
@@ -703,22 +682,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					ul.pagination li.current button:focus,
 					.home div[class*=\'home-middle-\'] .ae-iconbox.type-3:hover > .icon > i,
 					.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:active i,
-					.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:focus i,
-					#IDX-main.IDX-wrapper-standard .IDX-btn:hover,
-					#IDX-main.IDX-wrapper-standard .IDX-btn:link:hover,
-					#IDX-main.IDX-wrapper-standard .IDX-btn-default:hover,
-					#IDX-main.IDX-wrapper-standard .IDX-btn:focus,
-					#IDX-main.IDX-wrapper-standard .IDX-btn:link:focus,
-					#IDX-main.IDX-wrapper-standard .IDX-btn-default:focus,
-					#IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>li>a:focus,
-					#IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>li>a:hover,
-					#IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
-					#IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-					#IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
-					#IDX-main.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:focus,
-					#IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>.IDX-active>a,
-					#IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>.IDX-active>a:focus,
-					#IDX-main.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-nav>.IDX-active>a:hover {
+					.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:focus i {
 						background-color: ' . $primary_hover . ';
 					}';
 			}
@@ -772,11 +736,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type="button"],
 				input[type="submit"],
 				.widget .idx-omnibar-form button,
-				#IDX-main .IDX-btn,
-				#IDX-main .IDX-btn:link,
-				#IDX-main .IDX-btn-default,
-				#IDX-main .IDX-btn-default:hover,
-				#IDX-main .IDX-btn-default:focus,
 				.home .content-sidebar-wrap div[class*="home-"],
 				.home .content-sidebar-wrap div[class*="home-"] h1,
 				.home .content-sidebar-wrap div[class*="home-"] h2,
@@ -810,9 +769,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type="button"],
 				input[type="submit"],
 				.widget .idx-omnibar-form button,
-				#IDX-main .IDX-btn,
-				#IDX-main .IDX-btn:link,
-				#IDX-main .IDX-btn-default,
 				textarea:focus,
 				select:focus,
 				select:hover,
@@ -854,7 +810,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.home .bg-gradient a,
 				.bg-gradient p,
 				.bg-gradient a,
-				.bg-gradient label
+				.bg-gradient label,
+				header.site-header .site-title,
+				header.site-header .site-title a
 				',
 				'color', 'font_secondary_color'
 			);
@@ -891,7 +849,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			@media only screen and (min-width: 40.063em) {
 				header.site-header .site-title,
 				header.site-header .site-title a {
-					color: $font_secondary_color;
+					color: $primary_color;
 				}
 			}
 			";
