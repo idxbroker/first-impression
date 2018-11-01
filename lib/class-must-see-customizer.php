@@ -575,117 +575,23 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				echo '.home .content-sidebar-wrap.row div.home-middle-6.bg-image > .overlay {background-color: ' . self::hex2rgba( get_theme_mod( 'home_middle_6_background_overlay', '201f1f' ), get_theme_mod( 'home_middle_6_background_overlay_opacity', 0.6 ) ) . '}';
 			}
 
-			if ( get_theme_mod( 'primary_tone' ) ) {
-				//* Primary color - link color
-				self::generate_css( '
-					body.must-see-light a,
-					body.must-see-light header .site-title a:focus,
-					body.must-see-light .ae-iconbox i[class*="fa-"],
-					body.must-see-light .ae-iconbox a i[class*="fa-"],
-					body.must-see-light .ae-iconbox.type-3:hover i[class*="fa-"],
-					body.must-see-light .ae-iconbox.type-3:hover a i[class*="fa-"],
-					body.must-see-light .ae-iconbox.type-2:hover i[class*="fa-"],
-					body.must-see-light .ae-iconbox.type-2:hover a i[class*="fa-"]
-					', 'color', 'primary_color'
-				);
-			} else {
-				//* Primary color - link color
-				self::generate_css( '
-					a,
-					header .site-title a:focus,
-					.ae-iconbox i[class*="fa-"],
-					.ae-iconbox a i[class*="fa-"],
-					.ae-iconbox.type-3:hover i[class*="fa-"],
-					.ae-iconbox.type-3:hover a i[class*="fa-"],
-					.ae-iconbox.type-2:hover i[class*="fa-"],
-					.ae-iconbox.type-2:hover a i[class*="fa-"]
-					', 'color', 'primary_color'
-				);
-			}
 
 			//* Primary color - backgrounds
 
 			//* Primary color - borders
 			self::generate_css('
-				.IDX-wrapper-standard .IDX-navbar-default,
-				.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
-				.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form,
-				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
-				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-collapse,
-				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-form
+				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-navbar-default,
+				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
+				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form,
+				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
+				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-collapse,
+				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-form
 				',
 				'border-color', 'primary_color'
 			);
 
 			//* Primary color hover
 			$primary_hover = '#eee';
-			if ( get_theme_mod( 'primary_tone' ) ) {
-				echo '
-					body.must-see-light a:hover,
-					body.must-see-light a:focus {
-						color: #207FA8;
-					}';
-
-				//* Primary color hover - backgrounds
-				echo '
-					body.must-see-light .button:hover,
-					body.must-see-light .button:focus,
-					body.must-see-light button:hover,
-					body.must-see-light button:focus,
-					body.must-see-light input[type="button"]:hover,
-					body.must-see-light input[type="button"]:focus,
-					body.must-see-light input[type="submit"]:hover,
-					body.must-see-light input[type="submit"]:focus,
-					body.must-see-light .widget .idx-omnibar-form button:hover,
-					body.must-see-light .widget .idx-omnibar-form button:focus,
-					body.must-see-light .bg-primary .button:hover,
-					body.must-see-light .bg-primary input[type="button"]:hover,
-					body.must-see-light .bg-primary input[type="submit"]:hover,
-					body.must-see-light .widget .owl-carousel .owl-nav.owl-controls .owl-prev:hover,
-					body.must-see-light .widget .owl-carousel .owl-nav.owl-controls .owl-next:hover,
-					body.must-see-light ul.pagination li.current a:hover,
-					body.must-see-light ul.pagination li.current a:focus,
-					body.must-see-light ul.pagination li.current button:hover,
-					body.must-see-light ul.pagination li.current button:focus,
-					body.must-see-light.home div[class*=\'home-middle-\'] .ae-iconbox.type-3:hover > .icon > i,
-					body.must-see-light.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:active i,
-					body.must-see-light.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:focus i {
-						background-color: ' . $primary_hover . ';
-					}';
-			} else {
-				echo '
-					a:hover,
-					a:focus {
-						color: #207FA8;
-					}';
-
-				//* Primary color hover - backgrounds
-				echo '
-					.button:hover,
-					.button:focus,
-					button:hover,
-					button:focus,
-					input[type="button"]:hover,
-					input[type="button"]:focus,
-					input[type="submit"]:hover,
-					input[type="submit"]:focus,
-					.widget .idx-omnibar-form button:hover,
-					.widget .idx-omnibar-form button:focus,
-					.bg-primary .button:hover,
-					.bg-primary input[type="button"]:hover,
-					.bg-primary input[type="submit"]:hover,
-					.widget .owl-carousel .owl-nav.owl-controls .owl-prev:hover,
-					.widget .owl-carousel .owl-nav.owl-controls .owl-next:hover,
-					ul.pagination li.current a:hover,
-					ul.pagination li.current a:focus,
-					ul.pagination li.current button:hover,
-					ul.pagination li.current button:focus,
-					.home div[class*=\'home-middle-\'] .ae-iconbox.type-3:hover > .icon > i,
-					.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:active i,
-					.home div[class*=\'home-middle-\'] .ae-iconbox.type-3 a:focus i {
-						background-color: ' . $primary_hover . ';
-					}';
-			}
 
 			//* Secondary color - hover
 			$secondary_hover = '#258BB7';
@@ -722,6 +628,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				h3,
 				h4,
 				h5,
+				a,
+				a:hover,
+				a:focus,
 				blockquote,
 				blockquote p,
 				.entry-comments > h3,
@@ -736,6 +645,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type="button"],
 				input[type="submit"],
 				.widget .idx-omnibar-form button,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn:link,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default:hover,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default:focus,
 				.home .content-sidebar-wrap div[class*="home-"],
 				.home .content-sidebar-wrap div[class*="home-"] h1,
 				.home .content-sidebar-wrap div[class*="home-"] h2,
@@ -759,7 +673,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.nav-header-right ul > li.menu-item-has-children > a:after,
 				.testimonial_author cite,
 				.home a,
-				.home .widget article h2.entry-title a
+				.home .widget article h2.entry-title a,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
+				.IDX-wrapper-standard a,
+				.IDX-wrapper-standard a:focus,
+				.IDX-wrapper-standard a:hover,
+				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle
 				',
 				'color', 'primary_color'
 			);
@@ -769,15 +688,36 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type="button"],
 				input[type="submit"],
 				.widget .idx-omnibar-form button,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn:link,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default,
 				textarea:focus,
 				select:focus,
 				select:hover,
 				input[type="text"]:focus,
 				input[type="email"]:focus,
 				input[type="tel"]:focus,
-				input[type="password"]:focus
+				input[type="password"]:focus,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn:hover
+				body:not(.must-see-maps-results) #IDX-main .IDX-btn:focus,
+				body:not(.must-see-maps-results) #IDX-main .IDX-form input:focus,
+				body:not(.must-see-maps-results) #IDX-main .IDX-form textarea:focus,
+				.IDX-wrapper-standard .IDX-showcaseSlide-active
 				',
 				'border-color', 'primary_color'
+			);
+
+			self::generate_css('
+				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle::after
+				',
+				'border-top-color', 'primary_color'
+			);
+
+			self::generate_css('
+				.IDX-wrapper-standard .IDX-results-refinement.IDX-dropdown-open .IDX-refine-search--toggle::after
+				',
+				'border-bottom-color', 'primary_color'
 			);
 
 			self::generate_css('
@@ -785,7 +725,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				h4:before, 
 				h4:after,
 				h2:after,
-				h1:after
+				h1:after,
+				body:not(.must-see-maps-results) #IDX-main.IDX-wrapper-standard .IDX-container-navbar,
+				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice
 				',
 				'background-color', 'primary_color'
 			);
@@ -812,7 +754,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient a,
 				.bg-gradient label,
 				header.site-header .site-title,
-				header.site-header .site-title a
+				header.site-header .site-title a,
+				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li a
 				',
 				'color', 'font_secondary_color'
 			);

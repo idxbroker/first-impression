@@ -64,11 +64,152 @@
 }
 */
 
-.wrapper-fullscreen .content-sidebar-wrap {
-	width: 100%;
-	max-width: 100%;
-	main {
-		padding-left: 0;
-		padding-right: 0;
+body.must-see-maps-results {
+	.content-sidebar-wrap {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+		main {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
+	.site-inner {
+		padding: 0;
+	}
+}
+/*
+#IDX-main.IDX-page-listing .IDX-topAction a,
+#IDX-main.IDX-page-listing .IDX-form-group input,
+#IDX-main.IDX-page-listing .IDX-form-group button {
+	font-weight: 400;
+	font-size: rem-calc(18);
+	letter-spacing: .02px;
+	line-height: 44.5px;
+	padding: 0;
+	background: #fff;
+	border-radius: 5px;
+}
+
+#IDX-main.IDX-page-listing .IDX-topAction a,
+#IDX-main.IDX-page-listing .IDX-form-group input {
+	padding: 0 5px;
+}
+
+#IDX-main.IDX-page-listing .IDX-form-group button,
+#IDX-main.IDX-page-listing .IDX-topAction a {
+	&:hover {
+		background-color: #d6d6d6;
+	}
+}
+@media only screen and (min-width: 641px) {
+	#IDX-main.IDX-page-listing  {
+		.IDX-topActions {
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.IDX-topAction {
+			display: inline-block;
+			float: none;
+			margin-right: 0;
+			&+.IDX-topAction {
+				margin-left: 6.666%;
+			}
+		}
+	}
+}
+*/
+
+body:not(.must-see-maps-results) #IDX-main .IDX-btn,
+.IDX-wrapper-standard a,
+.IDX-wrapper-standard a:focus,
+.IDX-wrapper-standard a:hover,
+.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle {
+	color: $primary-color;
+}
+
+body:not(.must-see-maps-results) #IDX-main .IDX-btn,
+body:not(.must-see-maps-results) #IDX-main .IDX-btn:hover
+body:not(.must-see-maps-results) #IDX-main .IDX-btn:focus,
+body:not(.must-see-maps-results) #IDX-main .IDX-form input:focus,
+body:not(.must-see-maps-results) #IDX-main .IDX-form textarea:focus,
+.IDX-wrapper-standard .IDX-showcaseSlide-active {
+	border-color: $primary-color;
+},
+.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle::after {
+	border-top-color: $primary-color;
+}
+
+.IDX-wrapper-standard .IDX-results-refinement.IDX-dropdown-open .IDX-refine-search--toggle::after {
+	border-bottom-color: $primary-color;
+}
+
+body:not(.must-see-maps-results) #IDX-main.IDX-wrapper-standard .IDX-container-navbar,
+.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice {
+	background-color: $primary-color;
+}
+body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li a {
+	color: $light-text;
+}
+
+body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
+body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+	background-color: rgba(0,0,0,.1);
+}
+
+body:not(.must-see-maps-results) #IDX-main .IDX-btn,
+body:not(.must-see-maps-results) #IDX-main .IDX-btn:hover
+body:not(.must-see-maps-results) #IDX-main .IDX-btn:focus,
+body:not(.must-see-maps-results) #IDX-main .IDX-form input:focus,
+body:not(.must-see-maps-results) #IDX-main .IDX-form textarea:focus {
+	box-shadow: none;
+}
+
+body:not(.must-see-maps-results) #IDX-main .IDX-form input,
+body:not(.must-see-maps-results) #IDX-main .IDX-form textarea {
+	box-shadow: none;
+	padding: 8px;
+	border-color: #e6e6e6;
+}
+
+body:not(.must-see-maps-results) #IDX-main.IDX-wrapper-standard .IDX-btn:hover {
+	background-color: #eee;
+}
+
+body:not(.must-see-maps-results) {
+	#IDX-main.IDX-wrapper-standard .IDX-btn,
+	#IDX-main #IDX-action-buttons button,
+	.IDX-form input {
+		font-weight: 400;
+		font-size: rem-calc(18);
+		letter-spacing: .02px;
+		padding: 5px;
+		background-color: #fff;
+		border: 2px solid;
+		border-radius: 5px;
+		text-decoration: none;
+		&:hover {
+			border-width: 2px;
+		}
+	}
+	#IDX-main.IDX-wrapper-standard .IDX-btn{
+		text-align: center;
+	}
+
+	@media only screen and (min-width: 641px) {
+		#IDX-main .IDX-detailsHotAction {
+			.IDX-btn {
+				line-height: 12px;
+				font-size: rem-calc(12);
+			}
+			&+.IDX-detailsHotAction {
+				margin-left: 10px;
+			}
+		}
+	}
+
+}
+
+.IDX-navbar-toggle {
+	display: block;
 }
