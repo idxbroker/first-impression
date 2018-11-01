@@ -78,47 +78,6 @@ body.must-see-maps-results {
 		padding: 0;
 	}
 }
-/*
-#IDX-main.IDX-page-listing .IDX-topAction a,
-#IDX-main.IDX-page-listing .IDX-form-group input,
-#IDX-main.IDX-page-listing .IDX-form-group button {
-	font-weight: 400;
-	font-size: rem-calc(18);
-	letter-spacing: .02px;
-	line-height: 44.5px;
-	padding: 0;
-	background: #fff;
-	border-radius: 5px;
-}
-
-#IDX-main.IDX-page-listing .IDX-topAction a,
-#IDX-main.IDX-page-listing .IDX-form-group input {
-	padding: 0 5px;
-}
-
-#IDX-main.IDX-page-listing .IDX-form-group button,
-#IDX-main.IDX-page-listing .IDX-topAction a {
-	&:hover {
-		background-color: #d6d6d6;
-	}
-}
-@media only screen and (min-width: 641px) {
-	#IDX-main.IDX-page-listing  {
-		.IDX-topActions {
-			white-space: nowrap;
-			overflow: hidden;
-		}
-		.IDX-topAction {
-			display: inline-block;
-			float: none;
-			margin-right: 0;
-			&+.IDX-topAction {
-				margin-left: 6.666%;
-			}
-		}
-	}
-}
-*/
 
 body:not(.must-see-maps-results) #IDX-main .IDX-btn,
 .IDX-wrapper-standard a,
