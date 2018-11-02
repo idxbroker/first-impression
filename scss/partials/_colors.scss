@@ -182,7 +182,8 @@ h1:after {
 .home .bg-gradient a,
 .bg-gradient p,
 .bg-gradient a,
-.bg-gradient label {
+.bg-gradient label,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a {
 	color: $light-text;
 }
 
@@ -195,15 +196,24 @@ h1:after {
 }
 
 @media only screen and (min-width: 40.063em) {
-	header.site-header .site-title,
-	header.site-header .site-title a {
-		color: $light-text;
+	div.title-area  {
+		background: $light-text;
+	}
+	.site-header {
+		background-color: $light-text;
 	}
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (max-width: 40.063em) {
+	.site-header {
+		background-color: $primary-color;
+	}
 	div.title-area  {
-		background: $light-text;
+		background-color: #fff;
+	}
+	.site-header .agent-social-icons a,
+	.site-header .menu-toggle {
+		color: $light-text;
 	}
 }
 

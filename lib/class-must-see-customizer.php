@@ -579,16 +579,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			//* Primary color - backgrounds
 
 			//* Primary color - borders
-			self::generate_css('
-				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-navbar-default,
-				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
-				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form,
-				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
-				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-collapse,
-				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-form
-				',
-				'border-color', 'primary_color'
-			);
 
 			//* Primary color hover
 			$primary_hover = '#eee';
@@ -645,11 +635,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type="button"],
 				input[type="submit"],
 				.widget .idx-omnibar-form button,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn:link,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default:hover,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default:focus,
 				.home .content-sidebar-wrap div[class*="home-"],
 				.home .content-sidebar-wrap div[class*="home-"] h1,
 				.home .content-sidebar-wrap div[class*="home-"] h2,
@@ -674,11 +659,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.testimonial_author cite,
 				.home a,
 				.home .widget article h2.entry-title a,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
 				.IDX-wrapper-standard a,
 				.IDX-wrapper-standard a:focus,
 				.IDX-wrapper-standard a:hover,
-				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle
+				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle,
+				#IDX-main #IDX-detailsHotActions .IDX-btn,
+				body.must-see-map-results #IDX-main .IDX-topAction .IDX-btn
 				',
 				'color', 'primary_color'
 			);
@@ -688,9 +674,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type="button"],
 				input[type="submit"],
 				.widget .idx-omnibar-form button,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn:link,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn-default,
 				textarea:focus,
 				select:focus,
 				select:hover,
@@ -698,11 +681,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type="email"]:focus,
 				input[type="tel"]:focus,
 				input[type="password"]:focus,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn,
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn:hover
-				body:not(.must-see-maps-results) #IDX-main .IDX-btn:focus,
-				body:not(.must-see-maps-results) #IDX-main .IDX-form input:focus,
-				body:not(.must-see-maps-results) #IDX-main .IDX-form textarea:focus,
 				.IDX-wrapper-standard .IDX-showcaseSlide-active
 				',
 				'border-color', 'primary_color'
@@ -726,8 +704,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				h4:after,
 				h2:after,
 				h1:after,
-				body:not(.must-see-maps-results) #IDX-main.IDX-wrapper-standard .IDX-container-navbar,
-				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice
+				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice,
+				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
+				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
+				body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn
 				',
 				'background-color', 'primary_color'
 			);
@@ -754,8 +734,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient a,
 				.bg-gradient label,
 				header.site-header .site-title,
-				header.site-header .site-title a,
-				body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li a
+				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li a,
+				body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn,
+				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a
 				',
 				'color', 'font_secondary_color'
 			);
@@ -793,6 +774,16 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				header.site-header .site-title,
 				header.site-header .site-title a {
 					color: $primary_color;
+				}
+			}
+
+			@media only screen and (max-width: 40.063em) {
+				.site-header {
+					background-color: $primary_color;
+				}
+				.site-header .agent-social-icons a,
+				.site-header .menu-toggle {
+					color: $font_secondary_color;
 				}
 			}
 			";

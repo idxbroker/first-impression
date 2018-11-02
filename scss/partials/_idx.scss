@@ -1,70 +1,4 @@
-/* =IDX Content
------------------------------------------------------------- */
-/*
-#IDX-main {
-	width: 100% !important;
-	font-family: inherit !important;
-}
-#IDX-main img {
-	border: none;
-}
-#IDX-main select[multiple] {
-	height: auto;
-	background-image: none;
-}
-#IDX-main.IDX-wrapper-standard a {
-	color: $primary-color;
-	text-decoration: none;
-}
-#idx-mlm-app .app-footer a,
-#idx-mlm-app .app-footer a:hover,
-#idx-mlm-app .app-footer a:focus,
-#IDX-main #IDX-leadToolsBar a,
-#IDX-main #IDX-leadToolsBar a:hover,
-#IDX-main #IDX-leadToolsBar a:focus,
-#IDX-main #idx-mlm-app a.mlm-button,
-#IDX-main #idx-mlm-app a.mlm-button:hover,
-#IDX-main #idx-mlm-app a.mlm-button:focus,
-#IDX-main.IDX-wrapper-standard .IDX-nav a,
-#IDX-main.IDX-wrapper-standard .IDX-nav a:hover,
-#IDX-main.IDX-wrapper-standard .IDX-nav a:focus,
-#IDX-main.IDX-wrapper-standard .IDX-nav a:visited,
-#IDX-main.IDX-wrapper-standard a.IDX-arrow,
-#IDX-main.IDX-wrapper-standard a.select2-search-choice-close {
-	color: $primary-color;
-}
-#IDX-main.IDX-wrapper-standard .IDX-btn,
-#IDX-main.IDX-wrapper-standard .IDX-btn:link,
-#IDX-main.IDX-wrapper-standard .IDX-btn-default {
-	font-size: rem-calc(18);
-	color: $body-font-color-secondary;
-}
-#IDX-main.IDX-wrapper-standard #IDX-detailsTopActions a.IDX-btn,
-#IDX-main.IDX-wrapper-standard #IDX-detailsHotActions a.IDX-btn,
-#IDX-main.IDX-wrapper-standard #IDX-mapSearchFields a.IDX-btn,
-#IDX-main.IDX-wrapper-standard .IDX-pagination-action a.IDX-btn {
-	font-size: rem-calc(14);
-	padding: 0.4rem 0.8rem;
-	color: $body-font-color-secondary;
-	font-family: $body-font-family;
-    font-weight: $paragraph-font-weight;
-}
-#IDX-main.IDX-wrapper-standard #IDX-mapSearchFields a.IDX-btn {
-    padding: 0.4rem;
-}
-#IDX-main.IDX-wrapper-standard .IDX-detailsHotAction {
-	margin-right: 1rem;
-}
-#IDX-main #IDX-leadToolsBar {
-	background-color: $secondary-color;
-}
-// Hide location button on map search. Is removed by IDX system if SSL enabled 
-#IDX-main.IDX-wrapper-standard #IDX-userLocation.IDX-btn {
-	display: none;
-}
-*/
-
-body.must-see-maps-results {
+body.must-see-map-results {
 	.content-sidebar-wrap {
 		width: 100%;
 		max-width: 100%;
@@ -78,97 +12,57 @@ body.must-see-maps-results {
 		padding: 0;
 	}
 }
-
-body:not(.must-see-maps-results) #IDX-main .IDX-btn,
-.IDX-wrapper-standard a,
-.IDX-wrapper-standard a:focus,
-.IDX-wrapper-standard a:hover,
-.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle {
-	color: $primary-color;
-}
-
-body:not(.must-see-maps-results) #IDX-main .IDX-btn,
-body:not(.must-see-maps-results) #IDX-main .IDX-btn:hover
-body:not(.must-see-maps-results) #IDX-main .IDX-btn:focus,
-body:not(.must-see-maps-results) #IDX-main .IDX-form input:focus,
-body:not(.must-see-maps-results) #IDX-main .IDX-form textarea:focus,
-.IDX-wrapper-standard .IDX-showcaseSlide-active {
-	border-color: $primary-color;
-},
-.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle::after {
-	border-top-color: $primary-color;
-}
-
-.IDX-wrapper-standard .IDX-results-refinement.IDX-dropdown-open .IDX-refine-search--toggle::after {
-	border-bottom-color: $primary-color;
-}
-
-body:not(.must-see-maps-results) #IDX-main.IDX-wrapper-standard .IDX-container-navbar,
-.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice {
-	background-color: $primary-color;
-}
-body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li a {
-	color: $light-text;
-}
-
-body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
-body:not(.must-see-maps-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
+body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
+body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
+.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink:hover,
+.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink:focus {
 	background-color: rgba(0,0,0,.1);
 }
 
-body:not(.must-see-maps-results) #IDX-main .IDX-btn,
-body:not(.must-see-maps-results) #IDX-main .IDX-btn:hover
-body:not(.must-see-maps-results) #IDX-main .IDX-btn:focus,
-body:not(.must-see-maps-results) #IDX-main .IDX-form input:focus,
-body:not(.must-see-maps-results) #IDX-main .IDX-form textarea:focus {
-	box-shadow: none;
+
+body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
+body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
+body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
+	background-color: $primary-color;
 }
 
-body:not(.must-see-maps-results) #IDX-main .IDX-form input,
-body:not(.must-see-maps-results) #IDX-main .IDX-form textarea {
-	box-shadow: none;
-	padding: 8px;
-	border-color: #e6e6e6;
+body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
+	color: $light-text;
 }
 
-body:not(.must-see-maps-results) #IDX-main.IDX-wrapper-standard .IDX-btn:hover {
-	background-color: #eee;
+#IDX-main #IDX-detailsHotActions .IDX-btn,
+body.must-see-map-results #IDX-main .IDX-topAction .IDX-btn {
+	color: $primary-color;
 }
 
-body:not(.must-see-maps-results) {
-	#IDX-main.IDX-wrapper-standard .IDX-btn,
-	#IDX-main #IDX-action-buttons button,
-	.IDX-form input {
-		font-weight: 400;
-		font-size: rem-calc(18);
-		letter-spacing: .02px;
-		padding: 5px;
-		background-color: #fff;
-		border: 2px solid;
-		border-radius: 5px;
-		text-decoration: none;
-		&:hover {
-			border-width: 2px;
-		}
+.IDX-wrapper-standard #IDX-nextLastButtons .IDX-btn {
+	width: 150px;
+	&:last-child {
+		float: right;
 	}
-	#IDX-main.IDX-wrapper-standard .IDX-btn{
-		text-align: center;
-	}
+}
 
-	@media only screen and (min-width: 641px) {
-		#IDX-main .IDX-detailsHotAction {
-			.IDX-btn {
-				line-height: 12px;
-				font-size: rem-calc(12);
-			}
-			&+.IDX-detailsHotAction {
-				margin-left: 10px;
-			}
-		}
+#IDX-main .IDX-topAction .IDX-btn {
+	border: none;
+	&:hover {
+		opacity: .9;
 	}
+	padding-left: 6px;
+}
+
+.IDX-wrapper-standard .IDX-detailsHotAction a {
 
 }
 
 .IDX-navbar-toggle {
 	display: block;
+}
+
+// TODO: add this to customizer
+body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a > span {
+	outline: none;
+	color: #ffffff;
 }
