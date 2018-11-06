@@ -220,7 +220,7 @@ add_action( 'equity_header', 'social_icons' );
 
 function social_icons() {
 	?>
-	<div class="social-icons-header"><?php echo do_shortcode('[social_icons]'); ?></div>
+	<div class="social-icons-header"><?php echo do_shortcode('[social_icons newtab="1"]'); ?></div>
 	<?php
 }
 
