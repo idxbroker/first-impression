@@ -211,16 +211,26 @@ a.off-canvas-toggle:before {
 }
 
 .social-icons-header {
+	display: flex;
+	align-items: center;
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	bottom: 50%;
 	right: 0;
+	margin-left: 100px;
+	@media #{$medium-up} {
+		bottom: 0;
+	}
+	.agent-social-icons {
+		@media (max-width: 800px) and (min-width: 641px) {
+			max-width: 150px;
+		}
+	}
 	.agent-social-icons a {
-		line-height: 100px;
 		margin-right: 20px;
 		font-size: 24px;
-		@media (max-width: 850px) and (min-width: 641px) {
-			margin-right: 10px;
+		@media (max-width: 1000px) and (min-width: 641px) {
+				margin-right: 10px;
 		}
 	}
 	.fa-rss {

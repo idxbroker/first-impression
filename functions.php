@@ -436,7 +436,43 @@ function use_preset_colors() {
 	}
 }
 
-// Header
+// Carousel stuffs
+
+/*
+//* Filter listing scroller widget prev/next links
+add_filter( 'listing_scroller_prev_link', 'child_listing_scroller_prev_link');
+function child_listing_scroller_prev_link( $listing_scroller_prev_link_text ) {
+	$listing_scroller_prev_link_text = __( '<i class=\"fa fa-caret-left\"></i><span>Prev</span>', 'curb-appeal' );
+	return $listing_scroller_prev_link_text;
+}
+add_filter( 'listing_scroller_next_link', 'child_listing_scroller_next_link');
+function child_listing_scroller_next_link( $listing_scroller_next_link_text ) {
+	$listing_scroller_next_link_text = __( '<i class=\"fa fa-caret-right\"></i><span>Next</span>', 'curb-appeal' );
+	return $listing_scroller_next_link_text;
+}
+//* Filter IDX listing carousel widget prev/next links
+add_filter( 'idx_listing_carousel_prev_link', 'child_idx_listing_carousel_prev_link');
+function child_idx_listing_carousel_prev_link( $idx_listing_carousel_prev_link_text ) {
+	$idx_listing_carousel_prev_link_text = __( '<i class=\"fa fa-caret-left\"></i><span>Prev</span>', 'curb-appeal' );
+	return $idx_listing_carousel_prev_link_text;
+}
+add_filter( 'idx_listing_carousel_next_link', 'child_idx_listing_carousel_next_link');
+function child_idx_listing_carousel_next_link( $idx_listing_carousel_next_link_text ) {
+	$idx_listing_carousel_next_link_text = __( '<i class=\"fa fa-caret-right\"></i><span>Next</span>', 'curb-appeal' );
+	return $idx_listing_carousel_next_link_text;
+}
+//* Filter Equity page carousel widget prev/next links
+add_filter( 'equity_page_carousel_prev_link', 'child_equity_page_carousel_prev_link');
+function child_equity_page_carousel_prev_link( $equity_page_carousel_prev_link_text ) {
+	$equity_page_carousel_prev_link_text = __( '<i class=\"fa fa-caret-left\"></i><span>Prev</span>', 'curb-appeal' );
+	return $equity_page_carousel_prev_link_text;
+}
+add_filter( 'equity_page_carousel_next_link', 'child_equity_page_carousel_next_link');
+function child_equity_page_carousel_next_link( $equity_page_carousel_next_link_text ) {
+	$equity_page_carousel_next_link_text = __( '<i class=\"fa fa-caret-right\"></i><span>Next</span>', 'curb-appeal' );
+	return $equity_page_carousel_next_link_text;
+}
+*/
 
 // Includes
 
