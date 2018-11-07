@@ -53,8 +53,7 @@ body.sticky .menu-toggle {
 	margin-left: 0;
 }
 .nav-header-right .menu-item,
-.nav-header-right .sub-menu,
-.nav-header-right .sub-menu a {
+.nav-header-right .sub-menu {
 	display: block;
 	text-align: left;
 	list-style-type: none;
@@ -78,7 +77,13 @@ body.sticky .menu-toggle {
 	font-size: rem-calc(18);
 	font-weight: $paragraph-font-weight;
 	line-height: 33px;
-	width: 100%;
+}
+
+.nav-header-right .menu-item a {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .nav-header-right ul > li.menu-item-has-children {
@@ -107,6 +112,10 @@ body.sticky .menu-toggle {
 		content: "\f107";
 		transition: all .4s ease-in-out;
 	}
+}
+
+.nav-header-right ul > li.menu-item-has-children > a {
+	background: #ccc;
 }
 
 .nav-header-right ul > li.menu-item-has-children > a::after {
