@@ -858,6 +858,19 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 	}
 }
 
+div.impress-carousel .owl-nav.owl-controls button.owl-prev, div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	color: $primary-color;
+	height: 65px;
+	width: 65px;
+	margin: 40px 24px;
+	background-color: #fff;
+	border: 2px solid $primary-color;
+}
+
+div.impress-carousel .owl-nav.owl-controls button.owl-prev:hover, div.impress-carousel .owl-nav.owl-controls button.owl-next:hover {
+	background-color: #eee;
+}
+
 
 .singleTestimonialWidget, .listTestimonialsWidget {
 	margin: 0 auto;

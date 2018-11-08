@@ -24,9 +24,7 @@ footer.site-footer * {
 footer.site-footer a {
 	color: $body-font-color;
 }
-footer.site-footer p {
-	margin: 0;
-}
+
 footer.site-footer i.properticons {
 	width: 30px;
 	height: 30px;
@@ -34,8 +32,6 @@ footer.site-footer i.properticons {
 	margin-left: -5px;
 }
 
-@media #{$medium-up} {
-}
 @media #{$large-up} {
 	footer.site-footer .footer-left {
 		clear: both;

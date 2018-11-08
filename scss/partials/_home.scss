@@ -360,6 +360,7 @@ body.home.must-see-white-bkg {
 		padding-bottom: 50px;
 		section+section {
 			margin-top: 50px;
+			margin-left: 15px;
 			@media #{$medium-up} {
 				margin-top: 0;
 	  		}
@@ -371,6 +372,7 @@ body.home.must-see-white-bkg {
 	  		}
 	  		.widget {
 	  			flex-grow: 1;
+	  			flex-basis: 0;
 	  		}
 			.widget_text {
 				h4 {
@@ -381,16 +383,18 @@ body.home.must-see-white-bkg {
 			}
 			.impress-idx-signup-widget {
 			}
+			// Target two widgets only
 	  		section:first-child:nth-last-child(2).widget,
 	  		section:first-child:nth-last-child(2) ~ .widget {
 				@media #{$medium-up} {
-		  			width: 500px;
+		  			min-width: 500px;
 					padding: 0 50px;
   				}
 	  		}
 	  		section:first-child:nth-last-child(2).impress-idx-signup-widget,
 	  		section:first-child:nth-last-child(2) ~ .impress-idx-signup-widget {
 	  			width: 100%;
+	  			flex-basis: auto;
 	  		}
 		}
 	}
