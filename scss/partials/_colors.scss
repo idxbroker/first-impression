@@ -297,6 +297,10 @@ footer.site-footer .footer-widgets .IDX_Omnibar_Widget * {
 }
 
 // NEW THINGS
+div.impress-carousel .owl-nav.owl-controls button.owl-prev:hover,
+div.impress-carousel .owl-nav.owl-controls button.owl-next:hover {
+	background-color: rgba(0,0,0,.05);
+}
 
 div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-prev,
 div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-next,
@@ -305,6 +309,9 @@ footer.site-footer div.impress-carousel .owl-nav.owl-controls button.owl-next {
 	background-color: inherit;
 	border-color: #fff;
 	color: #fff;
+	&:hover {
+		background-color: rgba(255,255,255,.05);
+	}
 }
 
 div.impress-carousel .owl-nav.owl-controls button.owl-prev,
@@ -312,9 +319,4 @@ div.impress-carousel .owl-nav.owl-controls button.owl-next {
 	color: $primary-color;
 	background-color: #fff;
 	border-color: $primary-color;
-}
-
-div.impress-carousel .owl-nav.owl-controls button.owl-prev:hover,
-div.impress-carousel .owl-nav.owl-controls button.owl-next:hover {
-	background-color: #eee;
 }
