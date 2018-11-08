@@ -10,7 +10,7 @@
 	line-height: 30px;
 	margin: 0 0 0.5rem;
 	font-size: rem-calc(32);
-	&:after {
+	&::after {
 		content: "";
 		display: block;
 		width: 85px;

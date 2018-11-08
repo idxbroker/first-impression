@@ -151,14 +151,6 @@ h6 {
 	letter-spacing: -1px;
 }
 
-.home .widget h2,
-.home .widget h3,
-.home .widget h4,
-.home .widget h5,
-.home .widget h6,
-.off-canvas .widget .widget-title {
-	color: $body-font-color;
-}
 article h3,
 article h5 {
 	font-family: $paragraph-font-family;
@@ -369,4 +361,25 @@ div[class^="home-middle-"] { position: relative };
 .customize-partial-edit-shortcut-button {
 	height: 30px !important;
 	width: 30px !important;
+}
+
+
+div[class^="home-middle-"],
+.contact-us,
+footer {
+	.widget_nav_menu h4,
+	.widget_text h2,
+	.widget_text h4,
+	.impress-idx-signup-widget h2,
+	.impress-idx-signup-widget h4 {
+		font-size: rem-calc(24);
+		&::after {
+			content: "";
+			display: block;
+			width: 85px;
+			height: 3px;
+			margin: 20px 0;
+			border-radius: 5px;
+		}
+	}
 }

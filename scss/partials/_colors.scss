@@ -15,8 +15,8 @@ body.must-see-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.
 body.must-see-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active:focus {
 	color: $anchor-font-secondary-color-hover;
 }
-body.must-see-light .equity-nav-menu > li.menu-item-has-children a:after,
-body.must-see-light .nav-header-right ul>li.menu-item-has-children a:after {
+body.must-see-light .equity-nav-menu > li.menu-item-has-children a::after,
+body.must-see-light .nav-header-right ul>li.menu-item-has-children a::after {
 	color: rgba($body-font-color, 0.6);
 }
 
@@ -75,7 +75,7 @@ body.must-see-light.home div[class*='home-middle-'].bg-alt.transparent {
 }
 
 /* Border colors */
-body.must-see-light .equity-nav-menu .sub-menu:before {
+body.must-see-light .equity-nav-menu .sub-menu::before {
 	border-bottom-color: rgba($body-bg, 0.90);
 }
 body.must-see-light .sticky-header,
@@ -128,7 +128,7 @@ a.menu-toggle,
 .nav-header-right .menu-item,
 .nav-header-right .sub-menu,
 .nav-header-right a,
-.nav-header-right ul > li.menu-item-has-children > a:after,
+.nav-header-right ul > li.menu-item-has-children > a::after,
 .testimonial_author cite,
 footer.site-footer .footer-widgets .widget a:hover,
 footer.site-footer .footer-widgets .widget a:focus,
@@ -155,10 +155,10 @@ input[type="password"]:focus {
 }
 
 .title-area,
-h4:before, 
-h4:after,
-h2:after,
-h1:after {
+h4::before, 
+h4::after,
+h2::after,
+h1::after {
 	background: $primary-color;
 }
 
@@ -188,10 +188,10 @@ h1:after {
 }
 
 .bg-gradient .title-area,
-.bg-gradient h4:before, 
-.bg-gradient h4:after,
-.bg-gradient h2:after,
-.bg-gradient h1:after {
+.bg-gradient h4::before, 
+.bg-gradient h4::after,
+.bg-gradient h2::after,
+.bg-gradient h1::after {
 	background: $light-text;
 }
 
@@ -282,10 +282,10 @@ footer.site-footer .footer-widgets {
 }
 
 footer.site-footer .title-area,
-footer.site-footer h4:before, 
-footer.site-footer h4:after,
-footer.site-footer h2:after,
-footer.site-footer h1:after {
+footer.site-footer h4::before, 
+footer.site-footer h4::after,
+footer.site-footer h2::after,
+footer.site-footer h1::after {
 	background: #fff;
 }
 
@@ -294,4 +294,27 @@ footer.site-footer button
 footer.site-footer .IDX-mapWidgetWrap *,
 footer.site-footer .footer-widgets .IDX_Omnibar_Widget * {
 	color: #4C5051;
+}
+
+// NEW THINGS
+
+div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-next,
+footer.site-footer div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+footer.site-footer div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	background-color: inherit;
+	border-color: #fff;
+	color: #fff;
+}
+
+div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	color: $primary-color;
+	background-color: #fff;
+	border-color: $primary-color;
+}
+
+div.impress-carousel .owl-nav.owl-controls button.owl-prev:hover,
+div.impress-carousel .owl-nav.owl-controls button.owl-next:hover {
+	background-color: #eee;
 }

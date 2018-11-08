@@ -112,11 +112,11 @@ body.home.must-see-white-bkg {
 			font-size: rem-calc(32);
 		}
 		margin: 50px 0;
-		&:before, &:after {
+		&::before, &::after {
 			display: none;
 		}
 		@media #{$medium-up} {
-			&:before, &:after {
+			&::before, &::after {
 				display: inline-block;
 				content: "";
 				top: 50%;
@@ -128,10 +128,10 @@ body.home.must-see-white-bkg {
 				border-radius: 5px;
 				margin: 0;
 			}
-			&:before {
+			&::before {
 				margin-left: -105px;
 			}
-			&:after {
+			&::after {
 				margin-left: 25px;
 			}
 		}
@@ -228,7 +228,7 @@ body.home.must-see-white-bkg {
 				margin: 0 auto;
 				margin-top: calc(50% - 70px);
 			}
-			h4:after {
+			h4::after {
 				content: "";
 				display: block;
 				width: 90px;
@@ -258,7 +258,7 @@ body.home.must-see-white-bkg {
 				left: 0;
 				z-index: -1;
 				background: #000;
-				&:after {
+				&::after {
 					content: "";
 					display: block;
 					position: absolute;
@@ -380,6 +380,9 @@ body.home.must-see-white-bkg {
 					font-weight: 700;
 					letter-spacing: .01px;
 				}
+				h4.widgettitle::after {
+					display: none;
+				}
 			}
 			.impress-idx-signup-widget {
 			}
@@ -412,23 +415,6 @@ body.home.must-see-white-bkg {
 			margin-left: 10px;
 		}
 	}	
-}
-
-
-
-div[class^="home-middle-"], .contact-us, footer {
-	.widget_text, .impress-idx-signup-widget, {
-		h2, h4 {
-			&:after {
-				content: "";
-				display: block;
-				width: 85px;
-				height: 3px;
-				margin: 20px 0;
-				border-radius: 5px;
-			}
-		}
-	}
 }
 
 

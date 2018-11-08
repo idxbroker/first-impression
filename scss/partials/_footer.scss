@@ -63,6 +63,15 @@ footer.site-footer .footer-widgets .widget .agent-email-wrap i {
 footer.site-footer .footer-widgets .widget a {
 	text-decoration: none;
 }
+
+footer.site-footer .footer-widgets .widget .IDX-mapWidgetWrap {
+	color: #333;
+	a,label {
+		color: #333;
+	}
+}
+
+
 footer.site-footer .footer-widgets .widget a,
 footer.site-footer a {
 	&:hover, &:focus {
@@ -74,7 +83,8 @@ footer.site-footer .footer-widgets ol {
 footer.site-footer .footer-widgets li {
 	text-align: left;
 }
-footer.site-footer .footer-widgets .widget-title { 
+footer.site-footer .footer-widgets h4,
+footer.site-footer .footer-widgets h3 { 
 	font-size: rem-calc(24);
 	margin-bottom: 1.325rem;
 }

@@ -655,7 +655,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.nav-header-right .menu-item,
 				.nav-header-right .sub-menu,
 				.nav-header-right a,
-				.nav-header-right ul > li.menu-item-has-children > a:after,
+				.nav-header-right ul > li.menu-item-has-children > a::after,
 				.testimonial_author cite,
 				.home a,
 				.home .widget article h2.entry-title a,
@@ -700,10 +700,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 			self::generate_css('
 				.title-area,
-				h4:before, 
-				h4:after,
-				h2:after,
-				h1:after,
+				h4::before, 
+				h4::after,
+				h2::after,
+				h1::after,
 				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice,
 				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
 				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
@@ -743,10 +743,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 			self::generate_css('
 				.bg-gradient .title-area,
-				.bg-gradient h4:before, 
-				.bg-gradient h4:after,
-				.bg-gradient h2:after,
-				.bg-gradient h1:after
+				.bg-gradient h4::before, 
+				.bg-gradient h4::after,
+				.bg-gradient h2::after,
+				.bg-gradient h1::after
 			',
 			'background', 'font_secondary_color'
 			);
@@ -816,7 +816,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				padding-right: ' . $nav_padding . 'px;
 			}';
 			$nav_arrow = 8 + ( get_theme_mod( 'nav_menu_padding', 0 ) / 2 );
-			echo '.nav-header-right ul>li.menu-item-has-children>a:after {right: ' . $nav_arrow . 'px}';
+			echo '.nav-header-right ul>li.menu-item-has-children>a::after {right: ' . $nav_arrow . 'px}';
 
 			?>
 		</style>

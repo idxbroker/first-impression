@@ -89,8 +89,8 @@ body.sticky .menu-toggle {
 .nav-header-right ul > li.menu-item-has-children {
 	@media #{$small-only} {
 		position: relative;
-		&:hover:after,
-		&:focus:after {
+		&:hover::after,
+		&:focus::after {
 			transform: rotate(180deg);
 		}
 	}

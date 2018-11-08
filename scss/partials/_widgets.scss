@@ -54,7 +54,7 @@
 	line-height: 1;
 	margin: 0 0 1.25rem;
 }
-.widget_nav_menu_desc ul li:before {
+.widget_nav_menu_desc ul li::before {
 	content: "";
 }
 .widget_nav_menu_desc i {
@@ -266,17 +266,17 @@ section.equity-post-carousel article .entry-content {
 .impress-carousel p.address {
 	display: none;
 }
-.equity-idx-carousel ul.beds-baths-sqft li:before,
-.impress-carousel ul.beds-baths-sqft li:before {
+.equity-idx-carousel ul.beds-baths-sqft li::before,
+.impress-carousel ul.beds-baths-sqft li::before {
 	font-family: 'FontAwesome';
 	margin-right: 0.32rem;
 }
-.equity-idx-carousel ul.beds-baths-sqft li.beds:before,
-.impress-carousel ul.beds-baths-sqft li.beds:before {
+.equity-idx-carousel ul.beds-baths-sqft li.beds::before,
+.impress-carousel ul.beds-baths-sqft li.beds::before {
 	content: "\f236";
 }
-.equity-idx-carousel ul.beds-baths-sqft li.baths:before,
-.impress-carousel ul.beds-baths-sqft li.baths:before {
+.equity-idx-carousel ul.beds-baths-sqft li.baths::before,
+.impress-carousel ul.beds-baths-sqft li.baths::before {
 	content: "\f2cc";
 }
 .equity-idx-carousel .owl-dots,
@@ -726,7 +726,7 @@ section.equity-post-carousel article .entry-content {
 	position: relative;
 	padding: 0;
 }
-.widget .idx-omnibar-form:after {
+.widget .idx-omnibar-form::after {
 	content: "";
 	display: table;
 	clear: both;
@@ -858,17 +858,31 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 	}
 }
 
-div.impress-carousel .owl-nav.owl-controls button.owl-prev, div.impress-carousel .owl-nav.owl-controls button.owl-next {
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-idx-signup-widget, .equity-idx-search-widget {
+		button {
+			&:hover, &:active {
+				background: #eee;
+			}
+		}
+	}
+}
+
+div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div.impress-carousel .owl-nav.owl-controls button.owl-next {
 	color: $primary-color;
 	height: 65px;
 	width: 65px;
 	margin: 40px 24px;
-	background-color: #fff;
-	border: 2px solid $primary-color;
+	border: 2px solid;
 }
 
-div.impress-carousel .owl-nav.owl-controls button.owl-prev:hover, div.impress-carousel .owl-nav.owl-controls button.owl-next:hover {
-	background-color: #eee;
+// Make the chevrons look centered
+div.impress-carousel .owl-nav.owl-controls button.owl-prev i {
+	padding-right: 2px;
+}
+div.impress-carousel .owl-nav.owl-controls button.owl-next i {
+	padding-left: 2px;
 }
 
 
@@ -896,7 +910,7 @@ div.easy_testimonial_image_wrapper {
 			margin-left: 200px;
 		}
 		cite {
-			&:before {
+			&::before {
 				padding-right: 5px;
 			}
 			span:first-child {

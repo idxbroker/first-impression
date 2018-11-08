@@ -67,7 +67,7 @@
 		span:first-of-type {
 			padding-left: 60px;
 		}
-		.says:after {
+		.says::after {
 			content: ":";
 		}
 	}
