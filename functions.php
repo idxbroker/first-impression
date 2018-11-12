@@ -390,52 +390,6 @@ function must_see_featured_image() {
 	echo '</div>';
 }
 
-// Customizer color preset overrides
-add_action('customize_save_after', 'use_preset_colors');
-function use_preset_colors() {
-	$presets = array(
-		'blue' => array(
-			'primary_color'        => '#258bb7',
-			'font_secondary_color' => '#FFFFFF',
-			'gradient_start'       => '#3fa5db',
-			'gradient_end'         => '#5087c8'
-		),
-		'green' => array(
-			'primary_color'        => '#2e7e55',
-			'font_secondary_color' => '#FFFFFF',
-			'gradient_start'       => '#1a9a59',
-			'gradient_end'         => '#1e844c'
-		),
-		'red' => array(
-			'primary_color'        => '#b82501',
-			'font_secondary_color' => '#FFFFFF',
-			'gradient_start'       => '#b82601',
-			'gradient_end'         => '#aa1f03'
-		),
-		'tangerine' => array(
-			'primary_color'        => '#e27121',
-			'font_secondary_color' => '#FFFFFF',
-			'gradient_start'       => '#e27121',
-			'gradient_end'         => '#d3671e'
-		),
-		'white_blue' => array(
-			'primary_color'        => '#248ab7',
-			'font_secondary_color' => '#000000',
-			'gradient_start'       => '#f5f5f5',
-			'gradient_end'         => '#f5f5f5'
-		)
-	);
-
-	$preset_color = get_theme_mod( 'preset_color_scheme' );
-	if ($preset_color !== 'custom' && $presets[$preset_color]) {
-		$preset = $presets[$preset_color];
-		set_theme_mod('primary_color', $preset['primary_color']);
-		set_theme_mod('font_secondary_color', $preset['font_secondary_color']);
-		set_theme_mod('gradient_start', $preset['gradient_start']);
-		set_theme_mod('gradient_end', $preset['gradient_end']);
-	}
-}
-
 // Includes
 
 # Theme Customizatons

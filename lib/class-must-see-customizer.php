@@ -7,12 +7,55 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 	/**
 	 * Register theme specific customization options
 	 */
+
+	private $color_presets = array(
+		'blue' => array(
+			'primary_color'        => '#258bb7',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#3fa5db',
+			'gradient_end'         => '#5087c8'
+		),
+		'green' => array(
+			'primary_color'        => '#2e7e55',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#1a9a59',
+			'gradient_end'         => '#1e844c'
+		),
+		'red' => array(
+			'primary_color'        => '#b82501',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#b82601',
+			'gradient_end'         => '#aa1f03'
+		),
+		'tangerine' => array(
+			'primary_color'        => '#e27121',
+			'font_secondary_color' => '#FFFFFF',
+			'gradient_start'       => '#e27121',
+			'gradient_end'         => '#d3671e'
+		),
+		'white_blue' => array(
+			'primary_color'        => '#248ab7',
+			'font_secondary_color' => '#000000',
+			'gradient_start'       => '#f5f5f5',
+			'gradient_end'         => '#f5f5f5'
+		)
+	);
+
 	public function register( $wp_customize ) {
 
 		$this->header( $wp_customize );
 		$this->colors( $wp_customize );
 		$this->home( $wp_customize );
 		$this->misc( $wp_customize );
+	}
+
+	private function get_color_hex( $theme_mod ) {
+		$current_preset = get_theme_mod( 'preset_color_scheme', 'blue' );
+		if ('custom' !== $current_preset) {
+			return $this->color_presets[$current_preset][$theme_mod];
+		}
+		return get_theme_mod($theme_mod, $this->color_presets[$current_preset][$theme_mod]);
+
 	}
 
 	private function header( $wp_customize ) {
@@ -94,18 +137,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 	//* Colors
 	private function colors( $wp_customize ) {
 		$wp_customize->add_section(
-			'preset_colors',
-			array(
-				'title'    => __( 'Preset Colors', 'must-see' ),
-				'priority' => 200,
-			)
-		);
-
-		$wp_customize->add_section(
 			'colors',
 			array(
 				'title'       => __( 'Custom Colors', 'must-see' ),
-				'description' => __('NOTICE: These changes will not be saved unless you change the "Color Preset" to "Custom"'),
+				'description' => __('NOTICE: You are beautiful'),
 				'priority'    => 200,
 			)
 		);
@@ -143,7 +178,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			'preset_color_scheme',
 			array(
 				'label'    => __( 'Preset Color Scheme', 'must-see' ),
-				'section'  => 'preset_colors',
+				'section'  => 'colors',
 				'type'     => 'select',
 				'choices'  => array(
 					'blue'      => __( 'Blue' ),
@@ -540,79 +575,30 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 		<style type="text/css">
 			<?php
 
-			if ( get_theme_mod( 'primary_tone' ) ) {
-				$light = true;
-			}
-
 			//* Site description
 			if ( get_theme_mod( 'show_site_description' ) ) {
 				echo 'header.site-header .site-description {display: block;}';
 			}
 
 			//* Background images
+			// TODO: Add option to use custom image
 			echo '.home-top {background-image: url(\'' . get_theme_mod( 'default_background_image', get_stylesheet_directory_uri() . '/images/bkg-default.jpg' ) . '\');}';
 			//* Background overlay
-			if ( isset( $light ) ) {
-				echo 'body.must-see-light';
-			}
-
-			echo '.home .content-sidebar-wrap.row .home-top > .overlay {background-color: ' . self::hex2rgba( get_theme_mod( 'home_top_background_overlay', '201f1f' ), get_theme_mod( 'home_top_background_overlay_opacity', 0.1 ) ) . '}';
-
-			if ( get_theme_mod( 'home_widget_areas', 6 ) > 2 ) {
-				echo '.home-middle-3 {background-image: url(\'' . get_theme_mod( 'home_middle_3_background', get_stylesheet_directory_uri() . '/images/home-middle-3-default.jpg' ) . '\');}';
-				//* Background overlay
-				if ( isset( $light ) ) {
-					echo 'body.must-see-light';
-				}
-				echo '.home .content-sidebar-wrap.row div.home-middle-3.bg-image > .overlay {background-color: ' . self::hex2rgba( get_theme_mod( 'home_middle_3_background_overlay', '201f1f' ), get_theme_mod( 'home_middle_3_background_overlay_opacity', 0.8 ) ) . '}';
-			}
-			if ( get_theme_mod( 'home_widget_areas', 6 ) > 5 ) {
-				echo '.home-middle-6 {background-image: url(\'' . get_theme_mod( 'home_middle_6_background', get_stylesheet_directory_uri() . '/images/home-middle-6-default.jpg' ) . '\');}';
-				//* Background overlay
-				if ( isset( $light ) ) {
-					echo 'body.must-see-light';
-				}
-				echo '.home .content-sidebar-wrap.row div.home-middle-6.bg-image > .overlay {background-color: ' . self::hex2rgba( get_theme_mod( 'home_middle_6_background_overlay', '201f1f' ), get_theme_mod( 'home_middle_6_background_overlay_opacity', 0.6 ) ) . '}';
-			}
-
-
-			//* Primary color - backgrounds
-
-			//* Primary color - borders
 
 			//* Primary color hover
 			$primary_hover = '#eee';
 
 			//* Secondary color - hover
 			$secondary_hover = '#258BB7';
-			if ( get_theme_mod( 'primary_tone' ) ) {
-				echo '
-				body.must-see-light .bg-alt a:hover,
-				body.must-see-light .bg-alt a:focus,
-				body.must-see-light.home .bg-alt a:hover,
-				body.must-see-light.home .bg-alt a:focus,
-				body.must-see-light.home .widget article h2.entry-title a:hover,
-				body.must-see-light.home .widget article h2.entry-title a:focus,
-				body.must-see-light .off-canvas .widget a:hover,
-				body.must-see-light .off-canvas .widget a:focus {
-					color: ' . $secondary_hover . ';
-				}';
-			} else {
-				echo '
-					.bg-alt a:hover,
-					.bg-alt a:focus,
-					.home .bg-alt a:hover,
-					.home .bg-alt a:focus,
-					.home .widget article h2.entry-title a:hover,
-					.home .widget article h2.entry-title a:focus,
-					.off-canvas .widget a:hover,
-					.off-canvas .widget a:focus {
-						color: ' . $secondary_hover . ';
-					}';
-			}
 
-			/*** NEW STUFF ***/
-			self::generate_css('
+			// TODO: preset color settings here
+			$primary_color = $this->get_color_hex('primary_color');
+			$font_secondary_color = $this->get_color_hex('font_secondary_color');
+			$gradient_start = $this->get_color_hex('gradient_start');
+			$gradient_end = $this->get_color_hex('gradient_end');
+
+			echo "
+				/*** Font Primary Color ***/
 				h1,
 				h2,
 				h3,
@@ -632,17 +618,17 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				button:hover,
 				.widget button:hover,
 				.widget button:focus,
-				input[type="button"],
-				input[type="submit"],
+				input[type='button'],
+				input[type='submit'],
 				.widget .idx-omnibar-form button,
-				.home .content-sidebar-wrap div[class*="home-"],
-				.home .content-sidebar-wrap div[class*="home-"] h1,
-				.home .content-sidebar-wrap div[class*="home-"] h2,
-				.home .content-sidebar-wrap div[class*="home-"] h3,
-				.home .content-sidebar-wrap div[class*="home-"] h4,
-				.home .content-sidebar-wrap div[class*="home-"] h5,
-				.home .content-sidebar-wrap div[class*="home-"] h6,
-				.home .content-sidebar-wrap div[class*="home-"] label,
+				.home .content-sidebar-wrap div[class*='home-'],
+				.home .content-sidebar-wrap div[class*='home-'] h1,
+				.home .content-sidebar-wrap div[class*='home-'] h2,
+				.home .content-sidebar-wrap div[class*='home-'] h3,
+				.home .content-sidebar-wrap div[class*='home-'] h4,
+				.home .content-sidebar-wrap div[class*='home-'] h5,
+				.home .content-sidebar-wrap div[class*='home-'] h6,
+				.home .content-sidebar-wrap div[class*='home-'] label,
 				.home .impress-idx-dashboard-widget h4,
 				.home section.impress-carousel-widget h4,
 				.home .singleTestimonialWidget h4,
@@ -664,41 +650,44 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard a:hover,
 				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle,
 				#IDX-main #IDX-detailsHotActions .IDX-btn,
-				body.must-see-map-results #IDX-main .IDX-topAction .IDX-btn
-				',
-				'color', 'primary_color'
-			);
-			self::generate_css('
+				body.must-see-map-results #IDX-main .IDX-topAction .IDX-btn {
+					color: $primary_color;
+				}
+				@media only screen and (min-width: 40.063em) {
+					header.site-header .site-title,
+					header.site-header .site-title a {
+						color: $primary_color;
+					}
+				}
+
+				/*** Border Primary Color ***/
 				.button,
 				button,
-				input[type="button"],
-				input[type="submit"],
+				input[type='button'],
+				input[type='submit'],
 				.widget .idx-omnibar-form button,
 				textarea:focus,
 				select:focus,
 				select:hover,
-				input[type="text"]:focus,
-				input[type="email"]:focus,
-				input[type="tel"]:focus,
-				input[type="password"]:focus,
-				.IDX-wrapper-standard .IDX-showcaseSlide-active
-				',
-				'border-color', 'primary_color'
-			);
+				input[type='text']:focus,
+				input[type='email']:focus,
+				input[type='tel']:focus,
+				input[type='password']:focus,
+				.IDX-wrapper-standard .IDX-showcaseSlide-active {
+					border-color: $primary_color;
+				}
 
-			self::generate_css('
-				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle::after
-				',
-				'border-top-color', 'primary_color'
-			);
+				/*** Border Top Primary Color ***/
+				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle::after {
+					border-top-color: $primary_color;
+				}
 
-			self::generate_css('
-				.IDX-wrapper-standard .IDX-results-refinement.IDX-dropdown-open .IDX-refine-search--toggle::after
-				',
-				'border-bottom-color', 'primary_color'
-			);
+				/*** Border Bottom Primary Color ***/
+				.IDX-wrapper-standard .IDX-results-refinement.IDX-dropdown-open .IDX-refine-search--toggle::after {
+					border-bottom-color: $primary_color;
+				}
 
-			self::generate_css('
+				/*** Background Primary Color ***/
 				.title-area,
 				h4::before, 
 				h4::after,
@@ -707,24 +696,28 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice,
 				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
 				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
-				body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn
-				',
-				'background-color', 'primary_color'
-			);
+				body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
+					background-color: $primary_color;
+				}
+				@media only screen and (max-width: 40.063em) {
+					.site-header {
+						background-color: $primary_color;
+					}
+				}
 
-			self::generate_css('
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h1,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h2,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h3,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h4,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h5,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient h6,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient label,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient .impress-idx-dashboard-widget h4,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient section.impress-carousel-widget h4,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient .singleTestimonialWidget h4,
-				.home .content-sidebar-wrap div[class*="home-"].bg-gradient .listTestimonialsWidget h4,
+				/*** Font Secondary Color ***/
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h1,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h2,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h3,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h4,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h5,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h6,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient label,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .impress-idx-dashboard-widget h4,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient section.impress-carousel-widget h4,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .singleTestimonialWidget h4,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4,
 				.bg-gradient .easy_testimonial_title,
 				.bg-gradient .easy_testimonial .testimonial_body p,
 				.bg-gradient .easy_testimonial .testimonial_author cite,
@@ -736,58 +729,40 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				header.site-header .site-title,
 				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li a,
 				body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn,
-				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a
-				',
-				'color', 'font_secondary_color'
-			);
+				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a {
+					color: $font_secondary_color;
+				}
+				@media only screen and (max-width: 40.063em) {
+					.site-header .agent-social-icons a,
+					.site-header .menu-toggle {
+						color: $font_secondary_color;
+					}
+				}
 
-			self::generate_css('
+				/*** Background Secondary Color ***/
 				.bg-gradient .title-area,
 				.bg-gradient h4::before, 
 				.bg-gradient h4::after,
 				.bg-gradient h2::after,
-				.bg-gradient h1::after
-			',
-			'background', 'font_secondary_color'
-			);
+				.bg-gradient h1::after {
+					background-color: $font_secondary_color;
+				}
 
-			self::generate_css('
+				/*** Border Secondary Color ***/
 				.bg-gradient .button,
 				.bg-gradient button,
-				.bg-gradient input[type="button"],
-				.bg-gradient input[type="submit"]
-			',
-			'border-color', 'font_secondary_color'
-			);
-
-			$primary_color = get_theme_mod('primary_color', '#258bb7');
-			$font_secondary_color = get_theme_mod('font_secondary_color', '#ffffff');
-			$gradient_start = get_theme_mod('gradient_start', '#3fa5db');
-			$gradient_end = get_theme_mod('gradient_end', '#5087c8');
-
-			echo ".bg-gradient {
-				background: linear-gradient(135deg, $gradient_start 0%, $gradient_end 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			}";
-
-			echo "
-			@media only screen and (min-width: 40.063em) {
-				header.site-header .site-title,
-				header.site-header .site-title a {
-					color: $primary_color;
+				.bg-gradient input[type='button'],
+				.bg-gradient input[type='submit'] {
+					border-color: $font_secondary_color;
 				}
-			}
 
-			@media only screen and (max-width: 40.063em) {
-				.site-header {
-					background-color: $primary_color;
+				/*** Background Gradient Colors ***/
+				.bg-gradient {
+					background: linear-gradient(135deg, $gradient_start 0%, $gradient_end 100%);
 				}
-				.site-header .agent-social-icons a,
-				.site-header .menu-toggle {
-					color: $font_secondary_color;
-				}
-			}
 			";
 
+			// Property image zoom for cropped MLS images
 			if (get_theme_mod('zoom_property_image', false)) {
 				echo "
 					.home .impress-carousel .carousel-photo img,
@@ -796,6 +771,15 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 						min-height: 200%;
 						margin-top: -50%;
 						margin-left: -50%;
+					}
+				";
+			}
+
+			// TESTING PRESETS
+			if ($preset_color === 'green') {
+				echo "
+					*{
+						background: green !important;
 					}
 				";
 			}
