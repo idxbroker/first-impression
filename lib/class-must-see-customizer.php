@@ -11,25 +11,25 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 	private $color_presets = array(
 		'blue' => array(
 			'primary_color'        => '#258bb7',
-			'font_secondary_color' => '#FFFFFF',
+			'font_secondary_color' => '#ffffff',
 			'gradient_start'       => '#3fa5db',
 			'gradient_end'         => '#5087c8'
 		),
 		'green' => array(
 			'primary_color'        => '#2e7e55',
-			'font_secondary_color' => '#FFFFFF',
+			'font_secondary_color' => '#ffffff',
 			'gradient_start'       => '#1a9a59',
 			'gradient_end'         => '#1e844c'
 		),
 		'red' => array(
 			'primary_color'        => '#b82501',
-			'font_secondary_color' => '#FFFFFF',
+			'font_secondary_color' => '#ffffff',
 			'gradient_start'       => '#b82601',
 			'gradient_end'         => '#aa1f03'
 		),
 		'tangerine' => array(
 			'primary_color'        => '#e27121',
-			'font_secondary_color' => '#FFFFFF',
+			'font_secondary_color' => '#ffffff',
 			'gradient_start'       => '#e27121',
 			'gradient_end'         => '#d3671e'
 		),

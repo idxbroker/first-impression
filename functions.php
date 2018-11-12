@@ -67,6 +67,11 @@ function must_see_register_scripts() {
 	}
 }
 
+add_action( 'customize_controls_enqueue_scripts', 'conditionally_show_custom_color_options' );
+function conditionally_show_custom_color_options() {
+	wp_enqueue_script( 'show-custom-colors', get_stylesheet_directory_uri() . '/lib/js/cutomizerColorOptions.js', array( 'jquery', 'customize-controls' ), false, true );
+
+}
 // Dequeue the IDX widgets stylesheet.
 remove_action( 'wp_enqueue_scripts', 'equity_enqueue_idx_stylesheet', 10 );
 
