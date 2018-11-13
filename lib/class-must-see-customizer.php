@@ -10,34 +10,39 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 	private $color_presets = array(
 		'blue' => array(
-			'primary_color'        => '#258bb7',
-			'font_secondary_color' => '#ffffff',
-			'gradient_start'       => '#3fa5db',
-			'gradient_end'         => '#5087c8'
+			'primary_color'           => '#258bb7',
+			'heading_secondary_color' => '#ffffff',
+			'font_secondary_color'    => '#ffffff',
+			'gradient_start'          => '#3fa5db',
+			'gradient_end'            => '#5087c8'
 		),
 		'green' => array(
-			'primary_color'        => '#2e7e55',
-			'font_secondary_color' => '#ffffff',
-			'gradient_start'       => '#1a9a59',
-			'gradient_end'         => '#1e844c'
+			'primary_color'           => '#2e7e55',
+			'heading_secondary_color' => '#ffffff',
+			'font_secondary_color'    => '#ffffff',
+			'gradient_start'          => '#1a9a59',
+			'gradient_end'            => '#1e844c'
 		),
 		'red' => array(
-			'primary_color'        => '#b82501',
-			'font_secondary_color' => '#ffffff',
-			'gradient_start'       => '#b82601',
-			'gradient_end'         => '#aa1f03'
+			'primary_color'           => '#b82501',
+			'heading_secondary_color' => '#ffffff',
+			'font_secondary_color'    => '#ffffff',
+			'gradient_start'          => '#b82601',
+			'gradient_end'            => '#aa1f03'
 		),
 		'tangerine' => array(
-			'primary_color'        => '#e27121',
-			'font_secondary_color' => '#ffffff',
-			'gradient_start'       => '#e27121',
-			'gradient_end'         => '#d3671e'
+			'primary_color'           => '#e27121',
+			'heading_secondary_color' => '#ffffff',
+			'font_secondary_color'    => '#ffffff',
+			'gradient_start'          => '#e27121',
+			'gradient_end'            => '#d3671e'
 		),
 		'white_blue' => array(
-			'primary_color'        => '#248ab7',
-			'font_secondary_color' => '#000000',
-			'gradient_start'       => '#f5f5f5',
-			'gradient_end'         => '#f5f5f5'
+			'primary_color'           => '#248ab7',
+			'heading_secondary_color' => '#248ab7',
+			'font_secondary_color'    => '#000000',
+			'gradient_start'          => '#f5f5f5',
+			'gradient_end'            => '#f5f5f5'
 		)
 	);
 
@@ -155,11 +160,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 		//* Setting key and default value array
 		$settings = array(
-			'primary_color'        => '#258BB7',
-			'gradient_start'       => '#3fa5db',
-			'gradient_end'         => '#5087c8',
-			'font_secondary_color' => '#FFFFFF',
-			'zoom_property_image'  => false
+			'primary_color'           => '#258BB7',
+			'gradient_start'          => '#3fa5db',
+			'gradient_end'            => '#5087c8',
+			'heading_secondary_color' => '#ffffff',
+			'font_secondary_color'    => '#ffffff',
+			'zoom_property_image'     => false
 		);
 
 		foreach ( $settings as $setting => $default ) {
@@ -204,6 +210,21 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					'description' => __( 'Used for links, buttons, headings.', 'must-see' ),
 					'section'     => 'colors',
 					'settings'    => 'primary_color',
+					'priority'    => 100,
+				)
+			)
+		);
+
+		//* Heading Secondary Color
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'heading_secondary_color',
+				array(
+					'label'       => __( 'Heading Font Secondary Color', 'must-see' ),
+					'description' => __( 'Used dark backgrounds.', 'must-see' ),
+					'section'     => 'colors',
+					'settings'    => 'heading_secondary_color',
 					'priority'    => 100,
 				)
 			)
@@ -593,6 +614,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 			// TODO: preset color settings here
 			$primary_color = $this->get_color_hex('primary_color');
+			$heading_secondary_color = $this->get_color_hex('heading_secondary_color');
 			$font_secondary_color = $this->get_color_hex('font_secondary_color');
 			$gradient_start = $this->get_color_hex('gradient_start');
 			$gradient_end = $this->get_color_hex('gradient_end');
@@ -705,8 +727,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					}
 				}
 
-				/*** Font Secondary Color ***/
-				.home .content-sidebar-wrap div[class*='home-'].bg-gradient,
+				/*** Headings Secondary Color ***/
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h1,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h2,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient h3,
@@ -717,26 +738,23 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .impress-idx-dashboard-widget h4,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient section.impress-carousel-widget h4,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .singleTestimonialWidget h4,
-				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4 {
+					color: $heading_secondary_color;
+				}
+
+				/*** Font Secondary Color ***/
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient,
 				.bg-gradient .easy_testimonial_title,
 				.bg-gradient .easy_testimonial .testimonial_body p,
 				.bg-gradient .easy_testimonial .testimonial_author cite,
-				.title-area,
 				.home .bg-gradient a,
 				.bg-gradient p,
 				.bg-gradient a,
 				.bg-gradient label,
-				header.site-header .site-title,
 				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li a,
 				body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn,
 				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a {
 					color: $font_secondary_color;
-				}
-				@media only screen and (max-width: 40.063em) {
-					.site-header .agent-social-icons a,
-					.site-header .menu-toggle {
-						color: $font_secondary_color;
-					}
 				}
 
 				/*** Background Secondary Color ***/

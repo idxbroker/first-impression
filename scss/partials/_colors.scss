@@ -320,3 +320,11 @@ div.impress-carousel .owl-nav.owl-controls button.owl-next {
 	background-color: #fff;
 	border-color: $primary-color;
 }
+
+// NEW HARDCODED THINGS
+@media only screen and (max-width: 40.063em) {
+	.site-header .agent-social-icons a,
+	.site-header .menu-toggle {
+		color: #fff;
+	}
+}
