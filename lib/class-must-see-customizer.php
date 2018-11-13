@@ -738,7 +738,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .impress-idx-dashboard-widget h4,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient section.impress-carousel-widget h4,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .singleTestimonialWidget h4,
-				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4 {
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4,
+				.home .bg-gradient a {
 					color: $heading_secondary_color;
 				}
 
@@ -747,7 +748,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient .easy_testimonial_title,
 				.bg-gradient .easy_testimonial .testimonial_body p,
 				.bg-gradient .easy_testimonial .testimonial_author cite,
-				.home .bg-gradient a,
 				.bg-gradient p,
 				.bg-gradient a,
 				.bg-gradient label,
@@ -763,7 +763,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient h4::after,
 				.bg-gradient h2::after,
 				.bg-gradient h1::after {
-					background-color: $font_secondary_color;
+					background-color: $heading_secondary_color;
 				}
 
 				/*** Border Secondary Color ***/
@@ -771,7 +771,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient button,
 				.bg-gradient input[type='button'],
 				.bg-gradient input[type='submit'] {
-					border-color: $font_secondary_color;
+					border-color: $heading_secondary_color;
 				}
 
 				/*** Background Gradient Colors ***/
