@@ -141,15 +141,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 	//* Colors
 	private function colors( $wp_customize ) {
-		$wp_customize->add_section(
-			'colors',
-			array(
-				'title'       => __( 'Custom Colors', 'must-see' ),
-				'description' => __('NOTICE: You are beautiful'),
-				'priority'    => 200,
-			)
-		);
-
 		$wp_customize->add_setting(
 			'preset_color_scheme',
 			array(
@@ -305,18 +296,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 		//* Setting key and default value array
 		$settings = array(
-			'home_widget_areas'                        => 6,
-			'default_background_image'                 => get_stylesheet_directory_uri() . '/images/bkg-default.jpg',
-			'home_top_background_overlay'              => '#201f1f',
-			'home_top_background_overlay_opacity'      => 0.01,
-			'home_middle_3_background'                 => get_stylesheet_directory_uri() . '/images/home-middle-3-default.jpg',
-			'home_middle_3_background_overlay'         => '#201f1f',
-			'home_middle_3_background_overlay_opacity' => 0.8,
-			'home_middle_6_background'                 => get_stylesheet_directory_uri() . '/images/home-middle-6-default.jpg',
-			'home_middle_6_background_overlay'         => '#201f1f',
-			'home_middle_6_background_overlay_opacity' => 0.6,
-			'home_fadeup_effect'                       => true,
-			'home_match_height_for_carousel'           => true,
+			'home_widget_areas'        => 5,
+			'default_background_image' => get_stylesheet_directory_uri() . '/images/bkg-default.jpg',
+			'home_fadeup_effect'       => true,
 		);
 
 		foreach ( $settings as $setting => $default ) {
@@ -367,152 +349,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			)
 		);
 
-		//* Home Top background overlay
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'home_top_background_overlay',
-				array(
-					'label'       => __( 'Top background overlay color', 'must-see' ),
-					'description' => __( 'Adjust the color overlay on home top widget area.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_top_background_overlay',
-					'priority'    => 201,
-				)
-			)
-		);
-
-		//* Home Top background opacity
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'home_top_background_overlay_opacity',
-				array(
-					'label'       => __( 'Top background overlay color opacity.', 'must-see' ),
-					'description' => __( 'Adjust the overlay opacity of the home top widget area background.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_top_background_overlay_opacity',
-					'type'        => 'range',
-					'input_attrs' => array(
-						'min'   => 0,
-						'max'   => 1,
-						'step'  => 0.01,
-					),
-					'priority'    => 202,
-				)
-			)
-		);
-
-		//* Home Middle 3 background
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'home_middle_3_background',
-				array(
-					'label'       => __( 'Middle 3 Background Image', 'must-see' ),
-					'description' => __( 'Upload an image to use for the "Home Middle 3" widget area background.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_middle_3_background',
-					'extensions'  => array( 'jpg' ),
-					'priority'    => 300,
-					'active_callback' => array( $this, 'is_home_middle_3_widget_area_enabled' ),
-				)
-			)
-		);
-
-		//* Home Middle 3 background overlay
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'home_middle_3_background_overlay',
-				array(
-					'label'       => __( 'Middle 3 background overlay color', 'must-see' ),
-					'description' => __( 'Adjust the color overlay on home middle 3 widget area.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_middle_3_background_overlay',
-					'priority'    => 301,
-					'active_callback' => array( $this, 'is_home_middle_3_widget_area_enabled' ),
-				)
-			)
-		);
-
-		//* Home Middle 3 background opacity
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'home_middle_3_background_overlay_opacity',
-				array(
-					'label'       => __( 'Middle 3 background overlay color opacity.', 'must-see' ),
-					'description' => __( 'Adjust the overlay opacity of the home middle 3 widget area backgrounds.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_middle_3_background_overlay_opacity',
-					'type'        => 'range',
-					'input_attrs' => array(
-						'min'   => 0,
-						'max'   => 1,
-						'step'  => 0.01,
-					),
-					'priority'    => 302,
-					'active_callback' => array( $this, 'is_home_middle_3_widget_area_enabled' ),
-				)
-			)
-		);
-
-		//* Home Middle 6 background
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'home_middle_6_background',
-				array(
-					'label'       => __( 'Middle 6 Background Image', 'must-see' ),
-					'description' => __( 'Upload an image to use for the "Home Middle 6" widget area background.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_middle_6_background',
-					'extensions'  => array( 'jpg' ),
-					'priority'    => 400,
-					'active_callback' => array( $this, 'is_home_middle_6_widget_area_enabled' ),
-				)
-			)
-		);
-
-		//* Home Middle 6 background overlay
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'home_middle_6_background_overlay',
-				array(
-					'label'       => __( 'Middle 6 background overlay color', 'must-see' ),
-					'description' => __( 'Adjust the color overlay on home middle 6 widget area.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_middle_6_background_overlay',
-					'priority'    => 401,
-					'active_callback' => array( $this, 'is_home_middle_6_widget_area_enabled' ),
-				)
-			)
-		);
-
-		//* Home Middle 6 background opacity
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'home_middle_6_background_overlay_opacity',
-				array(
-					'label'       => __( 'Middle 6 background overlay color opacity.', 'must-see' ),
-					'description' => __( 'Adjust the overlay opacity of the home middle 6 widget area backgrounds.', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_middle_6_background_overlay_opacity',
-					'type'        => 'range',
-					'input_attrs' => array(
-						'min'   => 0,
-						'max'   => 1,
-						'step'  => 0.01,
-					),
-					'priority'    => 402,
-					'active_callback' => array( $this, 'is_home_middle_6_widget_area_enabled' ),
-				)
-			)
-		);
-
 		//* Toggle homepage fadeup effect
 		$wp_customize->add_control(
 			new WP_Customize_Control(
@@ -524,21 +360,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					'settings'    => 'home_fadeup_effect',
 					'type'        => 'checkbox',
 					'priority'    => 500,
-				)
-			)
-		);
-
-		//* Toggle match height on home page carousel
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'home_match_height_for_carousel',
-				array(
-					'label'       => __( 'Use match height on homepage carousel?', 'must-see' ),
-					'section'     => 'home',
-					'settings'    => 'home_match_height_for_carousel',
-					'type'        => 'checkbox',
-					'priority'    => 600,
 				)
 			)
 		);
@@ -711,12 +532,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 				/*** Background Primary Color ***/
 				.title-area,
-				h4::before, 
+				h4::before,
 				h4::after,
 				h2::after,
 				h1::after,
 				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice,
-				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
 				body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
 				body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
 					background-color: $primary_color;
