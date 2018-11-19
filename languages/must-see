@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Must See 2 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-11-12 05:11:05+00:00\n"
+"POT-Creation-Date: 2018-11-19 05:21:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,231 +32,153 @@ msgstr ""
 msgid "Header Right"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:101
 msgid "<i class=\\\"fa fa-chevron-left\\\"></i><span>Prev</span>"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:108
 msgid "<i class=\\\"fa fa-chevron-right\\\"></i><span>Next</span>"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:120
 msgid "Home Top"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:121
 msgid ""
 "This is the top section of the Home page. Not all widgets are designed to "
 "work here. Recommended to use IMPress Omnibar Search widget."
 msgstr ""
 
-#: functions.php:126
+#: functions.php:131
 msgid "Home Middle %d"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:132
 msgid "This is the Home Middle %d widget area."
 msgstr ""
 
-#: functions.php:135
+#: functions.php:140
 msgid "Contact Us"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:141
 msgid ""
 "This is the Contact Us section above the footer. Recommended to use Text "
 "and IMPress Lead Signup/Register widgets."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:45
+#: lib/class-must-see-customizer.php:93
 msgid "Site Title Font Size"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:63
+#: lib/class-must-see-customizer.php:111
 msgid "Main Menu Font Size"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:80
+#: lib/class-must-see-customizer.php:128
 msgid "Main Menu Item Padding"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:99
-msgid "Preset Colors"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:107
-msgid "Custom Colors"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:108
-msgid ""
-"NOTICE: These changes will not be saved unless you change the \"Color "
-"Preset\" to \"Custom\""
-msgstr ""
-
-#: lib/class-must-see-customizer.php:145
+#: lib/class-must-see-customizer.php:177
 msgid "Preset Color Scheme"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:149
+#: lib/class-must-see-customizer.php:181
 msgid "Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:150
+#: lib/class-must-see-customizer.php:182
 msgid "Green"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:151
+#: lib/class-must-see-customizer.php:183
 msgid "Red"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:152
+#: lib/class-must-see-customizer.php:184
 msgid "Tangerine"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:153
+#: lib/class-must-see-customizer.php:185
 msgid "White Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:154
+#: lib/class-must-see-customizer.php:186
 msgid "Use custom colors"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:168
+#: lib/class-must-see-customizer.php:200
 msgid "Primary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:169
+#: lib/class-must-see-customizer.php:201
 msgid "Used for links, buttons, headings."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:183
-msgid "Body Font Secondary Color"
+#: lib/class-must-see-customizer.php:215
+msgid "Heading Font Secondary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:184
+#: lib/class-must-see-customizer.php:216 lib/class-must-see-customizer.php:231
 msgid "Used dark backgrounds."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:198
-msgid "Gradient Start Color"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:199 lib/class-must-see-customizer.php:214
-msgid "Used for backgrounds in the home page."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:213
-msgid "Gradient End Color"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:228
-msgid "Zoom in on property carousel image?"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:229
-msgid "Used for MLS cropped photos with a white background."
+#: lib/class-must-see-customizer.php:230
+msgid "Body Font Secondary Color"
 msgstr ""
 
 #: lib/class-must-see-customizer.php:245
+msgid "Gradient Start Color"
+msgstr ""
+
+#: lib/class-must-see-customizer.php:246 lib/class-must-see-customizer.php:261
+msgid "Used for backgrounds in the home page."
+msgstr ""
+
+#: lib/class-must-see-customizer.php:260
+msgid "Gradient End Color"
+msgstr ""
+
+#: lib/class-must-see-customizer.php:275
+msgid "Zoom in on property carousel image?"
+msgstr ""
+
+#: lib/class-must-see-customizer.php:276
+msgid "Used for MLS cropped photos with a white background."
+msgstr ""
+
+#: lib/class-must-see-customizer.php:292
 msgid "Home Page"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:283
+#: lib/class-must-see-customizer.php:321
 msgid "Number of home page widget areas."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:284
+#: lib/class-must-see-customizer.php:322
 msgid "Enter the number of widget areas for the home page middle."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:304
+#: lib/class-must-see-customizer.php:342
 msgid "Top Background Image"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:305
+#: lib/class-must-see-customizer.php:343
 msgid ""
 "Upload an image to use for the \"Home Top\" widget area background. This "
 "image will also be used as the default background on interior pages."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:320
-msgid "Top background overlay color"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:321
-msgid "Adjust the color overlay on home top widget area."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:335
-msgid "Top background overlay color opacity."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:336
-msgid "Adjust the overlay opacity of the home top widget area background."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:356
-msgid "Middle 3 Background Image"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:357
-msgid "Upload an image to use for the \"Home Middle 3\" widget area background."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:373
-msgid "Middle 3 background overlay color"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:374
-msgid "Adjust the color overlay on home middle 3 widget area."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:389
-msgid "Middle 3 background overlay color opacity."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:390
-msgid "Adjust the overlay opacity of the home middle 3 widget area backgrounds."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:411
-msgid "Middle 6 Background Image"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:412
-msgid "Upload an image to use for the \"Home Middle 6\" widget area background."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:428
-msgid "Middle 6 background overlay color"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:429
-msgid "Adjust the color overlay on home middle 6 widget area."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:444
-msgid "Middle 6 background overlay color opacity."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:445
-msgid "Adjust the overlay opacity of the home middle 6 widget area backgrounds."
-msgstr ""
-
-#: lib/class-must-see-customizer.php:466
+#: lib/class-must-see-customizer.php:358
 msgid "Use fadeup effect on homepage?"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:481
-msgid "Use match height on homepage carousel?"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:515
+#: lib/class-must-see-customizer.php:392
 msgid "Show Site Description?"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:527
+#: lib/class-must-see-customizer.php:404
 msgid "Enable Sticky Header?"
 msgstr ""
 

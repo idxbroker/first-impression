@@ -47,8 +47,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 	);
 
 	public function register( $wp_customize ) {
-
-		$this->header( $wp_customize );
 		$this->colors( $wp_customize );
 		$this->home( $wp_customize );
 		$this->misc( $wp_customize );
@@ -61,82 +59,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 		}
 		return get_theme_mod($theme_mod, $this->color_presets[$current_preset][$theme_mod]);
 
-	}
-
-	private function header( $wp_customize ) {
-
-		global $wp_version;
-
-		//* Setting key and default value array
-		$settings = array(
-			'site_title_font_size'    => 2.22222222,
-			'nav_menu_font_size'  => 1,
-			'nav_menu_padding'    => 0,
-		);
-
-		foreach ( $settings as $setting => $default ) {
-
-			$wp_customize->add_setting(
-				$setting,
-				array(
-					'default' => $default,
-					'type'    => 'theme_mod',
-				)
-			);
-
-		}
-
-		//* Site Title font size
-		$wp_customize->add_control(
-			'site_title_font_size',
-			array(
-				'label'      => __( 'Site Title Font Size', 'must-see' ),
-				'section'    => 'title_tagline',
-				'settings'   => 'site_title_font_size',
-				'priority'   => 100,
-				'type'       => 'range',
-				'input_attrs' => array(
-					'min' => 0.5,
-					'max' => 2.75,
-					'step' => 0.001,
-				),
-				'active_callback' => array( $this, 'is_site_title_text' ),
-			)
-		);
-
-		//* Main Menu font size
-		$wp_customize->add_control(
-			'nav_menu_font_size',
-			array(
-				'label'      => __( 'Main Menu Font Size', 'must-see' ),
-				'section'    => 'title_tagline',
-				'settings'   => 'nav_menu_font_size',
-				'priority'   => 200,
-				'type'       => 'range',
-				'input_attrs' => array(
-					'min' => 0.5,
-					'max' => 1.5,
-					'step' => 0.001,
-				),
-			)
-		);
-
-		//* Main Menu padding
-		$wp_customize->add_control(
-			'nav_menu_padding',
-			array(
-				'label'      => __( 'Main Menu Item Padding', 'must-see' ),
-				'section'    => 'title_tagline',
-				'settings'   => 'nav_menu_padding',
-				'priority'   => 300,
-				'type'       => 'range',
-				'input_attrs' => array(
-					'min' => -10,
-					'max' => 10,
-					'step' => 1,
-				),
-			)
-		);
 	}
 
 	//* Colors
@@ -298,7 +220,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 		$settings = array(
 			'home_widget_areas'        => 5,
 			'default_background_image' => get_stylesheet_directory_uri() . '/images/bkg-default.jpg',
-			'home_fadeup_effect'       => true,
+			'home_fadeup_effect'       => true, // TODO: CURRENTLY FAILING
 		);
 
 		foreach ( $settings as $setting => $default ) {
@@ -370,7 +292,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 		//* Setting key and default value array
 		$settings = array(
-			'enable_sticky_header'   => true,
+			'enable_sticky_header'   => true, // TODO: Check out how this works
 			'show_site_description'  => false,
 		);
 
@@ -422,18 +344,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				echo 'header.site-header .site-description {display: block;}';
 			}
 
-			//* Background images
-			// TODO: Add option to use custom image
+			//* Background image
 			echo '.home-top {background-image: url(\'' . get_theme_mod( 'default_background_image', get_stylesheet_directory_uri() . '/images/bkg-default.jpg' ) . '\');}';
-			//* Background overlay
 
-			//* Primary color hover
-			$primary_hover = '#eee';
-
-			//* Secondary color - hover
-			$secondary_hover = '#258BB7';
-
-			// TODO: preset color settings here
+			// Get color values
 			$primary_color = $this->get_color_hex('primary_color');
 			$heading_secondary_color = $this->get_color_hex('heading_secondary_color');
 			$font_secondary_color = $this->get_color_hex('font_secondary_color');
@@ -613,33 +527,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				";
 			}
 
-			// TESTING PRESETS
-			if ($preset_color === 'green') {
-				echo "
-					*{
-						background: green !important;
-					}
-				";
-			}
-
-			/*** END NEW STUFF ***/
-
-			// Site title font size
-			self::generate_css( 'header.site-header .site-title', 'font-size', 'site_title_font_size', '', 'rem' );
-			echo 'body.sticky .sticky-header header.site-header .site-title { font-size: ' . get_theme_mod( 'site_title_font_size', 2.2222222 ) * 0.8 . 'rem; }';
-
-			// Nav menu font size
-			self::generate_css( '.nav-header-right a', 'font-size', 'nav_menu_font_size', '', 'rem' );
-
-			// Nav menu padding
-			$nav_padding = 20 + get_theme_mod( 'nav_menu_padding', 0 );
-			echo '.nav-header-right a {
-				padding-left: ' . $nav_padding . 'px;
-				padding-right: ' . $nav_padding . 'px;
-			}';
-			$nav_arrow = 8 + ( get_theme_mod( 'nav_menu_padding', 0 ) / 2 );
-			echo '.nav-header-right ul>li.menu-item-has-children>a::after {right: ' . $nav_arrow . 'px}';
-
 			?>
 		</style>
 		<!-- end Child Customizer CSS -->
@@ -649,22 +536,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 	public function is_site_title_text() {
 		$setting = get_theme_mod( 'logo_display_type' );
 		if ( 'text' === $setting ) {
-			return true;
-		}
-		return false;
-	}
-
-	public function is_home_middle_3_widget_area_enabled() {
-		$setting = get_theme_mod( 'home_widget_areas' );
-		if ( $setting > 2 ) {
-			return true;
-		}
-		return false;
-	}
-
-	public function is_home_middle_6_widget_area_enabled() {
-		$setting = get_theme_mod( 'home_widget_areas' );
-		if ( $setting > 5 ) {
 			return true;
 		}
 		return false;
@@ -679,46 +550,4 @@ add_action( 'init', 'must_see_customizer_init' );
  */
 function must_see_customizer_init() {
 	new MUST_SEE_Customizer;
-}
-
-/**
- * Generate a lighter or darker color from a starting color.
- * Used to generate complementary hover tints from user-chosen colors.
- *
- * @param string $color A color in hex format.
- * @param string $op The operation to apply: '+' for lighter, '-' for darker.
- * @param int    $change The amount to reduce or increase brightness by.
- * @return string Hex code for the adjusted color brightness.
- */
-if ( ! function_exists( 'equity_color_brightness' ) ) {
-	function equity_color_brightness( $color, $op, $change ) {
-
-		$hexcolor = str_replace( '#', '', $color );
-		$red      = hexdec( substr( $hexcolor, 0, 2 ) );
-		$green    = hexdec( substr( $hexcolor, 2, 2 ) );
-		$blue     = hexdec( substr( $hexcolor, 4, 2 ) );
-
-		if ( '+' !== $op && isset( $op ) ) {
-			$red   = max( 0, min( 255, $red - $change ) );
-			$green = max( 0, min( 255, $green - $change ) );
-			$blue  = max( 0, min( 255, $blue - $change ) );
-		} else {
-			$red   = max( 0, min( 255, $red + $change ) );
-			$green = max( 0, min( 255, $green + $change ) );
-			$blue  = max( 0, min( 255, $blue + $change ) );
-		}
-
-		$newhex = '#';
-		$newhex .= strlen( dechex( $red ) ) === 1 ? '0' . dechex( $red ) : dechex( $red );
-		$newhex .= strlen( dechex( $green ) ) === 1 ? '0' . dechex( $green ) : dechex( $green );
-		$newhex .= strlen( dechex( $blue ) ) === 1 ? '0' . dechex( $blue ) : dechex( $blue );
-
-		// Forces darken if brighten color is the same as color inputted.
-		if ( $newhex === $hexcolor && '+' === $op ) {
-			$newhex = '#111111';
-		}
-
-		return $newhex;
-
-	}
 }
