@@ -135,7 +135,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				'heading_secondary_color',
 				array(
 					'label'       => __( 'Heading Font Secondary Color', 'must-see' ),
-					'description' => __( 'Used dark backgrounds.', 'must-see' ),
+					'description' => __( 'Used for gradient backgrounds.', 'must-see' ),
 					'section'     => 'colors',
 					'settings'    => 'heading_secondary_color',
 					'priority'    => 100,
@@ -150,7 +150,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				'font_secondary_color',
 				array(
 					'label'       => __( 'Body Font Secondary Color', 'must-see' ),
-					'description' => __( 'Used dark backgrounds.', 'must-see' ),
+					'description' => __( 'Used for gradient dark backgrounds.', 'must-see' ),
 					'section'     => 'colors',
 					'settings'    => 'font_secondary_color',
 					'priority'    => 100,
