@@ -215,12 +215,9 @@ a.off-canvas-toggle::before {
 	align-items: center;
 	position: absolute;
 	top: 0;
-	bottom: 50%;
 	right: 0;
 	margin-left: 100px;
-	@media #{$medium-up} {
-		bottom: 0;
-	}
+	height: 100px;
 	.agent-social-icons {
 		@media (max-width: 800px) and (min-width: 641px) {
 			max-width: 150px;
