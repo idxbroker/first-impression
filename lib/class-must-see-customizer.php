@@ -220,7 +220,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 		$settings = array(
 			'home_widget_areas'        => 5,
 			'default_background_image' => get_stylesheet_directory_uri() . '/images/bkg-default.jpg',
-			'home_fadeup_effect'       => true, // TODO: CURRENTLY FAILING
+			'home_fadeup_effect'       => true,
 		);
 
 		foreach ( $settings as $setting => $default ) {
@@ -289,7 +289,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 	//* Misc
 	private function misc( $wp_customize ) {
-
+/*
 		//* Setting key and default value array
 		$settings = array(
 			'enable_sticky_header' => true, // TODO: Check out how this works
@@ -317,6 +317,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				'priority' => 300,
 			)
 		);
+	*/	
 	}
 
 	//* Render CSS
@@ -517,6 +518,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 						margin-left: -50%;
 					}
 				";
+			}
+
+			if ( ! get_theme_mod('home_fadeup_effect', true) ) {
+				echo ".fadeup-effect {
+					opacity: 1;
+				}";
 			}
 
 			function use_title_image() {
