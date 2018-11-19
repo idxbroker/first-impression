@@ -208,18 +208,6 @@ function equity_child_home() {
 		$widget_area_count++;
 	}
 }
-//remove_action( 'equity_header', 'equity_header_markup_open', 5 );
-//remove_action( 'equity_header', 'equity_header_markup_close', 15 );
-/*
-add_action( 'equity_header', 'test_header' );
-function test_header() {
-	?>
-	<div>
-		Testin' headers
-	</div>
-	<?php
-}
-*/
 
 add_action( 'equity_header', 'social_icons' );
 

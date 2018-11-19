@@ -519,18 +519,24 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				";
 			}
 
+			function use_title_image() {
+				$setting = get_theme_mod( 'logo_display_type' );
+				if ( 'image' !== $setting ) {
+					add_action( 'equity_do_title', 'must_see_filter_image' );
+				}
+			}
+			use_title_image();
+
+			function must_see_filter_image($title) {
+				$output = preg_replace('/<img[^>]+\>/i', '', $title);
+				$output = str_replace('class="hide"', '', $output);
+				return $output;
+			}
+
 			?>
 		</style>
 		<!-- end Child Customizer CSS -->
 		<?php
-	}
-
-	public function is_site_title_text() {
-		$setting = get_theme_mod( 'logo_display_type' );
-		if ( 'text' === $setting ) {
-			return true;
-		}
-		return false;
 	}
 }
 
