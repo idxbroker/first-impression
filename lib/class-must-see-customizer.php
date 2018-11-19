@@ -292,8 +292,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 
 		//* Setting key and default value array
 		$settings = array(
-			'enable_sticky_header'   => true, // TODO: Check out how this works
-			'show_site_description'  => false,
+			'enable_sticky_header' => true, // TODO: Check out how this works
 		);
 
 		foreach ( $settings as $setting => $default ) {
@@ -306,18 +305,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				)
 			);
 		}
-
-		//* Enable header description
-		$wp_customize->add_control(
-			'disable_site_description',
-			array(
-				'label'    => __( 'Show Site Description?', 'must-see' ),
-				'section'  => 'title_tagline',
-				'type'     => 'checkbox',
-				'settings' => 'show_site_description',
-				'priority' => 300,
-			)
-		);
 
 		//* Enable sticky header checkbox
 		$wp_customize->add_control(
@@ -340,9 +327,6 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			<?php
 
 			//* Site description
-			if ( get_theme_mod( 'show_site_description' ) ) {
-				echo 'header.site-header .site-description {display: block;}';
-			}
 
 			//* Background image
 			echo '.home-top {background-image: url(\'' . get_theme_mod( 'default_background_image', get_stylesheet_directory_uri() . '/images/bkg-default.jpg' ) . '\');}';
@@ -402,6 +386,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.testimonial_author cite,
 				.home a,
 				.home .widget article h2.entry-title a,
+				div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+				div.impress-carousel .owl-nav.owl-controls button.owl-next,
+				footer.site-footer input[type='submit'],
+				footer.site-footer button
+				footer.site-footer .IDX-mapWidgetWrap *,
+				footer.site-footer .footer-widgets .IDX_Omnibar_Widget *,
 				.IDX-wrapper-standard a,
 				.IDX-wrapper-standard a:focus,
 				.IDX-wrapper-standard a:hover,
@@ -430,6 +420,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type='email']:focus,
 				input[type='tel']:focus,
 				input[type='password']:focus,
+				div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+				div.impress-carousel .owl-nav.owl-controls button.owl-next,
 				.IDX-wrapper-standard .IDX-showcaseSlide-active {
 					border-color: $primary_color;
 				}
