@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Must See 2 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-11-19 05:21:52+00:00\n"
+"POT-Creation-Date: 2018-11-28 20:35:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,118 +68,102 @@ msgid ""
 "and IMPress Lead Signup/Register widgets."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:93
-msgid "Site Title Font Size"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:111
-msgid "Main Menu Font Size"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:128
-msgid "Main Menu Item Padding"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:177
+#: lib/class-must-see-customizer.php:99
 msgid "Preset Color Scheme"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:181
+#: lib/class-must-see-customizer.php:103
 msgid "Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:182
+#: lib/class-must-see-customizer.php:104
 msgid "Green"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:183
+#: lib/class-must-see-customizer.php:105
 msgid "Red"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:184
+#: lib/class-must-see-customizer.php:106
 msgid "Tangerine"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:185
+#: lib/class-must-see-customizer.php:107
 msgid "White Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:186
+#: lib/class-must-see-customizer.php:108
 msgid "Use custom colors"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:200
+#: lib/class-must-see-customizer.php:122
 msgid "Primary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:201
+#: lib/class-must-see-customizer.php:123
 msgid "Used for links, buttons, headings."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:215
+#: lib/class-must-see-customizer.php:137
 msgid "Heading Font Secondary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:216 lib/class-must-see-customizer.php:231
-msgid "Used dark backgrounds."
+#: lib/class-must-see-customizer.php:138
+msgid "Used for gradient backgrounds."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:230
+#: lib/class-must-see-customizer.php:152
 msgid "Body Font Secondary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:245
+#: lib/class-must-see-customizer.php:153
+msgid "Used for gradient dark backgrounds."
+msgstr ""
+
+#: lib/class-must-see-customizer.php:167
 msgid "Gradient Start Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:246 lib/class-must-see-customizer.php:261
+#: lib/class-must-see-customizer.php:168 lib/class-must-see-customizer.php:183
 msgid "Used for backgrounds in the home page."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:260
+#: lib/class-must-see-customizer.php:182
 msgid "Gradient End Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:275
+#: lib/class-must-see-customizer.php:197
 msgid "Zoom in on property carousel image?"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:276
+#: lib/class-must-see-customizer.php:198
 msgid "Used for MLS cropped photos with a white background."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:292
+#: lib/class-must-see-customizer.php:214
 msgid "Home Page"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:321
+#: lib/class-must-see-customizer.php:243
 msgid "Number of home page widget areas."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:322
+#: lib/class-must-see-customizer.php:244
 msgid "Enter the number of widget areas for the home page middle."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:342
+#: lib/class-must-see-customizer.php:264
 msgid "Top Background Image"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:343
+#: lib/class-must-see-customizer.php:265
 msgid ""
 "Upload an image to use for the \"Home Top\" widget area background. This "
 "image will also be used as the default background on interior pages."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:358
+#: lib/class-must-see-customizer.php:280
 msgid "Use fadeup effect on homepage?"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:392
-msgid "Show Site Description?"
-msgstr ""
-
-#: lib/class-must-see-customizer.php:404
-msgid "Enable Sticky Header?"
 msgstr ""
 
 #: lib/plugins.php:63

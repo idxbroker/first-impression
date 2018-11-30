@@ -831,6 +831,11 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 	
 }
 
+.impress-carousel-widget .carousel-photo {
+	margin-bottom: 20px;
+
+}
+
 .sidebar {
 	.impress-carousel-widget {
 		.impress-carousel {
@@ -851,9 +856,8 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 			h3.price {
 				font-size: rem-calc(28);
 			}
-			.carousel-photo{
+			.carousel-photo {
 				height: 235px;
-				margin-bottom: 10px;
 				img {
 					width: 100%;
 					height: 100%;
