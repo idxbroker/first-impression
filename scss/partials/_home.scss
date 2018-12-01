@@ -41,6 +41,9 @@ body.home.must-see-white-bkg {
 
 /** New stuff ***/
 .home {
+	.widget {
+		margin-bottom: 30px;
+	}
 	.home-top {
 		position: relative;
 		height: 300px;
@@ -390,7 +393,7 @@ body.home.must-see-white-bkg {
 	  		section:first-child:nth-last-child(2).widget,
 	  		section:first-child:nth-last-child(2) ~ .widget {
 				@media #{$medium-up} {
-		  			min-width: 500px;
+		  			min-width: 400px;
 					padding: 0 50px;
   				}
 	  		}
@@ -401,8 +404,6 @@ body.home.must-see-white-bkg {
 	  		}
 		}
 	}
-
-
 
 	.impress-idx-signup-widget {
 		button {
