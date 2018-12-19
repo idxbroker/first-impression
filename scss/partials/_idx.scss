@@ -1,3 +1,8 @@
+@mixin hover-effect {
+	background-color: transparent;
+	box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
+}
+
 body.must-see-map-results {
 	.content-sidebar-wrap {
 		width: 100%;
@@ -12,57 +17,253 @@ body.must-see-map-results {
 		padding: 0;
 	}
 }
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink:hover,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink:focus {
-	background-color: rgba(0,0,0,.1);
-}
 
-
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
-body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
-	background-color: $primary-color;
-}
-
-body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
-	color: $light-text;
-}
-
-#IDX-main #IDX-detailsHotActions .IDX-btn,
-body.must-see-map-results #IDX-main .IDX-topAction .IDX-btn {
-	color: $primary-color;
-}
-
-.IDX-wrapper-standard #IDX-nextLastButtons .IDX-btn {
-	width: 150px;
-	&:last-child {
-		float: right;
-	}
-}
-
-#IDX-main .IDX-topAction .IDX-btn {
-	border: none;
+/*** Listings Details ***/
+.IDX-wrapper-standard #IDX-saveProperty, .IDX-wrapper-standard #IDX-newSearch, .IDX-wrapper-standard #IDX-modifySearch, .IDX-wrapper-standard #IDX-backToResults {
+	line-height: 36px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	background-color: #fff;
+	color: $temp-blue;
+	border-color: $temp-blue;
+	font-size: rem-calc(16px);
+	font-family: $header-font-family;
 	&:hover {
-		opacity: .9;
+		@include hover-effect;
 	}
-	padding-left: 6px;
 }
 
-.IDX-wrapper-standard .IDX-detailsHotAction a {
+@media only screen and (min-width: 641px) {
+    .IDX-wrapper-standard .IDX-topAction {
+        margin-right: 30px;
+        min-width: auto;
+    }
+    .IDX-wrapper-standard .IDX-detailsHotAction {
+        margin-right: 30px;
+        a {
+	    	color: $temp-blue;
+	        text-decoration: none;
+	        border: 0px;
+	        text-align: left;
+	        &:hover {
+	        	background-color: transparent;
+	    		color: $temp-blue;
+	        	text-decoration: underline;
+	        }
+    	}
+    }
+    #IDX-detailsHotActions {
+    	border-bottom: 2px solid $temp-blue;
+    }
 
+    #IDX-detailsHead hr {
+    	border: none;
+    	border-bottom: 2px solid $temp-blue;
+    }
 }
 
-.IDX-navbar-toggle {
-	display: block;
+.IDX-carouselThumb {
+	border: none;
+	overflow: hidden;
+	&+.IDX-carouselThumb {
+	}
+	img {
+		border: none;
+	}
 }
 
-// TODO: add this to customizer
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a > span {
-	outline: none;
-	color: #ffffff;
+.IDX-wrapper-standard .IDX-showcaseSlide-active {
+	border: 2px solid $temp-blue;
+}
+
+.IDX-wrapper-standard #IDX-detailsPrimaryImg {
+	max-height: 570px;
+}
+
+.IDX-wrapper-standard {
+	#IDX-primaryPhoto {
+		height: 575px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+	}
+	.IDX-thumbnail {
+		border: none;
+		padding: 0;
+		img {
+			border: none;
+		}
+	}
+	.IDX-arrow {
+		background: transparent;
+		border: 2px solid $temp-blue;
+		color: $temp-blue;
+		border-radius: 100%;
+		width: 43px;
+		height: 43px;
+		&:hover {
+			color: $temp-blue;
+			@include hover-effect;
+		}
+		i {
+			line-height: 43px;
+		}
+	}
+	#IDX-arrow-previous i {
+		margin-right: 2px;
+	}
+	#IDX-arrow-next i {
+		margin-left: 2px;
+	}
+	.IDX-carouselNavWrapper {
+		background: $temp-blue;
+		i {
+			color: #fff; // THIS SHOULD BE SECONDARY COLOR TEXT
+			font-size: 24px;
+		}
+	}
+	#IDX-detailsAddress {
+		padding: 10px 15px;
+		a > div {
+			display: block;
+			font-family: $body-font-family;
+			font-size: 21px;
+			font-weight: 500;
+			&.IDX-detailsAddressLocationInfo {
+				font-size: 18px;
+				font-weight: normal;
+			}
+			.IDX-detailsEndAddressComma {
+				display: none;
+			}	
+		}
+	}
+	#IDX-detailsMainInfo {
+		&::after {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 3px;
+			border-radius: 5px;
+			background: $temp-blue;
+			margin: 20px 15px;
+		}
+	}
+	.IDX-panel {
+		border: none;
+		box-shadow: none;
+	}
+	.IDX-panel-heading, #IDX-listingHeader {
+		border: none;
+		background: transparent;
+		font-size: 20px;
+		font-weight: bold;
+		color: #4C5051;
+		letter-spacing: 0px;
+		&::before {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 3px;
+			border-radius: 5px;
+			background: $temp-blue;
+			margin-bottom: 20px;
+		}
+	}
+	.IDX-panel-title {
+		font-size: 20px;
+		font-weight: bold;
+		letter-spacing: 0px;
+	}
+	.IDX-panel-default > .IDX-panel-heading {
+		background-color: transparent;
+	}
+	.IDX-panel-body {
+		// Each item is an inline block, reduce font-size to reduce spacing between each item
+		font-size: 8px;
+		.IDX-field {
+			border: none;
+			margin-bottom: 0;
+			font-size: 16px;
+			color: #000000;
+		}
+	}
+	.IDX-panel-collapse-toggle span {
+		display: inline-block;
+		float: none;
+		color: #4C5051;
+		background: transparent;
+		&::after {
+			content: "-";
+			font-weight: light;
+			display: inline-block;
+			vertical-align: 2px;
+			text-align: center;
+			width: 20px;
+			height: 20px;
+			line-height: 14px;
+			color: #4C5051;
+			border: 1px solid #4C5051;
+			border-radius: 100%;
+		}
+	}
+	.IDX-panel-collapse-toggle.IDX-collapsed span {
+		background: transparent;
+		transform: none;
+		&::after{
+			content: "+";
+			line-height: 20px;
+			vertical-align: -1px;
+		}
+	}
+	#IDX-description {
+		font-size: 16px;
+		color: #000000;
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+	}
+	> hr, #IDX-detailscontactContainer > hr {
+		display: none;
+	}
+	#IDX-listingHeader {
+		margin-bottom: 30px;
+	}
+	.IDX-control-label {
+		font-weight: normal;
+		font-size: 16px;
+	}
+	.IDX-required {
+		font-size: 22px;
+		color: #D31313;
+	}
+	.IDX-form-control {
+		height: 45px;
+		line-height: 45px;
+		border: 1.35px solid #E6E6E6;
+		border-radius: 3px;
+	}
+	#IDX-resetBtn, #IDX-submitBtn {
+		font-family: $header-font-family;
+		font-size: 18px;
+		color: $temp-blue;
+		background-color: transparent;
+		border: 1px solid $temp-blue;
+		border-radius: 3px;
+		text-transform: uppercase;
+		letter-spacing: .2px;
+		&:hover {	
+			background-color: transparent;
+			box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
+		}
+	}
+	#IDX-message {
+		height: 150px;
+		margin-bottom: 35px;
+	}
+}
+
+// Remove large price font size
+.IDX-wrapper-standard .IDX-field-price .IDX-text, .IDX-wrapper-standard .IDX-field-listingPrice .IDX-text {
+	font-size: 16px;
 }

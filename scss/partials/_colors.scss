@@ -4,6 +4,7 @@ $body-font-color: #4C5051;
 $body-font-color-secondary: #fff;
 $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 $anchor-font-secondary-color-hover: scale-color($secondary-color, $lightness: -14%);
+$temp-blue: #258bb7;
 
 @media only screen and (min-width: 40.063em) {
 	div.title-area  {
