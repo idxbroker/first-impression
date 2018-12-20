@@ -378,12 +378,12 @@ body.must-see-map-results {
 	#IDX-walkscoreContainer {
 		margin-bottom: 30px;
 	}
+	.IDX-field-price .IDX-text, .IDX-field-listingPrice .IDX-text {
+		font-size: 16px;
+	}
 }
 
 // Remove large price font size
-.IDX-wrapper-standard .IDX-field-price .IDX-text, .IDX-wrapper-standard .IDX-field-listingPrice .IDX-text {
-	font-size: 16px;
-}
 
 /*** IDX Sign Up Page ***/
 .IDX-wrapper-standard {

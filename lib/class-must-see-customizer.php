@@ -393,10 +393,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				footer.site-footer button
 				footer.site-footer .IDX-mapWidgetWrap *,
 				footer.site-footer .footer-widgets .IDX_Omnibar_Widget *,
-				.IDX-wrapper-standard #IDX-saveProperty,
-				.IDX-wrapper-standard #IDX-newSearch,
-				.IDX-wrapper-standard #IDX-modifySearch, 
-				.IDX-wrapper-standard #IDX-backToResults,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-saveProperty,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-newSearch,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-modifySearch, 
+				.IDX-wrapper-standard.IDX-page-listing #IDX-backToResults,
 				.IDX-wrapper-standard.IDX-page-listing .IDX-detailsHotAction a,
 				.IDX-wrapper-standard.IDX-page-listing .IDX-detailsHotAction a:hover,
 				.IDX-wrapper-standard.IDX-page-listing .IDX-arrow,
@@ -413,7 +413,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					}
 				}
 				@media only screen and (max-width: 640px) {
-					.IDX-wrapper-standard .IDX-detailsHotAction a {
+					.IDX-wrapper-standard.IDX-page-listing .IDX-detailsHotAction a {
 						color: $primary_color;
 					}
 				}
@@ -433,11 +433,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type='password']:focus,
 				div.impress-carousel .owl-nav.owl-controls button.owl-prev,
 				div.impress-carousel .owl-nav.owl-controls button.owl-next,
-				.IDX-wrapper-standard #IDX-saveProperty,
-				.IDX-wrapper-standard #IDX-newSearch,
-				.IDX-wrapper-standard #IDX-modifySearch, 
-				.IDX-wrapper-standard #IDX-backToResults,
-				.IDX-wrapper-standard .IDX-showcaseSlide-active,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-saveProperty,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-newSearch,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-modifySearch, 
+				.IDX-wrapper-standard.IDX-page-listing #IDX-backToResults,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-showcaseSlide-active,
 				.IDX-wrapper-standard.IDX-page-listing #IDX-detailsHotActions,
 				.IDX-wrapper-standard.IDX-page-listing .IDX-arrow,
 				.IDX-wrapper-standard.IDX-page-listing #IDX-photoGalleryLink,
