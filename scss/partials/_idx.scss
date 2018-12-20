@@ -1,3 +1,37 @@
+@mixin hover-effect {
+	background-color: transparent;
+	box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
+}
+
+@mixin remove-well {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+@mixin control-label {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+@mixin idx-required {
+	font-size: 22px;
+	color: #D31313;
+}
+
+// Does not include color or fonts, since that needs to be in customizer
+@mixin idx-button {
+	font-size: 18px;
+	background-color: transparent;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: .2px;
+	background: #fff;
+	&:hover {	
+		@include hover-effect;
+	}
+}
+
 body.must-see-map-results {
 	.content-sidebar-wrap {
 		width: 100%;
@@ -12,57 +46,419 @@ body.must-see-map-results {
 		padding: 0;
 	}
 }
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink:hover,
-.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink:focus {
-	background-color: rgba(0,0,0,.1);
-}
 
-
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default,
-body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
-	background-color: $primary-color;
-}
-
-body:not(.must-see-map-results) #IDX-main .IDX-topAction .IDX-btn {
-	color: $light-text;
-}
-
-#IDX-main #IDX-detailsHotActions .IDX-btn,
-body.must-see-map-results #IDX-main .IDX-topAction .IDX-btn {
-	color: $primary-color;
-}
-
-.IDX-wrapper-standard #IDX-nextLastButtons .IDX-btn {
-	width: 150px;
-	&:last-child {
-		float: right;
-	}
-}
-
-#IDX-main .IDX-topAction .IDX-btn {
-	border: none;
+/*** Listings Details ***/
+.IDX-wrapper-standard #IDX-saveProperty, .IDX-wrapper-standard #IDX-newSearch, .IDX-wrapper-standard #IDX-modifySearch, .IDX-wrapper-standard #IDX-backToResults {
+	line-height: 36px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	background-color: #fff;
+	font-size: rem-calc(16px);
+	font-family: $header-font-family;
+	padding: 0 15px;
 	&:hover {
-		opacity: .9;
+		@include hover-effect;
 	}
-	padding-left: 6px;
 }
 
-.IDX-wrapper-standard .IDX-detailsHotAction a {
-
+@media only screen and (min-width: 641px) {
+	.IDX-wrapper-standard {
+		// Prev/Next buttons and position text
+		#IDX-nextLastButtons {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 30px;
+			#IDX-nextLastPosition {
+				flex: 1 1 auto;
+				order: 2;
+				width: 150px;
+				margin: 0 10px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			// Previous button
+			a:nth-of-type(1) {
+				float: none;
+				order: 1;
+				width: 150px;
+				border-radius: 5px;
+			}
+			// Next button
+			a:nth-of-type(2) {
+				float: none;
+				order: 3;
+				width: 150px;
+				border-radius: 5px;
+			}
+			> * {
+				line-height: 40px;
+				height: 40px;
+				padding: 0 5px;
+				text-align: center;
+			}
+		}
+		.IDX-topAction {
+			min-width: auto;
+			margin-right: 0;
+			+ .IDX-topAction {
+				margin-left: 30px;
+			}
+		}
+		.IDX-detailsHotAction {
+			&+.IDX-detailsHotAction {
+				margin-left: 30px;
+			}
+			a {
+				text-align: left;
+			}
+		}
+		.IDX-thumbnail {
+			margin: 0 60px;
+		}
+		.st-btn+.st-btn {
+			margin-left: 10px;
+		}
+	}
 }
 
-.IDX-navbar-toggle {
-	display: block;
+
+@media only screen and (max-width: 840px) and (min-width: 641px) {
+	.IDX-wrapper-standard {
+		#IDX-saveProperty, #IDX-newSearch, #IDX-modifySearch, #IDX-backToResults {
+			font-size: rem-calc(12px);
+			padding: 0 13px;
+		}
+		.IDX-topAction {
+			+ .IDX-topAction {
+				margin-left: 10px;
+			}
+		}
+	}
 }
 
-// TODO: add this to customizer
-body:not(.must-see-map-results) .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a > span {
-	outline: none;
-	color: #ffffff;
+
+@media only screen and (max-width: 640px) {
+	.IDX-wrapper-standard {
+		#IDX-saveProperty, #IDX-newSearch, #IDX-modifySearch, #IDX-backToResults {
+			margin: 8px 0;
+		}
+		.IDX-detailsHotAction {
+			a {
+				margin-top: 10px;
+				border: 0px;
+			}
+			+ .IDX-detailsHotAction {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.IDX-carouselThumb {
+	border: none;
+	overflow: hidden;
+	&+.IDX-carouselThumb {
+	}
+	img {
+		border: none;
+	}
+}
+
+.IDX-wrapper-standard .IDX-showcaseSlide-active {
+	border: 2px solid;
+}
+
+.IDX-wrapper-standard #IDX-detailsPrimaryImg {
+	max-height: 570px;
+}
+
+.IDX-wrapper-standard.IDX-page-listing {
+	#IDX-detailsHotActions {
+		border-bottom: 2px solid;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+	}
+	.IDX-detailsHotAction {
+		a {
+			text-decoration: none;
+			border: 0px;
+			&:hover {
+				background-color: transparent;
+				text-decoration: underline;
+			}
+		}
+	}
+	#IDX-primaryPhoto {
+		height: 575px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.IDX-thumbnail {
+		border: none;
+		padding: 0;
+		img {
+			border: none;
+		}
+	}
+	.IDX-arrow {
+		background: transparent;
+		border: 2px solid;
+		border-radius: 100%;
+		width: 43px;
+		height: 43px;
+		&:hover {
+			@include hover-effect;
+		}
+		i {
+			line-height: 43px;
+		}
+	}
+	#IDX-arrow-previous i {
+		margin-right: 2px;
+	}
+	#IDX-arrow-next i {
+		margin-left: 2px;
+	}
+	.IDX-carouselNavWrapper {
+		i {
+			font-size: 24px;
+		}
+	}
+	#IDX-photoGalleryLink {
+		display: block;
+		max-width: 400px;
+		line-height: 36px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		border: 1px solid;
+		border-radius: 3px;
+	}
+	#IDX-detailsHead hr {
+		border: none;
+		border-bottom: 2px solid;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	#IDX-detailsAddress {
+		padding: 10px 15px;
+		a > div {
+			display: block;
+			font-family: $body-font-family;
+			font-size: 21px;
+			font-weight: 500;
+			&.IDX-detailsAddressLocationInfo {
+				font-size: 18px;
+				font-weight: normal;
+			}
+			.IDX-detailsEndAddressComma {
+				display: none;
+			}	
+		}
+	}
+	#IDX-detailsMainInfo {
+		&::after {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 3px;
+			border-radius: 5px;
+			margin: 20px 0;
+		}
+	}
+	.IDX-panel {
+		border: none;
+		box-shadow: none;
+	}
+	.IDX-panel-heading, #IDX-listingHeader {
+		border: none;
+		background: transparent;
+		font-size: 20px;
+		font-weight: bold;
+		color: #4C5051;
+		letter-spacing: 0px;
+		&::before {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 3px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+	}
+	.IDX-panel-title {
+		font-size: 20px;
+		font-weight: bold;
+		letter-spacing: 0px;
+	}
+	.IDX-panel-default > .IDX-panel-heading {
+		background-color: transparent;
+	}
+	.IDX-panel-body {
+		// Each item is an inline block, reduce font-size to reduce spacing between each item
+		font-size: 8px;
+		.IDX-field {
+			border: none;
+			margin-bottom: 0;
+			font-size: 16px;
+			color: #000000;
+		}
+	}
+	.IDX-panel-collapse-toggle span {
+		display: inline-block;
+		float: none;
+		color: #4C5051;
+		background: transparent;
+		&::after {
+			content: "-";
+			font-weight: light;
+			display: inline-block;
+			vertical-align: 2px;
+			text-align: center;
+			width: 20px;
+			height: 20px;
+			line-height: 14px;
+			color: #4C5051;
+			border: 1px solid #4C5051;
+			border-radius: 100%;
+		}
+	}
+	.IDX-panel-collapse-toggle.IDX-collapsed span {
+		background: transparent;
+		transform: none;
+		&::after{
+			content: "+";
+			line-height: 20px;
+			vertical-align: -1px;
+		}
+	}
+	#IDX-description {
+		font-size: 16px;
+		color: #000000;
+		@include remove-well;
+	}
+	> hr, #IDX-detailscontactContainer > hr {
+		display: none;
+	}
+	#IDX-listingHeader {
+		margin-bottom: 30px;
+	}
+	.IDX-control-label {
+		@include control-label;
+	}
+	.IDX-required {
+		font-size: 22px;
+		color: #D31313;
+	}
+	.IDX-form-control {
+		height: 45px;
+		line-height: 45px;
+		border: 1.35px solid #E6E6E6;
+		border-radius: 3px;
+	}
+	#IDX-resetBtn, #IDX-submitBtn {
+		@include idx-button;
+		font-family: $header-font-family;
+		border: 1px solid;
+	}
+	#IDX-message {
+		height: 150px;
+		margin-bottom: 35px;
+	}
+	// Map details
+	#IDX-mapContainer {
+		@include remove-well;
+	}
+	// Remove all side padding
+	.IDX-panel-body, .IDX-panel-heading, .IDX-well, #IDX-detailsAddress {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#IDX-walkscoreContainer {
+		margin-bottom: 30px;
+	}
+	.IDX-field-price .IDX-text, .IDX-field-listingPrice .IDX-text {
+		font-size: 16px;
+	}
+}
+
+// Remove large price font size
+
+/*** IDX Sign Up Page ***/
+.IDX-wrapper-standard {
+	#IDX-leadLoginContainer {
+		.col-sm-4 {
+			display: block;
+			width: 100%;
+			min-width: 33%;
+			max-width: 670px;
+			margin: 0 auto;
+		}
+		.IDX-panel-body {
+			background-color: #F9F9F9;
+		}
+		.IDX-control-label {
+			@include control-label;
+			.IDX-required {
+				@include idx-required;
+			}
+		}
+		#IDX-keepLoggedIn label {
+			.IDX-keepLoggedInCheckBox {
+				position: relative;
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				width: 18px;
+				height: 18px;
+				color: #fff;
+				margin-right: 12px;
+				border-radius: 3px;
+				border: 2px solid $temp-blue;
+				vertical-align: top;
+				cursor: pointer;
+				outline: none;
+				&:checked {
+					background-color: $temp-blue;
+					border: none;
+					&::after {
+						content: '\2714';
+						position: absolute;
+						top: -1px;
+						left: 3px;
+						font-size: 14px;
+						font-weight: 200;
+						color: #fff;
+					}
+				}
+			}
+			span {
+				@include control-label;
+			}
+		}
+		.IDX-btn {
+			@include idx-button;
+			font-family: $header-font-family;
+			color: $temp-blue;
+			border: 1px solid $temp-blue;
+			i {
+				display: none;
+			}
+		}
+	}
+	#IDX-leadLoginHeader {
+		@include remove-well;
+		background-color: $temp-blue;
+		padding: 0;
+		h2 {
+			line-height: 85px;
+			text-transform: uppercase;
+			font-size: rem-calc(20px);
+			font-weight: bold;
+			letter-spacing: .2px;
+			padding-left: 45px;
+			color: #fff; // TODO: THIS SHOULD BE SECONDARY HEADING;
+		}
+	}
 }
