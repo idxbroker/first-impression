@@ -418,15 +418,13 @@ body.must-see-map-results {
 				-webkit-appearance: none;
 				width: 18px;
 				height: 18px;
-				color: #fff;
 				margin-right: 12px;
 				border-radius: 3px;
-				border: 2px solid $temp-blue;
+				border: 2px solid;
 				vertical-align: top;
 				cursor: pointer;
 				outline: none;
 				&:checked {
-					background-color: $temp-blue;
 					border: none;
 					&::after {
 						content: '\2714';
@@ -435,7 +433,6 @@ body.must-see-map-results {
 						left: 3px;
 						font-size: 14px;
 						font-weight: 200;
-						color: #fff;
 					}
 				}
 			}
@@ -446,8 +443,7 @@ body.must-see-map-results {
 		.IDX-btn {
 			@include idx-button;
 			font-family: $header-font-family;
-			color: $temp-blue;
-			border: 1px solid $temp-blue;
+			border: 1px solid;
 			height: 50px;
 			line-height: 50px;
 			padding: 0;
@@ -457,7 +453,6 @@ body.must-see-map-results {
 		}
 		.IDX-panel-heading {
 			@include remove-well;
-			background-color: $temp-blue;
 			padding: 0;
 			h2 {
 				line-height: 85px;
@@ -466,7 +461,6 @@ body.must-see-map-results {
 				font-weight: bold;
 				letter-spacing: .2px;
 				padding-left: 45px;
-				color: #fff; // TODO: THIS SHOULD BE SECONDARY HEADING;
 			}
 		}
 		.IDX-form-group {
@@ -490,7 +484,6 @@ body.must-see-map-results {
 			margin-top: 20px;
 		}
 		#IDX-userSignupLink, #IDX-toggleLogIn {
-			color: $temp-blue;
 			text-decoration: underline;
 			font-size: 16px;
 			i {

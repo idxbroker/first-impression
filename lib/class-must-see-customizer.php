@@ -403,7 +403,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-listing .IDX-arrow:hover,
 				.IDX-wrapper-standard.IDX-page-listing #IDX-resetBtn,
 				.IDX-wrapper-standard.IDX-page-listing #IDX-submitBtn,
-				.IDX-wrapper-standard a {
+				.IDX-wrapper-standard a,
+				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-btn,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn,
+				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer #IDX-toggleLogIn,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-userSignupLink {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
@@ -443,7 +447,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-listing #IDX-photoGalleryLink,
 				.IDX-wrapper-standard.IDX-page-listing #IDX-detailsHead hr,
 				.IDX-wrapper-standard.IDX-page-listing #IDX-resetBtn,
-				.IDX-wrapper-standard.IDX-page-listing #IDX-submitBtn {
+				.IDX-wrapper-standard.IDX-page-listing #IDX-submitBtn,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-keepLoggedIn label .IDX-keepLoggedInCheckBox,
+				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-btn,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn {
 					border-color: $primary_color;
 				}
 
@@ -456,7 +463,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-listing .IDX-carouselNavWrapper,
 				.IDX-wrapper-standard.IDX-page-listing #IDX-detailsMainInfo::after,
 				.IDX-wrapper-standard.IDX-page-listing .IDX-panel-heading::before,
-				.IDX-wrapper-standard.IDX-page-listing #IDX-listingHeader::before {
+				.IDX-wrapper-standard.IDX-page-listing #IDX-listingHeader::before,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-keepLoggedIn label .IDX-keepLoggedInCheckBox:checked,
+				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-panel-heading,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-panel-heading {
 					background-color: $primary_color;
 				}
 				@media only screen and (max-width: 40.063em) {
@@ -478,7 +488,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .singleTestimonialWidget h4,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4,
 				.home .bg-gradient a,
-				.IDX-wrapper-standard.IDX-page-listing .IDX-carouselNavWrapper i {
+				.IDX-wrapper-standard.IDX-page-listing .IDX-carouselNavWrapper i,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-keepLoggedIn label .IDX-keepLoggedInCheckBox::after,
+				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-panel-heading h2,
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-panel-heading h2 {
 					color: $heading_secondary_color;
 				}
 
