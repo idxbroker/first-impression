@@ -9,6 +9,29 @@
 	box-shadow: none;
 }
 
+@mixin control-label {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+@mixin idx-required {
+	font-size: 22px;
+	color: #D31313;
+}
+
+// Does not include color or fonts, since that needs to be in customizer
+@mixin idx-button {
+	font-size: 18px;
+	background-color: transparent;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: .2px;
+	background: #fff;
+	&:hover {	
+		@include hover-effect;
+	}
+}
+
 body.must-see-map-results {
 	.content-sidebar-wrap {
 		width: 100%;
@@ -153,7 +176,7 @@ body.must-see-map-results {
 	max-height: 570px;
 }
 
-.IDX-wrapper-standard {
+.IDX-wrapper-standard.IDX-page-listing {
 	#IDX-detailsHotActions {
 		border-bottom: 2px solid $temp-blue;
 		margin-bottom: 40px;
@@ -333,8 +356,7 @@ body.must-see-map-results {
 		margin-bottom: 30px;
 	}
 	.IDX-control-label {
-		font-weight: normal;
-		font-size: 16px;
+		@include control-label;
 	}
 	.IDX-required {
 		font-size: 22px;
@@ -347,18 +369,10 @@ body.must-see-map-results {
 		border-radius: 3px;
 	}
 	#IDX-resetBtn, #IDX-submitBtn {
+		@include idx-button;
 		font-family: $header-font-family;
-		font-size: 18px;
 		color: $temp-blue;
-		background-color: transparent;
 		border: 1px solid $temp-blue;
-		border-radius: 3px;
-		text-transform: uppercase;
-		letter-spacing: .2px;
-		&:hover {	
-			background-color: transparent;
-			box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
-		}
 	}
 	#IDX-message {
 		height: 150px;
@@ -378,4 +392,82 @@ body.must-see-map-results {
 // Remove large price font size
 .IDX-wrapper-standard .IDX-field-price .IDX-text, .IDX-wrapper-standard .IDX-field-listingPrice .IDX-text {
 	font-size: 16px;
+}
+
+/*** IDX Sign Up Page ***/
+.IDX-wrapper-standard {
+	#IDX-leadLoginContainer {
+		.col-sm-4 {
+			display: block;
+			width: 100%;
+			min-width: 33%;
+			max-width: 670px;
+			margin: 0 auto;
+		}
+		.IDX-panel-body {
+			background-color: #F9F9F9;
+		}
+		.IDX-control-label {
+			@include control-label;
+			.IDX-required {
+				@include idx-required;
+			}
+		}
+		#IDX-keepLoggedIn label {
+			.IDX-keepLoggedInCheckBox {
+				position: relative;
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				width: 18px;
+				height: 18px;
+				color: #fff;
+				margin-right: 12px;
+				border-radius: 3px;
+				border: 2px solid $temp-blue;
+				vertical-align: top;
+				cursor: pointer;
+				outline: none;
+				&:checked {
+					background-color: $temp-blue;
+					border: none;
+					&::after {
+						content: '\2714';
+						position: absolute;
+						top: -1px;
+						left: 3px;
+						font-size: 14px;
+						font-weight: 200;
+						color: #fff;
+					}
+				}
+			}
+			span {
+				@include control-label;
+			}
+		}
+		.IDX-btn {
+			@include idx-button;
+			font-family: $header-font-family;
+			color: $temp-blue;
+			border: 1px solid $temp-blue;
+			i {
+				display: none;
+			}
+		}
+	}
+	#IDX-leadLoginHeader {
+		@include remove-well;
+		background-color: $temp-blue;
+		padding: 0;
+		h2 {
+			line-height: 85px;
+			text-transform: uppercase;
+			font-size: rem-calc(20px);
+			font-weight: bold;
+			letter-spacing: .2px;
+			padding-left: 45px;
+			color: #fff; // TODO: THIS SHOULD BE SECONDARY HEADING;
+		}
+	}
 }
