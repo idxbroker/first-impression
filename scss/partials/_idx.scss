@@ -53,8 +53,6 @@ body.must-see-map-results {
 	border-radius: 3px;
 	text-transform: uppercase;
 	background-color: #fff;
-	color: $temp-blue;
-	border-color: $temp-blue;
 	font-size: rem-calc(16px);
 	font-family: $header-font-family;
 	padding: 0 15px;
@@ -147,7 +145,6 @@ body.must-see-map-results {
 		}
 		.IDX-detailsHotAction {
 			a {
-				color: $temp-blue;
 				margin-top: 10px;
 				border: 0px;
 			}
@@ -169,7 +166,7 @@ body.must-see-map-results {
 }
 
 .IDX-wrapper-standard .IDX-showcaseSlide-active {
-	border: 2px solid $temp-blue;
+	border: 2px solid;
 }
 
 .IDX-wrapper-standard #IDX-detailsPrimaryImg {
@@ -178,18 +175,16 @@ body.must-see-map-results {
 
 .IDX-wrapper-standard.IDX-page-listing {
 	#IDX-detailsHotActions {
-		border-bottom: 2px solid $temp-blue;
+		border-bottom: 2px solid;
 		margin-bottom: 40px;
 		padding-bottom: 40px;
 	}
 	.IDX-detailsHotAction {
 		a {
-			color: $temp-blue;
 			text-decoration: none;
 			border: 0px;
 			&:hover {
 				background-color: transparent;
-				color: $temp-blue;
 				text-decoration: underline;
 			}
 		}
@@ -209,13 +204,11 @@ body.must-see-map-results {
 	}
 	.IDX-arrow {
 		background: transparent;
-		border: 2px solid $temp-blue;
-		color: $temp-blue;
+		border: 2px solid;
 		border-radius: 100%;
 		width: 43px;
 		height: 43px;
 		&:hover {
-			color: $temp-blue;
 			@include hover-effect;
 		}
 		i {
@@ -229,9 +222,7 @@ body.must-see-map-results {
 		margin-left: 2px;
 	}
 	.IDX-carouselNavWrapper {
-		background: $temp-blue;
 		i {
-			color: #fff; // THIS SHOULD BE SECONDARY COLOR TEXT
 			font-size: 24px;
 		}
 	}
@@ -241,12 +232,12 @@ body.must-see-map-results {
 		line-height: 36px;
 		margin: 0 auto;
 		margin-bottom: 30px;
-		border: 1px solid $temp-blue;
+		border: 1px solid;
 		border-radius: 3px;
 	}
 	#IDX-detailsHead hr {
 		border: none;
-		border-bottom: 2px solid $temp-blue;
+		border-bottom: 2px solid;
 		margin-top: 40px;
 		margin-bottom: 20px;
 	}
@@ -273,7 +264,6 @@ body.must-see-map-results {
 			width: 80px;
 			height: 3px;
 			border-radius: 5px;
-			background: $temp-blue;
 			margin: 20px 0;
 		}
 	}
@@ -294,7 +284,6 @@ body.must-see-map-results {
 			width: 80px;
 			height: 3px;
 			border-radius: 5px;
-			background: $temp-blue;
 			margin-bottom: 20px;
 		}
 	}
@@ -371,8 +360,7 @@ body.must-see-map-results {
 	#IDX-resetBtn, #IDX-submitBtn {
 		@include idx-button;
 		font-family: $header-font-family;
-		color: $temp-blue;
-		border: 1px solid $temp-blue;
+		border: 1px solid;
 	}
 	#IDX-message {
 		height: 150px;
@@ -386,6 +374,9 @@ body.must-see-map-results {
 	.IDX-panel-body, .IDX-panel-heading, .IDX-well, #IDX-detailsAddress {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	#IDX-walkscoreContainer {
+		margin-bottom: 30px;
 	}
 }
 

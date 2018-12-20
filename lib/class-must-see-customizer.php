@@ -392,12 +392,28 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				footer.site-footer input[type='submit'],
 				footer.site-footer button
 				footer.site-footer .IDX-mapWidgetWrap *,
-				footer.site-footer .footer-widgets .IDX_Omnibar_Widget * {
+				footer.site-footer .footer-widgets .IDX_Omnibar_Widget *,
+				.IDX-wrapper-standard #IDX-saveProperty,
+				.IDX-wrapper-standard #IDX-newSearch,
+				.IDX-wrapper-standard #IDX-modifySearch, 
+				.IDX-wrapper-standard #IDX-backToResults,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-detailsHotAction a,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-detailsHotAction a:hover,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-arrow,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-arrow:hover,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-resetBtn,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-submitBtn,
+				.IDX-wrapper-standard a {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
 					header.site-header .site-title,
 					header.site-header .site-title a {
+						color: $primary_color;
+					}
+				}
+				@media only screen and (max-width: 640px) {
+					.IDX-wrapper-standard .IDX-detailsHotAction a {
 						color: $primary_color;
 					}
 				}
@@ -416,7 +432,18 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				input[type='tel']:focus,
 				input[type='password']:focus,
 				div.impress-carousel .owl-nav.owl-controls button.owl-prev,
-				div.impress-carousel .owl-nav.owl-controls button.owl-next {
+				div.impress-carousel .owl-nav.owl-controls button.owl-next,
+				.IDX-wrapper-standard #IDX-saveProperty,
+				.IDX-wrapper-standard #IDX-newSearch,
+				.IDX-wrapper-standard #IDX-modifySearch, 
+				.IDX-wrapper-standard #IDX-backToResults,
+				.IDX-wrapper-standard .IDX-showcaseSlide-active,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-detailsHotActions,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-arrow,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-photoGalleryLink,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-detailsHead hr,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-resetBtn,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-submitBtn {
 					border-color: $primary_color;
 				}
 
@@ -425,7 +452,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				h4::before,
 				h4::after,
 				h2::after,
-				h1::after {
+				h1::after,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-carouselNavWrapper,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-detailsMainInfo::after,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-panel-heading::before,
+				.IDX-wrapper-standard.IDX-page-listing #IDX-listingHeader::before {
 					background-color: $primary_color;
 				}
 				@media only screen and (max-width: 40.063em) {
@@ -446,7 +477,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient section.impress-carousel-widget h4,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .singleTestimonialWidget h4,
 				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .listTestimonialsWidget h4,
-				.home .bg-gradient a {
+				.home .bg-gradient a,
+				.IDX-wrapper-standard.IDX-page-listing .IDX-carouselNavWrapper i {
 					color: $heading_secondary_color;
 				}
 
