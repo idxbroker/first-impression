@@ -1,6 +1,6 @@
 @mixin hover-effect {
 	background-color: transparent;
-	box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.08);
 }
 
 @mixin remove-well {
@@ -11,7 +11,7 @@
 
 @mixin control-label {
 	font-weight: normal;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 @mixin idx-required {
@@ -386,17 +386,23 @@ body.must-see-map-results {
 // Remove large price font size
 
 /*** IDX Sign Up Page ***/
-.IDX-wrapper-standard {
-	#IDX-leadLoginContainer {
+.IDX-wrapper-standard.IDX-page-userlogin, .IDX-wrapper-standard.IDX-type-usersignup {
+	#IDX-leadLoginContainer, #IDX-leadSignupContainer {
 		.col-sm-4 {
 			display: block;
 			width: 100%;
+			margin: 0;
+		}
+		.IDX-panel {
 			min-width: 33%;
 			max-width: 670px;
-			margin: 0 auto;
+			margin: 30px auto;
+			margin-bottom: 40px;
+			border: none;
 		}
 		.IDX-panel-body {
 			background-color: #F9F9F9;
+			padding: 45px;
 		}
 		.IDX-control-label {
 			@include control-label;
@@ -412,15 +418,13 @@ body.must-see-map-results {
 				-webkit-appearance: none;
 				width: 18px;
 				height: 18px;
-				color: #fff;
 				margin-right: 12px;
 				border-radius: 3px;
-				border: 2px solid $temp-blue;
+				border: 2px solid;
 				vertical-align: top;
 				cursor: pointer;
 				outline: none;
 				&:checked {
-					background-color: $temp-blue;
 					border: none;
 					&::after {
 						content: '\2714';
@@ -429,7 +433,6 @@ body.must-see-map-results {
 						left: 3px;
 						font-size: 14px;
 						font-weight: 200;
-						color: #fff;
 					}
 				}
 			}
@@ -440,25 +443,61 @@ body.must-see-map-results {
 		.IDX-btn {
 			@include idx-button;
 			font-family: $header-font-family;
-			color: $temp-blue;
-			border: 1px solid $temp-blue;
+			border: 1px solid;
+			height: 50px;
+			line-height: 50px;
+			padding: 0;
 			i {
 				display: none;
 			}
 		}
-	}
-	#IDX-leadLoginHeader {
-		@include remove-well;
-		background-color: $temp-blue;
-		padding: 0;
-		h2 {
-			line-height: 85px;
-			text-transform: uppercase;
-			font-size: rem-calc(20px);
-			font-weight: bold;
-			letter-spacing: .2px;
-			padding-left: 45px;
-			color: #fff; // TODO: THIS SHOULD BE SECONDARY HEADING;
+		.IDX-panel-heading {
+			@include remove-well;
+			padding: 0;
+			h2 {
+				line-height: 85px;
+				text-transform: uppercase;
+				font-size: rem-calc(20px);
+				font-weight: bold;
+				letter-spacing: .2px;
+				padding-left: 45px;
+			}
 		}
+		.IDX-form-group {
+			margin-bottom: 35px;
+		}
+		.IDX-form-control {
+			border: 1px solid #E6E6E6;
+			border-radius: 3px;
+			height: 50px;
+			line-height: 50px;
+		}
+		.IDX-alert-info {
+			background: none;
+			padding: 0;
+			border: none;
+			color: #4C5051;
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		#IDX-signupFormActions {
+			margin-top: 20px;
+		}
+		#IDX-userSignupLink, #IDX-toggleLogIn {
+			text-decoration: underline;
+			font-size: 16px;
+			i {
+				display: none;
+			}
+		}
+		#IDX-gotoUserSignup, #IDX-signupForm > span {
+			font-size: 16px;
+		}
+	}
+}
+
+body.idx-wrapper-template-default {
+	.site-inner {
+		padding: 50px 0;
 	}
 }
