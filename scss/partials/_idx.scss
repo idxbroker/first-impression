@@ -301,7 +301,7 @@ body.must-see-map-results {
 		.IDX-field {
 			border: none;
 			margin-bottom: 0;
-			font-size: 16px;
+			font-size: rem-calc(16px);
 			color: #000000;
 		}
 	}
@@ -334,7 +334,7 @@ body.must-see-map-results {
 		}
 	}
 	#IDX-description {
-		font-size: 16px;
+		font-size: rem-calc(16px);
 		color: #000000;
 		@include remove-well;
 	}
@@ -379,7 +379,7 @@ body.must-see-map-results {
 		margin-bottom: 30px;
 	}
 	.IDX-field-price .IDX-text, .IDX-field-listingPrice .IDX-text {
-		font-size: 16px;
+		font-size: rem-calc(16px);
 	}
 }
 
@@ -403,12 +403,6 @@ body.must-see-map-results {
 		.IDX-panel-body {
 			background-color: #F9F9F9;
 			padding: 45px;
-		}
-		.IDX-control-label {
-			@include control-label;
-			.IDX-required {
-				@include idx-required;
-			}
 		}
 		#IDX-keepLoggedIn label {
 			.IDX-keepLoggedInCheckBox {
@@ -440,17 +434,6 @@ body.must-see-map-results {
 				@include control-label;
 			}
 		}
-		.IDX-btn {
-			@include idx-button;
-			font-family: $header-font-family;
-			border: 1px solid;
-			height: 50px;
-			line-height: 50px;
-			padding: 0;
-			i {
-				display: none;
-			}
-		}
 		.IDX-panel-heading {
 			@include remove-well;
 			padding: 0;
@@ -462,15 +445,6 @@ body.must-see-map-results {
 				letter-spacing: .2px;
 				padding-left: 45px;
 			}
-		}
-		.IDX-form-group {
-			margin-bottom: 35px;
-		}
-		.IDX-form-control {
-			border: 1px solid #E6E6E6;
-			border-radius: 3px;
-			height: 50px;
-			line-height: 50px;
 		}
 		.IDX-alert-info {
 			background: none;
@@ -485,19 +459,111 @@ body.must-see-map-results {
 		}
 		#IDX-userSignupLink, #IDX-toggleLogIn {
 			text-decoration: underline;
-			font-size: 16px;
+			font-size: rem-calc(16px);
 			i {
 				display: none;
 			}
 		}
 		#IDX-gotoUserSignup, #IDX-signupForm > span {
-			font-size: 16px;
+			font-size: rem-calc(16px);
 		}
+		#IDX-signupFormSubmitBtn, #IDX-loginSubmit {
+			background: #fff;
+		}
+	}
+}
+
+.IDX-wrapper-standard {
+	#IDX-searchForm {
+		font-size: rem-calc(16px);
+	}
+	.IDX-control-label {
+		@include control-label;
+		.IDX-required {
+			@include idx-required;
+		}
+	}
+	.IDX-form {
+		.IDX-btn {
+			@include idx-button;
+			font-family: $header-font-family;
+			border: 1px solid;
+			height: 50px;
+			line-height: 50px;
+			padding: 0;
+			i {
+				display: none;
+			}
+		}
+	}
+	.IDX-form-group {
+		margin-bottom: 35px;
+	}
+	.IDX-form-control, .IDX-control-group {
+		border: 1px solid #E6E6E6;
+		border-radius: 3px;
+		height: 50px;
+		line-height: 50px;
+	}
+	/*** Advanced Search Page ***/
+	.IDX-container-navbar {
+		background: $temp-blue;
+		.IDX-active {
+			a {
+				color: $temp-blue;
+			}
+		}
+	}
+	#IDX-navbar-collapse {
+		padding: 0;
+	}
+	#IDX-navbar {
+		border: none;
 	}
 }
 
 body.idx-wrapper-template-default {
 	.site-inner {
 		padding: 50px 0;
+	}
+}
+
+/*** Advanced Search Page ***/
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+	font-family: $header-font-family;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 200;
+	color: #fff;
+	padding: 15px 30px;
+}
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+	background-color: rgba(255,255,255,.3);
+}
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:focus,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:active,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:hover {
+	background-color: #F9F9F9;
+	color: $temp-blue;
+}
+
+.IDX-wrapper-standard #IDX-searchForm .IDX-control-group {
+	padding: 0;
+	.select2-container, .select2-choice {
+		display: block;
+		height: 50px;
+		line-height: 50px;
+		border: none;
+	}
+	.select2-chosen {
+		line-height: 50px;
+		height: 50px;
+		margin: 0;
 	}
 }
