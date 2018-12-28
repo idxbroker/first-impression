@@ -12,6 +12,8 @@
 @mixin control-label {
 	font-weight: normal;
 	font-size: 15px;
+	height: 28px;
+	overflow: hidden;
 }
 
 @mixin idx-required {
@@ -386,8 +388,8 @@ body.must-see-map-results {
 // Remove large price font size
 
 /*** IDX Sign Up Page ***/
-.IDX-wrapper-standard.IDX-page-userlogin, .IDX-wrapper-standard.IDX-type-usersignup {
-	#IDX-leadLoginContainer, #IDX-leadSignupContainer {
+.IDX-wrapper-standard {
+	#IDX-leadLoginContainer, #IDX-leadSignupContainer, #IDX-contactContainer {
 		.col-sm-4 {
 			display: block;
 			width: 100%;
@@ -470,50 +472,45 @@ body.must-see-map-results {
 		#IDX-signupFormSubmitBtn, #IDX-loginSubmit {
 			background: #fff;
 		}
+		#IDX-searchForm {
+			font-size: rem-calc(16px);
+		}
+		.IDX-control-label {
+			@include control-label;
+			.IDX-required {
+				@include idx-required;
+			}
+		}
+		.IDX-form {
+			.IDX-btn {
+				@include idx-button;
+				font-family: $header-font-family;
+				border: 1px solid;
+				height: 50px;
+				line-height: 50px;
+				padding: 0;
+				i {
+					display: none;
+				}
+			}
+		}
+		.IDX-form-group {
+			margin-bottom: 35px;
+		}
+		.IDX-form-control, .IDX-control-group {
+			border: 1px solid #E6E6E6;
+			border-radius: 3px;
+			height: 50px;
+			line-height: 50px;
+		}
+		#IDX-message {
+			height: auto;
+		}
 	}
 }
 
-.IDX-wrapper-standard {
-	#IDX-searchForm {
-		font-size: rem-calc(16px);
-	}
-	.IDX-control-label {
-		@include control-label;
-		.IDX-required {
-			@include idx-required;
-		}
-	}
-	.IDX-form {
-		.IDX-btn {
-			@include idx-button;
-			font-family: $header-font-family;
-			border: 1px solid;
-			height: 50px;
-			line-height: 50px;
-			padding: 0;
-			i {
-				display: none;
-			}
-		}
-	}
-	.IDX-form-group {
-		margin-bottom: 35px;
-	}
-	.IDX-form-control, .IDX-control-group {
-		border: 1px solid #E6E6E6;
-		border-radius: 3px;
-		height: 50px;
-		line-height: 50px;
-	}
+.IDX-wrapper-standard #IDX-searchPageWrapper {
 	/*** Advanced Search Page ***/
-	.IDX-container-navbar {
-		background: $temp-blue;
-		.IDX-active {
-			a {
-				color: $temp-blue;
-			}
-		}
-	}
 	#IDX-navbar-collapse {
 		padding: 0;
 	}
@@ -529,6 +526,12 @@ body.idx-wrapper-template-default {
 }
 
 /*** Advanced Search Page ***/
+.IDX-wrapper-standard .IDX-container-navbar,
+.IDX-wrapper-standard .IDX-container-navbar .IDX-active a {
+		background: $temp-blue;
+
+}
+
 .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a,
 .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
 .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
@@ -551,19 +554,4 @@ body.idx-wrapper-template-default {
 .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:hover {
 	background-color: #F9F9F9;
 	color: $temp-blue;
-}
-
-.IDX-wrapper-standard #IDX-searchForm .IDX-control-group {
-	padding: 0;
-	.select2-container, .select2-choice {
-		display: block;
-		height: 50px;
-		line-height: 50px;
-		border: none;
-	}
-	.select2-chosen {
-		line-height: 50px;
-		height: 50px;
-		margin: 0;
-	}
 }
