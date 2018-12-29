@@ -517,6 +517,25 @@ body.must-see-map-results {
 	#IDX-navbar {
 		border: none;
 	}
+	.IDX-control-group,
+	.IDX-advancedSearchColumn {
+		padding: 0 25px;
+	}
+	.IDX-control-group,
+	.IDX-advancedPair {
+		margin-bottom: 30px;
+	}
+	.IDX-btn {
+		@include idx-button;
+		width: calc(50% - 50px);
+		margin: 0 25px;
+		border-color: $temp-blue;
+		color: $temp-blue;
+		&:hover {
+			background-color: $temp-blue;
+			color: #fff; // TODO: SECONDARY HEADER TEXT
+		}
+	}
 }
 
 body.idx-wrapper-template-default {
@@ -526,10 +545,13 @@ body.idx-wrapper-template-default {
 }
 
 /*** Advanced Search Page ***/
+.IDX-wrapper-standard #IDX-navbar {
+	margin: 0 25px;
+	margin-bottom: 40px;
+}
 .IDX-wrapper-standard .IDX-container-navbar,
 .IDX-wrapper-standard .IDX-container-navbar .IDX-active a {
-		background: $temp-blue;
-
+	background: $temp-blue;
 }
 
 .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a,
@@ -554,4 +576,52 @@ body.idx-wrapper-template-default {
 .IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:hover {
 	background-color: #F9F9F9;
 	color: $temp-blue;
+}
+
+// May have to move these to be advanced wrapper specific
+.IDX-wrapper-standard {
+	.select2-container .select2-choice,
+	.select2-container.select2-container-multi .select2-choices,
+	#IDX-advancedSearchFields input.IDX-advancedBox,
+	.IDX-advancedRange  {
+		border: 2px solid #E6E6E6;
+		border-radius: 3px;
+		box-shadow: none;
+		height: 45px;
+		margin-bottom: 0;
+		&:active, &:focus {
+			background: none;
+			border-color: #E6E6E6;
+		}
+	}
+}
+
+.IDX-wrapper-standard .select2-container {
+	.select2-input,
+	.select2-search-field,
+	.select2-choice,
+	.select2-chosen,
+	#IDX-advancedSearchFields input.IDX-advancedBox {
+		height: 45px;
+		line-height: 41px;
+	}
+}
+.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-field {
+	height: 41px;
+	line-height: 41px;
+}
+
+.IDX-wrapper-standard .select2-container .select2-choice .select2-chosen {
+	margin: 0;
+}
+
+.select2-container-multi .select2-input {
+}
+
+.IDX-wrapper-standard .select2-input.select2-default {
+	height: 41px;
+}
+
+.IDX-advancedBox {
+
 }
