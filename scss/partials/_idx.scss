@@ -524,7 +524,7 @@ body.must-see-map-results {
 	}
 }
 
-/*** Advanced Search Page ***/
+/*** Advanced Search Page and Contact Page ***/
 @media only screen and (max-width: 640px) {
 	.IDX-wrapper-standard #IDX-searchPageWrapper {
 		#IDX-navbar-collapse {
@@ -602,6 +602,29 @@ body.must-see-map-results {
 	}
 	#IDX-action-buttons {
 		margin-bottom: 20px;
+	}	
+	#IDX-navbar {
+		margin: 0 25px;
+		margin-bottom: 40px;
+	}
+
+	.IDX-navbar-default .IDX-navbar-nav > li > a,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:active,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+		font-family: $header-font-family;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: 200;
+		padding: 15px 30px;
+		@media only screen and (min-width: 641px) and (max-width: 741px) {
+			padding: 15px 16px;
+		}
+	}
+	.IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:active,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+		background-color: rgba(255,255,255,.3);
 	}
 }
 .idx-wrapper-template-default #select2-drop {
@@ -637,42 +660,16 @@ body.must-see-map-results {
 	}
 }
 
-/*** Advanced Search Page ***/
-.IDX-wrapper-standard #IDX-navbar {
-	margin: 0 25px;
-	margin-bottom: 40px;
-}
-
-.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a,
-.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
-.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
-	font-family: $header-font-family;
-	font-size: 15px;
-	text-transform: uppercase;
-	font-weight: 200;
-	padding: 15px 30px;
-	@media only screen and (min-width: 641px) and (max-width: 741px) {
-		padding: 15px 16px;
-	}
-}
-.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
-.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
-.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
-	background-color: rgba(255,255,255,.3);
-}
-
 @media only screen and (min-width: 641px) {
-	.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
-	.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:focus,
-	.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:active,
-	.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:hover,
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:focus,
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:active,
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:hover,
 	.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink {
 		background-color: #F9F9F9;
 	}
 }
 
-// May have to move these to be advanced wrapper specific
 .IDX-wrapper-standard {
 	.select2-container .select2-choice,
 	.select2-container.select2-container-multi .select2-choices,
@@ -692,34 +689,33 @@ body.must-see-map-results {
 			border-color: #E6E6E6;
 		}
 	}
-}
-
-.IDX-wrapper-standard .select2-container {
-	.select2-input,
-	.select2-search-field,
-	.select2-choice,
-	.select2-chosen,
-	#IDX-advancedSearchFields input.IDX-advancedBox {
-		height: 45px;
+	.select2-container.select2-container-multi .select2-choices .select2-search-field {
+		height: 43px;
 		line-height: 43px;
-
 	}
-	.select2-choice.select2-default .select2-chosen,
-	.select2-default {
-		// Select2's css has color as important
-		color: #4C5051 !important;
-		font-size: 16px;
+	.select2-container .select2-choice .select2-chosen {
+		margin: 0;
+	}
+	.select2-input.select2-default {
+		height: 43px;
+	}
+	.select2-container {
+		.select2-input,
+		.select2-search-field,
+		.select2-choice,
+		.select2-chosen,
+		#IDX-advancedSearchFields input.IDX-advancedBox {
+			height: 45px;
+			line-height: 43px;
+
+		}
+		.select2-choice.select2-default .select2-chosen,
+		.select2-default {
+			// Select2's css has color as important
+			color: #4C5051 !important;
+			font-size: 16px;
+		}
 	}
 }
-.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-field {
-	height: 43px;
-	line-height: 43px;
-}
 
-.IDX-wrapper-standard .select2-container .select2-choice .select2-chosen {
-	margin: 0;
-}
-
-.IDX-wrapper-standard .select2-input.select2-default {
-	height: 43px;
-}
+/*** Home Atlas ***/
