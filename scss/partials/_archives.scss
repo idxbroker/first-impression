@@ -1,0 +1,43 @@
+/*! =Archives
+------------------------------------------------------------------------- */
+body.page-template-page_blog {
+	.site-inner {
+		padding: 50px 0;
+		@media #{$small-only} {
+			// Default padding
+			padding: 0;
+		}
+	}
+	article {
+		clear: both;
+		overflow: hidden;
+		.entry-content img {
+			max-height: 200px;
+			@media #{$small-only} {
+				display: none;
+			}
+		}
+		.entry-header {
+			margin-bottom: 10px;
+		}
+		h2 {
+			font-size: 26px;
+		}
+		.entry-meta {
+			font-size: 13px;
+			color: #000;
+			text-transform: uppercase;
+		}
+		.entry-terms {
+			margin-right: 30px;
+		}
+		.pagination li {
+			a {
+				color: #000;
+			}
+			&.pagination-next a {
+				color: #777777;
+			}
+		}
+	}
+}
