@@ -12,6 +12,8 @@
 @mixin control-label {
 	font-weight: normal;
 	font-size: 15px;
+	height: 28px;
+	overflow: hidden;
 }
 
 @mixin idx-required {
@@ -29,6 +31,21 @@
 	background: #fff;
 	&:hover {	
 		@include hover-effect;
+	}
+}
+
+body.idx-wrapper-template-default {
+	.site-inner {
+		padding: 50px 0;
+	}
+}
+
+
+@media only screen and (max-width: 640px) {
+	body.idx-wrapper-template-default {
+		.site-inner {
+			padding: 3px 0;
+		}
 	}
 }
 
@@ -301,7 +318,7 @@ body.must-see-map-results {
 		.IDX-field {
 			border: none;
 			margin-bottom: 0;
-			font-size: 16px;
+			font-size: rem-calc(16px);
 			color: #000000;
 		}
 	}
@@ -334,7 +351,7 @@ body.must-see-map-results {
 		}
 	}
 	#IDX-description {
-		font-size: 16px;
+		font-size: rem-calc(16px);
 		color: #000000;
 		@include remove-well;
 	}
@@ -379,15 +396,15 @@ body.must-see-map-results {
 		margin-bottom: 30px;
 	}
 	.IDX-field-price .IDX-text, .IDX-field-listingPrice .IDX-text {
-		font-size: 16px;
+		font-size: rem-calc(16px);
 	}
 }
 
 // Remove large price font size
 
 /*** IDX Sign Up Page ***/
-.IDX-wrapper-standard.IDX-page-userlogin, .IDX-wrapper-standard.IDX-type-usersignup {
-	#IDX-leadLoginContainer, #IDX-leadSignupContainer {
+.IDX-wrapper-standard {
+	#IDX-leadLoginContainer, #IDX-leadSignupContainer, #IDX-contactContainer {
 		.col-sm-4 {
 			display: block;
 			width: 100%;
@@ -403,12 +420,6 @@ body.must-see-map-results {
 		.IDX-panel-body {
 			background-color: #F9F9F9;
 			padding: 45px;
-		}
-		.IDX-control-label {
-			@include control-label;
-			.IDX-required {
-				@include idx-required;
-			}
 		}
 		#IDX-keepLoggedIn label {
 			.IDX-keepLoggedInCheckBox {
@@ -440,17 +451,6 @@ body.must-see-map-results {
 				@include control-label;
 			}
 		}
-		.IDX-btn {
-			@include idx-button;
-			font-family: $header-font-family;
-			border: 1px solid;
-			height: 50px;
-			line-height: 50px;
-			padding: 0;
-			i {
-				display: none;
-			}
-		}
 		.IDX-panel-heading {
 			@include remove-well;
 			padding: 0;
@@ -462,15 +462,6 @@ body.must-see-map-results {
 				letter-spacing: .2px;
 				padding-left: 45px;
 			}
-		}
-		.IDX-form-group {
-			margin-bottom: 35px;
-		}
-		.IDX-form-control {
-			border: 1px solid #E6E6E6;
-			border-radius: 3px;
-			height: 50px;
-			line-height: 50px;
 		}
 		.IDX-alert-info {
 			background: none;
@@ -485,19 +476,246 @@ body.must-see-map-results {
 		}
 		#IDX-userSignupLink, #IDX-toggleLogIn {
 			text-decoration: underline;
-			font-size: 16px;
+			font-size: rem-calc(16px);
 			i {
 				display: none;
 			}
 		}
 		#IDX-gotoUserSignup, #IDX-signupForm > span {
+			font-size: rem-calc(16px);
+		}
+		#IDX-signupFormSubmitBtn, #IDX-loginSubmit {
+			background: #fff;
+		}
+		#IDX-searchForm {
+			font-size: rem-calc(16px);
+		}
+		.IDX-control-label {
+			@include control-label;
+			.IDX-required {
+				@include idx-required;
+			}
+		}
+		.IDX-form {
+			.IDX-btn {
+				@include idx-button;
+				font-family: $header-font-family;
+				border: 1px solid;
+				height: 50px;
+				line-height: 50px;
+				padding: 0;
+				i {
+					display: none;
+				}
+			}
+		}
+		.IDX-form-group {
+			margin-bottom: 35px;
+		}
+		.IDX-form-control, .IDX-control-group {
+			border: 1px solid #E6E6E6;
+			border-radius: 3px;
+			height: 50px;
+			line-height: 50px;
+		}
+		#IDX-message {
+			height: auto;
+		}
+	}
+}
+
+/*** Advanced Search Page and Contact Page ***/
+@media only screen and (max-width: 640px) {
+	.IDX-wrapper-standard #IDX-searchPageWrapper {
+		#IDX-navbar-collapse {
+			background-color: #F9F9F9;
+		}
+		.IDX-navbar-toggle {
+			display: block;
+			float: left;
+			margin-left: 15px;
+			background-color: transparent;
+			border: none;
+		}
+		.IDX-navbar-default .IDX-navbar-toggle > .IDX-icon-bar {
+			height: 4px;
+			width: 29px;
+			margin: 6px auto;
+			border-radius: 3px;
+		}
+		.IDX-navbar-default .IDX-navbar-collapse {
+			border-top: none;
+			box-shadow: none;
+		}
+		.IDX-advancedRangeMax, .IDX-advancedRangeMin {
+			display: inline-block;
+		}
+		.IDX-navbar-nav {
+			margin-top: 0;
+		}
+		.IDX-navbar-default .IDX-navbar-nav > li:focus,
+		.IDX-navbar-default .IDX-navbar-nav > li:active,
+		.IDX-navbar-default .IDX-navbar-nav > li:hover {
+			box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.08);
+		}
+	}
+}
+
+.IDX-wrapper-standard #IDX-searchPageWrapper {
+	input {
+		transition: none;
+	}
+	#IDX-navbar-collapse {
+		padding: 0;
+		overflow: hidden;
+	}
+	#IDX-navbar {
+		border: none;
+	}
+	.IDX-control-group,
+	.IDX-advancedSearchColumn {
+		padding: 0 25px;
+	}
+	.IDX-control-group,
+	.IDX-advancedPair {
+		margin-bottom: 30px;
+	}
+	#IDX-action-buttons button.IDX-btn {
+		@include idx-button;
+		letter-spacing: 1px;
+		width: calc(50% - 50px);
+		margin: 0 25px;
+	}
+	.select2-container .select2-choice abbr {
+		top: 15px;
+	}
+	.select2-arrow {
+		margin-top: 2px;
+	}
+	.IDX-advancedRangeMin {
+		width: calc(45% - 20px);
+		margin-right: 20px;
+	}
+	.IDX-advancedRangeMax {
+		width: calc(45% - 20px);
+		margin-left: 20px;
+	}
+	#IDX-action-buttons {
+		margin-bottom: 20px;
+	}	
+	#IDX-navbar {
+		margin: 0 25px;
+		margin-bottom: 40px;
+	}
+
+	.IDX-navbar-default .IDX-navbar-nav > li > a,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:active,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+		font-family: $header-font-family;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: 200;
+		padding: 15px 30px;
+		@media only screen and (min-width: 641px) and (max-width: 741px) {
+			padding: 15px 16px;
+		}
+	}
+	.IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:active,
+	.IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+		background-color: rgba(255,255,255,.3);
+	}
+}
+.idx-wrapper-template-default #select2-drop {
+	border-color: #E6E6E6;
+	.select2-results {
+		padding: 0;
+		margin: 0;
+		max-height: 300px;
+	}
+	.select2-results .select2-result .select2-result-label {
+		padding: 10px;
+	}
+	.select2-searching {
+		padding: 10px;
+		color: #4C5051;
+	}
+	.select2-search .select2-input {
+		width: calc(100% - 10px);
+		padding: 0;
+		margin: 5px;
+		border-radius: 3px;
+		box-shadow: none;
+		line-height: 40px;
+		padding: 0 5px;
+	}
+	.select2-more-results,
+	.select2-no-results {
+		padding: 10px;
+		color: #4C5051;
+	}
+	.select2-searching img {
+		margin-top: 6px;
+	}
+}
+
+@media only screen and (min-width: 641px) {
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:focus,
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:active,
+	.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:hover,
+	.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink {
+		background-color: #F9F9F9;
+	}
+}
+
+.IDX-wrapper-standard {
+	.select2-container .select2-choice,
+	.select2-container.select2-container-multi .select2-choices,
+	#IDX-advancedSearchFields input.IDX-advancedBox,
+	.IDX-advancedRange,
+	#IDX-listingID,
+	#IDX-address {
+		border: 1px solid #E6E6E6;
+		border-radius: 3px;
+		box-shadow: none;
+		height: 45px;
+		margin-bottom: 0;
+		color: #4C5051;
+		font-size: 16px;
+		&:active, &:focus {
+			background: none;
+			border-color: #E6E6E6;
+		}
+	}
+	.select2-container.select2-container-multi .select2-choices .select2-search-field {
+		height: 43px;
+		line-height: 43px;
+	}
+	.select2-container .select2-choice .select2-chosen {
+		margin: 0;
+	}
+	.select2-input.select2-default {
+		height: 43px;
+	}
+	.select2-container {
+		.select2-input,
+		.select2-search-field,
+		.select2-choice,
+		.select2-chosen,
+		#IDX-advancedSearchFields input.IDX-advancedBox {
+			height: 45px;
+			line-height: 43px;
+
+		}
+		.select2-choice.select2-default .select2-chosen,
+		.select2-default {
+			// Select2's css has color as important
+			color: #4C5051 !important;
 			font-size: 16px;
 		}
 	}
 }
 
-body.idx-wrapper-template-default {
-	.site-inner {
-		padding: 50px 0;
-	}
-}
+/*** Home Atlas ***/

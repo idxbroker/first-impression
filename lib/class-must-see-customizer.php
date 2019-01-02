@@ -407,7 +407,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-btn,
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn,
 				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer #IDX-toggleLogIn,
-				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-userSignupLink {
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-userSignupLink,
+				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-advancedText,
+				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn,
+				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-advancedText {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
@@ -417,7 +420,18 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					}
 				}
 				@media only screen and (max-width: 640px) {
-					.IDX-wrapper-standard.IDX-page-listing .IDX-detailsHotAction a {
+					.IDX-wrapper-standard.IDX-page-listing .IDX-detailsHotAction a,
+					.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-navbar-collapse,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li > a {
+						color: $primary_color;
+					}
+				}
+				@media only screen and (min-width: 641px) {
+					.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a,
+					.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:focus,
+					.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:active,
+					.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a:hover,
+					.IDX-wrapper-standard.IDX-page-address .IDX-navbar-default .IDX-navbar-nav > .IDX-active > .IDX-searchNavLink {
 						color: $primary_color;
 					}
 				}
@@ -450,7 +464,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-listing #IDX-submitBtn,
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-keepLoggedIn label .IDX-keepLoggedInCheckBox,
 				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-btn,
-				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn {
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn,
+				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn {
 					border-color: $primary_color;
 				}
 
@@ -466,11 +481,21 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-listing #IDX-listingHeader::before,
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-keepLoggedIn label .IDX-keepLoggedInCheckBox:checked,
 				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-panel-heading,
-				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-panel-heading {
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-panel-heading,
+				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn:hover,
+				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-container-navbar {
 					background-color: $primary_color;
 				}
 				@media only screen and (max-width: 40.063em) {
 					.site-header {
+						background-color: $primary_color;
+					}
+				}
+				@media only screen and (max-width: 640px) {
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li:focus,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li:active,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li:hover,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a {
 						background-color: $primary_color;
 					}
 				}
@@ -491,8 +516,22 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-listing .IDX-carouselNavWrapper i,
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-keepLoggedIn label .IDX-keepLoggedInCheckBox::after,
 				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-panel-heading h2,
-				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-panel-heading h2 {
+				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-panel-heading h2,
+				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn:hover,
+				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-container-navbar,
+				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a,
+				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
+				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
+				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
 					color: $heading_secondary_color;
+				}
+				@media only screen and (max-width: 640px) {
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li:focus a,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li:active a,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li:hover a,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-nav > li.IDX-active > a {
+						color: $heading_secondary_color;
+					}
 				}
 
 				/*** Font Secondary Color ***/
@@ -513,6 +552,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient h2::after,
 				.bg-gradient h1::after {
 					background-color: $heading_secondary_color;
+				}
+				@media only screen and (max-width: 640px) {
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-toggle > .IDX-icon-bar,
+					.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-navbar-default .IDX-navbar-toggle > .IDX-icon-bar {
+						background-color: $heading_secondary_color;
+					}
 				}
 
 				/*** Border Secondary Color ***/
