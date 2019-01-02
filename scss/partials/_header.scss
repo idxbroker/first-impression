@@ -54,12 +54,6 @@ header.site-header .site-description {
 	margin: 0;
 	line-height: 1.6;
 }
-@media #{$large-up} {
-	header.site-header {
-		padding-left: $column-gutter / 2;
-		padding-right: $column-gutter / 2;
-	}
-}
 
 /*! =Sticky Header
 ------------------------------------------------------------------------- */

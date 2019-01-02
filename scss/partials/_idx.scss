@@ -719,3 +719,61 @@ body.must-see-map-results {
 }
 
 /*** Home Atlas ***/
+body.must-see-home-atlas {
+	.content-sidebar-wrap {
+		max-width: 100%;
+		padding: 0;
+	}
+	#equity-content {
+		padding: 0;
+	}
+	.site-inner {
+		padding: 0;
+	}
+}
+
+.IDX-wrapper-standard {
+	.IDX-topActions {
+		background-color: #F5F5F5;
+		font-size: 0;
+		> * {
+			font-size: 16px;
+			border-right: none;
+		}
+	}
+	.IDX-topAction {
+	}
+	.IDX-results-refinement .IDX-refine-search--toggle::after {
+		margin-left: 4px;	
+	}
+	#IDX-resultsContent {
+		padding: 0 15px;
+	}
+	.IDX-results-title {
+		font-size: 36px;
+	}
+	.IDX-results--cell .IDX-results--cell-inner-wrapper {
+		background: none;
+		border: none;
+		border-bottom: 10px solid transparent;
+	}
+	.IDX-pagination > li > a, .IDX-pagination > li > span {
+		padding: 6px 10px;
+	}
+	@media only screen and (min-width: 1280px) , only screen and (min-width: 641px) and (max-width: 991px) {
+		.IDX-results--cell:nth-child(even) .IDX-results--cell-inner-wrapper {
+			border-left: 10px solid transparent;
+		}
+		.IDX-results--cell:nth-child(odd) .IDX-results--cell-inner-wrapper {
+			border-right: 10px solid transparent;
+		}
+	}
+}
+
+.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle::after {
+	border-top-color: $temp-blue;
+}
+
+.IDX-wrapper-standard .IDX-results-title {
+	color: $temp-blue;
+}
