@@ -383,6 +383,23 @@ function must_see_featured_image() {
 	echo '</div>';
 }
 
+// Move blog list article header and footer into entry content.
+add_action( 'equity_before_entry', 'reposition_entry_header' );
+function reposition_entry_header() {
+	// Check if is blog homepage.
+	if ( is_home() ) {
+		remove_action( 'equity_entry_header', 'equity_entry_header_markup_open', 5 );
+		remove_action( 'equity_entry_header', 'equity_do_post_title' );
+		remove_action( 'equity_entry_header', 'equity_post_info', 12 );
+		remove_action( 'equity_entry_header', 'equity_entry_header_markup_close', 15 );
+		remove_action( 'equity_entry_footer', 'equity_post_meta' );
+
+		add_action( 'equity_entry_content', 'equity_do_post_title', 9 );
+		add_action( 'equity_entry_content', 'equity_post_info', 9 );
+		add_action( 'equity_entry_content', 'equity_post_meta', 15 );
+	}
+}
+
 // Includes
 
 # Theme Customizatons
