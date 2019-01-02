@@ -410,7 +410,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-userSignupLink,
 				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-advancedText,
 				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn,
-				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-advancedText {
+				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-advancedText,
+				.IDX-wrapper-standard.IDX-category-results .IDX-topActions a:hover,
+				.IDX-wrapper-standard a:hover, .IDX-wrapper-standard a:active,
+				.IDX-wrapper-standard a:focus,
+				.IDX-wrapper-standard .IDX-results-title {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
@@ -469,6 +473,13 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 					border-color: $primary_color;
 				}
 
+				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle::after {
+					border-top-color: $primary_color;
+				}
+				.IDX-wrapper-standard .IDX-results-refinement.IDX-dropdown-open .IDX-refine-search--toggle::after {
+					border-bottom-color: $primary_color;
+				}
+
 				/*** Background Primary Color ***/
 				.title-area,
 				h4::before,
@@ -483,7 +494,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-panel-heading,
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-panel-heading,
 				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn:hover,
-				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-container-navbar {
+				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-container-navbar,
+				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice,
+				.select2-results .select2-highlighted {
 					background-color: $primary_color;
 				}
 				@media only screen and (max-width: 40.063em) {

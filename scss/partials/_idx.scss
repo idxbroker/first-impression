@@ -40,6 +40,10 @@ body.idx-wrapper-template-default {
 	}
 }
 
+.IDX-wrapper-standard a:hover, .IDX-wrapper-standard a:active, .IDX-wrapper-standard a:focus {
+	text-decoration: none;
+}
+
 
 @media only screen and (max-width: 640px) {
 	body.idx-wrapper-template-default {
@@ -719,3 +723,94 @@ body.must-see-map-results {
 }
 
 /*** Home Atlas ***/
+body.must-see-full-screen {
+	.content-sidebar-wrap {
+		max-width: 100%;
+		padding: 0;
+	}
+	#equity-content {
+		padding: 0;
+	}
+	.site-inner {
+		padding: 0;
+	}
+}
+
+.IDX-wrapper-standard.IDX-category-results {
+	font-family: $body-font-family;
+	.IDX-topActions {
+		background-color: #F5F5F5;
+		font-size: 0;
+		> * {
+			font-size: 16px;
+			border-right: none;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	}
+	.IDX-results-refine-search-wrap .IDX-control-group {
+		.select2-container {
+			background: #fff;
+			&.select2-container-multi .select2-search-field {
+				height: 43px;
+				.select2-input {
+					line-height: 43px;
+					height: 43px;
+				}
+			}
+		}
+	}
+	.IDX-results-refinement .IDX-refine-search--toggle::after {
+		margin-left: 4px;	
+	}
+	#IDX-resultsContent {
+		padding: 0 15px;
+	}
+	.IDX-results-title {
+		font-size: 36px;
+		margin-bottom: 5px;
+	}
+	.IDX-results-title--count {
+		font-size: 18px;
+		font-weight: 400;
+		color: #4D4D4D;
+		letter-spacing: .1px;
+		margin-bottom: 25px;
+	}
+	#IDX-resultsSeparatorTextActive {
+		font-size: 28px;
+		font-weight: 400;
+		letter-spacing: .1px;
+	}
+	.IDX-results--cell .IDX-results--cell-inner-wrapper {
+		background: none;
+		border: none;
+		border-bottom: 10px solid transparent;
+	}
+	@media only screen and (max-width: 1280px) and (min-width: 641px) {
+		.IDX-pagination > li > a, .IDX-pagination > li > span {
+			padding: 6px 10px;
+		}
+	}
+	@media only screen and (min-width: 1280px) , only screen and (min-width: 641px) and (max-width: 991px) {
+		.IDX-results--cell:nth-child(even) .IDX-results--cell-inner-wrapper {
+			border-left: 10px solid transparent;
+		}
+		.IDX-results--cell:nth-child(odd) .IDX-results--cell-inner-wrapper {
+			border-right: 10px solid transparent;
+		}
+	}
+	@media only screen and (max-width: 640px) {
+		#IDX-resultsTopActions {
+			margin-bottom: 25px;
+		}
+	}
+	.select2-results .select2-highlighted {
+		background: $temp-blue;
+	}
+	.select2-container.select2-container-active .select2-choice {
+		border-color: #E6E6E6;
+		background: #fff;
+	}
+}
