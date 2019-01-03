@@ -414,7 +414,19 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-category-results .IDX-topActions a:hover,
 				.IDX-wrapper-standard a:hover, .IDX-wrapper-standard a:active,
 				.IDX-wrapper-standard a:focus,
-				.IDX-wrapper-standard .IDX-results-title {
+				.IDX-wrapper-standard .IDX-results-title,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox.type-2 i[class*='fa-'],
+				footer .ae-iconbox.type-2 i[class*='fa-'],
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox.type-2 a i[class*='fa-'],
+				footer .ae-iconbox.type-2 a i[class*='fa-'],
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox.type-3 i[class*='fa-'],
+				footer .ae-iconbox.type-3 i[class*='fa-'],
+				.ae-iconbox i[class*='fa-'],
+				.ae-iconbox a i[class*='fa-'],
+				.widget .impress-showcase-property .impress-price,
+				table#wp-calendar tfoot tr td a,
+				div[class*='home-middle-'].bg-gradient table#wp-calendar caption,
+				div[class*='home-middle-'].bg-gradient table#wp-calendar thead tr th {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
@@ -469,7 +481,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer #IDX-keepLoggedIn label .IDX-keepLoggedInCheckBox,
 				.IDX-wrapper-standard.IDX-type-usersignup #IDX-leadSignupContainer .IDX-btn,
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn,
-				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn {
+				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn,
+				table#wp-calendar caption,
+				table#wp-calendar thead {
 					border-color: $primary_color;
 				}
 
@@ -496,7 +510,11 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn:hover,
 				.IDX-wrapper-standard #IDX-searchPageWrapper .IDX-container-navbar,
 				.IDX-wrapper-standard .select2-container.select2-container-multi .select2-choices .select2-search-choice,
-				.select2-results .select2-highlighted {
+				.select2-results .select2-highlighted,
+				.ae-iconbox.type-2 i,
+				.ae-iconbox.type-3 i,
+				table#wp-calendar caption,
+				table#wp-calendar thead {
 					background-color: $primary_color;
 				}
 				@media only screen and (max-width: 40.063em) {
@@ -535,7 +553,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a,
 				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:focus,
 				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
-				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover {
+				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
+				table#wp-calendar caption,
+				table#wp-calendar thead tr th {
 					color: $heading_secondary_color;
 				}
 				@media only screen and (max-width: 640px) {
@@ -554,7 +574,15 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient .easy_testimonial .testimonial_author cite,
 				.bg-gradient p,
 				.bg-gradient a,
-				.bg-gradient label {
+				.bg-gradient label,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox i[class*='fa-'],
+				footer .ae-iconbox i[class*='fa-'],
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox a i[class*='fa-'],
+				footer .ae-iconbox a i[class*='fa-'],
+				.ae-iconbox.type-2 i[class*='fa-'],
+				.ae-iconbox.type-2 a i[class*='fa-'],
+				.ae-iconbox.type-3 i[class*='fa-'],
+				.ae-iconbox.type-3 a i[class*='fa-'] {
 					color: $font_secondary_color;
 				}
 
@@ -563,7 +591,13 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient h4::before, 
 				.bg-gradient h4::after,
 				.bg-gradient h2::after,
-				.bg-gradient h1::after {
+				.bg-gradient h1::after,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox.type-2 i,
+				footer .ae-iconbox.type-2 i,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox.type-3 i,
+				footer .ae-iconbox.type-3 i,
+				div[class*='home-middle-'].bg-gradient table#wp-calendar caption,
+				div[class*='home-middle-'].bg-gradient table#wp-calendar thead tr th {
 					background-color: $heading_secondary_color;
 				}
 				@media only screen and (max-width: 640px) {
@@ -577,7 +611,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient .button,
 				.bg-gradient button,
 				.bg-gradient input[type='button'],
-				.bg-gradient input[type='submit'] {
+				.bg-gradient input[type='submit'],
+				div[class*='home-middle-'].bg-gradient table#wp-calendar caption,
+				div[class*='home-middle-'].bg-gradient table#wp-calendar thead {
 					border-color: $heading_secondary_color;
 				}
 

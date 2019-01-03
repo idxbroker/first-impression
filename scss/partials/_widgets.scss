@@ -576,18 +576,111 @@ section.equity-post-carousel article .entry-content {
 
 /*! =Property Showcase
 ------------------------------------------------------------------------- */
-.widget .showcase-property span.price,
-.shortcode .showcase-property span.price {
-	margin: -30px auto 0px;
-	width: auto;
-	padding: 12px 10px;
-	display: inline-block;
-	font-family: $header-font-family;
-	font-size: 20px;
-	line-height: 1;
-	text-align: center;
-	color: $primary-color;
-	background: #fff;
+.widget {
+	// The first row only has this class
+	&.impress-showcase-widget .widgettitle {
+		font-size: rem-calc(24);
+		padding: 15px 1.6666rem;
+	}
+	.impress-row {
+		max-width: none;
+	}
+	.impress-showcase-property {
+		* {
+			background-color: #F9F9F9;
+			text-align: center;
+		}
+		.impress-showcase-photo {
+			margin-bottom: 0;
+			padding-bottom: 30px;
+			img {
+				border: 1px solid #F9F9F9;
+			}
+		}
+		.impress-price {
+			font-family: $header-font-family;
+			font-size: rem-calc(28px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(18px);
+			}
+			font-weight: bold;
+			margin-top: 30px;
+		}
+		.impress-address {
+			font-size: rem-calc(18px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(15px);
+			}
+			font-weight: bold;
+			color: #4D4D4D;
+			margin-bottom: 0;
+			padding-bottom: 30px;
+		}
+		.impress-beds-baths-sqft {
+			font-size: rem-calc(18px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(15px);
+			}
+			color: #000;
+			padding-bottom: 30px;
+		}
+		.sqft:before {
+			content: "\A";
+			white-space: pre;
+		}
+	}
+}
+
+// 747474
+/*! =Impress city Links
+------------------------------------------------------------ */
+.impress-city-links-widget {
+	.widget-title {
+		font-size: rem-calc(24);
+	}
+	.impress-city-links {
+		.impress-city-list-links {
+			width: auto;
+		}
+		ul {
+			font-size: rem-calc(16);
+			max-width: 250px;
+			&.impress-columns:last-child {
+				float: left;
+			}
+			li {
+				margin-bottom: 10px;
+				a {
+					display: flex;			
+					align-items: center;
+					line-height: 20px;
+				}
+				.count {
+					font-size: rem-calc(16);
+					font-weight: normal;
+					margin-left: auto;
+					background-color: #747474;
+					line-height: inherit;
+					border-radius: 3px;
+				}
+			}
+		}	
+	}
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-city-links-widget {
+		.impress-city-links {
+			ul {
+				li {
+					.count {
+						background-color: #fff;
+						color: #000;
+					}
+				}
+			}	
+		}
+	}
 }
 
 /*! =Responsive (for WP Listings - Featured Listing widget only)
@@ -765,8 +858,41 @@ section.equity-post-carousel article .entry-content {
 
 /*! =Default Widgets 
 ------------------------------------------------------------------------- */
+
+
+.widget.widget_calendar .widgettitle {
+	font-size: rem-calc(24);
+	padding: 15px 0;
+}
 table#wp-calendar {
-	width: 100%;
+	max-width: 425px;
+	caption, thead {
+		line-height: 50px;
+		height: 50px;
+		border: 1px solid;
+		@media #{$small-only} {
+			line-height: 30px;
+			height: 30px;
+		}
+	}
+	tbody tr {
+		background-color: #F9F9F9;
+		td {
+			padding: 20px;
+			@media #{$medium-only} {
+				padding: 12px;
+			}
+			@media #{$small-only} {
+				padding: 5px;
+			}
+		}
+	}
+	tfoot tr {
+		background-color: #EEEEEE;
+		td a {
+			font-size: rem-calc(16);
+		}
+	}
 }
 
 .sidebar .widget_nav_menu .label {
@@ -901,7 +1027,6 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 
 div.impress-carousel .owl-nav.owl-controls button.owl-prev,
 div.impress-carousel .owl-nav.owl-controls button.owl-next {
-	color: $primary-color;
 	height: 65px;
 	width: 65px;
 	border: 2px solid;
