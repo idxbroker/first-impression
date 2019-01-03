@@ -628,6 +628,56 @@ section.equity-post-carousel article .entry-content {
 	}
 }
 
+// 747474
+/*! =Impress city Links
+------------------------------------------------------------ */
+.impress-city-links-widget {
+	.widget-title {
+		font-size: rem-calc(24);
+	}
+	.impress-city-links {
+		.impress-city-list-links {
+			width: auto;
+		}
+		ul.impress-columns {
+			font-size: rem-calc(16);
+			float: left;
+			max-width: 250px;
+			li {
+				margin-bottom: 5px;
+				a {
+					display: flex;			
+					align-items: center;
+					line-height: 20px;
+				}
+				.count {
+					font-size: rem-calc(16);
+					font-weight: normal;
+					margin-left: auto;
+					background-color: #747474;
+					line-height: inherit;
+					border-radius: 3px;
+				}
+			}
+		}	
+	}
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-city-links-widget {
+		.impress-city-links {
+			ul {
+				li {
+					.count {
+						background-color: #fff;
+						color: #000;
+					}
+				}
+			}	
+		}
+	}
+}
+
 /*! =Responsive (for WP Listings - Featured Listing widget only)
 ------------------------------------------------------------ */
 
