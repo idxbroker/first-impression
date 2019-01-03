@@ -576,18 +576,56 @@ section.equity-post-carousel article .entry-content {
 
 /*! =Property Showcase
 ------------------------------------------------------------------------- */
-.widget .showcase-property span.price,
-.shortcode .showcase-property span.price {
-	margin: -30px auto 0px;
-	width: auto;
-	padding: 12px 10px;
-	display: inline-block;
-	font-family: $header-font-family;
-	font-size: 20px;
-	line-height: 1;
-	text-align: center;
-	color: $primary-color;
-	background: #fff;
+.widget {
+	// The first row only has this class
+	.impress-row {
+		max-width: none;
+	}
+	.impress-showcase-property {
+		* {
+			background-color: #F9F9F9;
+			text-align: center;
+		}
+		.impress-showcase-photo {
+			margin-bottom: 0;
+			padding-bottom: 30px;
+			img {
+				border: 1px solid #F9F9F9;
+			}
+		}
+		.impress-price {
+			font-family: $header-font-family;
+			font-size: rem-calc(28px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(18px);
+			}
+			font-weight: bold;
+			color: $temp-blue;
+			margin-top: 30px;
+		}
+		.impress-address {
+			font-size: rem-calc(18px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(15px);
+			}
+			font-weight: bold;
+			color: #4D4D4D;
+			margin-bottom: 0;
+			padding-bottom: 30px;
+		}
+		.impress-beds-baths-sqft {
+			font-size: rem-calc(18px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(15px);
+			}
+			color: #000;
+			padding-bottom: 30px;
+		}
+		.sqft:before {
+			content: "\A";
+			white-space: pre;
+		}
+	}
 }
 
 /*! =Responsive (for WP Listings - Featured Listing widget only)
