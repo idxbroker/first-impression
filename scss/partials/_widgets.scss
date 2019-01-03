@@ -578,6 +578,10 @@ section.equity-post-carousel article .entry-content {
 ------------------------------------------------------------------------- */
 .widget {
 	// The first row only has this class
+	&.impress-showcase-widget .widgettitle {
+		font-size: rem-calc(24);
+		padding: 15px 1.6666rem;
+	}
 	.impress-row {
 		max-width: none;
 	}
@@ -855,6 +859,11 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 /*! =Default Widgets 
 ------------------------------------------------------------------------- */
 
+
+.widget.widget_calendar .widgettitle {
+	font-size: rem-calc(24);
+	padding: 15px 0;
+}
 table#wp-calendar {
 	max-width: 425px;
 	caption, thead {
