@@ -8,11 +8,10 @@
 
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
 function enqueue_single_listing_scripts() {
-	wp_enqueue_style( 'wp-listings-single' );
+	// wp_enqueue_style( 'wp-listings-single' );
+	// TODO: remove listing style from monolith css and put conditionally into here
 	wp_enqueue_style( 'font-awesome-4.7.0' );
 	wp_enqueue_script( 'jquery-validate', array('jquery'), true, true );
-	wp_enqueue_script( 'fitvids', array('jquery'), true, true );
-	wp_enqueue_script( 'wp-listings-single', array('jquery, jquery-ui-tabs', 'jquery-validate'), true, true );
 }
 
 function single_listing_post_content() {
@@ -523,6 +522,7 @@ function single_listing_post_content() {
 }
 
 if (function_exists('equity')) {
+	remove_action( 'equity_entry_header', 'equity_do_post_title');
 
 	remove_action( 'equity_entry_header', 'equity_post_info', 12 );
 	remove_action( 'equity_entry_footer', 'equity_post_meta' );
@@ -531,79 +531,5 @@ if (function_exists('equity')) {
 	add_action( 'equity_entry_content', 'single_listing_post_content' );
 
 	equity();
-
-} elseif (function_exists('genesis_init')) {
-
-	remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 ); // HTML5
-	remove_action( 'genesis_before_post_content', 'genesis_post_info' ); // XHTML
-	remove_action( 'genesis_entry_footer', 'genesis_post_meta' ); // HTML5
-	remove_action( 'genesis_after_post_content', 'genesis_post_meta' ); // XHTML
-	remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 ); // HTML5
-	remove_action( 'genesis_after_post', 'genesis_do_author_box_single' ); // XHTML
-
-	remove_action( 'genesis_entry_content', 'genesis_do_post_content' ); // HTML5
-	remove_action( 'genesis_post_content', 'genesis_do_post_content' ); // XHTML
-	add_action( 'genesis_entry_content', 'single_listing_post_content' ); // HTML5
-	add_action( 'genesis_post_content', 'single_listing_post_content' ); // XHTML
-
-	genesis();
-
-} else {
-
-	$options = get_option('plugin_wp_listings_settings');
-
-	get_header();
-	if(isset($options['wp_listings_custom_wrapper']) && isset($options['wp_listings_start_wrapper']) && $options['wp_listings_start_wrapper'] != '') {
-		echo $options['wp_listings_start_wrapper'];
-	} else {
-		echo '<div id="primary" class="content-area container inner">
-			<div id="content" class="site-content" role="main">';
-	}
-
-		// Start the Loop.
-		while ( have_posts() ) : the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title" itemprop="name">', '</h1>' ); ?>
-				<small><?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?></small>
-				<div class="entry-meta">
-					<?php
-						if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
-					?>
-					<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'wp-listings' ), __( '1 Comment', 'wp-listings' ), __( '% Comments', 'wp-listings' ) ); ?></span>
-					<?php
-						endif;
-
-						edit_post_link( __( 'Edit', 'wp-listings' ), '<span class="edit-link">', '</span>' );
-					?>
-				</div><!-- .entry-meta -->
-			</header><!-- .entry-header -->
-
-
-		<?php single_listing_post_content(); ?>
-
-		</article><!-- #post-ID -->
-
-	<?php
-		// Previous/next post navigation.
-		wp_listings_post_nav();
-
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) {
-			comments_template();
-		}
-		endwhile;
-
-	if(isset($options['wp_listings_custom_wrapper']) && isset($options['wp_listings_end_wrapper']) && $options['wp_listings_end_wrapper'] != '') {
-		echo $options['wp_listings_end_wrapper'];
-	} else {
-		echo '</div><!-- #content -->
-		</div><!-- #primary -->';
-	}
-
-	// get_sidebar();
-	get_footer();
 
 }
