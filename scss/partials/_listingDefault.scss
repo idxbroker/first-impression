@@ -1,0 +1,35 @@
+body.listing-template-default {
+	.content-sidebar-wrap {
+		max-width: 100%;
+		padding: 0;
+	}
+	#equity-content {
+		padding: 0;
+	}
+	.site-inner {
+		padding-top: 1px;
+	}
+	.content-sidebar-wrap {
+		&::before {
+			display: none;
+		}
+	}
+	.content {
+		float: none;
+	}
+	.listing-image-wrap {
+		position: relative;
+		background-color: #f5f5f5;
+		h1 {
+			font-size: 32px;
+			text-align: center;
+			margin: 35px 0;
+		}
+	}
+	.listing-meta {
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+		background: rgba(249, 249, 249, .9);
+	}
+}
