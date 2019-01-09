@@ -483,7 +483,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn,
 				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn,
 				table#wp-calendar caption,
-				table#wp-calendar thead {
+				table#wp-calendar thead,
+				body.listing-template-default ul.listing-top-action-buttons li,
+				body.listing-template-default #listing-contact input[type='submit'] {
 					border-color: $primary_color;
 				}
 
@@ -514,7 +516,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.ae-iconbox.type-2 i,
 				.ae-iconbox.type-3 i,
 				table#wp-calendar caption,
-				table#wp-calendar thead {
+				table#wp-calendar thead,
+				body.listing-template-default #listing-details::before,
+				body.listing-template-default .extended-property-details::before {
 					background-color: $primary_color;
 				}
 				@media only screen and (max-width: 40.063em) {
