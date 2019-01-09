@@ -426,7 +426,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.widget .impress-showcase-property .impress-price,
 				table#wp-calendar tfoot tr td a,
 				div[class*='home-middle-'].bg-gradient table#wp-calendar caption,
-				div[class*='home-middle-'].bg-gradient table#wp-calendar thead tr th {
+				div[class*='home-middle-'].bg-gradient table#wp-calendar thead tr th,
+				body.listing-template-default .listing-no-image .listing-status {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
@@ -483,7 +484,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard.IDX-page-userlogin #IDX-leadLoginContainer .IDX-btn,
 				.IDX-wrapper-standard #IDX-searchPageWrapper #IDX-action-buttons button.IDX-btn,
 				table#wp-calendar caption,
-				table#wp-calendar thead {
+				table#wp-calendar thead,
+				body.listing-template-default ul.listing-top-action-buttons li,
+				body.listing-template-default #listing-contact input[type='submit'] {
 					border-color: $primary_color;
 				}
 
@@ -514,7 +517,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.ae-iconbox.type-2 i,
 				.ae-iconbox.type-3 i,
 				table#wp-calendar caption,
-				table#wp-calendar thead {
+				table#wp-calendar thead,
+				body.listing-template-default #listing-details::before,
+				body.listing-template-default .extended-property-details::before,
+				body.listing-template-default .listing-status {
 					background-color: $primary_color;
 				}
 				@media only screen and (max-width: 40.063em) {
@@ -555,7 +561,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:active,
 				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
 				table#wp-calendar caption,
-				table#wp-calendar thead tr th {
+				table#wp-calendar thead tr th,
+				body.listing-template-default .listing-status {
 					color: $heading_secondary_color;
 				}
 				@media only screen and (max-width: 640px) {
