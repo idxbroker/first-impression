@@ -222,7 +222,7 @@ function single_listing_post_content() {
 
 		<?php
 			if (get_post_meta( $post->ID, '_listing_map', true) != '') {
-				echo '<div id="listing-map"><h3>Location Map</h3>';
+				echo '<div id="listing-map">';
 				echo do_shortcode(get_post_meta( $post->ID, '_listing_map', true) );
 				echo '</div><!-- .listing-map -->';
 			}
@@ -263,7 +263,7 @@ function single_listing_post_content() {
 					google.maps.event.addDomListener(window, \'load\', initialize);
 				</script>
 				';
-				echo '<div id="listing-map"><h3>Location Map</h3><div id="map-canvas" style="width: 100%; height: 350px;"></div></div><!-- .listing-map -->';
+				echo '<div id="listing-map"><div id="map-canvas"></div></div><!-- .listing-map -->';
 			}
 		?>
 
