@@ -25,50 +25,52 @@ function single_listing_post_content() {
 		<?php 
 		echo (get_post_meta($post->ID, '_listing_address', true)) ? '<h1 class="must-see-top-address">' . get_post_meta( $post->ID, '_listing_address', true) . '</h1>' : '';
 		?>
-		<?php echo '<div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">'. get_the_post_thumbnail( $post->ID, 'listings-full', array('class' => 'single-listing-image', 'itemprop'=>'contentUrl') ) . '</div>';
+		<?php echo '<div class="image-status-wrap" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">'. get_the_post_thumbnail( $post->ID, 'listings-full', array('class' => 'single-listing-image', 'itemprop'=>'contentUrl') );
 
 		if ( '' != wp_listings_get_status() ) {
 			printf( '<span class="listing-status %s">%s</span>', strtolower(str_replace(' ', '-', wp_listings_get_status())), wp_listings_get_status() );
 		}
 
+		printf('</div>');
+
 		$listing_meta = sprintf( '<ul class="listing-meta">');
 
 		if ( get_post_meta($post->ID, '_listing_hide_price', true) == 1 ) {
-			$listing_meta .= (get_post_meta($post->ID, '_listing_price_alt', true)) ? sprintf( '<li class="listing-price">%s</li>', get_post_meta( $post->ID, '_listing_price_alt', true ) ) : '';
+			$listing_meta .= (get_post_meta($post->ID, '_listing_price_alt', true)) ? sprintf( '<li class="listing-price"><h3>%s</h3></li>', get_post_meta( $post->ID, '_listing_price_alt', true ) ) : '';
 		} else {
-			$listing_meta .= sprintf( '<li class="listing-price">%s %s %s</li>', '<span class="currency-symbol">' . $options['wp_listings_currency_symbol'] . '</span>', get_post_meta( $post->ID, '_listing_price', true ), (isset($options['wp_listings_display_currency_code']) && $options['wp_listings_display_currency_code'] == 1) ? '<span class="currency-code">' . $options['wp_listings_currency_code'] . '</span>' : '' );
+			$listing_meta .= sprintf( '<li class="listing-price"><h3>%s %s %s</h3></li>', '<span class="currency-symbol">' . $options['wp_listings_currency_symbol'] . '</span>', get_post_meta( $post->ID, '_listing_price', true ), (isset($options['wp_listings_display_currency_code']) && $options['wp_listings_display_currency_code'] == 1) ? '<span class="currency-code">' . $options['wp_listings_currency_code'] . '</span>' : '' );
 		}
 
 		if ( '' != wp_listings_get_property_types() ) {
-			$listing_meta .= sprintf( '<li class="listing-property-type"><span class="label">Property Type: </span>%s</li>', get_the_term_list( get_the_ID(), 'property-types', '', ', ', '' ) );
+			$listing_meta .= sprintf( '<li class="listing-property-type"><span class="label">Property Type</span>: %s</li>', get_the_term_list( get_the_ID(), 'property-types', '', ', ', '' ) );
 		}
 
 		if ( '' != wp_listings_get_locations() ) {
-			$listing_meta .= sprintf( '<li class="listing-location"><span class="label">Location: </span>%s</li>', get_the_term_list( get_the_ID(), 'locations', '', ', ', '' ) );
+			$listing_meta .= sprintf( '<li class="listing-location"><span class="label">Location</span>: %s</li>', get_the_term_list( get_the_ID(), 'locations', '', ', ', '' ) );
 		}
 
 		if ( '' != get_post_meta( $post->ID, '_listing_bedrooms', true ) ) {
-			$listing_meta .= sprintf( '<li class="listing-bedrooms"><span class="label">Beds: </span>%s</li>', get_post_meta( $post->ID, '_listing_bedrooms', true ) );
+			$listing_meta .= sprintf( '<li class="listing-bedrooms"><span class="label">Beds</span>: %s</li>', get_post_meta( $post->ID, '_listing_bedrooms', true ) );
 		}
 
 		if ( '' != get_post_meta( $post->ID, '_listing_bathrooms', true ) ) {
-			$listing_meta .= sprintf( '<li class="listing-bathrooms"><span class="label">Baths: </span>%s</li>', get_post_meta( $post->ID, '_listing_bathrooms', true ) );
+			$listing_meta .= sprintf( '<li class="listing-bathrooms"><span class="label">Baths</span>: %s</li>', get_post_meta( $post->ID, '_listing_bathrooms', true ) );
 		}
 
 		if ( '' != get_post_meta( $post->ID, '_listing_sqft', true ) ) {
-			$listing_meta .= sprintf( '<li class="listing-sqft"><span class="label">Sq Ft: </span>%s</li>', get_post_meta( $post->ID, '_listing_sqft', true ) );
+			$listing_meta .= sprintf( '<li class="listing-sqft"><span class="label">Sq Ft</span>: %s</li>', get_post_meta( $post->ID, '_listing_sqft', true ) );
 		}
 
 		if ( '' != get_post_meta( $post->ID, '_listing_lot_sqft', true ) ) {
-			$listing_meta .= sprintf( '<li class="listing-lot-sqft"><span class="label">Lot Sq Ft: </span>%s</li>', get_post_meta( $post->ID, '_listing_lot_sqft', true ) );
+			$listing_meta .= sprintf( '<li class="listing-lot-sqft"><span class="label">Lot Sq Ft</span>: %s</li>', get_post_meta( $post->ID, '_listing_lot_sqft', true ) );
 		}
 
 		if ( '' != get_post_meta( $post->ID, '_listing_acres', true ) ) {
-			$listing_meta .= sprintf( '<li class="listing-acres"><span class="label">Acres: </span>%s</li>', get_post_meta( $post->ID, '_listing_acres', true ) );
+			$listing_meta .= sprintf( '<li class="listing-acres"><span class="label">Acres</span: >%s</li>', get_post_meta( $post->ID, '_listing_acres', true ) );
 		}
 
 		if ( '' != get_post_meta( $post->ID, '_listing_open_house', true ) ) {
-			$listing_meta .= sprintf( '<li><span class="listing-open-house">Open House: %s</span></li>', get_post_meta( $post->ID, '_listing_open_house', true ) );
+			$listing_meta .= sprintf( '<li><span class="listing-open-house">Open House</span>: %s</li>', get_post_meta( $post->ID, '_listing_open_house', true ) );
 		} 
 
 		$listing_meta .= sprintf( '</ul>');
@@ -76,7 +78,7 @@ function single_listing_post_content() {
 		echo $listing_meta;
 		?>
 	</div><!-- .listing-image-wrap -->
-	<div itemscope itemtype="http://schema.org/SingleFamilyResidence" class="entry-content wplistings-single-listing">
+	<div itemscope itemtype="http://schema.org/SingleFamilyResidence" class="wplistings-single-listing">
 
 
 		<?php
@@ -87,7 +89,7 @@ function single_listing_post_content() {
 
 		<div id="listing-tabs" class="listing-data">
 
-			<ul>
+			<ul class="listing-top-action-buttons">
 				<li><a href="#listing-description">Description</a></li>
 
 				<li><a href="#listing-details">Details</a></li>
