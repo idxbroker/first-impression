@@ -8,8 +8,6 @@
 
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
 function enqueue_single_listing_scripts() {
-	// wp_enqueue_style( 'wp-listings-single' );
-	// TODO: remove listing style from monolith css and put conditionally into here
 	wp_enqueue_style( 'font-awesome-4.7.0' );
 	wp_enqueue_script( 'jquery-validate', array('jquery'), true, true );
 }
