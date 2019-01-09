@@ -19,13 +19,18 @@ function single_listing_post_content() {
 	global $post;
 	$options = get_option('plugin_wp_listings_settings');
 
+	$image_markup = get_the_post_thumbnail( $post->ID, 'listings-full', array('class' => 'single-listing-image', 'itemprop'=>'contentUrl') );
+	$no_image_class = '';
+	if( ! $image_markup ) {
+		$no_image_class = 'listing-no-image';
+	}
 	?>
 
-	<div class="listing-image-wrap">
+	<div class="listing-image-wrap <?php echo $no_image_class ?>">
 		<?php 
 		echo (get_post_meta($post->ID, '_listing_address', true)) ? '<h1 class="must-see-top-address">' . get_post_meta( $post->ID, '_listing_address', true) . '</h1>' : '';
 		?>
-		<?php echo '<div class="image-status-wrap" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">'. get_the_post_thumbnail( $post->ID, 'listings-full', array('class' => 'single-listing-image', 'itemprop'=>'contentUrl') );
+		<?php echo '<div class="image-status-wrap" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">'. $image_markup;
 
 		if ( '' != wp_listings_get_status() ) {
 			printf( '<span class="listing-status %s">%s</span>', strtolower(str_replace(' ', '-', wp_listings_get_status())), wp_listings_get_status() );

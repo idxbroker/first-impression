@@ -51,6 +51,7 @@ body.listing-template-default {
 			width: 100%;
 			max-height: 835px;
 			object-fit: cover;
+			border: none;
 			@media #{$medium-only} {
 				max-height: 600px;
 			}
@@ -83,13 +84,58 @@ body.listing-template-default {
 			margin-bottom: 5px;
 		}
 	}
+	.listing-no-image {
+		.listing-meta {
+			position: relative;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			background-color: #fff;
+			> * {
+				max-width: 1280px;
+				margin: 0 auto;
+				margin-bottom: 5px;
+				padding: 0 35px;
+			}
+		}
+		.image-status-wrap {
+			position: relative;
+			width: 100%;
+			background: #fff;
+		}
+		.listing-status {
+			text-align: left;
+			display: block;
+			position: relative;
+			top: 0;
+			left: 0;
+			max-width: 1280px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 35px;
+			padding-top: 35px;
+			background-color: transparent;
+			border: none;
+			transform: rotate(0);
+		}
+	}
 	.image-status-wrap {
 		position: relative;
+		overflow: hidden;
 	}
 	.listing-status {
+		font-family: $header-font-family;
+		font-size: 24px;
+		text-align: center;
+		text-transform: uppercase;
 		position: absolute;
-		top: 10px;
-		left: 10px;
+		top: 50px;
+		left: -80px;
+		width: 300px;
+		line-height: 50px;
+		border: 1px solid #000;
+		transform: rotate(-45deg);
 	}
 	.wplistings-single-listing,
 	.comment-respond,
