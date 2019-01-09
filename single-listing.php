@@ -156,6 +156,7 @@ function single_listing_post_content() {
 							printf( $pattern, $key, esc_html( $label ), $detail_value );
 						endif;
 					}
+					echo '</ul><ul class="extended-property-details">';
 
 
 					foreach ( (array) $details_instance->extended_property_details['col1'] as $label => $key ) {
@@ -528,6 +529,8 @@ if (function_exists('equity')) {
 
 	remove_action( 'equity_entry_content', 'equity_do_post_content' );
 	add_action( 'equity_entry_content', 'single_listing_post_content' );
+
+	remove_action( 'equity_sidebar', 'equity_do_sidebar' );
 
 	equity();
 
