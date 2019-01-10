@@ -646,27 +646,29 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 
 /*! =IMPress Omnibar
 ------------------------------------------------------------------------- */
-.widget .idx-omnibar-form {
+form.idx-omnibar-form {
 	position: relative;
 	padding: 0;
 }
-.widget .idx-omnibar-form::after {
+form.idx-omnibar-form::after {
 	content: "";
 	display: table;
 	clear: both;
 }
-.widget .idx-omnibar-form input {
+.widget form.idx-omnibar-form input {
 	border: none;
+}
+form.idx-omnibar-form input {
 	margin: 0;
 }
-.widget .idx-omnibar-form label {
+form.idx-omnibar-form label {
 	color: $body-font-color;
 }
-.widget .idx-omnibar-form .awesomplete {
+form.idx-omnibar-form .awesomplete {
 	width: 100%;
 }
-.widget .idx-omnibar-form button,
-.widget .idx-omnibar-form.idx-omnibar-extra-form button {
+form.idx-omnibar-form button,
+form.idx-omnibar-form.idx-omnibar-extra-form button {
 	width: auto;
 	padding: 0.55rem 0.7rem;
 	margin: 0;
@@ -675,8 +677,47 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 	right: 0;
 	font-size: $paragraph-font-size;
 }
-.widget .idx-omnibar-form button span {
+form.idx-omnibar-form button span {
 	display: none;
+}
+
+form.idx-omnibar-form {
+	margin: 35px 0;
+	.awesomplete {
+		line-height: 50px !important;
+		.idx-omnibar-input {
+		}
+	}
+	.idx-omnibar-input {
+		border-radius: 5px;
+		height: 50px !important;
+	}
+	button {
+		background: none !important;
+		color: black !important;
+		height: 50px !important;
+		padding: 0 20px;
+		border: none;
+		border-radius: 0 5px 5px 0 !important;
+	}
+	label {
+		display: none;
+	}
+	.idx-omnibar-extra {
+		input {
+			border-radius: 5px;
+		}
+	}
+	.idx-omnibar-price-container {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	h4 {
+		display: none;
+	}
+	button[type="submit"] {
+		background: #fff;
+	}
 }
 
 /*! =IMPress Lead Signup
@@ -731,7 +772,7 @@ table#wp-calendar {
 }
 
 /** new stuff **/
-.widget {
+.widget, .impress-lead-login, .impress-lead-signup {
 	select, input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
 		font-family: $header-font-family;
 		background: #fff;
@@ -748,6 +789,11 @@ table#wp-calendar {
 		}
 	}	
 }
+
+.impress-lead-login, .impress-lead-signup {
+	margin: 35px 0;
+}
+
 .impress-idx-signup-widget, .equity-idx-search-widget {
 	> p {
 		padding-bottom: 20px;
@@ -795,53 +841,59 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 
 }
 
+.sidebar, .single {
+	.impress-carousel {
+		background: #fff;
+		margin: 35px 0;
+		padding: 15px 0;
+		.carousel-photo {
+			height: 235px;
+		}
+		a {
+			color: #000;
+			font-size: 1rem;
+			text-decoration: none;
+		}
+		.property-details {
+			font-size: rem-calc(18);
+			.address, .city-state {
+				font-weight: bold;
+			}
+		}
+		h3.price {
+			font-size: rem-calc(28);
+		}
+		.carousel-photo {
+			height: 235px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.owl-controls span {
+			font-size: rem-calc(20);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -35px;
+			display: block;
+		}
+		.owl-nav.owl-controls button {
+			margin-top: 20px;
+		}
+	}
+}
+
 .sidebar {
-	.impress-carousel-widget {
-		.impress-carousel {
-			background: #fff;
-			.carousel-photo {
-				height: 235px;
-			}
-			a {
-				color: #000;
-				font-size: 1rem;
-			}
-			.property-details {
-				font-size: rem-calc(18);
-				.address, .city-state {
-					font-weight: bold;
-				}
-			}
-			h3.price {
-				font-size: rem-calc(28);
-			}
-			.carousel-photo {
-				height: 235px;
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-			.owl-controls span {
-				font-size: rem-calc(20);
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: -35px;
-				display: block;
-			}
-			.owl-nav.owl-controls button {
-				margin-top: 20px;
-			}
-			.owl-nav.owl-controls button.owl-prev {
-				float: left;
-				margin-left: 30px;
-			}
-			.owl-nav.owl-controls button.owl-next {
-				float: right;
-				margin-right: 30px;
-			}
+	.impress-carousel {
+		.owl-nav.owl-controls button.owl-prev {
+			float: left;
+			margin-left: 30px;
+		}
+		.owl-nav.owl-controls button.owl-next {
+			float: right;
+			margin-right: 30px;
 		}
 	}
 }
@@ -878,6 +930,37 @@ div.impress-carousel .owl-nav.owl-controls button.owl-prev i {
 }
 div.impress-carousel .owl-nav.owl-controls button.owl-next i {
 	padding-left: 2px;
+}
+
+
+
+div.impress-carousel, div.equity-idx-carousel {
+	 .carousel-property {
+		width: 235px;
+		margin: 0 auto;
+	}
+
+	.owl-item {
+		@media (min-width: 450px) and (max-width: 550px) {
+		}
+	}
+
+	.carousel-photo {
+		position: relative;
+		width: 235px;
+		height: 235px;
+		border-radius: 100%;
+		overflow: hidden;
+		img {
+			position: relative;
+			height: 100%;
+			object-fit: cover; // No IE support, but the fallback looks decent enough
+		}
+	}
+
+	.beds-baths span+span {
+		margin-left: 10px;
+	}
 }
 
 

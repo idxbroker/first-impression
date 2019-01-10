@@ -176,8 +176,7 @@ h2.entry-title a {
 .button,
 button,
 input[type="button"],
-input[type="submit"],
-.widget .idx-omnibar-form button {
+input[type="submit"] {
 	// Styled for medium by default
 	font-size: rem-calc(18);
 	letter-spacing: 0.02;
