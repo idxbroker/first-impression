@@ -64,39 +64,13 @@ body.home.must-see-white-bkg {
 		}
 	}
 
-	.IDX_Omnibar_Widget {
+	.idx-omnibar-form {
 		margin: 50px auto;
 		.awesomplete {
 			line-height: 50px !important;
-			ul {
+			.idx-omnibar-input {
+				border-color: transparent;
 			}
-		}
-		.idx-omnibar-input {
-			border-radius: 5px;
-			height: 50px !important;
-		}
-		button {
-			background: none !important;
-			color: black !important;
-			height: 50px !important;
-			padding: 0 20px;
-			border: none;
-			border-radius: 0 5px 5px 0 !important;
-		}
-		label {
-			display: none;
-		}
-		.idx-omnibar-extra {
-			input {
-				border-radius: 5px;
-			}
-		}
-		.idx-omnibar-price-container {
-			margin-top: 20px;
-			margin-bottom: 10px;
-		}
-		h4 {
-			display: none;
 		}
 	}
 
@@ -158,35 +132,6 @@ body.home.must-see-white-bkg {
 				width: auto;
 				border-radius: 5px;
 			}
-		}
-	}
-
-	.impress-carousel, .equity-idx-carousel {
-		 .carousel-property {
-			width: 235px;
-			margin: 0 auto;
-		}
-
-		.owl-item {
-			@media (min-width: 450px) and (max-width: 550px) {
-			}
-		}
-
-		.carousel-photo {
-			position: relative;
-			width: 235px;
-			height: 235px;
-			border-radius: 100%;
-			overflow: hidden;
-			img {
-				position: relative;
-				height: 100%;
-				object-fit: cover; // No IE support, but the fallback looks decent enough
-			}
-		}
-
-		.beds-baths span+span {
-			margin-left: 10px;
 		}
 	}
 
