@@ -748,6 +748,13 @@ body.must-see-full-screen {
 		a:hover {
 			text-decoration: none;
 		}
+		#IDX-refineSearchFormToggle,
+		.IDX-topAction--map-toggle .IDX-btn-link {
+			vertical-align: baseline;
+			&:focus, &:hover, &:active {
+				text-decoration: none;
+			}
+		}
 	}
 	.IDX-results-refine-search-wrap .IDX-control-group {
 		.select2-container {
@@ -786,7 +793,8 @@ body.must-see-full-screen {
 	.IDX-results--cell .IDX-results--cell-inner-wrapper {
 		background: none;
 		border: none;
-		border-bottom: 10px solid transparent;
+		border: 2px solid transparent;
+		margin-top: 10px;
 	}
 	@media only screen and (max-width: 1280px) and (min-width: 641px) {
 		.IDX-pagination > li > a, .IDX-pagination > li > span {
@@ -795,10 +803,10 @@ body.must-see-full-screen {
 	}
 	@media only screen and (min-width: 1280px) , only screen and (min-width: 641px) and (max-width: 991px) {
 		.IDX-results--cell:nth-child(even) .IDX-results--cell-inner-wrapper {
-			border-left: 10px solid transparent;
+			margin-left: 8px;
 		}
 		.IDX-results--cell:nth-child(odd) .IDX-results--cell-inner-wrapper {
-			border-right: 10px solid transparent;
+			margin-right: 8px;
 		}
 	}
 	@media only screen and (max-width: 640px) {
@@ -812,5 +820,8 @@ body.must-see-full-screen {
 	.select2-container.select2-container-active .select2-choice {
 		border-color: #E6E6E6;
 		background: #fff;
+	}
+	.IDX-results--cell .IDX-results--cell-inner-wrapper.IDX-results--cell-active {
+		border: 2px solid red;
 	}
 }

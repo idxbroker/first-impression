@@ -427,7 +427,9 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				table#wp-calendar tfoot tr td a,
 				div[class*='home-middle-'].bg-gradient table#wp-calendar caption,
 				div[class*='home-middle-'].bg-gradient table#wp-calendar thead tr th,
-				body.listing-template-default .listing-no-image .listing-status {
+				body.listing-template-default .listing-no-image .listing-status,
+				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle,
+				.IDX-wrapper-standard .IDX-topAction.IDX-topAction--map-toggle .IDX-btn-link {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
