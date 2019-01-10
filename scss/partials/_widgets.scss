@@ -685,8 +685,6 @@ form.idx-omnibar-form {
 	margin: 35px 0;
 	.awesomplete {
 		line-height: 50px !important;
-		.idx-omnibar-input {
-		}
 	}
 	.idx-omnibar-input {
 		border-radius: 5px;
@@ -938,11 +936,6 @@ div.impress-carousel, div.equity-idx-carousel {
 	 .carousel-property {
 		width: 235px;
 		margin: 0 auto;
-	}
-
-	.owl-item {
-		@media (min-width: 450px) and (max-width: 550px) {
-		}
 	}
 
 	.carousel-photo {
