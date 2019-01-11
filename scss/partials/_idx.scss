@@ -771,6 +771,11 @@ body.must-see-full-screen {
 	.IDX-results-refinement .IDX-refine-search--toggle::after {
 		margin-left: 4px;	
 	}
+
+	#IDX-resultsRefineSearchToggle {
+		position: relative;
+		z-index: 1;
+	}
 	#IDX-resultsContent {
 		padding: 0 15px;
 	}
@@ -801,6 +806,14 @@ body.must-see-full-screen {
 			padding: 6px 10px;
 		}
 	}
+	@media only screen and (max-width: 640px) {
+		.IDX-pagination > li > a {
+			font-size: 16px;
+			padding: 6px 6px;
+			width: 35px;
+			text-align: center;
+		}
+	}
 	@media only screen and (min-width: 1280px) , only screen and (min-width: 641px) and (max-width: 991px) {
 		.IDX-results--cell:nth-child(even) .IDX-results--cell-inner-wrapper {
 			margin-left: 8px;
@@ -812,6 +825,9 @@ body.must-see-full-screen {
 	@media only screen and (max-width: 640px) {
 		#IDX-resultsTopActions {
 			margin-bottom: 25px;
+			button {
+				min-height: 0;
+			}
 		}
 	}
 	.select2-results .select2-highlighted {
@@ -824,4 +840,26 @@ body.must-see-full-screen {
 	.IDX-results--cell .IDX-results--cell-inner-wrapper.IDX-results--cell-active {
 		border: 2px solid red;
 	}
+	ul {
+		margin-left: 0;
+	}
+}
+
+#IDX-leadToolsBar {
+	@media only screen and (max-width: 640px) {
+		padding: 0;
+		margin: 0;
+		line-height: 30px;
+		min-height: 30px;
+		height: auto;
+		#IDX-leadAccountLink {
+			float: left;
+			margin-top: 0;
+			margin-left: 5px;
+		}
+		#IDX-leadLogOutLink {
+			margin-right: 10px;
+		}
+	}
+
 }
