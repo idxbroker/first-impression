@@ -41,7 +41,7 @@ body.home.must-see-white-bkg {
 
 /** New stuff ***/
 .home {
-	.widget {
+	.widget:not(.widget_text):not(.featured-page) {
 		margin-bottom: 30px;
 	}
 	.home-top {
@@ -130,6 +130,7 @@ body.home.must-see-white-bkg {
 				font-size: rem-calc(20);
 				letter-spacing: .025em;
 				width: auto;
+				max-width: 200px;
 				border-radius: 5px;
 			}
 		}
@@ -150,38 +151,39 @@ body.home.must-see-white-bkg {
 
 	.featured-communities {
 		.widget_text {
-	    	width: 100% !important;
-	    	float: none !important;
-	    	h4 {
-	    		margin: 0px !important;
-	    	}
+				width: 100% !important;
+				float: none !important;
+				h4 {
+					margin: 0px !important;
+				}
 		}
 		.featured-page {
 			position: relative;
 			height: 100vw;
-	    	width: 100%;
-	    	overflow: hidden;
+			width: 100%;
+			overflow: hidden;
 			@media #{$medium-up} {
 				height: calc(100vw / 2);
-	    		width: 50% !important;
+				width: 50% !important;
 			}
 			h4 {
 				font-size: rem-calc(36);
-				@media #{$medium-up} {
-					font-size: rem-calc(40);
-				}
 				font-weight: 500;
 				color: #fff !important;
 				width: 300px;
 				margin: 0 auto;
-				margin-top: calc(50% - 70px);
+				margin-top: calc(50% - 120px);
+				@media #{$medium-up} {
+					font-size: rem-calc(40);
+					margin-top: calc(50% - 110px);
+				}
 			}
 			h4::after {
 				content: "";
 				display: block;
 				width: 90px;
 				height: 3px;
-				margin: 10px 0;
+				margin: 15px 0;
 				border-radius: 5px;
 				background: #fff;
 				@media #{$medium-up} {
@@ -230,7 +232,7 @@ body.home.must-see-white-bkg {
 				.entry-content {
 					width: 300px;
 					margin: 0 auto;
-					margin-top: calc(50%);
+					margin-top: calc(50% - 40px);
 					p {
 						color: #fff;
 						font-size: rem-calc(20);
@@ -265,11 +267,11 @@ body.home.must-see-white-bkg {
 	}
 
 	.featured-communities.flexible-widgets.widget-halves .widget:nth-child(even) {
-	    clear: left !important;
+			clear: left !important;
 	}
 
 	.featured-communities.flexible-widgets.widget-halves .widget:nth-child(odd) {
-	    clear: none !important;
+			clear: none !important;
 	}
 
 	.featured-communities.flexible-widgets.widget-halves .widget.widget_text {
@@ -311,17 +313,17 @@ body.home.must-see-white-bkg {
 			margin-left: 15px;
 			@media #{$medium-up} {
 				margin-top: 0;
-	  		}
+				}
 		}
 		.widget-area {
 			@media #{$medium-up} {
 				display: flex;
-	  			align-items: stretch;
-	  		}
-	  		.widget {
-	  			flex-grow: 1;
-	  			flex-basis: 0;
-	  		}
+					align-items: stretch;
+				}
+				.widget {
+					flex-grow: 1;
+					flex-basis: 0;
+				}
 			.widget_text {
 				h4 {
 					font-size: rem-calc(18);
@@ -335,18 +337,18 @@ body.home.must-see-white-bkg {
 			.impress-idx-signup-widget {
 			}
 			// Target two widgets only
-	  		section:first-child:nth-last-child(2).widget,
-	  		section:first-child:nth-last-child(2) ~ .widget {
+				section:first-child:nth-last-child(2).widget,
+				section:first-child:nth-last-child(2) ~ .widget {
 				@media #{$medium-up} {
-		  			min-width: 400px;
+					min-width: 300px;
 					padding: 0 50px;
-  				}
-	  		}
-	  		section:first-child:nth-last-child(2).impress-idx-signup-widget,
-	  		section:first-child:nth-last-child(2) ~ .impress-idx-signup-widget {
-	  			width: 100%;
-	  			flex-basis: auto;
-	  		}
+					}
+				}
+				section:first-child:nth-last-child(2).impress-idx-signup-widget,
+				section:first-child:nth-last-child(2) ~ .impress-idx-signup-widget {
+					width: 100%;
+					flex-basis: auto;
+				}
 		}
 	}
 
@@ -360,7 +362,13 @@ body.home.must-see-white-bkg {
 		ul > li {
 			margin-left: 10px;
 		}
-	}	
+	}
+	.impress-lead-signup {
+		margin-top: 0;
+		input[type="text"], input[type="email"] {
+			margin-bottom: 40px;
+		}
+	}
 }
 
 
