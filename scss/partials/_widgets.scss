@@ -82,9 +82,6 @@
 
 /*! =Featured Post Carousel
 ------------------------------------------------------------------------- */
-.equity-post-carousel {
-
-}
 section.equity-post-carousel article {
 	margin-bottom: 0;
 }
@@ -186,186 +183,6 @@ section.equity-post-carousel article .entry-content {
 	display: none;
 }
 
-/*
-.equity-idx-carousel,
-.impress-carousel {
-	position: relative;
-}
-.equity-idx-carousel.owl-carousel .owl-item .carousel-property,
-.impress-carousel .owl-item .carousel-property {
-	margin: 0 10px;
-	overflow: hidden;
-}
-.equity-idx-carousel.owl-carousel .owl-item .carousel-photo,
-.equity-idx-carousel.owl-carousel .owl-item .carousel-photo img,
-.impress-carousel .owl-item .carousel-photo,
-.impress-carousel .owl-item .carousel-photo img {
-	position: relative;
-	display: block;
-	@include single-transition(all);
-}
-.equity-idx-carousel.owl-carousel .owl-item .carousel-photo img,
-.impress-carousel .owl-item .carousel-photo img {
-	margin-bottom: 10px;
-	width: 100%;
-	opacity: 1;
-	border-radius: 100%;
-}
-.equity-idx-carousel .property-details,
-.impress-carousel .property-details {
-	display: block;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 0.32rem 0.64rem;
-	color: $body-font-color;
-	background-color: rgba($body-bg, 0.7);
-}
-.equity-idx-carousel a,
-.impress-carousel a {
-	text-decoration: none;
-	color: $body-font-color;
-}
-.equity-idx-carousel p,
-.impress-carousel p {
-	margin: 0;
-	color: $body-font-color;
-}
-.equity-idx-carousel ul.beds-baths-sqft,
-.impress-carousel ul.beds-baths-sqft {
-	float: right;
-	text-align: right;
-	list-style-type: none;
-	padding: 0.225rem 0;
-	margin: 0;
-}
-.equity-idx-carousel ul.beds-baths-sqft li,
-.impress-carousel ul.beds-baths-sqft li {
-	display: inline-block;
-	margin-left: 1rem;
-}
-.equity-idx-carousel ul.beds-baths-sqft li span.label,
-.impress-carousel ul.beds-baths-sqft li span.label {
-	display: none;
-}
-.equity-idx-carousel ul.beds-baths-sqft li.sqft span.label,
-.equity-idx-carousel ul.beds-baths-sqft li.acres span.label,
-.impress-carousel ul.beds-baths-sqft li.sqft span.label,
-.impress-carousel ul.beds-baths-sqft li.acres span.label {
-	display: inline-block;
-}
-.equity-idx-carousel .property-details span.price,
-.impress-carousel .property-details span.price {
-	font-family: $header-font-family;
-	font-size: rem-calc(18);
-	color: $secondary-color;
-	margin-bottom: 0.225rem;
-}
-.equity-idx-carousel p.address,
-.impress-carousel p.address {
-	display: none;
-}
-.equity-idx-carousel ul.beds-baths-sqft li::before,
-.impress-carousel ul.beds-baths-sqft li::before {
-	font-family: 'FontAwesome';
-	margin-right: 0.32rem;
-}
-.equity-idx-carousel ul.beds-baths-sqft li.beds::before,
-.impress-carousel ul.beds-baths-sqft li.beds::before {
-	content: "\f236";
-}
-.equity-idx-carousel ul.beds-baths-sqft li.baths::before,
-.impress-carousel ul.beds-baths-sqft li.baths::before {
-	content: "\f2cc";
-}
-.equity-idx-carousel .owl-dots,
-.impress-carousel .owl-dots {
-	display: none;
-}
-.equity-idx-carousel .owl-nav,
-.impress-carousel .owl-nav {
-	text-align: center;
-}
-.equity-idx-carousel .owl-nav i,
-.impress-carousel .owl-nav i {
-	font-size: 24px;
-	display: block;
-	color: #fff;
-}
-.equity-idx-carousel .owl-nav .fa-caret-right,
-.impress-carousel .owl-nav .fa-caret-right {
-	margin-left: 3px;
-}
-.equity-idx-carousel .owl-nav .fa-caret-left,
-.impress-carousel .owl-nav .fa-caret-left {
-	margin-right: 3px;
-}
-.equity-idx-carousel .owl-nav span,
-.impress-carousel .owl-nav span {
-	text-transform: uppercase;
-	font-size: 12px;
-}
-.widget .equity-idx-carousel .owl-nav.owl-controls button.owl-prev,
-.widget .equity-idx-carousel .owl-nav.owl-controls button.owl-next,
-.widget .impress-carousel .owl-nav.owl-controls button.owl-prev,
-.widget .impress-carousel .owl-nav.owl-controls button.owl-next {
-	background: $primary-color;
-	color: $body-font-color;
-	padding: 10px;
-	border-radius: 45px;
-	width: 45px;
-	height: 45px;
-	display: inline-block;
-	margin: 10px;
-	float: none !important;
-}
-.equity-idx-carousel .owl-nav.owl-controls button.owl-prev:hover,
-.equity-idx-carousel .owl-nav.owl-controls button.owl-next:hover,
-.impress-carousel .owl-nav.owl-controls button.owl-prev:hover,
-.impress-carousel .owl-nav.owl-controls button.owl-next:hover {
-	background: scale-color($primary-color, $lightness: -14%);
-}
-.equity-idx-carousel .owl-nav span,
-.impress-carousel .owl-nav span {
-	display: none;
-}
-.equity-idx-carousel .hover-cover,
-.impress-carousel .hover-cover {
-	display: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 99;
-	top: 0;
-	left: 0;
-	padding: 25%;
-	text-align: center;
-	text-transform: uppercase;
-	color: $body-font-color-secondary;
-	background-color: rgba($body-bg, 0.3);
-}
-.widget div[class*='carousel-property'] .hover-cover > p {
-	font-size: rem-calc(16);
-	font-weight: $font-weight-bold;
-}
-.equity-idx-carousel a:hover .hover-cover,
-.equity-idx-carousel .hover-cover i,
-.impress-carousel a:hover .hover-cover,
-.impress-carousel .hover-cover i {
-	display: block;
-}
-.equity-idx-carousel .hover-cover i,
-.impress-carousel a:hover .hover-cover, {
-	font-size: rem-calc(32);
-}
-.equity-idx-carousel .disclaimer p img,
-.impress-carousel .disclaimer p img {
-    border: none;
-	width: auto;
-	margin: 0 auto;
-}
-*/
 @media #{$large-up} {
 	.equity-idx-carousel .property-details span.price,
 	.impress-carousel .property-details span.price {
@@ -576,7 +393,7 @@ section.equity-post-carousel article .entry-content {
 
 /*! =Property Showcase
 ------------------------------------------------------------------------- */
-.widget {
+.widget, .shortcode {
 	// The first row only has this class
 	&.impress-showcase-widget .widgettitle {
 		font-size: rem-calc(24);
@@ -589,6 +406,9 @@ section.equity-post-carousel article .entry-content {
 		* {
 			background-color: #F9F9F9;
 			text-align: center;
+		}
+		a {
+			text-decoration: none;
 		}
 		.impress-showcase-photo {
 			margin-bottom: 0;
@@ -631,6 +451,16 @@ section.equity-post-carousel article .entry-content {
 	}
 }
 
+body.single-post {
+	.widget, .shortcode {
+		.impress-showcase-property {
+			* {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
 // 747474
 /*! =Impress city Links
 ------------------------------------------------------------ */
@@ -638,34 +468,35 @@ section.equity-post-carousel article .entry-content {
 	.widget-title {
 		font-size: rem-calc(24);
 	}
-	.impress-city-links {
-		.impress-city-list-links {
-			width: auto;
-		}
-		ul {
-			font-size: rem-calc(16);
-			max-width: 250px;
-			&.impress-columns:last-child {
-				float: left;
-			}
-			li {
-				margin-bottom: 10px;
-				a {
-					display: flex;			
-					align-items: center;
-					line-height: 20px;
-				}
-				.count {
-					font-size: rem-calc(16);
-					font-weight: normal;
-					margin-left: auto;
-					background-color: #747474;
-					line-height: inherit;
-					border-radius: 3px;
-				}
-			}
-		}	
+}
+div.impress-city-links {
+	.impress-city-list-links {
+		width: auto;
 	}
+	ul {
+		font-size: rem-calc(16);
+		max-width: 250px;
+		&.impress-columns:last-child {
+			float: left;
+		}
+		li {
+			margin-bottom: 10px;
+			a {
+				display: flex;			
+				align-items: center;
+				line-height: 20px;
+				text-decoration: none;
+			}
+			.count {
+				font-size: rem-calc(16);
+				font-weight: normal;
+				margin-left: auto;
+				background-color: #747474;
+				line-height: inherit;
+				border-radius: 3px;
+			}
+		}
+	}	
 }
 
 div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
@@ -815,27 +646,29 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 
 /*! =IMPress Omnibar
 ------------------------------------------------------------------------- */
-.widget .idx-omnibar-form {
+form.idx-omnibar-form {
 	position: relative;
 	padding: 0;
 }
-.widget .idx-omnibar-form::after {
+form.idx-omnibar-form::after {
 	content: "";
 	display: table;
 	clear: both;
 }
-.widget .idx-omnibar-form input {
+.widget form.idx-omnibar-form input {
 	border: none;
+}
+form.idx-omnibar-form input {
 	margin: 0;
 }
-.widget .idx-omnibar-form label {
+form.idx-omnibar-form label {
 	color: $body-font-color;
 }
-.widget .idx-omnibar-form .awesomplete {
+form.idx-omnibar-form .awesomplete {
 	width: 100%;
 }
-.widget .idx-omnibar-form button,
-.widget .idx-omnibar-form.idx-omnibar-extra-form button {
+form.idx-omnibar-form button,
+form.idx-omnibar-form.idx-omnibar-extra-form button {
 	width: auto;
 	padding: 0.55rem 0.7rem;
 	margin: 0;
@@ -844,8 +677,45 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 	right: 0;
 	font-size: $paragraph-font-size;
 }
-.widget .idx-omnibar-form button span {
+form.idx-omnibar-form button span {
 	display: none;
+}
+
+form.idx-omnibar-form {
+	margin: 35px 0;
+	.awesomplete {
+		line-height: 50px !important;
+	}
+	.idx-omnibar-input {
+		border-radius: 5px;
+		height: 50px !important;
+	}
+	button {
+		background: none !important;
+		color: black !important;
+		height: 50px !important;
+		padding: 0 20px;
+		border: none;
+		border-radius: 0 5px 5px 0 !important;
+	}
+	label {
+		display: none;
+	}
+	.idx-omnibar-extra {
+		input {
+			border-radius: 5px;
+		}
+	}
+	.idx-omnibar-price-container {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	h4 {
+		display: none;
+	}
+	button[type="submit"] {
+		background: #fff;
+	}
 }
 
 /*! =IMPress Lead Signup
@@ -900,7 +770,7 @@ table#wp-calendar {
 }
 
 /** new stuff **/
-.widget {
+.widget, .impress-lead-login, .impress-lead-signup {
 	select, input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
 		font-family: $header-font-family;
 		background: #fff;
@@ -917,6 +787,11 @@ table#wp-calendar {
 		}
 	}	
 }
+
+.impress-lead-login, .impress-lead-signup {
+	margin: 35px 0;
+}
+
 .impress-idx-signup-widget, .equity-idx-search-widget {
 	> p {
 		padding-bottom: 20px;
@@ -964,53 +839,59 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 
 }
 
+.sidebar, .single {
+	.impress-carousel {
+		background: #fff;
+		margin: 35px 0;
+		padding: 15px 0;
+		.carousel-photo {
+			height: 235px;
+		}
+		a {
+			color: #000;
+			font-size: 1rem;
+			text-decoration: none;
+		}
+		.property-details {
+			font-size: rem-calc(18);
+			.address, .city-state {
+				font-weight: bold;
+			}
+		}
+		h3.price {
+			font-size: rem-calc(28);
+		}
+		.carousel-photo {
+			height: 235px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.owl-controls span {
+			font-size: rem-calc(20);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -35px;
+			display: block;
+		}
+		.owl-nav.owl-controls button {
+			margin-top: 20px;
+		}
+	}
+}
+
 .sidebar {
-	.impress-carousel-widget {
-		.impress-carousel {
-			background: #fff;
-			.carousel-photo {
-				height: 235px;
-			}
-			a {
-				color: #000;
-				font-size: 1rem;
-			}
-			.property-details {
-				font-size: rem-calc(18);
-				.address, .city-state {
-					font-weight: bold;
-				}
-			}
-			h3.price {
-				font-size: rem-calc(28);
-			}
-			.carousel-photo {
-				height: 235px;
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-			.owl-controls span {
-				font-size: rem-calc(20);
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: -35px;
-				display: block;
-			}
-			.owl-nav.owl-controls button {
-				margin-top: 20px;
-			}
-			.owl-nav.owl-controls button.owl-prev {
-				float: left;
-				margin-left: 30px;
-			}
-			.owl-nav.owl-controls button.owl-next {
-				float: right;
-				margin-right: 30px;
-			}
+	.impress-carousel {
+		.owl-nav.owl-controls button.owl-prev {
+			float: left;
+			margin-left: 30px;
+		}
+		.owl-nav.owl-controls button.owl-next {
+			float: right;
+			margin-right: 30px;
 		}
 	}
 }
@@ -1047,6 +928,32 @@ div.impress-carousel .owl-nav.owl-controls button.owl-prev i {
 }
 div.impress-carousel .owl-nav.owl-controls button.owl-next i {
 	padding-left: 2px;
+}
+
+
+
+div.impress-carousel, div.equity-idx-carousel {
+	 .carousel-property {
+		width: 235px;
+		margin: 0 auto;
+	}
+
+	.carousel-photo {
+		position: relative;
+		width: 235px;
+		height: 235px;
+		border-radius: 100%;
+		overflow: hidden;
+		img {
+			position: relative;
+			height: 100%;
+			object-fit: cover; // No IE support, but the fallback looks decent enough
+		}
+	}
+
+	.beds-baths span+span {
+		margin-left: 10px;
+	}
 }
 
 
@@ -1093,8 +1000,6 @@ div.easy_testimonial_image_wrapper {
 	}
 }
 
-.impress-idx-dashboard-widget {
-}
 .IDX-mapWidgetWrap {
 	position: relative;
 	.IDX-mapHeader {
