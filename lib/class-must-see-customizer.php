@@ -564,7 +564,15 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-navbar-default .IDX-navbar-nav > li > a:hover,
 				table#wp-calendar caption,
 				table#wp-calendar thead tr th,
-				body.listing-template-default .listing-status {
+				body.listing-template-default .listing-status,
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox i[class*='fa-'],
+				footer .ae-iconbox i[class*='fa-'],
+				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox a i[class*='fa-'],
+				footer .ae-iconbox a i[class*='fa-'],
+				.ae-iconbox.type-2 i[class*='fa-'],
+				.ae-iconbox.type-2 a i[class*='fa-'],
+				.ae-iconbox.type-3 i[class*='fa-'],
+				.ae-iconbox.type-3 a i[class*='fa-'] {
 					color: $heading_secondary_color;
 				}
 				@media only screen and (max-width: 640px) {
@@ -583,15 +591,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.bg-gradient .easy_testimonial .testimonial_author cite,
 				.bg-gradient p,
 				.bg-gradient a,
-				.bg-gradient label,
-				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox i[class*='fa-'],
-				footer .ae-iconbox i[class*='fa-'],
-				.home .content-sidebar-wrap div[class*='home-'].bg-gradient .ae-iconbox a i[class*='fa-'],
-				footer .ae-iconbox a i[class*='fa-'],
-				.ae-iconbox.type-2 i[class*='fa-'],
-				.ae-iconbox.type-2 a i[class*='fa-'],
-				.ae-iconbox.type-3 i[class*='fa-'],
-				.ae-iconbox.type-3 a i[class*='fa-'] {
+				.bg-gradient label {
 					color: $font_secondary_color;
 				}
 

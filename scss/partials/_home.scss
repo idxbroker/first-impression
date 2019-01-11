@@ -80,7 +80,9 @@ body.home.must-see-white-bkg {
 	.singleTestimonialWidget h4,
 	.listTestimonialsWidget h4,
 	.contact-us > div > h4,
-	div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle {
+	div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle,
+	.impress-showcase-widget h4.widgettitle,
+	.impress-city-links-widget h4 {
 		position: relative;
 		text-align: center;
 		font-size: rem-calc(32);
