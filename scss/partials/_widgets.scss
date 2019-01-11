@@ -882,6 +882,11 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 		.owl-nav.owl-controls button {
 			margin-top: 20px;
 		}
+		.owl-prev, .owl-next {
+			span {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -910,8 +915,8 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 
 div.impress-carousel .owl-nav.owl-controls button.owl-prev,
 div.impress-carousel .owl-nav.owl-controls button.owl-next {
-	height: 65px;
-	width: 65px;
+	height: 60px;
+	width: 60px;
 	border: 2px solid;
 }
 div.impress-carousel .owl-nav.owl-controls button.owl-prev {

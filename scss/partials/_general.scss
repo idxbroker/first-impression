@@ -147,15 +147,6 @@ a.button,
 
 /*! =Headings
 ------------------------------------------------------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	letter-spacing: -1px;
-}
-
 article h3,
 article h5 {
 	font-family: $paragraph-font-family;
@@ -169,6 +160,10 @@ h6 {
 h1.entry-title,
 h2.entry-title a {
 	text-decoration: none;
+}
+
+.site-title {
+	font-weight: 600;
 }
 
 /*! =Buttons
@@ -202,6 +197,7 @@ button.large, .button.large {
 	line-height: rem-calc(28);
 	letter-spacing: 0.025;
 	min-height: 60px;
+	padding: 5px 10px;
 }
 
 .bg-gradient .button,
@@ -378,13 +374,5 @@ footer {
 	.impress-idx-signup-widget h2,
 	.impress-idx-signup-widget h4 {
 		font-size: rem-calc(24);
-		&::after {
-			content: "";
-			display: block;
-			width: 85px;
-			height: 3px;
-			margin: 20px 0;
-			border-radius: 5px;
-		}
 	}
 }
