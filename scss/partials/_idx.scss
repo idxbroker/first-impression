@@ -211,10 +211,16 @@ body.must-see-map-results {
 		}
 	}
 	#IDX-primaryPhoto {
-		height: 575px;
+		min-height: 100px;
+		max-height: 575px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+	#IDX-detailsPhotoCourtesy {
+		position: absolute;
+		bottom: 35px;
+		background: rgba(255,255,255,.8);
 	}
 	.IDX-thumbnail {
 		border: none;
@@ -316,14 +322,29 @@ body.must-see-map-results {
 	.IDX-panel-default > .IDX-panel-heading {
 		background-color: transparent;
 	}
+	#IDX-detailsAgentInfo {
+		margin-top: 35px;
+	}
+	#IDX-openHouses {
+		font-size: rem-calc(16px);
+		.IDX-ohWhen {
+			font-weight: bold;
+		}
+	}
 	.IDX-panel-body {
 		// Each item is an inline block, reduce font-size to reduce spacing between each item
 		font-size: 8px;
+		* {
+			font-size: rem-calc(16px);
+		}
 		.IDX-field {
 			border: none;
 			margin-bottom: 0;
-			font-size: rem-calc(16px);
 			color: #000000;
+		}
+		.IDX-detailsAgentInfoLabel, .IDX-label {
+			color: #000;
+			font-weight: bold;
 		}
 	}
 	.IDX-panel-collapse-toggle span {
