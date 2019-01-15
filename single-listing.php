@@ -139,6 +139,7 @@ function single_listing_post_content() {
 					$pattern = '<li class="wp_listings%s"><span class="label">%s</span> %s</li>';
 
 					echo '<ul class="listing-details">';
+					echo '<li><h3 class="must-see-listings-section-title primary-features">Primary Features</h3></li>';
 
                     if ( get_post_meta($post->ID, '_listing_hide_price', true) == 1 ) {
                     	echo (get_post_meta($post->ID, '_listing_price_alt', true)) ? '<li><span class="label">' . __('Price:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_price_alt', true) .'</li>' : '';
@@ -148,6 +149,7 @@ function single_listing_post_content() {
                     	echo (isset($options['wp_listings_display_currency_code']) && $options['wp_listings_display_currency_code'] == 1) ? '<span class="currency-code">' . $options['wp_listings_currency_code'] . '</span>' : '';
                     	echo '</li>';
                 	}
+                	echo (wp_listings_get_status() ? '<li><span class="label">'. __('Status: ', 'wp-listings') . '</span>' . wp_listings_get_status() . '</li>' : '');
                     echo '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
                     echo (get_post_meta($post->ID, '_listing_address', true)) ? '<li><span class="label">' . __('Address:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_address', true) .'</li>' : '';
                     echo (get_post_meta($post->ID, '_listing_city', true)) ? '<li><span class="label">' . __('City:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_city', true) .'</li>' : '';
@@ -163,7 +165,9 @@ function single_listing_post_content() {
 							printf( $pattern, $key, esc_html( $label ), $detail_value );
 						endif;
 					}
-					echo '</ul><ul class="extended-property-details">';
+					echo '</ul>';
+					echo '<ul class="extended-property-details">';
+					echo '<li><h3 class="must-see-listings-section-title extended-details">Extended Details</h3></li>';
 
 
 					foreach ( (array) $details_instance->extended_property_details['col1'] as $label => $key ) {
@@ -219,6 +223,7 @@ function single_listing_post_content() {
 
 			<?php if (get_post_meta( $post->ID, '_listing_school_neighborhood', true) != '') { ?>
 			<div id="listing-school-neighborhood">
+				<span class="listing-school-neighborhood-title"><?php _e("School and Neighborhood", 'wp-listings'); ?></span>
 				<p>
 				<?php echo do_shortcode(get_post_meta( $post->ID, '_listing_school_neighborhood', true)); ?>
 				</p>
