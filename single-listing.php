@@ -44,6 +44,10 @@ function single_listing_post_content() {
 			$listing_meta .= sprintf( '<li class="listing-price"><h3>%s %s %s</h3></li>', '<span class="currency-symbol">' . $options['wp_listings_currency_symbol'] . '</span>', get_post_meta( $post->ID, '_listing_price', true ), (isset($options['wp_listings_display_currency_code']) && $options['wp_listings_display_currency_code'] == 1) ? '<span class="currency-code">' . $options['wp_listings_currency_code'] . '</span>' : '' );
 		}
 
+		if ( '' != get_post_meta($post->ID, '_listing_address', true) ) {
+			$listing_meta .= sprintf( '<li><span class="listing-address">Address</span>:<br />%s<br />%s%s %s</li>', get_post_meta( $post->ID, '_listing_open_house', true ), get_post_meta($post->ID, '_listing_city', true),  get_post_meta($post->ID, '_listing_state', true), get_post_meta($post->ID, '_listing_zip', true));
+		}
+
 		if ( '' != wp_listings_get_property_types() ) {
 			$listing_meta .= sprintf( '<li class="listing-property-type"><span class="label">Property Type</span>: %s</li>', get_the_term_list( get_the_ID(), 'property-types', '', ', ', '' ) );
 		}
@@ -74,7 +78,7 @@ function single_listing_post_content() {
 
 		if ( '' != get_post_meta( $post->ID, '_listing_open_house', true ) ) {
 			$listing_meta .= sprintf( '<li><span class="listing-open-house">Open House</span>: %s</li>', get_post_meta( $post->ID, '_listing_open_house', true ) );
-		} 
+		}
 
 		$listing_meta .= sprintf( '</ul>');
 
