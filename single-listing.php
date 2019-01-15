@@ -223,7 +223,7 @@ function single_listing_post_content() {
 
 			<?php if (get_post_meta( $post->ID, '_listing_school_neighborhood', true) != '') { ?>
 			<div id="listing-school-neighborhood">
-				<span class="listing-school-neighborhood-title"><?php _e("School and Neighborhoods", 'wp-listings'); ?></span>
+				<span class="listing-school-neighborhood-title"><?php _e("Schools &amp; Neighborhood", 'wp-listings'); ?></span>
 				<p>
 				<?php echo do_shortcode(get_post_meta( $post->ID, '_listing_school_neighborhood', true)); ?>
 				</p>
