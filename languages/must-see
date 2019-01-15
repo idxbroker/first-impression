@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Must See 2 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2019-01-14 18:07:06+00:00\n"
+"POT-Creation-Date: 2019-01-15 21:48:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -282,52 +282,60 @@ msgstr ""
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: single-listing.php:115
+#: single-listing.php:119
 msgid "View more <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: single-listing.php:140 single-listing.php:142
+#: single-listing.php:145 single-listing.php:147
 msgid "Price:"
 msgstr ""
 
-#: single-listing.php:148
+#: single-listing.php:152
+msgid "Status: "
+msgstr ""
+
+#: single-listing.php:154
 msgid "Address:"
 msgstr ""
 
-#: single-listing.php:149
+#: single-listing.php:155
 msgid "City:"
 msgstr ""
 
-#: single-listing.php:150
+#: single-listing.php:156
 msgid "County:"
 msgstr ""
 
-#: single-listing.php:151
+#: single-listing.php:157
 msgid "State:"
 msgstr ""
 
-#: single-listing.php:152
+#: single-listing.php:158
 msgid "Zip Code:"
 msgstr ""
 
-#: single-listing.php:180
+#: single-listing.php:188
 msgid "Tagged Features:"
 msgstr ""
 
-#: single-listing.php:188
+#: single-listing.php:196
 msgid "Home Summary"
 msgstr ""
 
-#: single-listing.php:190
+#: single-listing.php:198
 msgid "Kitchen Summary"
 msgstr ""
 
-#: single-listing.php:192
+#: single-listing.php:200
 msgid "Living Room"
 msgstr ""
 
-#: single-listing.php:194
+#: single-listing.php:202
 msgid "Master Suite"
+msgstr ""
+
+#: single-listing.php:226
+msgid "School and Neighborhood"
 msgstr ""
 
 #. Theme Name of the plugin/theme

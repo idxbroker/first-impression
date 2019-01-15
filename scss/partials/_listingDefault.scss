@@ -83,6 +83,15 @@ body.listing-template-default {
 		li {
 			margin-bottom: 5px;
 		}
+		@media #{$medium-only} {
+			left: auto;
+			right: 30px;
+			padding: 15px;
+			width: 350px;
+			li {
+				margin-bottom: 0px;
+			}
+		}
 	}
 	.listing-no-image {
 		.listing-meta {
