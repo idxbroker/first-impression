@@ -139,7 +139,7 @@ function single_listing_post_content() {
 					$pattern = '<li class="wp_listings%s"><span class="label">%s</span> %s</li>';
 
 					echo '<ul class="listing-details">';
-					echo '<li><h3 class="must-see-listings-section-title primary-features">Primary Features</h3></li>';
+					echo '<li><h3 class="must-see-listings-section-title primary-details">Primary Details</h3></li>';
 
                     if ( get_post_meta($post->ID, '_listing_hide_price', true) == 1 ) {
                     	echo (get_post_meta($post->ID, '_listing_price_alt', true)) ? '<li><span class="label">' . __('Price:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_price_alt', true) .'</li>' : '';
@@ -223,7 +223,7 @@ function single_listing_post_content() {
 
 			<?php if (get_post_meta( $post->ID, '_listing_school_neighborhood', true) != '') { ?>
 			<div id="listing-school-neighborhood">
-				<span class="listing-school-neighborhood-title"><?php _e("School and Neighborhood", 'wp-listings'); ?></span>
+				<span class="listing-school-neighborhood-title"><?php _e("School and Neighborhoods", 'wp-listings'); ?></span>
 				<p>
 				<?php echo do_shortcode(get_post_meta( $post->ID, '_listing_school_neighborhood', true)); ?>
 				</p>

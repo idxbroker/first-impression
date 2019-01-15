@@ -189,11 +189,14 @@ body.listing-template-default {
 			@include custom-hr;
 		}
 	}
-	.must-see-listings-section-title {
+	.must-see-listings-section-title, .additional-features h4 {
 		font-size: 20px;
 		font-weight: bold;
 		color: #4C5051;
 		margin-bottom: 20px;
+	}
+	.additional-features {
+		margin-top: 35px;
 	}
 	.extended-property-details {
 		&::before {
