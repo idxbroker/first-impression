@@ -429,7 +429,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				div[class*='home-middle-'].bg-gradient table#wp-calendar thead tr th,
 				body.listing-template-default .listing-no-image .listing-status,
 				.IDX-wrapper-standard .IDX-results-refinement .IDX-refine-search--toggle,
-				.IDX-wrapper-standard .IDX-topAction.IDX-topAction--map-toggle .IDX-btn-link {
+				.IDX-wrapper-standard .IDX-topAction.IDX-topAction--map-toggle .IDX-btn-link,
+				.agent-phone-wrap i,
+				.agent-email-wrap i, 
+				.agent-address i {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {
@@ -572,7 +575,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.ae-iconbox.type-2 i[class*='fa-'],
 				.ae-iconbox.type-2 a i[class*='fa-'],
 				.ae-iconbox.type-3 i[class*='fa-'],
-				.ae-iconbox.type-3 a i[class*='fa-'] {
+				.ae-iconbox.type-3 a i[class*='fa-'],
+				.bg-gradient .agent-phone-wrap i,
+				.bg-gradient .agent-email-wrap i, 
+				.bg-gradient .agent-address i {
 					color: $heading_secondary_color;
 				}
 				@media only screen and (max-width: 640px) {
