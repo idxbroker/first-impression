@@ -643,10 +643,10 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				echo "
 					.home .impress-carousel .carousel-photo img,
 					.home .equity-idx-carousel .carousel-photo img {
-						min-width: 200%;
-						min-height: 200%;
-						margin-top: -50%;
-						margin-left: -50%;
+						min-width: 150%;
+						min-height: 150%;
+						margin-top: -25%;
+						margin-left: -25%;
 					}
 				";
 			}
