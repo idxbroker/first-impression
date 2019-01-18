@@ -432,7 +432,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				.IDX-wrapper-standard .IDX-topAction.IDX-topAction--map-toggle .IDX-btn-link,
 				.agent-phone-wrap i,
 				.agent-email-wrap i, 
-				.agent-address i {
+				.agent-address i,
+				.impress-showcase-widget .impress-price {
 					color: $primary_color;
 				}
 				@media only screen and (min-width: 40.063em) {

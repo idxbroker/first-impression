@@ -395,16 +395,36 @@ section.equity-post-carousel article .entry-content {
 ------------------------------------------------------------------------- */
 .widget, .shortcode {
 	// The first row only has this class
-	&.impress-showcase-widget .widgettitle {
-		font-size: rem-calc(24);
-		padding: 15px 1.6666rem;
+	&.impress-showcase-widget {
+		.widgettitle {
+			font-size: rem-calc(24);
+		}
+		.columns {
+			padding: 0;
+		}
+		.row, .impress-row {
+			width: auto;
+			max-width: none;
+			margin-left: 0;
+			margin-right: 0;
+			> .columns {
+				padding-right: 1.6666rem; 
+			}
+		}
 	}
-	.impress-row {
-		max-width: none;
+	.impress-showcase-property-list a {
+		display: block;
+		background-color: #ffffff;
+		* {
+			background-color: transparent;
+		}
 	}
-	.impress-showcase-property {
+	.impress-showcase-property, .impress-showcase-property-list {
+		list-style: none;
 		* {
 			background-color: #F9F9F9;
+		}
+		* {
 			text-align: center;
 		}
 		a {
@@ -656,7 +676,6 @@ form.idx-omnibar-form::after {
 	clear: both;
 }
 .widget form.idx-omnibar-form input {
-	border: none;
 }
 form.idx-omnibar-form input {
 	margin: 0;
@@ -1030,5 +1049,19 @@ div.easy_testimonial_image_wrapper {
 	}
 	.leaflet-control-zoom {
 		margin-top: 50px !important;
+	}
+}
+
+// Featured agent (IDX)
+.IDX-featuredAgentWrap {
+	a {
+		#IDX-featAgentImg {
+			display: block;
+			width: auto;
+			margin: 0 auto;
+		}
+	}
+	#IDX-featuredAgentCaption {
+		text-shadow: none;
 	}
 }
