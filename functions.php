@@ -400,6 +400,17 @@ function reposition_entry_header() {
 	}
 }
 
+// Remove Equity widgets with an IMPress alternative
+function remove_equity_widgets() {
+	unregister_widget( 'Equity_City_Links_Widget' );
+	unregister_widget( 'Equity_Idx_Widget' );
+	unregister_widget( 'Equity_Lead_Login_Widget' );
+	unregister_widget( 'Equity_IDX_Carousel_Widget' );
+	unregister_widget( 'Equity_Showcase_Widget' );
+}
+
+add_action( 'widgets_init', 'remove_equity_widgets', 99 );
+
 // Includes
 
 # Theme Customizatons
