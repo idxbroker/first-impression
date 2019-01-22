@@ -1,10 +1,14 @@
 <?php
-/**
- * The Template for displaying all single listing posts
- *
- * @package WP Listings
- * @since 0.1.0
- */
+/*
+Single Listing Template: First Impression
+Description: Large photo, First Impression integrated
+Version: 1.0
+
+Changelog:
+
+1.0 - Initial release
+
+*/
 
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
 function enqueue_single_listing_scripts() {
