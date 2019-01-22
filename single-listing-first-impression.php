@@ -10,6 +10,13 @@ Changelog:
 
 */
 
+add_filter( 'body_class', 'single_listing_class' );
+function single_listing_class( $classes ) {
+	$classes[] = 'listing-template-first-impression';
+
+	return $classes;
+}
+
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
 function enqueue_single_listing_scripts() {
 	wp_enqueue_style( 'font-awesome-4.7.0' );

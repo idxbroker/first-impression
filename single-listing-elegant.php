@@ -23,6 +23,19 @@ Changelog:
 
 */
 
+// Remove First Impression styles
+function dequeue_first_impression() {
+   wp_dequeue_style( 'must-see' );
+   wp_dequeue_style( 'equity' );
+}
+add_action( 'wp_print_styles', 'dequeue_first_impression', 100 );
+
+// Remove First Impression contact section
+remove_action( 'equity_before_footer', 'must_see_before_footer', 1 );
+
+// Remove First Impression accessibility quick links
+remove_theme_support( 'equity-accessibility', array( 'skip-links' ) );
+
 add_filter( 'body_class', 'single_listing_class' );
 function single_listing_class( $classes ) {
 	$classes[] = 'listing-template-custom';
@@ -31,6 +44,7 @@ function single_listing_class( $classes ) {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
+
 function enqueue_single_listing_scripts() {
 	wp_register_style( 'wplistings-google-fonts', '//fonts.googleapis.com/css?family=Neuton:200|Raleway:300,400,700');
 	wp_enqueue_style( 'font-awesome' );

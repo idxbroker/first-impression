@@ -22,6 +22,18 @@ Changelog:
 1.0 - Initial release
 
 */
+// Remove First Impression styles
+function dequeue_first_impression() {
+   wp_dequeue_style( 'must-see' );
+   wp_dequeue_style( 'equity' );
+}
+add_action( 'wp_print_styles', 'dequeue_first_impression', 100 );
+
+// Remove First Impression contact section
+remove_action( 'equity_before_footer', 'must_see_before_footer', 1 );
+
+// Remove First Impression accessibility quick links
+remove_theme_support( 'equity-accessibility', array( 'skip-links' ) );
 
 add_filter( 'body_class', 'single_listing_class' );
 function single_listing_class( $classes ) {
