@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Must See 2 1.0\n"
+"Project-Id-Version: First Impression 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
 "POT-Creation-Date: 2019-01-22 20:59:44+00:00\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 
 #: functions.php:6
-msgid "Must See"
+msgid "First Impression"
 msgstr ""
 
 #: functions.php:24
@@ -68,101 +68,101 @@ msgid ""
 "and IMPress Lead Signup/Register widgets."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:99
+#: lib/class-first-impression-customizer.php:99
 msgid "Preset Color Scheme"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:103
+#: lib/class-first-impression-customizer.php:103
 msgid "Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:104
+#: lib/class-first-impression-customizer.php:104
 msgid "Green"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:105
+#: lib/class-first-impression-customizer.php:105
 msgid "Red"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:106
+#: lib/class-first-impression-customizer.php:106
 msgid "Tangerine"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:107
+#: lib/class-first-impression-customizer.php:107
 msgid "White Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:108
+#: lib/class-first-impression-customizer.php:108
 msgid "Use custom colors"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:122
+#: lib/class-first-impression-customizer.php:122
 msgid "Primary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:123
+#: lib/class-first-impression-customizer.php:123
 msgid "Used for links, buttons, headings."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:137
+#: lib/class-first-impression-customizer.php:137
 msgid "Heading Font Secondary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:138
+#: lib/class-first-impression-customizer.php:138
 msgid "Used for gradient backgrounds."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:152
+#: lib/class-first-impression-customizer.php:152
 msgid "Body Font Secondary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:153
+#: lib/class-first-impression-customizer.php:153
 msgid "Used for gradient dark backgrounds."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:167
+#: lib/class-first-impression-customizer.php:167
 msgid "Gradient Start Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:168 lib/class-must-see-customizer.php:183
+#: lib/class-first-impression-customizer.php:168 lib/class-first-impression-customizer.php:183
 msgid "Used for backgrounds in the home page."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:182
+#: lib/class-first-impression-customizer.php:182
 msgid "Gradient End Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:197
+#: lib/class-first-impression-customizer.php:197
 msgid "Zoom in on property carousel image?"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:198
+#: lib/class-first-impression-customizer.php:198
 msgid "Used for MLS cropped photos with a white background."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:214
+#: lib/class-first-impression-customizer.php:214
 msgid "Home Page"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:243
+#: lib/class-first-impression-customizer.php:243
 msgid "Number of home page widget areas."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:244
+#: lib/class-first-impression-customizer.php:244
 msgid "Enter the number of widget areas for the home page middle."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:264
+#: lib/class-first-impression-customizer.php:264
 msgid "Top Background Image"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:265
+#: lib/class-first-impression-customizer.php:265
 msgid ""
 "Upload an image to use for the \"Home Top\" widget area background. This "
 "image will also be used as the default background on interior pages."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:280
+#: lib/class-first-impression-customizer.php:280
 msgid "Use fadeup effect on homepage?"
 msgstr ""
 
@@ -365,11 +365,11 @@ msgid "Schools &amp; Neighborhood"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Must See 2"
+msgid "First Impression"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://learn.agentevolution.com/kb/must-see/"
+msgid "https://learn.agentevolution.com/kb/first-impression/"
 msgstr ""
 
 #. Description of the plugin/theme

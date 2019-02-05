@@ -1,13 +1,13 @@
 /*!
- * Theme Name: Must See 2
- * Theme URI: https://learn.agentevolution.com/kb/must-see/
+ * Theme Name: First Impression
+ * Theme URI: https://learn.agentevolution.com/kb/first-impression/
  * Author: Agent Evolution
  * Author URI: http://www.agentevolution.com/
  * Description: A Responsive Real Estate Child Theme with IDX home search for the real estate professional.
  * Version: 1.0
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.htm
- * Text Domain: must-see
+ * Text Domain: first-impression
  * Domain Path: /languages/
  * Tags: black, white, black, green, blue, red, purple, aqua, responsive-layout, left-sidebar, right-sidebar, custom-menu, editor-style, featured-images, microformats, translation-ready
  * Template: equity
@@ -5893,17 +5893,17 @@ a.off-canvas-toggle:hover,
 a.exit-off-canvas,
 a.exit-off-canvas:hover,
 a.exit-off-canvas:focus,
-body.must-see-light a.off-canvas-toggle,
-body.must-see-light a.off-canvas-toggle:focus,
-body.must-see-light a.off-canvas-toggle:hover,
-body.must-see-light a.exit-off-canvas,
-body.must-see-light a.exit-off-canvas:hover,
-body.must-see-light a.exit-off-canvas:focus {
+body.first-impression-light a.off-canvas-toggle,
+body.first-impression-light a.off-canvas-toggle:focus,
+body.first-impression-light a.off-canvas-toggle:hover,
+body.first-impression-light a.exit-off-canvas,
+body.first-impression-light a.exit-off-canvas:hover,
+body.first-impression-light a.exit-off-canvas:focus {
   color: #555;
 }
 
-body.must-see-light a.off-canvas-toggle:focus,
-body.must-see-light a.exit-off-canvas:focus {
+body.first-impression-light a.off-canvas-toggle:focus,
+body.first-impression-light a.exit-off-canvas:focus {
   font-weight: bold;
 }
 
@@ -7136,7 +7136,7 @@ table#wp-calendar {
 /*! =Home page
 ------------------------------------------------------------------------- */
 body.home,
-body.home.must-see-white-bkg {
+body.home.first-impression-white-bkg {
   background: #fff;
   color: #555;
 }
@@ -7546,206 +7546,206 @@ body.fl-builder .post-edit-link {
   display: block;
 }
 
-body.must-see-light,
-body.must-see-white-bkg {
+body.first-impression-light,
+body.first-impression-white-bkg {
   background: #fff;
 }
 
-body.must-see-light,
-body.must-see-light header.site-header,
-body.must-see-light .content-sidebar-wrap,
-body.must-see-light.home .content-sidebar-wrap.row .home-top,
-body.must-see-light.home .content-sidebar-wrap.row div[class*='home-middle-'],
-body.must-see-light footer.site-footer,
-body.must-see-light .nav-header-right > ul,
-body.must-see-white-bkg .content-sidebar-wrap {
+body.first-impression-light,
+body.first-impression-light header.site-header,
+body.first-impression-light .content-sidebar-wrap,
+body.first-impression-light.home .content-sidebar-wrap.row .home-top,
+body.first-impression-light.home .content-sidebar-wrap.row div[class*='home-middle-'],
+body.first-impression-light footer.site-footer,
+body.first-impression-light .nav-header-right > ul,
+body.first-impression-white-bkg .content-sidebar-wrap {
   background-color: #fff;
 }
 
-body.must-see-light,
-body.must-see-light header .site-title a,
-body.must-see-light header .site-title a:hover,
-body.must-see-light .equity-nav-menu a,
-body.must-see-light .equity-nav-menu a:focus,
-body.must-see-light .equity-nav-menu a:hover,
-body.must-see-light .equity-nav-menu .current-menu-item > a,
-body.must-see-light .equity-nav-menu .sub-menu a,
-body.must-see-light .equity-nav-menu .sub-menu a:hover,
-body.must-see-light .equity-nav-menu .sub-menu a:focus,
-body.must-see-light .menu-toggle,
-body.must-see-light h1,
-body.must-see-light h2,
-body.must-see-light h3,
-body.must-see-light h4,
-body.must-see-light h5,
-body.must-see-light h6,
-body.must-see-light .sidebar-primary h4.widget-title,
-body.must-see-light.home .widget h2,
-body.must-see-light.home .widget h3,
-body.must-see-light.home .widget h4,
-body.must-see-light.home .widget h5,
-body.must-see-light.home .widget h6,
-body.must-see-light footer.site-footer .footer-widgets .widget-title,
-body.must-see-light .off-canvas .widget .widget-title,
-body.must-see-light .off-canvas .widget span,
-body.must-see-light .off-canvas .widget p,
-body.must-see-light .off-canvas .widget label,
-body.must-see-light .off-canvas .widget li,
-body.must-see-light .off-canvas .agent-phone-wrap i,
-body.must-see-light .off-canvas .agent-email-wrap i,
-body.must-see-light .off-canvas .agent-address i,
-body.must-see-light.home div[class*='home-middle-'] span,
-body.must-see-light.home div[class*='home-middle-'] p,
-body.must-see-light.home div[class*='home-middle-'] .agent-social-icons a,
-body.must-see-light.home div[class*='home-middle-'] .impress-city-links li,
-body.must-see-light.home div[class*='home-middle-'] .impress-city-links li a,
-body.must-see-light.home div[class*='home-middle-'] label,
-body.must-see-light.home div[class*='home-middle-'] blockquote,
-body.must-see-light.home div[class*='home-middle-'] blockquote cite,
-body.must-see-light.home div[class*='home-middle-'] li,
-body.must-see-light.home div[class*='home-middle-'] .widget.featured-content p.entry-meta a,
-body.must-see-light footer.site-footer *,
-body.must-see-light footer.site-footer p,
-body.must-see-light footer.site-footer a,
-body.must-see-light footer.site-footer .footer-widgets .widget p,
-body.must-see-light footer.site-footer .footer-widgets .widget li,
-body.must-see-light footer.site-footer .footer-widgets .widget .agent-phone-wrap i,
-body.must-see-light footer.site-footer .footer-widgets .widget .agent-email-wrap i,
-body.must-see-white-bkg,
-body.must-see-white-bkg h1,
-body.must-see-white-bkg h2,
-body.must-see-white-bkg h3,
-body.must-see-white-bkg h4,
-body.must-see-white-bkg h5,
-body.must-see-white-bkg h6,
-body.must-see-white-bkg label,
-body.must-see-white-bkg blockquote,
-body.must-see-white-bkg blockquote p,
-body.must-see-white-bkg .sidebar-primary,
-body.must-see-white-bkg .sidebar-primary p,
-body.must-see-white-bkg .sidebar-primary label,
-body.must-see-light.must-see-white-bkg .sidebar-primary .property-details ul,
-body.must-see-light.must-see-white-bkg .sidebar-primary .property-details p,
-body.must-see-light.must-see-white-bkg .sidebar-primary .hover-cover > p {
+body.first-impression-light,
+body.first-impression-light header .site-title a,
+body.first-impression-light header .site-title a:hover,
+body.first-impression-light .equity-nav-menu a,
+body.first-impression-light .equity-nav-menu a:focus,
+body.first-impression-light .equity-nav-menu a:hover,
+body.first-impression-light .equity-nav-menu .current-menu-item > a,
+body.first-impression-light .equity-nav-menu .sub-menu a,
+body.first-impression-light .equity-nav-menu .sub-menu a:hover,
+body.first-impression-light .equity-nav-menu .sub-menu a:focus,
+body.first-impression-light .menu-toggle,
+body.first-impression-light h1,
+body.first-impression-light h2,
+body.first-impression-light h3,
+body.first-impression-light h4,
+body.first-impression-light h5,
+body.first-impression-light h6,
+body.first-impression-light .sidebar-primary h4.widget-title,
+body.first-impression-light.home .widget h2,
+body.first-impression-light.home .widget h3,
+body.first-impression-light.home .widget h4,
+body.first-impression-light.home .widget h5,
+body.first-impression-light.home .widget h6,
+body.first-impression-light footer.site-footer .footer-widgets .widget-title,
+body.first-impression-light .off-canvas .widget .widget-title,
+body.first-impression-light .off-canvas .widget span,
+body.first-impression-light .off-canvas .widget p,
+body.first-impression-light .off-canvas .widget label,
+body.first-impression-light .off-canvas .widget li,
+body.first-impression-light .off-canvas .agent-phone-wrap i,
+body.first-impression-light .off-canvas .agent-email-wrap i,
+body.first-impression-light .off-canvas .agent-address i,
+body.first-impression-light.home div[class*='home-middle-'] span,
+body.first-impression-light.home div[class*='home-middle-'] p,
+body.first-impression-light.home div[class*='home-middle-'] .agent-social-icons a,
+body.first-impression-light.home div[class*='home-middle-'] .impress-city-links li,
+body.first-impression-light.home div[class*='home-middle-'] .impress-city-links li a,
+body.first-impression-light.home div[class*='home-middle-'] label,
+body.first-impression-light.home div[class*='home-middle-'] blockquote,
+body.first-impression-light.home div[class*='home-middle-'] blockquote cite,
+body.first-impression-light.home div[class*='home-middle-'] li,
+body.first-impression-light.home div[class*='home-middle-'] .widget.featured-content p.entry-meta a,
+body.first-impression-light footer.site-footer *,
+body.first-impression-light footer.site-footer p,
+body.first-impression-light footer.site-footer a,
+body.first-impression-light footer.site-footer .footer-widgets .widget p,
+body.first-impression-light footer.site-footer .footer-widgets .widget li,
+body.first-impression-light footer.site-footer .footer-widgets .widget .agent-phone-wrap i,
+body.first-impression-light footer.site-footer .footer-widgets .widget .agent-email-wrap i,
+body.first-impression-white-bkg,
+body.first-impression-white-bkg h1,
+body.first-impression-white-bkg h2,
+body.first-impression-white-bkg h3,
+body.first-impression-white-bkg h4,
+body.first-impression-white-bkg h5,
+body.first-impression-white-bkg h6,
+body.first-impression-white-bkg label,
+body.first-impression-white-bkg blockquote,
+body.first-impression-white-bkg blockquote p,
+body.first-impression-white-bkg .sidebar-primary,
+body.first-impression-white-bkg .sidebar-primary p,
+body.first-impression-white-bkg .sidebar-primary label,
+body.first-impression-light.first-impression-white-bkg .sidebar-primary .property-details ul,
+body.first-impression-light.first-impression-white-bkg .sidebar-primary .property-details p,
+body.first-impression-light.first-impression-white-bkg .sidebar-primary .hover-cover > p {
   color: #383636;
 }
 
-body.must-see-light.home div[class*='home-middle-'].bg-primary .widget h4,
-body.must-see-light.home div[class*='home-middle-'].bg-primary p,
-body.must-see-light.home div[class*='home-middle-'].bg-primary span,
-body.must-see-light.home div[class*='home-middle-'].bg-primary blockquote,
-body.must-see-light.home div[class*='home-middle-'].bg-primary blockquote cite,
-body.must-see-light .ae-iconbox.type-3 i[class*="fa-"],
-body.must-see-light .ae-iconbox.type-3 a i[class*="fa-"],
-body.must-see-light .sticky-header a.off-canvas-toggle,
-body.must-see-light a.button,
-body.must-see-light a.button:hover,
-body.must-see-light .off-canvas .widget button span,
-body.must-see-light.home .home-top .widget h4,
-body.must-see-light .owl-carousel .owl-nav button.owl-prev,
-body.must-see-light .owl-carousel .owl-nav button.owl-next,
-body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-nav a,
-body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-nav a:hover,
-body.must-see-light #IDX-main.IDX-wrapper-standard .IDX-nav a:focus,
-body.must-see-white-bkg .sidebar-primary .property-details ul,
-body.must-see-white-bkg .sidebar-primary .property-details p,
-body.must-see-white-bkg .sidebar-primary .hover-cover > p {
+body.first-impression-light.home div[class*='home-middle-'].bg-primary .widget h4,
+body.first-impression-light.home div[class*='home-middle-'].bg-primary p,
+body.first-impression-light.home div[class*='home-middle-'].bg-primary span,
+body.first-impression-light.home div[class*='home-middle-'].bg-primary blockquote,
+body.first-impression-light.home div[class*='home-middle-'].bg-primary blockquote cite,
+body.first-impression-light .ae-iconbox.type-3 i[class*="fa-"],
+body.first-impression-light .ae-iconbox.type-3 a i[class*="fa-"],
+body.first-impression-light .sticky-header a.off-canvas-toggle,
+body.first-impression-light a.button,
+body.first-impression-light a.button:hover,
+body.first-impression-light .off-canvas .widget button span,
+body.first-impression-light.home .home-top .widget h4,
+body.first-impression-light .owl-carousel .owl-nav button.owl-prev,
+body.first-impression-light .owl-carousel .owl-nav button.owl-next,
+body.first-impression-light #IDX-main.IDX-wrapper-standard .IDX-nav a,
+body.first-impression-light #IDX-main.IDX-wrapper-standard .IDX-nav a:hover,
+body.first-impression-light #IDX-main.IDX-wrapper-standard .IDX-nav a:focus,
+body.first-impression-white-bkg .sidebar-primary .property-details ul,
+body.first-impression-white-bkg .sidebar-primary .property-details p,
+body.first-impression-white-bkg .sidebar-primary .hover-cover > p {
   color: #fff;
 }
 
-body.must-see-light.home .bg-primary a,
-body.must-see-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active {
+body.first-impression-light.home .bg-primary a,
+body.first-impression-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active {
   color: #3fa5db;
 }
 
-body.must-see-light.home .bg-primary a:hover,
-body.must-see-light.home .bg-primary a:focus,
-body.must-see-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active:hover,
-body.must-see-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active:focus {
+body.first-impression-light.home .bg-primary a:hover,
+body.first-impression-light.home .bg-primary a:focus,
+body.first-impression-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active:hover,
+body.first-impression-light.home div[class*='home-middle-'] .easy-t-cycle-controls span.cycle-pager-active:focus {
   color: #2693cc;
 }
 
-body.must-see-light .equity-nav-menu > li.menu-item-has-children a:after,
-body.must-see-light .nav-header-right ul > li.menu-item-has-children a:after {
+body.first-impression-light .equity-nav-menu > li.menu-item-has-children a:after,
+body.first-impression-light .nav-header-right ul > li.menu-item-has-children a:after {
   color: rgba(56, 54, 54, 0.6);
 }
 
 /* Background colors */
-body.must-see-light.home .content-sidebar-wrap.row div[class*='home-middle-'].bg-primary {
+body.first-impression-light.home .content-sidebar-wrap.row div[class*='home-middle-'].bg-primary {
   background-color: #258bb7;
 }
 
-body.must-see-light .nav-header-right .menu-item a:focus,
-body.must-see-light .nav-header-right .menu-item a:hover,
-body.must-see-light .nav-header-right .sub-menu a:focus,
-body.must-see-light .nav-header-right .sub-menu a:hover,
-body.must-see-light .nav-header-right .equity-nav-menu .sub-menu a:focus,
-body.must-see-light .nav-header-right .equity-nav-menu .sub-menu a:hover {
+body.first-impression-light .nav-header-right .menu-item a:focus,
+body.first-impression-light .nav-header-right .menu-item a:hover,
+body.first-impression-light .nav-header-right .sub-menu a:focus,
+body.first-impression-light .nav-header-right .sub-menu a:hover,
+body.first-impression-light .nav-header-right .equity-nav-menu .sub-menu a:focus,
+body.first-impression-light .nav-header-right .equity-nav-menu .sub-menu a:hover {
   background-color: #ebebeb;
 }
 
-body.must-see-light .bg-alt {
+body.first-impression-light .bg-alt {
   background-color: black;
 }
 
-body.must-see-light .equity-nav-menu .sub-menu a {
+body.first-impression-light .equity-nav-menu .sub-menu a {
   background-color: white;
 }
 
-body.must-see-light .home-top .idx-omnibar-form {
+body.first-impression-light .home-top .idx-omnibar-form {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-body.must-see-light .sticky-header header.site-header {
+body.first-impression-light .sticky-header header.site-header {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-body.must-see-light .right-off-canvas-menu,
-body.must-see-light.sticky .sticky-header {
+body.first-impression-light .right-off-canvas-menu,
+body.first-impression-light.sticky .sticky-header {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-body.must-see-light .owl-carousel .property-details,
-body.must-see-light.home div[class*='home-middle-'] .widget.featured-content article > .entry-header,
-body.must-see-light.home div[class*='home-middle-'] .widget.featured-content article > .entry-content,
-body.must-see-light.home div[class*='home-middle-'] section.equity-post-carousel article .entry-header {
+body.first-impression-light .owl-carousel .property-details,
+body.first-impression-light.home div[class*='home-middle-'] .widget.featured-content article > .entry-header,
+body.first-impression-light.home div[class*='home-middle-'] .widget.featured-content article > .entry-content,
+body.first-impression-light.home div[class*='home-middle-'] section.equity-post-carousel article .entry-header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-body.must-see-light.home .content-sidebar-wrap.row div[class*='home-middle-'].bg-image > .overlay {
+body.first-impression-light.home .content-sidebar-wrap.row div[class*='home-middle-'].bg-image > .overlay {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-body.must-see-light .owl-carousel .hover-cover {
+body.first-impression-light .owl-carousel .hover-cover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-body.must-see-light.home div[class*='home-middle-'].transparent,
-body.must-see-light.home div[class*='home-middle-'].bg-alt.transparent {
+body.first-impression-light.home div[class*='home-middle-'].transparent,
+body.first-impression-light.home div[class*='home-middle-'].bg-alt.transparent {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media only screen and (min-width: 64.063em) {
-  body.must-see-light .nav-header-right ul.menu-header-right > li > a:focus,
-  body.must-see-light .nav-header-right ul.menu-header-right > li > a:hover,
-  body.must-see-light .nav-header-right > ul.menu-header-right {
+  body.first-impression-light .nav-header-right ul.menu-header-right > li > a:focus,
+  body.first-impression-light .nav-header-right ul.menu-header-right > li > a:hover,
+  body.first-impression-light .nav-header-right > ul.menu-header-right {
     background: none;
     background-color: transparent;
   }
 }
 
 /* Border colors */
-body.must-see-light .equity-nav-menu .sub-menu:before {
+body.first-impression-light .equity-nav-menu .sub-menu:before {
   border-bottom-color: rgba(255, 255, 255, 0.9);
 }
 
-body.must-see-light .sticky-header,
-body.must-see-light.sticky .sticky-header {
+body.first-impression-light .sticky-header,
+body.first-impression-light.sticky .sticky-header {
   border-color: #fff;
 }
 
-body.must-see-light.home div[class*='home-middle-'].bg-primary .ae-iconbox.type-3 i,
-body.must-see-light.home div[class*='home-middle-'].bg-primary .ae-iconbox.type-3:hover i {
+body.first-impression-light.home div[class*='home-middle-'].bg-primary .ae-iconbox.type-3 i,
+body.first-impression-light.home div[class*='home-middle-'].bg-primary .ae-iconbox.type-3:hover i {
   border-color: #fff;
 }
 

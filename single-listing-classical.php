@@ -6,7 +6,7 @@ Version: 1.3.3
 
 Changelog:
 
-1.3.3 - Fix display issues in Must See theme
+1.3.3 - Fix display issues in First Impression theme
 1.3.2 - Fix issue with Google map not displaying
 1.3.1 - Fix issue with contact form not displaying
 1.3 - Updated with IMPress Agents support, currency support, and global disclaimer
@@ -24,13 +24,13 @@ Changelog:
 */
 // Remove First Impression styles
 function dequeue_first_impression() {
-   wp_dequeue_style( 'must-see' );
+   wp_dequeue_style( 'first-impression' );
    wp_dequeue_style( 'equity' );
 }
 add_action( 'wp_print_styles', 'dequeue_first_impression', 100 );
 
 // Remove First Impression contact section
-remove_action( 'equity_before_footer', 'must_see_before_footer', 1 );
+remove_action( 'equity_before_footer', 'first_impression_before_footer', 1 );
 
 // Remove First Impression accessibility quick links
 remove_theme_support( 'equity-accessibility', array( 'skip-links' ) );
@@ -1488,7 +1488,7 @@ if (function_exists('equity')) {
 	remove_action( 'genesis_footer', 'curbappeal_footer' );
 	remove_action( 'genesis_footer', 'turnkey_footer' );
 	remove_action( 'genesis_footer', 'picture_perfect_footer' );
-	remove_action( 'genesis_footer', 'mustsee_footer' );
+	remove_action( 'genesis_footer', 'firstimpression_footer' );
 	remove_action( 'genesis_footer', 'ofp_footer' );
 	remove_action( 'genesis_footer', 'mir_footer' );
 	remove_action( 'genesis_before_header', 'cae_before_header' );

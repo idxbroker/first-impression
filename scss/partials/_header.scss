@@ -155,16 +155,16 @@ a.off-canvas-toggle:hover,
 a.exit-off-canvas,
 a.exit-off-canvas:hover,
 a.exit-off-canvas:focus,
-body.must-see-light a.off-canvas-toggle,
-body.must-see-light a.off-canvas-toggle:focus,
-body.must-see-light a.off-canvas-toggle:hover,
-body.must-see-light a.exit-off-canvas,
-body.must-see-light a.exit-off-canvas:hover,
-body.must-see-light a.exit-off-canvas:focus {
+body.first-impression-light a.off-canvas-toggle,
+body.first-impression-light a.off-canvas-toggle:focus,
+body.first-impression-light a.off-canvas-toggle:hover,
+body.first-impression-light a.exit-off-canvas,
+body.first-impression-light a.exit-off-canvas:hover,
+body.first-impression-light a.exit-off-canvas:focus {
 	color: $body-font-color;
 }
-body.must-see-light a.off-canvas-toggle:focus,
-body.must-see-light a.exit-off-canvas:focus {
+body.first-impression-light a.off-canvas-toggle:focus,
+body.first-impression-light a.exit-off-canvas:focus {
 	font-weight: bold;
 }
 body.sticky .sticky-header a.off-canvas-toggle {

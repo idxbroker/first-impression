@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                 cwd: '',                          // Directory of files to internationalize.
                 domainPath: '/languages',         // Where to save the POT file.
                 potComments: '',                  // The copyright at the beginning of the POT file.
-                potFilename: 'must-see',          // Name of the POT file.
+                potFilename: 'first-impression',          // Name of the POT file.
                 potHeaders: {
                     poedit: true,                 // Includes common Poedit headers.
                     'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
