@@ -3,7 +3,7 @@
  * Recommends plugins for use in First Impression theme
  *
  * @package First Impression\Plugins
- * @author  Agent Evolution
+ * @author  IDX, LLC
  * @license GPL-2.0+
  * @link    
  */
