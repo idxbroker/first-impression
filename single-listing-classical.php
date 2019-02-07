@@ -232,7 +232,7 @@ function single_listing_style() { ?>
 	#listing-content h4 {
 		margin: 25px 0;
 	}
-	.entry-content p {
+	body .entry-content p {
 		color: #fff;
 		font-family: "EB Garamond", serif;
 		font-size: 20px;

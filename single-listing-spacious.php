@@ -234,7 +234,7 @@ function single_listing_style() { ?>
 	body.listing-template-custom h6 {
 		font-size: 26px;
 	}
-	.entry-content p {
+	body .entry-content p {
 		color: #333;
 		font-family: "Open Sans", sans-serif;
 		font-size: 18px;

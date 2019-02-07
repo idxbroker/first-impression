@@ -191,7 +191,7 @@ function single_listing_style() { ?>
 	body.listing-template-custom h6 {
 		font-size: 20px;
 	}
-	.entry-content p {
+	body .entry-content p {
 		font-size: 18px;
 		line-height: 30px;
 		margin-bottom: 25px;
