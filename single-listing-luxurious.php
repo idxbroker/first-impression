@@ -29,6 +29,11 @@ function dequeue_first_impression() {
 }
 add_action( 'wp_print_styles', 'dequeue_first_impression', 100 );
 
+function enqueue_foundation() {
+	wp_enqueue_style( 'equity-foundation', PARENT_URL . '/lib/css/foundation.css', false, null );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_foundation' );
+
 // Remove First Impression contact section
 remove_action( 'equity_before_footer', 'first_impression_before_footer', 1 );
 
@@ -186,7 +191,7 @@ function single_listing_style() { ?>
 	body.listing-template-custom h6 {
 		font-size: 20px;
 	}
-	.entry-content p {
+	body .entry-content p {
 		font-size: 18px;
 		line-height: 30px;
 		margin-bottom: 25px;
