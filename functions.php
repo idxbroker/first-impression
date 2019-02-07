@@ -3,12 +3,12 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 // Child theme (do not remove)
-define( 'CHILD_THEME_NAME', __( 'Must See', 'must-see' ) );
-define( 'CHILD_THEME_URL', 'https://learn.agentevolution.com/kb/must-see/' );
-define( 'CHILD_THEME_VERSION', '2.0.0' );
+define( 'CHILD_THEME_NAME', __( 'First Impression', 'first-impression' ) );
+define( 'CHILD_THEME_URL', 'https://support.idxbroker.com/' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 // Set Localization (do not remove).
-load_child_theme_textdomain( 'must-see', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'must-see' ) );
+load_child_theme_textdomain( 'first-impression', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'first-impression' ) );
 
 // Remove foundation stylesheet - components loaded in child css.
 add_action( 'wp_enqueue_scripts', 'child_dequeue_foundation_stylesheet' );
@@ -21,7 +21,7 @@ function child_dequeue_foundation_stylesheet() {
 // Add Theme Support.
 // add_theme_support( 'equity-after-entry-widget-area' );
 add_theme_support( 'equity-menus', array(
-	'header-right' => __( 'Header Right', 'must-see' ),
+	'header-right' => __( 'Header Right', 'first-impression' ),
 ) );
 add_theme_support( 'equity-structural-wraps', array() );
 
@@ -49,15 +49,15 @@ add_filter( 'post_thumbnail_html', 'remove_img_attributes', 10 );
 add_filter( 'image_send_to_editor', 'remove_img_attributes', 10 );
 
 // Load fonts.
-add_filter( 'equity_google_fonts', 'must_see_fonts' );
-function must_see_fonts( $equity_google_fonts ) {
+add_filter( 'equity_google_fonts', 'first_impression_fonts' );
+function first_impression_fonts( $equity_google_fonts ) {
 	$equity_google_fonts = 'PT+Sans:400,700|Raleway:500,600';
 	return $equity_google_fonts;
 }
 
 // Load scripts.
-add_action( 'wp_enqueue_scripts', 'must_see_register_scripts' );
-function must_see_register_scripts() {
+add_action( 'wp_enqueue_scripts', 'first_impression_register_scripts' );
+function first_impression_register_scripts() {
 	// Use jQuery matchHeight for carousel images and header height.
 	wp_enqueue_script( 'jquery-matchheight', get_stylesheet_directory_uri() . '/lib/js/jquery.matchHeight-min.js', array( 'jquery', 'equity-theme-js' ), null, true );
 
@@ -76,20 +76,20 @@ function conditionally_show_custom_color_options() {
 remove_action( 'wp_enqueue_scripts', 'equity_enqueue_idx_stylesheet', 10 );
 
 // Resize title area and header menu widths
-add_filter( 'equity_attr_title-area', 'must_see_attributes_title_area' );
-function must_see_attributes_title_area( $attributes ) {
+add_filter( 'equity_attr_title-area', 'first_impression_attributes_title_area' );
+function first_impression_attributes_title_area( $attributes ) {
 	$attributes['class'] = str_replace( 'large-5', 'large-12', $attributes['class'] );
 	return $attributes;
 }
-add_filter( 'equity_attr_nav-header-right', 'must_see_attributes_header_nav' );
-function must_see_attributes_header_nav( $attributes ) {
+add_filter( 'equity_attr_nav-header-right', 'first_impression_attributes_header_nav' );
+function first_impression_attributes_header_nav( $attributes ) {
 	$attributes['class'] = str_replace( 'large-7', 'large-12', $attributes['class'] );
 	return $attributes;
 }
 
 // Filter nav markup to add toggle icon.
-add_filter( 'equity_nav_markup_open', 'must_see_nav_markup_open' );
-function must_see_nav_markup_open() {
+add_filter( 'equity_nav_markup_open', 'first_impression_nav_markup_open' );
+function first_impression_nav_markup_open() {
 	return '<a href="#" class="menu-toggle"><span class="screen-reader-text">Menu</span><i class="fa fa-bars"></i></a>';
 }
 
@@ -98,14 +98,14 @@ add_filter( 'listing_scroller_prev_link', 'child_listing_scroller_prev_link' );
 add_filter( 'idx_listing_carousel_prev_link', 'child_listing_scroller_prev_link' );
 add_filter( 'equity_page_carousel_prev_link', 'child_listing_scroller_prev_link' );
 function child_listing_scroller_prev_link( $listing_scroller_prev_link_text ) {
-	$listing_scroller_prev_link_text = __( '<i class=\"fa fa-chevron-left\"></i><span>Prev</span>', 'must-see' );
+	$listing_scroller_prev_link_text = __( '<i class=\"fa fa-chevron-left\"></i><span>Prev</span>', 'first-impression' );
 	return $listing_scroller_prev_link_text;
 }
 add_filter( 'listing_scroller_next_link', 'child_listing_scroller_next_link' );
 add_filter( 'idx_listing_carousel_next_link', 'child_listing_scroller_next_link' );
 add_filter( 'equity_page_carousel_next_link', 'child_listing_scroller_next_link' );
 function child_listing_scroller_next_link( $listing_scroller_next_link_text ) {
-	$listing_scroller_next_link_text = __( '<i class=\"fa fa-chevron-right\"></i><span>Next</span>', 'must-see' );
+	$listing_scroller_next_link_text = __( '<i class=\"fa fa-chevron-right\"></i><span>Next</span>', 'first-impression' );
 	return $listing_scroller_next_link_text;
 }
 
@@ -117,8 +117,8 @@ add_action( 'equity_footer', 'equity_footer_widget_areas', 6 );
 equity_register_widget_area(
 	array(
 		'id'           => 'home-top',
-		'name'         => __( 'Home Top', 'must-see' ),
-		'description'  => __( 'This is the top section of the Home page. Not all widgets are designed to work here. Recommended to use IMPress Omnibar Search widget.' , 'must-see' ),
+		'name'         => __( 'Home Top', 'first-impression' ),
+		'description'  => __( 'This is the top section of the Home page. Not all widgets are designed to work here. Recommended to use IMPress Omnibar Search widget.' , 'first-impression' ),
 	)
 );
 // Get number of home widget areas from Customizer. Loop through them and register each.
@@ -128,8 +128,8 @@ while ( $widget_area_count <= $home_widget_areas ) {
 	equity_register_widget_area(
 		array(
 			'id'          => sprintf( 'home-middle-%d', $widget_area_count ),
-			'name'        => sprintf( __( 'Home Middle %d', 'must-see' ), $widget_area_count ),
-			'description' => sprintf( __( 'This is the Home Middle %d widget area.', 'must-see' ), $widget_area_count ),
+			'name'        => sprintf( __( 'Home Middle %d', 'first-impression' ), $widget_area_count ),
+			'description' => sprintf( __( 'This is the Home Middle %d widget area.', 'first-impression' ), $widget_area_count ),
 		)
 	);
 	$widget_area_count++;
@@ -137,8 +137,8 @@ while ( $widget_area_count <= $home_widget_areas ) {
 equity_register_widget_area(
 	array(
 		'id'           => 'contact-us',
-		'name'         => __( 'Contact Us', 'must-see' ),
-		'description'  => __( 'This is the Contact Us section above the footer. Recommended to use Text and IMPress Lead Signup/Register widgets.' , 'must-see' ),
+		'name'         => __( 'Contact Us', 'first-impression' ),
+		'description'  => __( 'This is the Contact Us section above the footer. Recommended to use Text and IMPress Lead Signup/Register widgets.' , 'first-impression' ),
 	)
 );
 
@@ -178,17 +178,17 @@ function equity_child_home() {
 	$home_widget_areas = get_theme_mod( 'home_widget_areas', 5 );
 	$widget_area_count = 1;
 	while ( $widget_area_count <= $home_widget_areas ) {
-		$z_index = ' must-see-z-index-' . ($home_widget_areas - $widget_area_count + 1) . ' ';
+		$z_index = ' first-impression-z-index-' . ($home_widget_areas - $widget_area_count + 1) . ' ';
 		$common_classes = 'flexible-widgets columns small-12 widget-area ';
 		$widget_area = $widgets["home-middle-$widget_area_count"];
 		$fullscreen = '';
 		if (is_community_area($widget_area)) {
 			$common_classes = 'flexible-widgets columns small-12 widget-area widget-halves featured-communities ';
-			$fullscreen = 'must-see-fullscreen ';
+			$fullscreen = 'first-impression-fullscreen ';
 		}
 
 		?>
-		<div class="<?php echo esc_attr( must_see_home_middle_widget_class( $widget_area_count, $home_widget_areas ) ); echo esc_attr($z_index); echo esc_attr($fullscreen); ?>">
+		<div class="<?php echo esc_attr( first_impression_home_middle_widget_class( $widget_area_count, $home_widget_areas ) ); echo esc_attr($z_index); echo esc_attr($fullscreen); ?>">
 			<div class="row">
 				<?php
 				$classes = equity_widget_area_class( sprintf( 'home-middle-%d', $widget_area_count ) );
@@ -217,8 +217,8 @@ function social_icons() {
 	<?php
 }
 
-add_action( 'equity_before_footer', 'must_see_before_footer', 1 );
-function must_see_before_footer() {
+add_action( 'equity_before_footer', 'first_impression_before_footer', 1 );
+function first_impression_before_footer() {
 	?>
 	<div class="contact-us">
 		<div class="row">
@@ -238,7 +238,7 @@ function must_see_before_footer() {
  * @param string $home_widget_areas Number of total widget areas set in Customizer.
  * @return Name of column class.
  */
-function must_see_home_middle_widget_class( $widget_area_count, $home_widget_areas ) {
+function first_impression_home_middle_widget_class( $widget_area_count, $home_widget_areas ) {
 
 	$class = ( $widget_area_count > 5 && $widget_area_count % 2 ) ? sprintf( 'home-middle-%d bg-gradient', $widget_area_count ) : sprintf( 'home-middle-%d', $widget_area_count );
 
@@ -253,12 +253,12 @@ function must_see_home_middle_widget_class( $widget_area_count, $home_widget_are
 			$class .= '';
 			break;
 	}
-	$class = apply_filters( 'must_see_home_middle_widget_class', $class, $widget_area_count, $home_widget_areas );
+	$class = apply_filters( 'first_impression_home_middle_widget_class', $class, $widget_area_count, $home_widget_areas );
 
 	return $class;
 }
 
-add_filter( 'get_the_content_limit', 'must_see_get_the_content_limit', 10, 5 );
+add_filter( 'get_the_content_limit', 'first_impression_get_the_content_limit', 10, 5 );
 
 /**
  * Filters the default markup of Equity Featured Page 'more link' text.
@@ -269,7 +269,7 @@ add_filter( 'get_the_content_limit', 'must_see_get_the_content_limit', 10, 5 );
  * @param  string $max_characters The maximum number of characters to return.
  * @return [type]                 The modified HTML to output.
  */
-function must_see_get_the_content_limit( $output, $content, $link, $max_characters ) {
+function first_impression_get_the_content_limit( $output, $content, $link, $max_characters ) {
 	$ellipsis = '';
 	$content_length = strlen( get_the_content( '', true ) );
 	if ( $content_length < $max_characters ) {
@@ -282,8 +282,8 @@ function must_see_get_the_content_limit( $output, $content, $link, $max_characte
 /**
  * Filter the Equity IDX and IMPress Carousel widget markup.
  */
-add_filter( 'equity_idx_carousel_property_html', 'must_see_equity_idx_carousel_property_html', 10, 5 );
-add_filter( 'impress_carousel_property_html', 'must_see_equity_idx_carousel_property_html', 10, 5 );
+add_filter( 'equity_idx_carousel_property_html', 'first_impression_equity_idx_carousel_property_html', 10, 5 );
+add_filter( 'impress_carousel_property_html', 'first_impression_equity_idx_carousel_property_html', 10, 5 );
 /**
  * Filters the default markup of IMPress and Equity Carousel widgets.
  *
@@ -294,7 +294,7 @@ add_filter( 'impress_carousel_property_html', 'must_see_equity_idx_carousel_prop
  * @param  string $disclaimer The HTML wrapped disclaimer.
  * @return [type]             The modified HTML to output.
  */
-function must_see_equity_idx_carousel_property_html( $output, $prop, $instance, $url, $disclaimer ) {
+function first_impression_equity_idx_carousel_property_html( $output, $prop, $instance, $url, $disclaimer ) {
 
 	if ( isset( $instance['target'] ) && ! empty( $instance['target'] ) ) {
 		$target = '_blank';
@@ -346,14 +346,14 @@ function sp_custom_footer( $attributes ) {
 	return $attributes;
 }
 
-add_filter( 'equity_author_box_gravatar_size', 'must_see_gravatar_size' );
-function must_see_gravatar_size( $size ) {
+add_filter( 'equity_author_box_gravatar_size', 'first_impression_gravatar_size' );
+function first_impression_gravatar_size( $size ) {
     return 80;
 }
 
-add_filter( 'get_avatar', 'must_see_get_avatar', 10, 5 );
+add_filter( 'get_avatar', 'first_impression_get_avatar', 10, 5 );
 
-function must_see_get_avatar( $avatar, $id_or_email, $size, $default, $alt )
+function first_impression_get_avatar( $avatar, $id_or_email, $size, $default, $alt )
 {
 	// TODO: Doesn't work, need to find out how to set
 	$size = 80;
@@ -370,16 +370,16 @@ function my_enqueue($hook) {
 add_action( 'admin_enqueue_scripts', 'my_enqueue' );
 
 // Add post thumbnail support
-add_action( 'equity_before_content', 'must_see_featured_image' );
-function must_see_featured_image() {
+add_action( 'equity_before_content', 'first_impression_featured_image' );
+function first_impression_featured_image() {
 	if ( ! is_singular( array( 'post', 'page' ) ) ) {
 		return;
 	}
 	if ( ! has_post_thumbnail() ) {
 		return;
 	}
-	echo '<div class="must-see-featured-image">';
-		equity_image( array( 'size' => 'must-see-featured-thumb' ) );
+	echo '<div class="first-impression-featured-image">';
+		equity_image( array( 'size' => 'first-impression-featured-thumb' ) );
 	echo '</div>';
 }
 
@@ -414,7 +414,7 @@ add_action( 'widgets_init', 'remove_equity_widgets', 99 );
 // Includes
 
 # Theme Customizatons
-require_once get_stylesheet_directory() . '/lib/class-must-see-customizer.php';
+require_once get_stylesheet_directory() . '/lib/class-first-impression-customizer.php';
 
 # Recommended Plugins
 require_once get_stylesheet_directory() . '/lib/plugins.php';

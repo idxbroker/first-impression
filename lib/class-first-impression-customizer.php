@@ -1,8 +1,8 @@
 <?php
-/* Adds Customizer options for Must See
+/* Adds Customizer options for First Impression
  */
 
-class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
+class first_impression_Customizer extends EQUITY_Customizer_Base {
 
 	/**
 	 * Register theme specific customization options
@@ -96,7 +96,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 		$wp_customize->add_control(
 			'preset_color_scheme',
 			array(
-				'label'    => __( 'Preset Color Scheme', 'must-see' ),
+				'label'    => __( 'Preset Color Scheme', 'first-impression' ),
 				'section'  => 'colors',
 				'type'     => 'select',
 				'choices'  => array(
@@ -119,8 +119,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'primary_color',
 				array(
-					'label'       => __( 'Primary Color', 'must-see' ),
-					'description' => __( 'Used for links, buttons, headings.', 'must-see' ),
+					'label'       => __( 'Primary Color', 'first-impression' ),
+					'description' => __( 'Used for links, buttons, headings.', 'first-impression' ),
 					'section'     => 'colors',
 					'settings'    => 'primary_color',
 					'priority'    => 100,
@@ -134,8 +134,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'heading_secondary_color',
 				array(
-					'label'       => __( 'Heading Font Secondary Color', 'must-see' ),
-					'description' => __( 'Used for gradient backgrounds.', 'must-see' ),
+					'label'       => __( 'Heading Font Secondary Color', 'first-impression' ),
+					'description' => __( 'Used for gradient backgrounds.', 'first-impression' ),
 					'section'     => 'colors',
 					'settings'    => 'heading_secondary_color',
 					'priority'    => 100,
@@ -149,8 +149,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'font_secondary_color',
 				array(
-					'label'       => __( 'Body Font Secondary Color', 'must-see' ),
-					'description' => __( 'Used for gradient dark backgrounds.', 'must-see' ),
+					'label'       => __( 'Body Font Secondary Color', 'first-impression' ),
+					'description' => __( 'Used for gradient dark backgrounds.', 'first-impression' ),
 					'section'     => 'colors',
 					'settings'    => 'font_secondary_color',
 					'priority'    => 100,
@@ -164,8 +164,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'gradient_start',
 				array(
-					'label'       => __( 'Gradient Start Color', 'must-see' ),
-					'description' => __( 'Used for backgrounds in the home page.', 'must-see' ),
+					'label'       => __( 'Gradient Start Color', 'first-impression' ),
+					'description' => __( 'Used for backgrounds in the home page.', 'first-impression' ),
 					'section'     => 'colors',
 					'settings'    => 'gradient_start',
 					'priority'    => 100,
@@ -179,8 +179,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'gradient_end',
 				array(
-					'label'       => __( 'Gradient End Color', 'must-see' ),
-					'description' => __( 'Used for backgrounds in the home page.', 'must-see' ),
+					'label'       => __( 'Gradient End Color', 'first-impression' ),
+					'description' => __( 'Used for backgrounds in the home page.', 'first-impression' ),
 					'section'     => 'colors',
 					'settings'    => 'gradient_end',
 					'priority'    => 100,
@@ -194,8 +194,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'zoom_property_image',
 				array(
-					'label'       => __( 'Zoom in on property carousel image?', 'must-see' ),
-					'description' => __( 'Used for MLS cropped photos with a white background.', 'must-see' ),
+					'label'       => __( 'Zoom in on property carousel image?', 'first-impression' ),
+					'description' => __( 'Used for MLS cropped photos with a white background.', 'first-impression' ),
 					'section'     => 'title_tagline',
 					'settings'    => 'zoom_property_image',
 					'type'        => 'checkbox',
@@ -211,7 +211,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 		$wp_customize->add_section(
 			'home',
 			array(
-				'title'    => __( 'Home Page', 'must-see' ),
+				'title'    => __( 'Home Page', 'first-impression' ),
 				'priority' => 201,
 			)
 		);
@@ -240,8 +240,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'home_widget_areas',
 				array(
-					'label'       => __( 'Number of home page widget areas.', 'must-see' ),
-					'description' => __( 'Enter the number of widget areas for the home page middle.', 'must-see' ),
+					'label'       => __( 'Number of home page widget areas.', 'first-impression' ),
+					'description' => __( 'Enter the number of widget areas for the home page middle.', 'first-impression' ),
 					'section'     => 'home',
 					'settings'    => 'home_widget_areas',
 					'type'        => 'number',
@@ -261,8 +261,8 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'default_background_image',
 				array(
-					'label'       => __( 'Top Background Image', 'must-see' ),
-					'description' => __( 'Upload an image to use for the "Home Top" widget area background. This image will also be used as the default background on interior pages.', 'must-see' ),
+					'label'       => __( 'Top Background Image', 'first-impression' ),
+					'description' => __( 'Upload an image to use for the "Home Top" widget area background. This image will also be used as the default background on interior pages.', 'first-impression' ),
 					'section'     => 'home',
 					'settings'    => 'default_background_image',
 					'extensions'  => array( 'jpg' ),
@@ -277,7 +277,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 				$wp_customize,
 				'home_fadeup_effect',
 				array(
-					'label'       => __( 'Use fadeup effect on homepage?', 'must-see' ),
+					'label'       => __( 'Use fadeup effect on homepage?', 'first-impression' ),
 					'section'     => 'home',
 					'settings'    => 'home_fadeup_effect',
 					'type'        => 'checkbox',
@@ -310,7 +310,7 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 		$wp_customize->add_control(
 			'enable_sticky_header',
 			array(
-				'label'    => __( 'Enable Sticky Header?', 'must-see' ),
+				'label'    => __( 'Enable Sticky Header?', 'first-impression' ),
 				'section'  => 'title_tagline',
 				'type'     => 'checkbox',
 				'settings' => 'enable_sticky_header',
@@ -661,12 +661,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 			function use_title_image() {
 				$setting = get_theme_mod( 'logo_display_type' );
 				if ( 'image' !== $setting ) {
-					add_action( 'equity_do_title', 'must_see_filter_image' );
+					add_action( 'equity_do_title', 'first_impression_filter_image' );
 				}
 			}
 			use_title_image();
 
-			function must_see_filter_image($title) {
+			function first_impression_filter_image($title) {
 				$output = preg_replace('/<img[^>]+\>/i', '', $title);
 				$output = str_replace('class="hide"', '', $output);
 				return $output;
@@ -679,12 +679,12 @@ class MUST_SEE_Customizer extends EQUITY_Customizer_Base {
 	}
 }
 
-add_action( 'init', 'must_see_customizer_init' );
+add_action( 'init', 'first_impression_customizer_init' );
 /**
- * Instantiate MUST_SEE_Customizer
+ * Instantiate first_impression_Customizer
  *
  * @since 1.0
  */
-function must_see_customizer_init() {
-	new MUST_SEE_Customizer;
+function first_impression_customizer_init() {
+	new first_impression_Customizer;
 }

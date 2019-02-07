@@ -37,7 +37,7 @@ function single_listing_post_content() {
 
 	<div class="listing-image-wrap <?php echo $no_image_class ?>">
 		<?php 
-		echo (get_post_meta($post->ID, '_listing_address', true)) ? '<h1 class="must-see-top-address">' . get_post_meta( $post->ID, '_listing_address', true) . '</h1>' : '';
+		echo (get_post_meta($post->ID, '_listing_address', true)) ? '<h1 class="first-impression-top-address">' . get_post_meta( $post->ID, '_listing_address', true) . '</h1>' : '';
 		?>
 		<?php echo '<div class="image-status-wrap" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">'. $image_markup;
 
@@ -150,7 +150,7 @@ function single_listing_post_content() {
 					$pattern = '<li class="wp_listings%s"><span class="label">%s</span> %s</li>';
 
 					echo '<ul class="listing-details">';
-					echo '<li><h3 class="must-see-listings-section-title primary-details">Primary Details</h3></li>';
+					echo '<li><h3 class="first-impression-listings-section-title primary-details">Primary Details</h3></li>';
 
                     if ( get_post_meta($post->ID, '_listing_hide_price', true) == 1 ) {
                     	echo (get_post_meta($post->ID, '_listing_price_alt', true)) ? '<li><span class="label">' . __('Price:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_price_alt', true) .'</li>' : '';
@@ -178,7 +178,7 @@ function single_listing_post_content() {
 					}
 					echo '</ul>';
 					echo '<ul class="extended-property-details">';
-					echo '<li><h3 class="must-see-listings-section-title extended-details">Extended Details</h3></li>';
+					echo '<li><h3 class="first-impression-listings-section-title extended-details">Extended Details</h3></li>';
 
 
 					foreach ( (array) $details_instance->extended_property_details['col1'] as $label => $key ) {

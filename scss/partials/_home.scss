@@ -1,7 +1,7 @@
 /*! =Home page
 ------------------------------------------------------------------------- */
 body.home,
-body.home.must-see-white-bkg {
+body.home.first-impression-white-bkg {
 	background: $body-bg;
 	color: $body-font-color;
 }
@@ -141,7 +141,7 @@ body.home.must-see-white-bkg {
 		}
 	}
 
-	.must-see-fullscreen {
+	.first-impression-fullscreen {
 		.row {
 			max-width: 100% !important;
 		}
@@ -402,7 +402,7 @@ body.home.must-see-white-bkg {
 	animation-name: fadeInUp;
 }
 
-.must-see-fullscreen {
+.first-impression-fullscreen {
 	.widget-area {
 		.widget {
 			clear: both;

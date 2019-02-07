@@ -1,5 +1,5 @@
 {
-  "name": "mustsee-libsass-template",
+  "name": "firstimpression-libsass-template",
   "version": "1.0.0",
   "devDependencies": {
     "node-sass": "^3.4.0",

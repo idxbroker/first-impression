@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Must See 2 1.0\n"
+"Project-Id-Version: First Impression 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2019-01-22 20:59:44+00:00\n"
+"POT-Creation-Date: 2019-02-06 21:49:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,8 +24,8 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
-#: functions.php:6
-msgid "Must See"
+#. Theme Name of the plugin/theme
+msgid "First Impression"
 msgstr ""
 
 #: functions.php:24
@@ -68,101 +68,102 @@ msgid ""
 "and IMPress Lead Signup/Register widgets."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:99
+#: lib/class-first-impression-customizer.php:99
 msgid "Preset Color Scheme"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:103
+#: lib/class-first-impression-customizer.php:103
 msgid "Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:104
+#: lib/class-first-impression-customizer.php:104
 msgid "Green"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:105
+#: lib/class-first-impression-customizer.php:105
 msgid "Red"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:106
+#: lib/class-first-impression-customizer.php:106
 msgid "Tangerine"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:107
+#: lib/class-first-impression-customizer.php:107
 msgid "White Blue"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:108
+#: lib/class-first-impression-customizer.php:108
 msgid "Use custom colors"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:122
+#: lib/class-first-impression-customizer.php:122
 msgid "Primary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:123
+#: lib/class-first-impression-customizer.php:123
 msgid "Used for links, buttons, headings."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:137
+#: lib/class-first-impression-customizer.php:137
 msgid "Heading Font Secondary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:138
+#: lib/class-first-impression-customizer.php:138
 msgid "Used for gradient backgrounds."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:152
+#: lib/class-first-impression-customizer.php:152
 msgid "Body Font Secondary Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:153
+#: lib/class-first-impression-customizer.php:153
 msgid "Used for gradient dark backgrounds."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:167
+#: lib/class-first-impression-customizer.php:167
 msgid "Gradient Start Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:168 lib/class-must-see-customizer.php:183
+#: lib/class-first-impression-customizer.php:168
+#: lib/class-first-impression-customizer.php:183
 msgid "Used for backgrounds in the home page."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:182
+#: lib/class-first-impression-customizer.php:182
 msgid "Gradient End Color"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:197
+#: lib/class-first-impression-customizer.php:197
 msgid "Zoom in on property carousel image?"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:198
+#: lib/class-first-impression-customizer.php:198
 msgid "Used for MLS cropped photos with a white background."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:214
+#: lib/class-first-impression-customizer.php:214
 msgid "Home Page"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:243
+#: lib/class-first-impression-customizer.php:243
 msgid "Number of home page widget areas."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:244
+#: lib/class-first-impression-customizer.php:244
 msgid "Enter the number of widget areas for the home page middle."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:264
+#: lib/class-first-impression-customizer.php:264
 msgid "Top Background Image"
 msgstr ""
 
-#: lib/class-must-see-customizer.php:265
+#: lib/class-first-impression-customizer.php:265
 msgid ""
 "Upload an image to use for the \"Home Top\" widget area background. This "
 "image will also be used as the default background on interior pages."
 msgstr ""
 
-#: lib/class-must-see-customizer.php:280
+#: lib/class-first-impression-customizer.php:280
 msgid "Use fadeup effect on homepage?"
 msgstr ""
 
@@ -282,94 +283,90 @@ msgstr ""
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: single-listing-classical.php:1059 single-listing-elegant.php:1024
-#: single-listing-first-impression.php:123 single-listing-luxurious.php:966
-#: single-listing-solid.php:1021 single-listing-spacious.php:1016
+#: single-listing-classical.php:1072 single-listing-elegant.php:1024
+#: single-listing-first-impression.php:130 single-listing-luxurious.php:978
+#: single-listing-solid.php:1033 single-listing-spacious.php:1028
 msgid "View more <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: single-listing-classical.php:1086 single-listing-classical.php:1088
+#: single-listing-classical.php:1099 single-listing-classical.php:1101
 #: single-listing-elegant.php:1050 single-listing-elegant.php:1052
-#: single-listing-first-impression.php:149
-#: single-listing-first-impression.php:151 single-listing-luxurious.php:990
-#: single-listing-luxurious.php:992 single-listing-solid.php:1046
-#: single-listing-solid.php:1048 single-listing-spacious.php:1041
-#: single-listing-spacious.php:1043
+#: single-listing-first-impression.php:156
+#: single-listing-first-impression.php:158 single-listing-luxurious.php:1002
+#: single-listing-luxurious.php:1004 single-listing-solid.php:1058
+#: single-listing-solid.php:1060 single-listing-spacious.php:1053
+#: single-listing-spacious.php:1055
 msgid "Price:"
 msgstr ""
 
-#: single-listing-classical.php:1094 single-listing-elegant.php:1058
-#: single-listing-first-impression.php:158 single-listing-luxurious.php:998
-#: single-listing-solid.php:1054 single-listing-spacious.php:1049
+#: single-listing-classical.php:1107 single-listing-elegant.php:1058
+#: single-listing-first-impression.php:165 single-listing-luxurious.php:1010
+#: single-listing-solid.php:1066 single-listing-spacious.php:1061
 msgid "Address:"
 msgstr ""
 
-#: single-listing-classical.php:1095 single-listing-elegant.php:1059
-#: single-listing-first-impression.php:159 single-listing-luxurious.php:999
-#: single-listing-solid.php:1055 single-listing-spacious.php:1050
+#: single-listing-classical.php:1108 single-listing-elegant.php:1059
+#: single-listing-first-impression.php:166 single-listing-luxurious.php:1011
+#: single-listing-solid.php:1067 single-listing-spacious.php:1062
 msgid "City:"
 msgstr ""
 
-#: single-listing-classical.php:1096 single-listing-elegant.php:1060
-#: single-listing-first-impression.php:161 single-listing-luxurious.php:1000
-#: single-listing-solid.php:1056 single-listing-spacious.php:1051
+#: single-listing-classical.php:1109 single-listing-elegant.php:1060
+#: single-listing-first-impression.php:168 single-listing-luxurious.php:1012
+#: single-listing-solid.php:1068 single-listing-spacious.php:1063
 msgid "State:"
 msgstr ""
 
-#: single-listing-classical.php:1097 single-listing-elegant.php:1061
-#: single-listing-first-impression.php:162 single-listing-luxurious.php:1001
-#: single-listing-solid.php:1057 single-listing-spacious.php:1052
+#: single-listing-classical.php:1110 single-listing-elegant.php:1061
+#: single-listing-first-impression.php:169 single-listing-luxurious.php:1013
+#: single-listing-solid.php:1069 single-listing-spacious.php:1064
 msgid "Zip Code:"
 msgstr ""
 
-#: single-listing-classical.php:1133 single-listing-elegant.php:1097
-#: single-listing-first-impression.php:192 single-listing-luxurious.php:1037
-#: single-listing-solid.php:1093 single-listing-spacious.php:1088
+#: single-listing-classical.php:1146 single-listing-elegant.php:1097
+#: single-listing-first-impression.php:199 single-listing-luxurious.php:1049
+#: single-listing-solid.php:1105 single-listing-spacious.php:1100
 msgid "Tagged Features:"
 msgstr ""
 
-#: single-listing-classical.php:1141 single-listing-elegant.php:1105
-#: single-listing-first-impression.php:200 single-listing-luxurious.php:1045
-#: single-listing-solid.php:1101 single-listing-spacious.php:1096
+#: single-listing-classical.php:1154 single-listing-elegant.php:1105
+#: single-listing-first-impression.php:207 single-listing-luxurious.php:1057
+#: single-listing-solid.php:1113 single-listing-spacious.php:1108
 msgid "Home Summary"
 msgstr ""
 
-#: single-listing-classical.php:1143 single-listing-elegant.php:1107
-#: single-listing-first-impression.php:202 single-listing-luxurious.php:1047
-#: single-listing-solid.php:1103 single-listing-spacious.php:1098
+#: single-listing-classical.php:1156 single-listing-elegant.php:1107
+#: single-listing-first-impression.php:209 single-listing-luxurious.php:1059
+#: single-listing-solid.php:1115 single-listing-spacious.php:1110
 msgid "Kitchen Summary"
 msgstr ""
 
-#: single-listing-classical.php:1145 single-listing-elegant.php:1109
-#: single-listing-first-impression.php:204 single-listing-luxurious.php:1049
-#: single-listing-solid.php:1105 single-listing-spacious.php:1100
+#: single-listing-classical.php:1158 single-listing-elegant.php:1109
+#: single-listing-first-impression.php:211 single-listing-luxurious.php:1061
+#: single-listing-solid.php:1117 single-listing-spacious.php:1112
 msgid "Living Room"
 msgstr ""
 
-#: single-listing-classical.php:1147 single-listing-elegant.php:1111
-#: single-listing-first-impression.php:206 single-listing-luxurious.php:1051
-#: single-listing-solid.php:1107 single-listing-spacious.php:1102
+#: single-listing-classical.php:1160 single-listing-elegant.php:1111
+#: single-listing-first-impression.php:213 single-listing-luxurious.php:1063
+#: single-listing-solid.php:1119 single-listing-spacious.php:1114
 msgid "Master Suite"
 msgstr ""
 
-#: single-listing-first-impression.php:156
+#: single-listing-first-impression.php:163
 msgid "Status: "
 msgstr ""
 
-#: single-listing-first-impression.php:160
+#: single-listing-first-impression.php:167
 msgid "County:"
 msgstr ""
 
-#: single-listing-first-impression.php:230
+#: single-listing-first-impression.php:237
 msgid "Schools &amp; Neighborhood"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "Must See 2"
-msgstr ""
-
 #. Theme URI of the plugin/theme
-msgid "https://learn.agentevolution.com/kb/must-see/"
+msgid "https://support.idxbroker.com/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -383,5 +380,5 @@ msgid "Agent Evolution"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://www.agentevolution.com/"
+msgid "https://idxbroker.com/"
 msgstr ""
