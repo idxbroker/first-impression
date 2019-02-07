@@ -24,8 +24,8 @@ Changelog:
 */
 // Remove First Impression styles
 function dequeue_first_impression() {
-	wp_dequeue_style( 'first-impression' );
-	wp_dequeue_style( 'equity' );
+   wp_dequeue_style( 'first-impression' );
+   wp_dequeue_style( 'equity' );
 }
 add_action( 'wp_print_styles', 'dequeue_first_impression', 100 );
 
