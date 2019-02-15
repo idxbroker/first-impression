@@ -330,7 +330,7 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 			//* Site description
 
 			//* Background image
-			echo '.home-top {background-image: url(\'' . get_theme_mod( 'default_background_image', get_stylesheet_directory_uri() . '/images/bkg-default.jpg' ) . '\');}';
+			echo '.home-top-bg {background-image: url(\'' . get_theme_mod( 'default_background_image', get_stylesheet_directory_uri() . '/images/bkg-default.jpg' ) . '\');}';
 
 			// Get color values
 			$primary_color = $this->get_color_hex('primary_color');

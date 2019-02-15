@@ -113,6 +113,18 @@ function child_listing_scroller_next_link( $listing_scroller_next_link_text ) {
 remove_action( 'equity_before_footer', 'equity_footer_widget_areas' );
 add_action( 'equity_footer', 'equity_footer_widget_areas', 6 );
 
+
+// Register the LayerSlider widget are if it is activated
+if ( is_plugin_active( 'LayerSlider/layerslider.php' ) || class_exists( 'LS_Sliders' ) || defined( 'LS_ROOT_PATH' ) ) {
+	equity_register_widget_area(
+		array(
+			'id'           => 'layer-slider-top',
+			'name'         => __( 'LayerSlider Home Top Background', 'first-impression' ),
+			'description'  => __( 'Use a <b>single</b> LayerSlider widget here to use as a background in the home top section. This will override your background chosen in the customizer.' , 'first-impression' ),
+		)
+	);
+}
+
 // Register home-top widget area.
 equity_register_widget_area(
 	array(
@@ -121,6 +133,7 @@ equity_register_widget_area(
 		'description'  => __( 'This is the top section of the Home page. Not all widgets are designed to work here. Recommended to use IMPress Omnibar Search widget.' , 'first-impression' ),
 	)
 );
+
 // Get number of home widget areas from Customizer. Loop through them and register each.
 $home_widget_areas = get_theme_mod( 'home_widget_areas', 5 );
 $widget_area_count = 1;
@@ -144,9 +157,8 @@ equity_register_widget_area(
 
 // Home page - return false to not display welcome screen.
 add_filter( 'equity_display_welcome_screen', '__return_false' );
-/*
-?><pre><?php print_r($arr); ?></pre><?php
-*/
+
+// Check if homepage widget area has a featured page, if so make it a special community area
 function is_community_area($arr) {
 	if ( $arr ) {
 		foreach ($arr as $widget) {
@@ -158,11 +170,28 @@ function is_community_area($arr) {
 	return false;
 }
 
+// Check if the user is using a LayerSlider widget as a background for home top
+function using_layer_slider() {
+	$widgets = wp_get_sidebars_widgets();
+	$widget_area = $widgets['layer-slider-top'];
+	if( empty( $widget_area ) ) {
+		return false;
+	}
+	return true;
+}
+
 // Home page - markup and default widgets.
 function equity_child_home() {
+	$slider_present = using_layer_slider();
+	$home_top_bg = $slider_present ? '' : 'home-top-bg';
 	?>
-
-	<div class="home-top">
+	<div class='home-top  <?php echo $home_top_bg; ?>'>
+		<?php
+		if( $slider_present ): ?>
+		<div id='first-impression-slider-top'>
+			<?php equity_widget_area( 'layer-slider-top' ); ?>	
+		</div>
+		<?php endif; ?>
 		<div class="row">
 			<div class="columns small-10 large-8 small-centered omnibar-top">
 				<?php equity_widget_area( 'home-top' ); ?>

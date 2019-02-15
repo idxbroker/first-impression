@@ -65,6 +65,21 @@ body.home.first-impression-white-bkg {
 				display: none;
 			}
 		}
+		#first-impression-slider-top {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 0;
+			.widget-title, .widgettitle {
+				display: none;
+			}
+			.ls-bg {
+				// Stops white flashing between slides
+				opacity: 1 !important;
+			}
+		}
 	}
 
 	.idx-omnibar-form {
