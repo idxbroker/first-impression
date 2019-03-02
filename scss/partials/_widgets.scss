@@ -855,7 +855,26 @@ div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
 
 .impress-carousel-widget .carousel-photo {
 	margin-bottom: 20px;
+}
 
+div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	background-color: #fff;
+	&:hover {
+		background-color: rgba(0,0,0,.05);
+	}
+}
+
+div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-next,
+footer.site-footer div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+footer.site-footer div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	background-color: inherit;
+	border-color: #fff;
+	color: #fff;
+	&:hover {
+		background-color: rgba(255,255,255,.05);
+	}
 }
 
 .sidebar, .single {
@@ -1064,4 +1083,9 @@ div.easy_testimonial_image_wrapper {
 	#IDX-featuredAgentCaption {
 		text-shadow: none;
 	}
+}
+
+.impress-carousel-widget .property-details,
+.easy_testimonial .testimonial_body p {
+	color: $dark-text;
 }

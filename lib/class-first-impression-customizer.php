@@ -504,7 +504,6 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 				}
 
 				/*** Background Primary Color ***/
-				.title-area,
 				h4::before,
 				h4::after,
 				h2::after,

@@ -11,6 +11,7 @@ header.site-header::after {
 	display: table;
 	clear: both;
 }
+
 header.site-header .title-area {
 	position: relative;
 	text-align: center;
@@ -190,6 +191,10 @@ a.off-canvas-toggle::before {
 	}
 }
 
+div.title-area {
+	background-color: #fff;
+}
+
 @media #{$medium-up} {
 	body.top-bar-enabled a.off-canvas-toggle {
 		top: 30px;
@@ -228,5 +233,12 @@ a.off-canvas-toggle::before {
 	}
 	.fa-rss {
 		display: none;
+	}
+}
+
+@media #{$medium-down} {
+	.site-header .agent-social-icons a,
+	.site-header .menu-toggle {
+		color: #fff;
 	}
 }

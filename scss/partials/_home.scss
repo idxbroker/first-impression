@@ -40,6 +40,11 @@ body.home.first-impression-white-bkg {
 // Anchors
 
 /** New stuff ***/
+div[class*='home-middle-'].bg-gradient input,
+div[class*='home-middle-'].bg-gradient button {
+	color: $dark-text;
+}
+
 .home {
 	.widget:not(.widget_text):not(.featured-page) {
 		margin-bottom: 30px;

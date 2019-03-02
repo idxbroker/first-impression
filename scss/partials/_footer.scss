@@ -121,3 +121,45 @@ footer.site-footer .button {
 footer .impress-carousel-widget .impress-carousel {
 	background: transparent;
 }
+
+// Colors
+footer.site-footer .footer-widgets,
+footer.site-footer .footer-widgets .widget p,
+footer.site-footer .footer-widgets .widget li,
+footer.site-footer .footer-widgets .widget .agent-phone-wrap i,
+footer.site-footer .footer-widgets .widget .agent-email-wrap i,
+footer.site-footer .footer-widgets .widget a,
+footer.site-footer .footer-widgets .widget-title,
+footer.site-footer,
+footer.site-footer .button:hover,
+footer.site-footer h1,
+footer.site-footer h2,
+footer.site-footer h3,
+footer.site-footer h4,
+footer.site-footer h5,
+footer.site-footer h6,
+footer.site-footer label,
+footer.site-footer .impress-idx-dashboard-widget h4,
+footer.site-footer section.impress-carousel-widget .property-details *,
+footer.site-footer .singleTestimonialWidget h4,
+footer.site-footer .listTestimonialsWidget h4,
+footer.site-footer .easy_testimonial_title,
+footer.site-footer .easy_testimonial .testimonial_body p,
+footer.site-footer .easy_testimonial .testimonial_author cite {
+	color: #fff;
+}
+
+footer.site-footer .button
+footer.site-footer input,
+footer.site-footer button,
+footer.site-footer .footer-widgets {
+	border-color: #fff;
+}
+
+footer.site-footer .title-area,
+footer.site-footer h4::before, 
+footer.site-footer h4::after,
+footer.site-footer h2::after,
+footer.site-footer h1::after {
+	background: #fff;
+}

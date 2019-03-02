@@ -98,6 +98,15 @@ body.fl-builder .post-edit-link {
 
 /** New Stuff **/
 body.single-post {
+	color: $inner-page-font-color;
+}
+body.single-post .site-container, 
+body.single-post .site-inner,
+body.single-post .content-sidebar-wrap {
+	background: $inner-page-bg;
+}
+
+body.single-post {
 	.site-inner {
 		box-shadow: none;
 	}
