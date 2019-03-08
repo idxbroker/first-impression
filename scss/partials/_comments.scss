@@ -1,43 +1,27 @@
 /*! =Comments
 ------------------------------------------------------------------------- */
-.entry-comments ol {
-	margin-left: 0;
-}
-.entry-comments ol,
-.entry-comments ul.children {
-	list-style-type: none;
-}
-.entry-comments .comment article {
-}
-.entry-comments .comment-author {
-	font-size: rem-calc(14);
-	margin: 0 0 0.325rem;
-}
-.entry-comments .comment-author .avatar {
-	margin: 0 0.625rem 0.625rem 0;
-}
-.entry-comments .comment-meta {
-	font-size: rem-calc(12);
-	margin: 0 0 0.325rem;
-}
-.entry-comments .comment-reply {
-	font-size: rem-calc(14);
-	font-weight: $font-weight-bold;
-}
-.comment-respond .logged-in-as {
-	font-size: rem-calc(14);
-}
-.comment-respond label {
-	font-size: rem-calc(16);
-}
-.comment-respond .form-allowed-tags {
-	font-size: rem-calc(12);
-	background: #fafafa;
-	padding: 1rem;
-}
-
-/*** New Stuff ***/
 .entry-comments {
+	ol {
+		margin-left: 0;
+	}
+	ol, ul.children {
+		list-style-type: none;
+	}
+	.comment-author {
+		font-size: rem-calc(14);
+		margin: 0 0 0.325rem;
+	}
+	.comment-author .avatar {
+		margin: 0 0.625rem 0.625rem 0;
+	}
+	.comment-meta {
+		font-size: rem-calc(12);
+		margin: 0 0 0.325rem;
+	}
+	.comment-reply {
+		font-size: rem-calc(14);
+		font-weight: $font-weight-bold;
+	}
 	> h3 {
 		font-size: rem-calc(22);
 	}
@@ -90,5 +74,18 @@
 			text-decoration: none;
 			text-transform: uppercase;
 		}
+	}
+}
+.comment-respond {
+	.logged-in-as {
+		font-size: rem-calc(14);
+	}
+	label {
+		font-size: rem-calc(16);
+	}
+	.form-allowed-tags {
+		font-size: rem-calc(12);
+		background: #fafafa;
+		padding: 1rem;
 	}
 }
