@@ -5,47 +5,38 @@ body.home.first-impression-white-bkg {
 	background: $body-bg;
 	color: $body-font-color;
 }
-.home .content-sidebar-wrap {
-	padding: 0;
-	margin: 0;
-	background: none;
-	font-size: rem-calc(16);
-}
-.home .content-sidebar-wrap.row,
-.home div[class*='home-middle-'].full .row {
-	max-width: none;
-}
-.home .content-sidebar-wrap.row > .columns,
-.home div[class*='home-middle-'].full .row > .columns {
-	padding: 0;
-}
-.home .content-sidebar-wrap.row .row {
-	max-width: $row-width;
-	margin-left: auto;
-	margin-right: auto;
-}
-.home .content-sidebar-wrap.row .home-top,
-.home .content-sidebar-wrap.row div[class*='home-middle-'] {
-	background-attachment: scroll;
-	background-color: $body-bg;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	color: $body-font-color;
-}
-// Headings and body
-// Anchors
-
-/** New stuff ***/
-div[class*='home-middle-'].bg-gradient input,
-div[class*='home-middle-'].bg-gradient button {
-	color: $dark-text;
-}
-
 .home {
+	.content-sidebar-wrap {
+		padding: 0;
+		margin: 0;
+		background: none;
+		font-size: rem-calc(16);
+	}
+	.content-sidebar-wrap.row,
+	div[class*='home-middle-'].full .row {
+		max-width: none;
+	}
+	.content-sidebar-wrap.row > .columns,
+	div[class*='home-middle-'].full .row > .columns {
+		padding: 0;
+	}
+	.content-sidebar-wrap.row .row {
+		max-width: $row-width;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.content-sidebar-wrap.row .home-top,
+	.content-sidebar-wrap.row div[class*='home-middle-'] {
+		background-attachment: scroll;
+		background-color: $body-bg;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		color: $body-font-color;
+	}
 	.widget:not(.widget_text):not(.featured-page) {
 		margin-bottom: 30px;
 	}
@@ -90,20 +81,18 @@ div[class*='home-middle-'].bg-gradient button {
 	.idx-omnibar-form {
 		margin: 50px auto;
 		.awesomplete {
-			line-height: 50px !important;
 			.idx-omnibar-input {
 				border: none;
 			}
 		}
 	}
 
-
 	.impress-idx-dashboard-widget h4,
 	section.impress-carousel-widget h4,
 	.singleTestimonialWidget h4,
 	.listTestimonialsWidget h4,
 	.contact-us > div > h4,
-	div[class^="home-middle-"] .featured-communities .widget_text h4.widgettitle,
+	.featured-communities .widget_text h4.widgettitle,
 	.impress-showcase-widget h4.widgettitle,
 	.impress-city-links-widget h4 {
 		position: relative;
@@ -163,6 +152,7 @@ div[class*='home-middle-'].bg-gradient button {
 
 	.first-impression-fullscreen {
 		.row {
+			// Needs to override default foundation max-width
 			max-width: 100% !important;
 		}
 		.row > .columns {
@@ -176,25 +166,25 @@ div[class*='home-middle-'].bg-gradient button {
 
 	.featured-communities {
 		.widget_text {
-				width: 100% !important;
-				float: none !important;
-				h4 {
-					margin: 0px !important;
-				}
+			width: 100%;
+			float: none;
+			h4.widgettitle {
+				margin: 0px;
+			}
 		}
-		.featured-page {
+		section.featured-page {
 			position: relative;
 			height: 100vw;
 			width: 100%;
 			overflow: hidden;
 			@media #{$medium-up} {
 				height: calc(100vw / 2);
-				width: 50% !important;
+				width: 50%;
 			}
-			h4 {
+			h4.widgettitle {
 				font-size: rem-calc(36);
 				font-weight: 500;
-				color: #fff !important;
+				color: #fff;
 				width: 300px;
 				margin: 0 auto;
 				margin-top: calc(50% - 120px);
@@ -247,6 +237,7 @@ div[class*='home-middle-'].bg-gradient button {
 				}
 			}
 			img {
+				// Has inline width/height, need to use !important
 				width: 100% !important;
 				height: 100% !important;
 			}
@@ -292,11 +283,11 @@ div[class*='home-middle-'].bg-gradient button {
 	}
 
 	.featured-communities.flexible-widgets.widget-halves .widget:nth-child(even) {
-			clear: left !important;
+			clear: left;
 	}
 
 	.featured-communities.flexible-widgets.widget-halves .widget:nth-child(odd) {
-			clear: none !important;
+			clear: none;
 	}
 
 	.featured-communities.flexible-widgets.widget-halves .widget.widget_text {
@@ -304,6 +295,7 @@ div[class*='home-middle-'].bg-gradient button {
 
 	.IDX-mapWidgetWrap {
 		position: relative;
+		// Need to override generated ID rule
 		height: 700px !important;
 		.IDX-mapHeader {
 			position: absolute;
@@ -315,6 +307,7 @@ div[class*='home-middle-'].bg-gradient button {
 			font-weight: 400;
 			font-size: 1.1rem;
 			color: #4C5051;
+		// Need to override generated ID rule
 			float: right !important;
 			padding-right: 25px;
 			padding-top: 5px;
@@ -327,6 +320,7 @@ div[class*='home-middle-'].bg-gradient button {
 			box-shadow: 1px 1px 3px #666;
 		}
 		.leaflet-control-zoom {
+			// Need to override generated ID rule
 			margin-top: 50px !important;
 		}
 	}
@@ -361,7 +355,7 @@ div[class*='home-middle-'].bg-gradient button {
 			}
 			.impress-idx-signup-widget {
 			}
-			// Target two widgets only
+				// Target two widgets only
 				section:first-child:nth-last-child(2).widget,
 				section:first-child:nth-last-child(2) ~ .widget {
 				@media #{$medium-up} {
@@ -397,7 +391,12 @@ div[class*='home-middle-'].bg-gradient button {
 }
 
 
-/** End new stuff **/
+/*! Gradient Backgrounds
+---------------------------------------------------------------------------------------------------- */
+div[class*='home-middle-'].bg-gradient input,
+div[class*='home-middle-'].bg-gradient button {
+	color: $dark-text;
+}
 
 
 /*! Fadeup Effect
@@ -422,6 +421,9 @@ div[class*='home-middle-'].bg-gradient button {
 	animation-name: fadeInUp;
 }
 
+
+/*! Fullscreen Widget Areas
+---------------------------------------------------------------------------------------------------- */
 .first-impression-fullscreen {
 	.widget-area {
 		.widget {
