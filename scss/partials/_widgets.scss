@@ -697,13 +697,16 @@ form.idx-omnibar-form{
 		border-radius: 5px;
 		height: 50px;
 	}
-	button {
+	button[type="submit"] {
 		color: #000;
 		height: 46px;
-		padding: 0 20px;
+		padding: 0 18px;
 		margin-top: 2px;
+		margin-right: 2px;
 		border: none;
 		border-radius: 0 5px 5px 0;
+		background: #fff;
+		background: linear-gradient(to left, #fff 38px, transparent);
 	}
 	label {
 		display: none;
@@ -719,9 +722,6 @@ form.idx-omnibar-form{
 	}
 	h4 {
 		display: none;
-	}
-	button[type="submit"] {
-		background: #fff;
 	}
 }
 
