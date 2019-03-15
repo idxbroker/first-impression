@@ -188,6 +188,8 @@ body.home.first-impression-white-bkg {
 				width: 300px;
 				margin: 0 auto;
 				margin-top: calc(50% - 120px);
+				white-space: nowrap;
+				overflow: hidden;
 				@media #{$medium-up} {
 					font-size: rem-calc(40);
 					margin-top: calc(50% - 110px);
