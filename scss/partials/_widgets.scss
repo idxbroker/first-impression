@@ -687,22 +687,23 @@ form.idx-omnibar-form button span {
 	display: none;
 }
 
-form.idx-omnibar-form {
+.widget form.idx-omnibar-form,
+form.idx-omnibar-form{
 	margin: 35px 0;
 	.awesomplete {
 		line-height: 50px;
 	}
-	.idx-omnibar-input {
+	input[type="text"].idx-omnibar-input {
 		border-radius: 5px;
-		height: 50px !important;
+		height: 50px;
 	}
 	button {
-		background: none !important;
-		color: black !important;
-		height: 50px !important;
+		color: #000;
+		height: 46px;
 		padding: 0 20px;
+		margin-top: 2px;
 		border: none;
-		border-radius: 0 5px 5px 0 !important;
+		border-radius: 0 5px 5px 0;
 	}
 	label {
 		display: none;
@@ -996,14 +997,16 @@ div.easy_testimonial_image_wrapper {
 			}
 		}
 	}
-	img {
-		float: none;
-		@media #{$medium-up} {
-			float: left;
+	div.easy_testimonial_image_wrapper {
+		img.wp-post-image {
+			float: none;
+			@media #{$medium-up} {
+				float: left;
+			}
+			width: 150px;
+			height: 150px;
+			border-radius: 100%;
 		}
-		width: 150px;
-		height: 150px;
-		border-radius: 100% !important;
 	}
 }
 
