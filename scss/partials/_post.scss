@@ -1,112 +1,40 @@
 /*! =Entry Content
 ------------------------------------------------------------------------- */
-.content > article {
-	margin: 0 0 2rem;
-}
-.content article .entry-header {
-	margin: 0 0 1.825rem;
-}
-.content article h1.entry-title {
-	line-height: 30px;
-	margin: 0 0 0.5rem;
-	font-size: rem-calc(32);
-	&::after {
-		content: "";
-		display: block;
-		width: 85px;
-		height: 3px;
-		margin: 20px 0;
-		border-radius: 5px;
+.content {
+	> article {
+		margin: 0 0 2rem;
+	}
+	article .entry-header {
+		margin: 0 0 1.825rem;
+	}
+	article h1.entry-title {
+		line-height: 30px;
+		margin: 0 0 0.5rem;
+		font-size: rem-calc(32);
+		&::after {
+			content: "";
+			display: block;
+			width: 85px;
+			height: 3px;
+			margin: 20px 0;
+			border-radius: 5px;
+		}
+	}
+	figure {
+		margin: 0;
+	}
+	img {
+		border: 1px solid #efefef;
 	}
 }
-.content figure {
-	margin: 0;
-}
-.entry-content img {
-	border: 1px solid #efefef;
-}
 
-/*! =Post Info/Post Meta
-------------------------------------------------------------------------- */
-header .entry-meta,
-footer .entry-meta {
-	font-size: rem-calc(14);
-}
-footer .entry-meta span {
-	display: inline-block;
-	margin-right: 10px;
-}
-footer .entry-meta {
-	border-top: 1px solid #efefef; // TODO: What is this?
-	border-bottom: 1px solid #efefef;
-	padding: 8px;
-	margin: 0;
-}
-header .entry-meta i,
-footer .entry-meta i {
-	color: scale-color($body-font-color, $lightness: 50%); // TODO: What is this?
-}
-header .entry-meta i {
-	display: none;
-}
-
-/*! =After Entry Widget Area
-------------------------------------------------------------------------- */
-.after-entry-widget-area {
-	background: $body-bg-alt;
-	color: $body-font-color-secondary;
-	padding: 1.4rem;
-	font-size: rem-calc(16);
-	line-height: 1.6;
-	margin: 1rem 0;
-}
-.after-entry-widget-area h4 {
-	line-height: 1;
-	margin: 0 0 1rem;
-	color: $body-font-color-secondary;
-}
-.after-entry-widget-area a {
-	color: $body-font-color-secondary;	
-}
-.after-entry-widget-area p {
-	font-size: rem-calc(16);
-	line-height: 1.4;
-}
-body.fl-builder .post-edit-link {
-	display: none;
-}
-
-/*! =Author Box
-------------------------------------------------------------------------- */
-.author-box {
-	overflow: hidden;
-	padding: 1.5rem;
-	background: #fff;
-}
-.author-box .gravatar {
-	float: left;
-	margin: 0 1rem 1rem 0;
-}
-
-
-/*! =Pagination/Post Navigation (most formatting included in foundation.css)
-------------------------------------------------------------------------- */
-.pagination {
-	font-size: rem-calc(14);
-	margin: 0.875rem 0;
-}
-
-/** New Stuff **/
 body.single-post {
 	color: $inner-page-font-color;
-}
-body.single-post .site-container, 
-body.single-post .site-inner,
-body.single-post .content-sidebar-wrap {
-	background: $inner-page-bg;
-}
-
-body.single-post {
+	.site-container, 
+	.site-inner,
+	.content-sidebar-wrap {
+		background: $inner-page-bg;
+	}
 	.site-inner {
 		box-shadow: none;
 	}
@@ -158,7 +86,7 @@ body:not(.home) .contact-us {
         margin: auto;
         min-width: 100%;
         min-height: 100%;
-        // Remove all inline width/height stylings
+        // Removes all inline width/height stylings
         width: auto;
         height: auto;
 		max-width: none;
@@ -166,6 +94,45 @@ body:not(.home) .contact-us {
 	}
 }
 
+/*! =Post Info/Post Meta
+------------------------------------------------------------------------- */
+footer .entry-meta {
+	padding: 8px;
+	margin: 0;
+	span {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+
+/*! =After Entry Widget Area
+------------------------------------------------------------------------- */
+body.fl-builder .post-edit-link {
+	display: none;
+}
+
+/*! =Author Box
+------------------------------------------------------------------------- */
+.author-box {
+	overflow: hidden;
+	padding: 1.5rem;
+	background: #fff;
+	.gravatar {
+		float: left;
+		margin: 0 1rem 1rem 0;
+	}
+}
+
+
+/*! =Pagination/Post Navigation (most formatting included in foundation.css)
+------------------------------------------------------------------------- */
+.pagination {
+	font-size: rem-calc(14);
+	margin: 0.875rem 0;
+}
+
+/*! =Comments
+------------------------------------------------------------------------- */
 #comments h3 {
 	margin-bottom: 20px;
 }

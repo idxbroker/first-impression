@@ -19,7 +19,6 @@ function child_dequeue_foundation_stylesheet() {
 }
 
 // Add Theme Support.
-// add_theme_support( 'equity-after-entry-widget-area' );
 add_theme_support( 'equity-menus', array(
 	'header-right' => __( 'Header Right', 'first-impression' ),
 ) );
