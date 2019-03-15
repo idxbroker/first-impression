@@ -68,7 +68,8 @@ body.first-impression-map-results {
 	}
 }
 
-/*** Listings Details ***/
+/*! =Listings Details
+------------------------------------------------------------------------- */
 .IDX-wrapper-standard #IDX-saveProperty, .IDX-wrapper-standard #IDX-newSearch, .IDX-wrapper-standard #IDX-modifySearch, .IDX-wrapper-standard #IDX-backToResults {
 	line-height: 36px;
 	border-radius: 3px;
@@ -425,9 +426,8 @@ body.first-impression-map-results {
 	}
 }
 
-// Remove large price font size
-
-/*** IDX Sign Up Page ***/
+/*! =IDX Sign Up Page
+------------------------------------------------------------------------- */
 .IDX-wrapper-standard {
 	#IDX-leadLoginContainer, #IDX-leadSignupContainer, #IDX-contactContainer {
 		.col-sm-4 {
@@ -549,7 +549,8 @@ body.first-impression-map-results {
 	}
 }
 
-/*** Advanced Search Page and Contact Page ***/
+/*! =Advanced Search Page and Contact Page
+------------------------------------------------------------------------- */
 @media only screen and (max-width: 640px) {
 	.IDX-wrapper-standard #IDX-searchPageWrapper {
 		#IDX-navbar-collapse {
@@ -743,7 +744,9 @@ body.first-impression-map-results {
 	}
 }
 
-/*** Home Atlas ***/
+
+/*! =Home Atlas
+------------------------------------------------------------------------- */
 body.first-impression-full-screen {
 	.content-sidebar-wrap {
 		max-width: 100%;

@@ -49,7 +49,6 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 	public function register( $wp_customize ) {
 		$this->colors( $wp_customize );
 		$this->home( $wp_customize );
-		$this->misc( $wp_customize );
 	}
 
 	private function get_color_hex( $theme_mod ) {
@@ -287,39 +286,6 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 		);
 	}
 
-	//* Misc
-	private function misc( $wp_customize ) {
-/*
-		//* Setting key and default value array
-		$settings = array(
-			'enable_sticky_header' => true, // TODO: Check out how this works
-		);
-
-		foreach ( $settings as $setting => $default ) {
-
-			$wp_customize->add_setting(
-				$setting,
-				array(
-					'default' => $default,
-					'type'    => 'theme_mod',
-				)
-			);
-		}
-
-		//* Enable sticky header checkbox
-		$wp_customize->add_control(
-			'enable_sticky_header',
-			array(
-				'label'    => __( 'Enable Sticky Header?', 'first-impression' ),
-				'section'  => 'title_tagline',
-				'type'     => 'checkbox',
-				'settings' => 'enable_sticky_header',
-				'priority' => 300,
-			)
-		);
-	*/	
-	}
-
 	//* Render CSS
 	public function render() {
 		?>
@@ -504,7 +470,6 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 				}
 
 				/*** Background Primary Color ***/
-				.title-area,
 				h4::before,
 				h4::after,
 				h2::after,
