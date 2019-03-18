@@ -49,6 +49,7 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 	public function register( $wp_customize ) {
 		$this->colors( $wp_customize );
 		$this->home( $wp_customize );
+		$this->first_impression_settings( $wp_customize );
 	}
 
 	private function get_color_hex( $theme_mod ) {
@@ -76,8 +77,7 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 			'gradient_start'          => '#3fa5db',
 			'gradient_end'            => '#5087c8',
 			'heading_secondary_color' => '#ffffff',
-			'font_secondary_color'    => '#ffffff',
-			'zoom_property_image'     => false
+			'font_secondary_color'    => '#ffffff'
 		);
 
 		foreach ( $settings as $setting => $default ) {
@@ -281,6 +281,65 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 					'settings'    => 'home_fadeup_effect',
 					'type'        => 'checkbox',
 					'priority'    => 500,
+				)
+			)
+		);
+	}
+
+	//* First Impression Settings
+	private function first_impression_settings( $wp_customize ) {
+		$wp_customize->add_section(
+			'first-impression-settings',
+			array(
+				'title'    => __( 'First Impression Settings', 'first-impression' ),
+				'priority' => 201,
+			)
+		);
+
+		//* Setting key and default value array
+		$settings = array(
+			'zoom_property_image' => false,
+			'contact_us_title'     => 'Contact Us'
+		);
+
+		foreach ( $settings as $setting => $default ) {
+
+			$wp_customize->add_setting(
+				$setting,
+				array(
+					'default' => $default,
+					'type'    => 'theme_mod',
+				)
+			);
+		}
+
+		//* Zoom in for property photos with white cropping
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'zoom_property_image',
+				array(
+					'label'       => __( 'Zoom in on property carousel image?', 'first-impression' ),
+					'description' => __( 'Used for MLS cropped photos with a white background.', 'first-impression' ),
+					'section'     => 'first-impression-settings',
+					'settings'    => 'zoom_property_image',
+					'type'        => 'checkbox',
+					'priority'    => 200,
+				)
+			)
+		);
+
+		//* Edit contact area heading
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'contact_us_title',
+				array(
+					'label'       => __( 'Contact section heading text.', 'first-impression' ),
+					'section'     => 'first-impression-settings',
+					'settings'    => 'contact_us_title',
+					'type'        => 'text',
+					'priority'    => 100,
 				)
 			)
 		);

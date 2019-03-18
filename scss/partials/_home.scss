@@ -37,7 +37,7 @@ body.home.first-impression-white-bkg {
 		background-size: cover;
 		color: $body-font-color;
 	}
-	.widget:not(.widget_text):not(.featured-page) {
+	div[class^="home-middle-"]:not(.first-impression-fullscreen) .widget:not(.widget_text) {
 		margin-bottom: 30px;
 	}
 	.home-top {
