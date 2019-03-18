@@ -172,8 +172,7 @@ function is_community_area($arr) {
 // Check if the user is using a LayerSlider widget as a background for home top
 function using_layer_slider() {
 	$widgets = wp_get_sidebars_widgets();
-	$widget_area = $widgets['layer-slider-top'];
-	if( empty( $widget_area ) ) {
+	if( ! isset($widgets['layer-slider-top']) || empty( $widgets['layer-slider-top'] ) ) {
 		return false;
 	}
 	return true;
@@ -247,6 +246,10 @@ function social_icons() {
 
 add_action( 'equity_before_footer', 'first_impression_before_footer', 1 );
 function first_impression_before_footer() {
+	$widgets = wp_get_sidebars_widgets();
+	if( empty( $widgets['contact-us'] ) ) {
+		return false;
+	}
 	?>
 	<div class="contact-us">
 		<div class="row">
