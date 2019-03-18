@@ -329,7 +329,7 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 			)
 		);
 
-		//* Number of home widget areas.
+		//* Edit contact area heading
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
