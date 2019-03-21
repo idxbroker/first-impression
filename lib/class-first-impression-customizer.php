@@ -57,7 +57,7 @@ class first_impression_Customizer extends EQUITY_Customizer_Base {
 		if ('custom' !== $current_preset) {
 			return $this->color_presets[$current_preset][$theme_mod];
 		}
-		return get_theme_mod($theme_mod, $this->color_presets[$current_preset][$theme_mod]);
+		return get_theme_mod($theme_mod, $this->color_presets['blue'][$theme_mod]);
 
 	}
 
