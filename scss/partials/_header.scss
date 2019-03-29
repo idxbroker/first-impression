@@ -78,7 +78,7 @@ header.site-header {
 		}
 	}
 
-	@media #{$medium-down} {
+	@media #{$small-only} {
 		.agent-social-icons a,
 		.menu-toggle {
 			color: #fff;

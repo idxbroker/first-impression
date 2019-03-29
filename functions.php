@@ -112,6 +112,11 @@ function child_listing_scroller_next_link( $listing_scroller_next_link_text ) {
 remove_action( 'equity_before_footer', 'equity_footer_widget_areas' );
 add_action( 'equity_footer', 'equity_footer_widget_areas', 6 );
 
+function wrap_footer_areas($output) {
+	return "<div class='bottom-footer-wrapper'>$output<div>";
+}
+add_filter('equity_footer_output', 'wrap_footer_areas');
+
 
 // Register the LayerSlider widget are if it is activated
 if ( is_plugin_active( 'LayerSlider/layerslider.php' ) || class_exists( 'LS_Sliders' ) || defined( 'LS_ROOT_PATH' ) ) {

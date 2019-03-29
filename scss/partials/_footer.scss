@@ -16,22 +16,31 @@ footer.site-footer {
 	a {
 		color: $body-font-color;
 	}
-	i.properticons {
-		width: 30px;
-		height: 30px;
-		vertical-align: middle;
-		margin-left: -5px;
-	}
 
 	.footer-widgets {
-		border: none !important;
-		padding-bottom: 10px !important;
+		padding-bottom: 10px;
 		width: 100%;
 		max-width: $row-width;
-		margin: 0 auto !important;
+		margin: 0 auto;
+		border: none;
+		border-bottom: 1px solid #fff;
 	}
-	&>div+div {
-		display: none;
+	.bottom-footer-wrapper {
+		max-width: $row-width;
+		margin: 0 auto;
+	}
+	.footer-left, .footer-right, .footer-disclaimer {
+		@media #{$medium-down} {
+			text-align: center;
+		}
+		a {
+			color: #fff;
+		}
+	}
+	.footer-right {
+		@media #{$medium-down} {
+			padding-top: 5px;
+		}
 	}
 	ul {
 		list-style: none;
@@ -39,6 +48,21 @@ footer.site-footer {
 	}
 	.button {
 		background: #4C5051;
+	}
+	.realty-logos {
+		text-align: center;
+		i.properticons {
+			width: 30px;
+			height: 30px;
+			vertical-align: baseline;
+			&::before {
+				display: inline-block;
+				vertical-align: top;
+			}
+			&+i.properticons {
+				margin-left: 30px;
+			}
+		}
 	}
 }
 
