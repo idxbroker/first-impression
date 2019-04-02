@@ -22,11 +22,22 @@
 	margin-right: 5px;
 	color: scale-color($body-font-color-secondary, $lightness: 30%);
 }
+.agent-phone-wrap i,
+.agent-email-wrap i,
+.agent-address i {
+	margin-right: 5px;
+}
+footer {
+	.agent-phone-wrap i,
+	.agent-email-wrap i,
+	.agent-address i {
+		color: #fff;
+	}
+}
 
 
 /*! =Icon box shortcodes
 ------------------------------------------------------------ */
-
 .ae-iconbox {
 	position: relative;
 	margin: 10px 0 10px;
@@ -34,7 +45,6 @@
 
 .ae-iconbox i[class*="fa-"],
 .ae-iconbox a i[class*="fa-"] {
-	color: $primary-color;
 	margin-bottom: 10px;
 }
 
@@ -42,10 +52,6 @@
 .ae-iconbox h4 a {
 	margin: 0 0 10px;
 	text-decoration: none;
-}
-
-.ae-iconbox h4 a:hover {
-	color: $header-font-color;
 }
 
 .ae-iconbox p {
@@ -92,17 +98,6 @@
 	border-radius: 80px;
 }
 
-.ae-iconbox.type-2 i[class*="fa-"],
-.ae-iconbox.type-2 a i[class*="fa-"] {
-	color: #fff;
-}
-
-.ae-iconbox.type-2:hover i[class*="fa-"],
-.ae-iconbox.type-2:hover a i[class*="fa-"] {
-	color: $primary-color;
-	background: #fff;
-}
-
 .ae-iconbox.type-3 {
 	text-align: center;
 }
@@ -112,19 +107,7 @@
 	line-height: 85px;
 	width: 90px;
 	height: 90px;
-	background: $primary-color;
 	border-radius: 90px;
-}
-
-.ae-iconbox.type-3 i[class*="fa-"],
-.ae-iconbox.type-3 a i[class*="fa-"] {
-	color: #fff;
-}
-
-.ae-iconbox.type-3:hover i[class*="fa-"],
-.ae-iconbox.type-3:hover a i[class*="fa-"] {
-	color: $primary-color;
-	background: #fff;
 }
 
 .ae-iconbox.type-4 {
@@ -136,10 +119,6 @@
 	line-height: 90px;
 	width: 90px;
 	height: 90px;
-}
-
-.ae-iconbox.type-4:hover i {
-	font-size: 78px;
 }
 
 .ae-iconbox.type-5 {

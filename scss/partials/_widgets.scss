@@ -1,6 +1,5 @@
 /*! Flexible Widgets
 --------------------------------------------- */
-
 .flexible-widgets.widget-fourths .widget,
 .flexible-widgets.widget-halves .widget,
 .flexible-widgets.widget-thirds .widget {
@@ -19,12 +18,6 @@
 	    padding-left: rem-calc(30);
 	    padding-right: rem-calc(30);
 	    margin-bottom: 0;
-	}
-
-	.flexible-widgets.widget-full .widget,
-	.flexible-widgets.widget-halves.uneven .widget:last-of-type {
-	    float: none;
-	    width: 100%;
 	}
 
 	.flexible-widgets.widget-fourths .widget {
@@ -46,9 +39,6 @@
 	}
 }
 
-/*! =Equity Widgets 
-------------------------------------------------------------------------- */
-
 /*! =Custom Menu with Icon and Description
 ------------------------------------------------------------------------- */
 .widget_nav_menu_desc ul {
@@ -60,7 +50,7 @@
 	line-height: 1;
 	margin: 0 0 1.25rem;
 }
-.widget_nav_menu_desc ul li:before {
+.widget_nav_menu_desc ul li::before {
 	content: "";
 }
 .widget_nav_menu_desc i {
@@ -81,62 +71,8 @@
 	margin: 0;
 }
 
-
-/*! =Featured Page/Posts
-------------------------------------------------------------------------- */
-.featured-page,
-.featured-post {
-
-}
-.featured-page figure {
-	margin: 0;
-}
-.featured-page article,
-.featured-post article {
-	position: relative;
-	display: inline-block;
-	margin: 0;
-}
-
-.featured-page article .entry-header,
-.featured-post article .entry-header {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 0;
-	padding: 0.75rem 1rem;
-	background-color: rgba($body-bg, 0.7);
-}
-.featured-page h2,
-.featured-post h2 {
-	font-size: rem-calc(20);
-	line-height: 1.1;
-	margin: 0;
-}
-.featured-page p.entry-meta *,
-.featured-post p.entry-meta * {
-	font-size: rem-calc(13);
-	margin: 0;
-}
-.featured-post p.entry-meta a {
-	color: $body-font-color-secondary;
-	text-decoration: underline;
-}
-.featured-page img,
-.featured-post img {
-	border: 1px solid scale-color($body-font-color, $lightness: -14%);
-	width: 100%;
-}
-.featured-page .more-link,
-.featured-post .more-link {
-}
-
-
 /*! =Featured Post Carousel
 ------------------------------------------------------------------------- */
-.equity-post-carousel {
-
-}
 section.equity-post-carousel article {
 	margin-bottom: 0;
 }
@@ -202,9 +138,6 @@ section.equity-post-carousel article .entry-content {
 
 /*! =Listing Scroller (WP Listings)
 ------------------------------------------------------------------------- */
-.listings-scroller {
-
-}
 .listings-scroller .owl-item .listing {
 	margin: 0 10px;
 }
@@ -238,186 +171,6 @@ section.equity-post-carousel article .entry-content {
 	display: none;
 }
 
-
-/*! =IDX Carousel
-------------------------------------------------------------------------- */
-.equity-idx-carousel,
-.impress-carousel {
-	position: relative;
-}
-.equity-idx-carousel.owl-carousel .owl-item .carousel-property,
-.impress-carousel .owl-item .carousel-property {
-	margin: 0 10px;
-	overflow: hidden;
-}
-.equity-idx-carousel.owl-carousel .owl-item .carousel-photo,
-.equity-idx-carousel.owl-carousel .owl-item .carousel-photo img,
-.impress-carousel .owl-item .carousel-photo,
-.impress-carousel .owl-item .carousel-photo img {
-	position: relative;
-	display: block;
-	@include single-transition(all);
-}
-.equity-idx-carousel.owl-carousel .owl-item .carousel-photo img,
-.impress-carousel .owl-item .carousel-photo img {
-	margin-bottom: 10px;
-	width: 100%;
-	opacity: 1;
-}
-.equity-idx-carousel .property-details,
-.impress-carousel .property-details {
-	display: block;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 0.32rem 0.64rem;
-	color: $body-font-color;
-	background-color: rgba($body-bg, 0.7);
-}
-.equity-idx-carousel a,
-.impress-carousel a {
-	text-decoration: none;
-	color: $body-font-color;
-}
-.equity-idx-carousel p,
-.impress-carousel p {
-	margin: 0;
-	color: $body-font-color;
-}
-.equity-idx-carousel ul.beds-baths-sqft,
-.impress-carousel ul.beds-baths-sqft {
-	float: right;
-	text-align: right;
-	list-style-type: none;
-	padding: 0.225rem 0;
-	margin: 0;
-}
-.equity-idx-carousel ul.beds-baths-sqft li,
-.impress-carousel ul.beds-baths-sqft li {
-	display: inline-block;
-	margin-left: 1rem;
-}
-.equity-idx-carousel ul.beds-baths-sqft li span.label,
-.impress-carousel ul.beds-baths-sqft li span.label {
-	display: none;
-}
-.equity-idx-carousel ul.beds-baths-sqft li.sqft span.label,
-.equity-idx-carousel ul.beds-baths-sqft li.acres span.label,
-.impress-carousel ul.beds-baths-sqft li.sqft span.label,
-.impress-carousel ul.beds-baths-sqft li.acres span.label {
-	display: inline-block;
-}
-.equity-idx-carousel .property-details span.price,
-.impress-carousel .property-details span.price {
-	font-family: $header-font-family;
-	font-size: rem-calc(18);
-	color: $secondary-color;
-	margin-bottom: 0.225rem;
-}
-.equity-idx-carousel p.address,
-.impress-carousel p.address {
-	display: none;
-}
-.equity-idx-carousel ul.beds-baths-sqft li:before,
-.impress-carousel ul.beds-baths-sqft li:before {
-	font-family: 'FontAwesome';
-	margin-right: 0.32rem;
-}
-.equity-idx-carousel ul.beds-baths-sqft li.beds:before,
-.impress-carousel ul.beds-baths-sqft li.beds:before {
-	content: "\f236";
-}
-.equity-idx-carousel ul.beds-baths-sqft li.baths:before,
-.impress-carousel ul.beds-baths-sqft li.baths:before {
-	content: "\f2cc";
-}
-.equity-idx-carousel .owl-dots,
-.impress-carousel .owl-dots {
-	display: none;
-}
-.equity-idx-carousel .owl-nav,
-.impress-carousel .owl-nav {
-	text-align: center;
-}
-.equity-idx-carousel .owl-nav i,
-.impress-carousel .owl-nav i {
-	font-size: 24px;
-	display: block;
-	color: #fff;
-}
-.equity-idx-carousel .owl-nav .fa-caret-right,
-.impress-carousel .owl-nav .fa-caret-right {
-	margin-left: 3px;
-}
-.equity-idx-carousel .owl-nav .fa-caret-left,
-.impress-carousel .owl-nav .fa-caret-left {
-	margin-right: 3px;
-}
-.equity-idx-carousel .owl-nav span,
-.impress-carousel .owl-nav span {
-	text-transform: uppercase;
-	font-size: 12px;
-}
-.widget .equity-idx-carousel .owl-nav.owl-controls button.owl-prev,
-.widget .equity-idx-carousel .owl-nav.owl-controls button.owl-next,
-.widget .impress-carousel .owl-nav.owl-controls button.owl-prev,
-.widget .impress-carousel .owl-nav.owl-controls button.owl-next {
-	background: $primary-color;
-	color: $body-font-color;
-	padding: 10px;
-	border-radius: 45px;
-	width: 45px;
-	height: 45px;
-	display: inline-block;
-	margin: 10px;
-	float: none !important;
-}
-.equity-idx-carousel .owl-nav.owl-controls button.owl-prev:hover,
-.equity-idx-carousel .owl-nav.owl-controls button.owl-next:hover,
-.impress-carousel .owl-nav.owl-controls button.owl-prev:hover,
-.impress-carousel .owl-nav.owl-controls button.owl-next:hover {
-	background: scale-color($primary-color, $lightness: -14%);
-}
-.equity-idx-carousel .owl-nav span,
-.impress-carousel .owl-nav span {
-	display: none;
-}
-.equity-idx-carousel .hover-cover,
-.impress-carousel .hover-cover {
-	display: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 99;
-	top: 0;
-	left: 0;
-	padding: 25%;
-	text-align: center;
-	text-transform: uppercase;
-	color: $body-font-color-secondary;
-	background-color: rgba($body-bg, 0.3);
-}
-.widget div[class*='carousel-property'] .hover-cover > p {
-	font-size: rem-calc(16);
-	font-weight: $font-weight-bold;
-}
-.equity-idx-carousel a:hover .hover-cover,
-.equity-idx-carousel .hover-cover i,
-.impress-carousel a:hover .hover-cover,
-.impress-carousel .hover-cover i {
-	display: block;
-}
-.equity-idx-carousel .hover-cover i,
-.impress-carousel a:hover .hover-cover, {
-	font-size: rem-calc(32);
-}
-.equity-idx-carousel .disclaimer p img,
-.impress-carousel .disclaimer p img {
-    border: none;
-	width: auto;
-	margin: 0 auto;
-}
 @media #{$large-up} {
 	.equity-idx-carousel .property-details span.price,
 	.impress-carousel .property-details span.price {
@@ -427,9 +180,12 @@ section.equity-post-carousel article .entry-content {
 	}
 }
 
+.impress-carousel-widget .property-details {
+	color: $dark-text;
+}
+
 /*! =Featured Listing Widget + Listings Scroller Widget
 ------------------------------------------------------------ */
-
 .widget .listing-wrap {
 	margin: 0 0 25px;
 	width: 100%;
@@ -502,9 +258,6 @@ section.equity-post-carousel article .entry-content {
 	display: none;
 }
 
-.widget .listing-wrap .listing-thumb-meta span.listing-price {
-}
-
 .widget .listing-wrap span.listing-open-house {
 	display: block;
 	padding: 5px 10px;
@@ -515,22 +268,9 @@ section.equity-post-carousel article .entry-content {
 	background: #be1d2c;
 }
 
-.widget .listing-widget-details {
-}
-
-.widget .listing-widget-details h3.listing-title {
-}
-
-.widget .listing-widget-details h3.listing-title a {
-}
-
 .widget .listing-widget-details p.listing-address {
 	line-height: 1.4;
 	margin-bottom: 0;
-}
-
-.widget .listing-widget-details span.listing-address,
-.widget .listing-widget-details span.listing-city-state-zip {
 }
 
 .widget .listing-widget-details .listing-beds-baths-sqft {
@@ -628,23 +368,148 @@ section.equity-post-carousel article .entry-content {
 
 /*! =Property Showcase
 ------------------------------------------------------------------------- */
-.widget .showcase-property span.price,
-.shortcode .showcase-property span.price {
-	margin: -30px auto 0px;
-	width: auto;
-	padding: 12px 10px;
-	display: inline-block;
-	font-family: $header-font-family;
-	font-size: 20px;
-	line-height: 1;
-	text-align: center;
-	color: $primary-color;
-	background: #fff;
+.widget, .shortcode {
+	// The first row only has this class
+	&.impress-showcase-widget {
+		.widgettitle {
+			font-size: rem-calc(24);
+		}
+		.columns {
+			padding: 0;
+		}
+		.row, .impress-row {
+			width: auto;
+			max-width: none;
+			margin-left: 0;
+			margin-right: 0;
+			> .columns {
+				padding-right: 1.6666rem; 
+			}
+		}
+	}
+	.impress-showcase-property-list a {
+		display: block;
+		background-color: #ffffff;
+		* {
+			background-color: transparent;
+		}
+	}
+	.impress-showcase-property, .impress-showcase-property-list {
+		list-style: none;
+		* {
+			background-color: #F9F9F9;
+		}
+		* {
+			text-align: center;
+		}
+		a {
+			text-decoration: none;
+		}
+		.impress-showcase-photo {
+			margin-bottom: 0;
+			padding-bottom: 30px;
+			img {
+				border: 1px solid #F9F9F9;
+			}
+		}
+		.impress-price {
+			font-family: $header-font-family;
+			font-size: rem-calc(28px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(18px);
+			}
+			font-weight: bold;
+			margin-top: 30px;
+		}
+		.impress-address {
+			font-size: rem-calc(18px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(15px);
+			}
+			font-weight: bold;
+			color: #4D4D4D;
+			margin-bottom: 0;
+			padding-bottom: 30px;
+		}
+		.impress-beds-baths-sqft {
+			font-size: rem-calc(18px);
+			@media only screen and (max-width: 64em) {
+				font-size: rem-calc(15px);
+			}
+			color: #000;
+			padding-bottom: 30px;
+		}
+		.sqft:before {
+			content: "\A";
+			white-space: pre;
+		}
+	}
+}
+
+body.single-post {
+	.widget, .shortcode {
+		.impress-showcase-property {
+			* {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+/*! =Impress city Links
+------------------------------------------------------------ */
+.impress-city-links-widget {
+	.widget-title {
+		font-size: rem-calc(24);
+	}
+}
+div.impress-city-links {
+	.impress-city-list-links {
+		width: auto;
+	}
+	ul {
+		font-size: rem-calc(16);
+		max-width: 250px;
+		&.impress-columns:last-child {
+			float: left;
+		}
+		li {
+			margin-bottom: 10px;
+			a {
+				display: flex;			
+				align-items: center;
+				line-height: 20px;
+				text-decoration: none;
+			}
+			.count {
+				font-size: rem-calc(16);
+				font-weight: normal;
+				margin-left: auto;
+				background-color: #747474;
+				line-height: inherit;
+				border-radius: 3px;
+			}
+		}
+	}	
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-city-links-widget {
+		.impress-city-links {
+			ul {
+				li {
+					.count {
+						background-color: #fff;
+						color: #000;
+					}
+				}
+			}	
+		}
+	}
 }
 
 /*! =Responsive (for WP Listings - Featured Listing widget only)
 ------------------------------------------------------------ */
-
 @media (max-width: 767px) {
 	.widget .listing.one-half,
 	.widget .listing.one-third,
@@ -657,9 +522,6 @@ section.equity-post-carousel article .entry-content {
 		margin: 0 0 20px;
 	}
 }
-
-/*! =IDX Widgets - Equity
-------------------------------------------------------------------------- */
 
 /*! =Quick search
 ------------------------------------------------------------------------- */
@@ -691,7 +553,10 @@ section.equity-post-carousel article .entry-content {
 }
 
 .equity-idx-search-widget .equity-qs-links {
-	font-size: 15px;
+	font-family: $header-font-family;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	letter-spacing: .02px;
 }
 
 .equity-idx-search-widget .equity-qs-links .advanced-search,
@@ -709,8 +574,6 @@ section.equity-post-carousel article .entry-content {
 
 .equity-idx-search-widget .equity-qs-submit-button {
 	display: block;
-	font-size: 20px;
-	margin: 0 auto .67rem;
 }
 
 .equity-idx-search-widget .vertical .equity-qs-submit-button {
@@ -721,6 +584,23 @@ section.equity-post-carousel article .entry-content {
 	margin: 0 5px 0 0;
 }
 
+.equity-idx-search-widget {
+	button {
+		.fa-search {
+			display: none;
+		}
+	}
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-idx-signup-widget, .equity-idx-search-widget {
+		button {
+			&:hover, &:active {
+				background: #eee;
+			}
+		}
+	}
+}
 
 /*! =Property Showcase
 ------------------------------------------------------------------------- */
@@ -773,27 +653,28 @@ section.equity-post-carousel article .entry-content {
 
 /*! =IMPress Omnibar
 ------------------------------------------------------------------------- */
-.widget .idx-omnibar-form {
+form.idx-omnibar-form {
 	position: relative;
 	padding: 0;
 }
-.widget .idx-omnibar-form:after {
+form.idx-omnibar-form::after {
 	content: "";
 	display: table;
 	clear: both;
 }
-.widget .idx-omnibar-form input {
-	border: none;
+.widget form.idx-omnibar-form input {
+}
+form.idx-omnibar-form input {
 	margin: 0;
 }
-.widget .idx-omnibar-form label {
+form.idx-omnibar-form label {
 	color: $body-font-color;
 }
-.widget .idx-omnibar-form .awesomplete {
+form.idx-omnibar-form .awesomplete {
 	width: 100%;
 }
-.widget .idx-omnibar-form button,
-.widget .idx-omnibar-form.idx-omnibar-extra-form button {
+form.idx-omnibar-form button,
+form.idx-omnibar-form.idx-omnibar-extra-form button {
 	width: auto;
 	padding: 0.55rem 0.7rem;
 	margin: 0;
@@ -802,8 +683,46 @@ section.equity-post-carousel article .entry-content {
 	right: 0;
 	font-size: $paragraph-font-size;
 }
-.widget .idx-omnibar-form button span {
+form.idx-omnibar-form button span {
 	display: none;
+}
+
+.widget form.idx-omnibar-form,
+form.idx-omnibar-form{
+	margin: 35px 0;
+	.awesomplete {
+		line-height: 50px;
+	}
+	input[type="text"].idx-omnibar-input {
+		border-radius: 5px;
+		height: 50px;
+	}
+	button[type="submit"] {
+		color: #000;
+		height: 46px;
+		padding: 0 18px;
+		margin-top: 2px;
+		margin-right: 2px;
+		border: none;
+		border-radius: 0 5px 5px 0;
+		background: #fff;
+		background: linear-gradient(to left, #fff 38px, transparent);
+	}
+	label {
+		display: none;
+	}
+	.idx-omnibar-extra {
+		input {
+			border-radius: 5px;
+		}
+	}
+	.idx-omnibar-price-container {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	h4 {
+		display: none;
+	}
 }
 
 /*! =IMPress Lead Signup
@@ -814,10 +733,82 @@ section.equity-post-carousel article .entry-content {
     margin-bottom: 1rem;
 }
 
+.widget, .impress-lead-login, .impress-lead-signup {
+	select, input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+		font-family: $header-font-family;
+		background: #fff;
+		box-shadow: none;
+		border: 2px solid #e6e6e6;
+		border-radius: 5px;
+		font-size: rem-calc(16);
+		height: 45.5px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		transition: .3s;
+		&:focus {
+			background-color: #fff;
+		}
+	}	
+}
+
+.impress-lead-login, .impress-lead-signup {
+	margin: 35px 0;
+}
+
+.impress-idx-signup-widget {
+	> p {
+		padding-bottom: 20px;
+	}
+	label {
+		display: none;
+	}
+	button {
+		width: 100%;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: rem-calc(18);
+		letter-spacing: .02px;
+		line-height: 44.5px;
+		padding: 0;
+		background: #fff;
+		border-radius: 5px;
+	}
+}
 /*! =Default Widgets 
 ------------------------------------------------------------------------- */
+.widget.widget_calendar .widgettitle {
+	font-size: rem-calc(24);
+	padding: 15px 0;
+}
 table#wp-calendar {
-	width: 100%;
+	max-width: 425px;
+	caption, thead {
+		line-height: 50px;
+		height: 50px;
+		border: 1px solid;
+		@media #{$small-only} {
+			line-height: 30px;
+			height: 30px;
+		}
+	}
+	tbody tr {
+		background-color: #F9F9F9;
+		td {
+			padding: 20px;
+			@media #{$medium-only} {
+				padding: 12px;
+			}
+			@media #{$small-only} {
+				padding: 5px;
+			}
+		}
+	}
+	tfoot tr {
+		background-color: #EEEEEE;
+		td a {
+			font-size: rem-calc(16);
+		}
+	}
 }
 
 .sidebar .widget_nav_menu .label {
@@ -825,3 +816,245 @@ table#wp-calendar {
 }
 
 
+/*! =Property Carousel 
+------------------------------------------------------------------------- */
+.impress-carousel-widget .carousel-photo {
+	margin-bottom: 20px;
+}
+
+div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	background-color: #fff;
+	&:hover {
+		background-color: rgba(0,0,0,.05);
+	}
+}
+
+div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div[class*='home-middle-'].bg-gradient div.impress-carousel .owl-nav.owl-controls button.owl-next,
+footer.site-footer div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+footer.site-footer div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	background-color: inherit;
+	border-color: #fff;
+	color: #fff;
+	&:hover {
+		background-color: rgba(255,255,255,.05);
+	}
+}
+
+.sidebar, .single {
+	.impress-carousel {
+		background: #fff;
+		margin: 35px 0;
+		padding: 15px 0;
+		.carousel-photo {
+			height: 235px;
+		}
+		a {
+			color: #000;
+			font-size: 1rem;
+			text-decoration: none;
+		}
+		.property-details {
+			font-size: rem-calc(18);
+			.address, .city-state {
+				font-weight: bold;
+			}
+		}
+		h3.price {
+			font-size: rem-calc(28);
+		}
+		.carousel-photo {
+			height: 235px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.owl-controls span {
+			font-size: rem-calc(20);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -35px;
+			display: block;
+		}
+		.owl-nav.owl-controls button {
+			margin-top: 20px;
+		}
+		.owl-prev, .owl-next {
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+.sidebar {
+	.impress-carousel {
+		.owl-nav.owl-controls button.owl-prev {
+			float: left;
+			margin-left: 30px;
+		}
+		.owl-nav.owl-controls button.owl-next {
+			float: right;
+			margin-right: 30px;
+		}
+	}
+}
+
+div[class*='home-middle-'].bg-gradient, footer.site-footer .footer-widgets {
+	.impress-idx-signup-widget, .equity-idx-search-widget {
+		button {
+			&:hover, &:active {
+				background: #eee;
+			}
+		}
+	}
+}
+
+div.impress-carousel .owl-nav.owl-controls button.owl-prev,
+div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	height: 60px;
+	width: 60px;
+	border: 2px solid;
+}
+div.impress-carousel .owl-nav.owl-controls button.owl-prev {
+	margin: 40px 24px;
+	margin-left: 0;
+
+}
+div.impress-carousel .owl-nav.owl-controls button.owl-next {
+	margin: 40px 24px;
+	margin-right: 0;
+}
+
+// Make the chevrons look centered
+div.impress-carousel .owl-nav.owl-controls button.owl-prev i {
+	padding-right: 2px;
+}
+div.impress-carousel .owl-nav.owl-controls button.owl-next i {
+	padding-left: 2px;
+}
+
+div.impress-carousel {
+	 .carousel-property {
+		width: 235px;
+		margin: 0 auto;
+	}
+
+	.carousel-photo {
+		position: relative;
+		width: 235px;
+		height: 235px;
+		border-radius: 100%;
+		overflow: hidden;
+		img {
+			position: relative;
+			height: 100%;
+			object-fit: cover; // No IE support, but the fallback looks decent enough
+		}
+	}
+
+	.beds-baths span+span {
+		margin-left: 10px;
+	}
+}
+
+/*! =Easy Testimonials
+------------------------------------------------------------------------- */
+.singleTestimonialWidget, .listTestimonialsWidget {
+	margin: 0 auto;
+	max-width: 900px;
+}
+div.easy_testimonial_image_wrapper {
+	img.wp-post-image {
+		margin-right: 55px;
+	}
+}
+.easy_testimonial {
+	text-align: center;
+	@media #{$medium-up} {
+		text-align: left;
+	}
+	.testimonial_body p {
+		@media #{$medium-up} {
+			margin-left: 200px;
+		}
+		color: $dark-text;
+	}
+	.testimonial_author {
+		@media #{$medium-up} {
+			margin-left: 200px;
+		}
+		cite {
+			&::before {
+				padding-right: 5px;
+			}
+			span:first-child {
+				display: inline;
+			}
+		}
+	}
+	div.easy_testimonial_image_wrapper {
+		img.wp-post-image {
+			float: none;
+			@media #{$medium-up} {
+				float: left;
+			}
+			width: 150px;
+			height: 150px;
+			border-radius: 100%;
+		}
+	}
+}
+
+/*! =IDX Map
+------------------------------------------------------------------------- */
+.IDX-mapWidgetWrap {
+	position: relative;
+	.IDX-mapHeader {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+	.IDX-mapCount {
+		font-family: $header-font-family;
+		font-weight: 400;
+		font-size: 1.1rem;
+		color: #4C5051;
+		// Need to !importan to override generated ID specificity
+		float: right !important;
+		padding-right: 25px;
+		padding-top: 5px;
+	}
+	.IDX-mapTab {
+		// Need to !importan to override generated ID specificity
+		float: left !important;
+		border-radius: 0px;
+		border: none;
+		border-bottom-right-radius: 5px;
+		box-shadow: 1px 1px 3px #666;
+	}
+	.leaflet-control-zoom {
+		// Need to !importan to override generated ID specificity
+		margin-top: 50px !important;
+	}
+}
+
+
+/*! =IDX Featured Agent
+------------------------------------------------------------------------- */
+.IDX-featuredAgentWrap {
+	a {
+		#IDX-featAgentImg {
+			display: block;
+			width: auto;
+			margin: 0 auto;
+		}
+	}
+	#IDX-featuredAgentCaption {
+		text-shadow: none;
+	}
+}

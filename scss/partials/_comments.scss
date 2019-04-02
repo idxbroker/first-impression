@@ -1,40 +1,91 @@
 /*! =Comments
 ------------------------------------------------------------------------- */
-.entry-comments ol {
-	margin-left: 0;
+.entry-comments {
+	ol {
+		margin-left: 0;
+	}
+	ol, ul.children {
+		list-style-type: none;
+	}
+	.comment-author {
+		font-size: rem-calc(14);
+		margin: 0 0 0.325rem;
+	}
+	.comment-author .avatar {
+		margin: 0 0.625rem 0.625rem 0;
+	}
+	.comment-meta {
+		font-size: rem-calc(12);
+		margin: 0 0 0.325rem;
+	}
+	.comment-reply {
+		font-size: rem-calc(14);
+		font-weight: $font-weight-bold;
+	}
+	> h3 {
+		font-size: rem-calc(22);
+	}
+	> .comment-list > li+li {
+		border-top: 2px solid #e6e6e6;
+		padding-top: 35px;
+	}
+	// Individual comment box
+	article {
+		background-color: transparent;
+		margin-bottom: 35px;
+	}
+	.comment-header {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		img {
+			position: absolute;
+			top: 0;
+			border-radius: 100%;
+		}
+	}
+	.comment-author {
+		order: 2;
+		font-size: rem-calc(16);
+		// Author name
+		span:first-of-type {
+			padding-left: 60px;
+		}
+		.says::after {
+			content: ":";
+		}
+	}
+	.comment-meta {
+		order: 1;
+		padding-left: 60px;
+		font-size: 14px;
+		text-transform: uppercase;
+		a {
+			text-decoration: none;
+		}
+	}
+	.comment-content {
+		a {
+			text-decoration: none;
+		}
+	}
+	.comment-reply {
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
 }
-.entry-comments ol,
-.entry-comments ul.children {
-	list-style-type: none;
-}
-.entry-comments .comment article {
-	background: #fafafa;
-	padding: 1.4rem;
-	margin: 0 0 1.2rem;
-}
-.entry-comments .comment-author {
-	font-size: rem-calc(14);
-	margin: 0 0 0.325rem;
-}
-.entry-comments .comment-author .avatar {
-	margin: 0 0.625rem 0.625rem 0;
-}
-.entry-comments .comment-meta {
-	font-size: rem-calc(12);
-	margin: 0 0 0.325rem;
-}
-.entry-comments .comment-reply {
-	font-size: rem-calc(14);
-	font-weight: $font-weight-bold;
-}
-.comment-respond .logged-in-as {
-	font-size: rem-calc(14);
-}
-.comment-respond label {
-	font-size: rem-calc(16);
-}
-.comment-respond .form-allowed-tags {
-	font-size: rem-calc(12);
-	background: #fafafa;
-	padding: 1rem;
+.comment-respond {
+	.logged-in-as {
+		font-size: rem-calc(14);
+	}
+	label {
+		font-size: rem-calc(16);
+	}
+	.form-allowed-tags {
+		font-size: rem-calc(12);
+		background: #fafafa;
+		padding: 1rem;
+	}
 }

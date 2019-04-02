@@ -13,10 +13,22 @@
 	font-size: rem-calc(14);
 }
 .sidebar-primary h4.widget-title {
-	color: $header-font-color;
-	border-bottom: 1px solid #D8D8D8;
 	padding: 0 0 0.5rem;
 	margin: 0 0 1.825rem;
-	font-size: rem-calc(24);
+	font-size: rem-calc(18);
+	letter-spacing: 0;
 	line-height: 1;
+}
+
+.sidebar {
+	.widget+.widget {
+		margin-top: 80px;
+	}
+	.easy_testimonial .testimonial_body p {
+		margin-left: 0;
+	}
+	.featured-page figure {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }

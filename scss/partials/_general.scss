@@ -1,20 +1,5 @@
 /*! =Background (alternates)
 ------------------------------------------------------------------------- */
-.bg-primary {
-	background-color: $primary-color;
-}
-.bg-gradient p,
-.bg-gradient a,
-.bg-gradient label {
-	color: $body-font-color-secondary;
-}
-.bg-gradient {
-	background: #3fa5db; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #3fa5db 0%, #5087c8 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #3fa5db 0%,#5087c8 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #3fa5db 0%,#5087c8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fa5db', endColorstr='#5087c8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
 /*! =Structure
 ------------------------------------------------------------------------- */
 .structural-wrap {
@@ -36,12 +21,17 @@
 }
 body:not(.home) .site-inner {
 	padding: 1rem 0;
-	background-color: $body-bg;
+	background-color: $inner-page-bg;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	box-shadow: 0px 7px 7px rgba(0,0,0,0.2);
+}
+@media only screen and (max-width: 640px) {
+	body:not(.home) .site-inner {
+		padding: .3rem 0;
+	}
 }
 
 /*! =Alignments
@@ -157,23 +147,6 @@ a.button,
 
 /*! =Headings
 ------------------------------------------------------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	letter-spacing: -1px;
-}
-
-.home .widget h2,
-.home .widget h3,
-.home .widget h4,
-.home .widget h5,
-.home .widget h6,
-.off-canvas .widget .widget-title {
-	color: $body-font-color;
-}
 article h3,
 article h5 {
 	font-family: $paragraph-font-family;
@@ -189,26 +162,50 @@ h2.entry-title a {
 	text-decoration: none;
 }
 
+.site-title {
+	font-weight: 600;
+}
+
 /*! =Buttons
 ------------------------------------------------------------------------- */
 .button,
 button,
 input[type="button"],
-input[type="submit"],
-.widget .idx-omnibar-form button,
-#IDX-main .IDX-btn,
-#IDX-main .IDX-btn:link,
-#IDX-main .IDX-btn-default {
-	@include button;
-	letter-spacing: -1px;
+input[type="submit"] {
+	// Styled for medium by default
+	font-size: rem-calc(18);
+	letter-spacing: 0.02;
+	min-height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px 30px;
+	font-family: $header-font-family;
+	letter-spacing: .02px;
+	text-transform: uppercase;
 	text-decoration: none;
+	border: 1px solid;
+	border-radius: 5px;
+	background: #fff;
+	&:hover, &:focus {
+		background: rgba(0,0,20,.1);
+	}
 }
+
+button.large, .button.large {
+	font-size: rem-calc(20);
+	line-height: rem-calc(28);
+	letter-spacing: 0.025;
+	min-height: 60px;
+	padding: 5px 10px;
+}
+
 .bg-gradient .button,
 .bg-gradient button,
 .bg-gradient input[type="button"],
 .bg-gradient input[type="submit"] {
 	background: none;
-	border: 2px solid #fff;
+	border: 2px solid;
 }
 .bg-gradient .button:hover,
 .bg-gradient button:hover,
@@ -218,7 +215,7 @@ input[type="submit"],
 .bg-gradient button:focus,
 .bg-gradient input[type="button"]:focus,
 .bg-gradient input[type="submit"]:focus {
-	background: scale-color($primary-color, $lightness: -14%);
+	background: rgba(0,0,0,.1);
 }
 
 .widget .idx-omnibar-form button {
@@ -338,4 +335,44 @@ blockquote cite {
 @keyframes fadeInUp {
 	from { opacity: 0; transform: translateY(20px); }
 	to { opacity: 1; transform: translateY(0); }
+}
+
+/** NEW STUFF **/
+
+textarea:focus {
+	background: #fff;
+}
+
+div[class^="home-middle-"] { position: relative; }
+.first-impression-z-index-1  { z-index: 1; }
+.first-impression-z-index-2  { z-index: 2; }
+.first-impression-z-index-3  { z-index: 3; }
+.first-impression-z-index-4  { z-index: 4; }
+.first-impression-z-index-5  { z-index: 5; }
+.first-impression-z-index-6  { z-index: 6; }
+.first-impression-z-index-7  { z-index: 7; }
+.first-impression-z-index-8  { z-index: 8; }
+.first-impression-z-index-9  { z-index: 9; }
+.first-impression-z-index-10 { z-index: 10; }
+.first-impression-z-index-11 { z-index: 11; }
+.first-impression-z-index-12 { z-index: 12; }
+.first-impression-z-index-13 { z-index: 13; }
+
+// Customizer edit button reset since our css properties bleed into it
+.customize-partial-edit-shortcut-button {
+	height: 30px !important;
+	width: 30px !important;
+}
+
+
+div[class^="home-middle-"],
+.contact-us,
+footer {
+	.widget_nav_menu h4,
+	.widget_text h2,
+	.widget_text h4,
+	.impress-idx-signup-widget h2,
+	.impress-idx-signup-widget h4 {
+		font-size: rem-calc(24);
+	}
 }
