@@ -405,6 +405,16 @@ function my_enqueue($hook) {
 }
 add_action( 'admin_enqueue_scripts', 'my_enqueue' );
 
+
+/**
+ * Nav_behavior_fix.
+ * Used to correct mobile nav menu drop-down behavior.
+ */
+function nav_behavior_fix() {
+	wp_enqueue_script( 'nav-menu-fix', get_stylesheet_directory_uri() . '/lib/js/nav-menu-fix.js', null, true );
+}
+add_action( 'wp_enqueue_scripts', 'nav_behavior_fix' );
+
 // Add post thumbnail support
 add_action( 'equity_before_content', 'first_impression_featured_image' );
 function first_impression_featured_image() {
