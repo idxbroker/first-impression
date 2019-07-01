@@ -89,7 +89,7 @@ function first_impression_attributes_header_nav( $attributes ) {
 // Filter nav markup to add toggle icon.
 add_filter( 'equity_nav_markup_open', 'first_impression_nav_markup_open' );
 function first_impression_nav_markup_open() {
-	return '<a href="#" class="menu-toggle"><span class="screen-reader-text">Menu</span><i class="fa fa-bars"></i></a>';
+	return '<a href="#" class="menu-toggle"><span class="screen-reader-text">Menu</span><i class="fas fa-bars"></i></a>';
 }
 
 // Filter listing scroller widget prev/next links.
@@ -97,14 +97,14 @@ add_filter( 'listing_scroller_prev_link', 'child_listing_scroller_prev_link' );
 add_filter( 'idx_listing_carousel_prev_link', 'child_listing_scroller_prev_link' );
 add_filter( 'equity_page_carousel_prev_link', 'child_listing_scroller_prev_link' );
 function child_listing_scroller_prev_link( $listing_scroller_prev_link_text ) {
-	$listing_scroller_prev_link_text = __( '<i class=\"fa fa-chevron-left\"></i><span>Prev</span>', 'first-impression' );
+	$listing_scroller_prev_link_text = __( '<i class=\"fas fa-chevron-left\"></i><span>Prev</span>', 'first-impression' );
 	return $listing_scroller_prev_link_text;
 }
 add_filter( 'listing_scroller_next_link', 'child_listing_scroller_next_link' );
 add_filter( 'idx_listing_carousel_next_link', 'child_listing_scroller_next_link' );
 add_filter( 'equity_page_carousel_next_link', 'child_listing_scroller_next_link' );
 function child_listing_scroller_next_link( $listing_scroller_next_link_text ) {
-	$listing_scroller_next_link_text = __( '<i class=\"fa fa-chevron-right\"></i><span>Next</span>', 'first-impression' );
+	$listing_scroller_next_link_text = __( '<i class=\"fas fa-chevron-right\"></i><span>Next</span>', 'first-impression' );
 	return $listing_scroller_next_link_text;
 }
 
