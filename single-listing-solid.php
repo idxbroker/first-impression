@@ -491,7 +491,8 @@ function single_listing_style() { ?>
 	}
 	.listing-template .tagged-features li:before {
 		color: #53c331;
-		font-family: "FontAwesome";
+		font-family: "Font Awesome\ 5 Free";
+		font-weight: 900;
 		font-size: 16px;
 		content: "\f14a";
 		top: 0;
