@@ -1000,7 +1000,7 @@ function single_listing_post_content() {
 		}
 
 		if (get_post_meta( $post->ID, '_listing_video', true) != '') {
-			$listing_tabs .= ('<li><a href="#listing-video"><i class="fas fa-youtube-play fa-fw"></i><span class="label">Video / Virtual Tour</span></a></li>');
+			$listing_tabs .= ('<li><a href="#listing-video"><i class="fab fa-youtube fa-fw"></i><span class="label">Video / Virtual Tour</span></a></li>');
 			$count++; // add 1 to counter 
 		}
 
