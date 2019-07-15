@@ -491,7 +491,8 @@ function single_listing_style() { ?>
 	}
 	.listing-template .tagged-features li:before {
 		color: #53c331;
-		font-family: "FontAwesome";
+		font-family: "Font Awesome\ 5 Free";
+		font-weight: 900;
 		font-size: 16px;
 		content: "\f14a";
 		top: 0;
@@ -1399,38 +1400,38 @@ function single_listing_post_content() {
 			<?php // listing navigation with counter for list item width
 			$count = 0; // start counter at 0
 
-			$listing_tabs = sprintf('<li><a href="#listing-description"><i class="fa fa-info fa-fw"></i><span class="label">Description</span></a></li>');
+			$listing_tabs = sprintf('<li><a href="#listing-description"><i class="fas fa-info fa-fw"></i><span class="label">Description</span></a></li>');
 			$count++; // add 1 to counter 
 
-			$listing_tabs .= sprintf('<li><a href="#listing-details"><i class="fa fa-list fa-fw"></i><span class="label">Details</span></a></li>');
+			$listing_tabs .= sprintf('<li><a href="#listing-details"><i class="fas fa-list fa-fw"></i><span class="label">Details</span></a></li>');
 			$count++; // add 1 to counter 
 
 			if (get_post_meta( $post->ID, '_listing_gallery', true) != '') {
-				$listing_tabs .= sprintf('<li><a href="#listing-gallery"><i class="fa fa-camera fa-fw"></i><span class="label">Photos</span></a></li>');
+				$listing_tabs .= sprintf('<li><a href="#listing-gallery"><i class="fas fa-camera fa-fw"></i><span class="label">Photos</span></a></li>');
 				$count++; // add 1 to counter 
 			}
 
 			if (get_post_meta( $post->ID, '_listing_video', true) != '') {
-				$listing_tabs .= ('<li><a href="#listing-video"><i class="fa fa-youtube-play fa-fw"></i><span class="label">Video / Virtual Tour</span></a></li>');
+				$listing_tabs .= ('<li><a href="#listing-video"><i class="fab fa-youtube fa-fw"></i><span class="label">Video / Virtual Tour</span></a></li>');
 				$count++; // add 1 to counter 
 			}
 
 			if (get_post_meta( $post->ID, '_listing_school_neighborhood', true) != '') {
-				$listing_tabs .= ('<li><a href="#listing-school-neighborhood"><i class="fa fa-building-o fa-fw"></i><span class="label">Schools &amp; Neighborhood</span></a></li>');
+				$listing_tabs .= ('<li><a href="#listing-school-neighborhood"><i class="fas fa-building-o fa-fw"></i><span class="label">Schools &amp; Neighborhood</span></a></li>');
 				$count++; // add 1 to counter 
 			}
 
 			if (get_post_meta( $post->ID, '_listing_map', true) != '') {
-				$listing_tabs .= ('<li><a href="#listing-map"><i class="fa fa-map-marker fa-fw"></i><span class="label">Map</span></a></li>');
+				$listing_tabs .= ('<li><a href="#listing-map"><i class="fas fa-map-marker fa-fw"></i><span class="label">Map</span></a></li>');
 				$count++; // add 1 to counter 
 			}
 			elseif(get_post_meta( $post->ID, '_listing_latitude', true) && get_post_meta( $post->ID, '_listing_longitude', true) && get_post_meta( $post->ID, '_listing_automap', true) == 'y') {
-				$listing_tabs .= ('<li><a href="#listing-map"><i class="fa fa-map-marker fa-fw"></i><span class="label">Map</span></a></li>');
+				$listing_tabs .= ('<li><a href="#listing-map"><i class="fas fa-map-marker fa-fw"></i><span class="label">Map</span></a></li>');
 				$count++; // add 1 to counter 
 			}
 
 
-			$listing_tabs .= ('<li><a href="#listing-contact"><i class="fa fa-envelope fa-fw"></i><span class="label">Contact</span></a></li>');
+			$listing_tabs .= ('<li><a href="#listing-contact"><i class="fas fa-envelope fa-fw"></i><span class="label">Contact</span></a></li>');
 			$count++; // add 1 to counter 
 
 			printf('<ul class="nav navigation items-%s">%s</ul><!-- .navigation -->', $count, $listing_tabs);

@@ -5912,7 +5912,8 @@ body.sticky .sticky-header a.off-canvas-toggle {
 }
 
 a.off-canvas-toggle:before {
-  font-family: "FontAwesome";
+  font-family: "Font Awesome\ 5 Free";
+	font-weight: 900;
   content: "\f002";
   width: 1rem;
   height: 1rem;
@@ -6037,9 +6038,9 @@ body.sticky .menu-toggle {
 .nav-header-right ul > li.menu-item-has-children > a:after {
   color: rgba(85, 85, 85, 0.6);
   content: "\f078";
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome\ 5 Free";
+	font-weight: 900;
   font-size: 8px;
-  font-weight: normal;
   width: 8px;
   height: 8px;
   position: absolute;
@@ -6617,7 +6618,8 @@ section.equity-post-carousel article .entry-content {
 
 .equity-idx-carousel ul.beds-baths-sqft li:before,
 .impress-carousel ul.beds-baths-sqft li:before {
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome\ 5 Free";
+	font-weight: 900;
   margin-right: 0.32rem;
 }
 
