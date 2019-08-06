@@ -1,6 +1,6 @@
 {
   "name": "firstimpression-libsass-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
     "node-sass": "^3.4.0",
     "grunt": "~0.4.5",
