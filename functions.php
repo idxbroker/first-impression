@@ -5,7 +5,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'First Impression', 'first-impression' ) );
 define( 'CHILD_THEME_URL', 'https://support.idxbroker.com/' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+define( 'CHILD_THEME_VERSION', '1.0.1' );
 
 // Set Localization (do not remove).
 load_child_theme_textdomain( 'first-impression', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'first-impression' ) );
@@ -89,7 +89,7 @@ function first_impression_attributes_header_nav( $attributes ) {
 // Filter nav markup to add toggle icon.
 add_filter( 'equity_nav_markup_open', 'first_impression_nav_markup_open' );
 function first_impression_nav_markup_open() {
-	return '<a href="#" class="menu-toggle"><span class="screen-reader-text">Menu</span><i class="fa fa-bars"></i></a>';
+	return '<a href="#" class="menu-toggle"><span class="screen-reader-text">Menu</span><i class="fas fa-bars"></i></a>';
 }
 
 // Filter listing scroller widget prev/next links.
@@ -97,14 +97,14 @@ add_filter( 'listing_scroller_prev_link', 'child_listing_scroller_prev_link' );
 add_filter( 'idx_listing_carousel_prev_link', 'child_listing_scroller_prev_link' );
 add_filter( 'equity_page_carousel_prev_link', 'child_listing_scroller_prev_link' );
 function child_listing_scroller_prev_link( $listing_scroller_prev_link_text ) {
-	$listing_scroller_prev_link_text = __( '<i class=\"fa fa-chevron-left\"></i><span>Prev</span>', 'first-impression' );
+	$listing_scroller_prev_link_text = __( '<i class=\"fas fa-chevron-left\"></i><span>Prev</span>', 'first-impression' );
 	return $listing_scroller_prev_link_text;
 }
 add_filter( 'listing_scroller_next_link', 'child_listing_scroller_next_link' );
 add_filter( 'idx_listing_carousel_next_link', 'child_listing_scroller_next_link' );
 add_filter( 'equity_page_carousel_next_link', 'child_listing_scroller_next_link' );
 function child_listing_scroller_next_link( $listing_scroller_next_link_text ) {
-	$listing_scroller_next_link_text = __( '<i class=\"fa fa-chevron-right\"></i><span>Next</span>', 'first-impression' );
+	$listing_scroller_next_link_text = __( '<i class=\"fas fa-chevron-right\"></i><span>Next</span>', 'first-impression' );
 	return $listing_scroller_next_link_text;
 }
 
@@ -404,6 +404,16 @@ function my_enqueue($hook) {
     wp_enqueue_script( 'remove_widget_options', get_stylesheet_directory_uri() . '/lib/js/adminWidgets.js' );
 }
 add_action( 'admin_enqueue_scripts', 'my_enqueue' );
+
+
+/**
+ * Nav_behavior_fix.
+ * Used to correct mobile nav menu drop-down behavior.
+ */
+function nav_behavior_fix() {
+	wp_enqueue_script( 'nav-menu-fix', get_stylesheet_directory_uri() . '/lib/js/nav-menu-fix.js', null, true );
+}
+add_action( 'wp_enqueue_scripts', 'nav_behavior_fix' );
 
 // Add post thumbnail support
 add_action( 'equity_before_content', 'first_impression_featured_image' );

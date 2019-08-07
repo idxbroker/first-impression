@@ -19,7 +19,7 @@ function single_listing_class( $classes ) {
 
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
 function enqueue_single_listing_scripts() {
-	wp_enqueue_style( 'font-awesome-4.7.0' );
+	wp_enqueue_style( 'font-awesome' );
 	wp_enqueue_script( 'jquery-validate', array('jquery'), true, true );
 }
 

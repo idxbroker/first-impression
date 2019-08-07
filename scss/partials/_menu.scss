@@ -49,8 +49,8 @@
 		}
 		> a::after {
 			@media #{$medium-up} {
-				font-family: 'FontAwesome';
-				font-weight: normal;
+				font-family: 'Font Awesome\ 5 Free';
+				font-weight: 900;
 				content: "\f105";
 				position: relative;
 				display: inline-block;
@@ -62,8 +62,8 @@
 	}
 	ul > li.menu-item-has-children::after {
 		@media #{$small-only} {
-			font-family: 'FontAwesome';
-			font-weight: normal;
+			font-family: 'Font Awesome\ 5 Free';
+			font-weight: 900;
 			content: "\f107";
 			display: flex;
 			align-items: center;
