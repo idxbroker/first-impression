@@ -195,6 +195,29 @@ function single_listing_post_content() {
 					}
 					echo '</ul>';
 
+					if ( isset( $options['wp_listings_display_advanced_fields'] ) && $options['wp_listings_display_advanced_fields'] ) {
+						$adv_fields = generate_adv_field_list( $post );
+						if ( count( $adv_fields ) ) {
+							echo '<table class="listing-details advanced">';
+							echo '<tbody class="left">';
+							foreach ( $adv_fields['col1'] as $key => $value ) {
+								if ( ! empty( $value ) ) :
+									printf( $pattern, $key, esc_html( get_adv_field_display_name( $key ) . ':' ), $value );
+								endif;
+							}
+							echo '</tbody>';
+
+							echo '<tbody class="right">';
+							foreach ( $adv_fields['col2'] as $key => $value ) {
+								if ( ! empty( $value ) ) :
+									printf( $pattern, $key, esc_html( get_adv_field_display_name( $key ) . ':'), $value );
+								endif;
+							}
+							echo '</tbody>';
+							echo '</table>';
+						}
+					}
+
 				if(get_the_term_list( get_the_ID(), 'features', '<li>', '</li><li>', '</li>' ) != null) {
 					echo '<h5>' . __('Tagged Features:', 'wp-listings') . '</h5><ul class="tagged-features">';
 					echo get_the_term_list( get_the_ID(), 'features', '<li>', '</li><li>', '</li>' );
