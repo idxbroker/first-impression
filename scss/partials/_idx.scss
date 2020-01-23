@@ -892,3 +892,8 @@ body.first-impression-full-screen {
 	}
 
 }
+
+/* Hide sticky nav bar when ListingPro template is displaying a modal window */
+.idx-lightbox--active .sticky-header {
+	display: none;
+}
