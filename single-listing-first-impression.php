@@ -145,55 +145,72 @@ function single_listing_post_content() {
 
 			<div id="listing-details">
 				<?php
-					$details_instance = new WP_Listings();
+				$details_instance = new WP_Listings();
 
-					$pattern = '<li class="wp_listings%s"><span class="label">%s</span> %s</li>';
+				$pattern = '<li class="wp_listings%s"><span class="label">%s</span> %s</li>';
 
-					echo '<ul class="listing-details">';
-					echo '<li><h3 class="first-impression-listings-section-title primary-details">Primary Details</h3></li>';
+				echo '<ul class="listing-details">';
+				echo '<li><h3 class="first-impression-listings-section-title primary-details">Primary Details</h3></li>';
 
-                    if ( get_post_meta($post->ID, '_listing_hide_price', true) == 1 ) {
-                    	echo (get_post_meta($post->ID, '_listing_price_alt', true)) ? '<li><span class="label">' . __('Price:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_price_alt', true) .'</li>' : '';
-                	} elseif(get_post_meta($post->ID, '_listing_price', true)) {
-                    	echo '<li><span class="label">' . __('Price:', 'wp-listings') . '</span> <span class="currency-symbol">' . $options['wp_listings_currency_symbol'] . '</span>';
-                    	echo get_post_meta( $post->ID, '_listing_price', true) . ' ';
-                    	echo (isset($options['wp_listings_display_currency_code']) && $options['wp_listings_display_currency_code'] == 1) ? '<span class="currency-code">' . $options['wp_listings_currency_code'] . '</span>' : '';
-                    	echo '</li>';
-                	}
-                	echo (wp_listings_get_status() ? '<li><span class="label">'. __('Status: ', 'wp-listings') . '</span>' . wp_listings_get_status() . '</li>' : '');
-                    echo '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
-                    echo (get_post_meta($post->ID, '_listing_address', true)) ? '<li><span class="label">' . __('Address:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_address', true) .'</li>' : '';
-                    echo (get_post_meta($post->ID, '_listing_city', true)) ? '<li><span class="label">' . __('City:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_city', true) .'</li>' : '';
-                    echo (get_post_meta($post->ID, '_listing_county', true)) ? '<li><span class="label">' . __('County:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_county', true) .'</li>' : '';
-                    echo (get_post_meta($post->ID, '_listing_state', true)) ? '<li><span class="label">' . __('State:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_state', true) .'</li>' : '';
-                    echo (get_post_meta($post->ID, '_listing_zip', true)) ? '<li><span class="label">' . __('Zip Code:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_zip', true) .'</li>' : '';
-                    echo '</div>';
-                    echo (get_post_meta($post->ID, '_listing_mls', true)) ? '<li><span class="label">MLS:</span> '.get_post_meta( $post->ID, '_listing_mls', true) .'</li>' : '';
+				if ( get_post_meta($post->ID, '_listing_hide_price', true) == 1 ) {
+					echo (get_post_meta($post->ID, '_listing_price_alt', true)) ? '<li><span class="label">' . __('Price:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_price_alt', true) .'</li>' : '';
+				} elseif(get_post_meta($post->ID, '_listing_price', true)) {
+					echo '<li><span class="label">' . __('Price:', 'wp-listings') . '</span> <span class="currency-symbol">' . $options['wp_listings_currency_symbol'] . '</span>';
+					echo get_post_meta( $post->ID, '_listing_price', true) . ' ';
+					echo (isset($options['wp_listings_display_currency_code']) && $options['wp_listings_display_currency_code'] == 1) ? '<span class="currency-code">' . $options['wp_listings_currency_code'] . '</span>' : '';
+					echo '</li>';
+				}
+				echo (wp_listings_get_status() ? '<li><span class="label">'. __('Status: ', 'wp-listings') . '</span>' . wp_listings_get_status() . '</li>' : '');
+				echo '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
+				echo (get_post_meta($post->ID, '_listing_address', true)) ? '<li><span class="label">' . __('Address:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_address', true) .'</li>' : '';
+				echo (get_post_meta($post->ID, '_listing_city', true)) ? '<li><span class="label">' . __('City:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_city', true) .'</li>' : '';
+				echo (get_post_meta($post->ID, '_listing_county', true)) ? '<li><span class="label">' . __('County:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_county', true) .'</li>' : '';
+				echo (get_post_meta($post->ID, '_listing_state', true)) ? '<li><span class="label">' . __('State:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_state', true) .'</li>' : '';
+				echo (get_post_meta($post->ID, '_listing_zip', true)) ? '<li><span class="label">' . __('Zip Code:', 'wp-listings') . '</span> '.get_post_meta( $post->ID, '_listing_zip', true) .'</li>' : '';
+				echo '</div>';
+				echo (get_post_meta($post->ID, '_listing_mls', true)) ? '<li><span class="label">MLS:</span> '.get_post_meta( $post->ID, '_listing_mls', true) .'</li>' : '';
 
-					foreach ( (array) $details_instance->property_details['col2'] as $label => $key ) {
-						$detail_value = esc_html( get_post_meta($post->ID, $key, true) );
-						if (! empty( $detail_value ) ) :
-							printf( $pattern, $key, esc_html( $label ), $detail_value );
-						endif;
+				foreach ( (array) $details_instance->property_details['col2'] as $label => $key ) {
+					$detail_value = esc_html( get_post_meta($post->ID, $key, true) );
+					if (! empty( $detail_value ) ) {
+						printf( $pattern, $key, esc_html( $label ), $detail_value );
 					}
-					echo '</ul>';
-					echo '<ul class="extended-property-details">';
-					echo '<li><h3 class="first-impression-listings-section-title extended-details">Extended Details</h3></li>';
+				}
+				echo '</ul>';
+				echo '<ul class="extended-property-details">';
+				echo '<li><h3 class="first-impression-listings-section-title extended-details">Extended Details</h3></li>';
 
+				foreach ( (array) $details_instance->extended_property_details['col1'] as $label => $key ) {
+					$detail_value = esc_html( get_post_meta($post->ID, $key, true) );
+					if (! empty( $detail_value ) ) {
+						printf( $pattern, $key, esc_html( $label ), $detail_value );
+					}
+				}
+				foreach ( (array) $details_instance->extended_property_details['col2'] as $label => $key ) {
+					$detail_value = esc_html( get_post_meta($post->ID, $key, true) );
+					if (! empty( $detail_value ) ) {
+						printf( $pattern, $key, esc_html( $label ), $detail_value );
+					}
+				}
+				echo '</ul>';
 
-					foreach ( (array) $details_instance->extended_property_details['col1'] as $label => $key ) {
-						$detail_value = esc_html( get_post_meta($post->ID, $key, true) );
-						if (! empty( $detail_value ) ) :
-							printf( $pattern, $key, esc_html( $label ), $detail_value );
-						endif;
+				if ( isset( $options['wp_listings_display_advanced_fields'] ) && $options['wp_listings_display_advanced_fields'] ) {
+					$adv_fields = generate_adv_field_list( $post );
+					if ( count( $adv_fields ) ) {
+						echo '<ul class="listing-details advanced">';
+						foreach ( $adv_fields['col1'] as $key => $value ) {
+							if ( ! empty( $value ) ) {
+								printf( $pattern, $key, esc_html( get_adv_field_display_name( $key ) . ':' ), $value );
+							}
+						}
+						foreach ( $adv_fields['col2'] as $key => $value ) {
+							if ( ! empty( $value ) ) {
+								printf( $pattern, $key, esc_html( get_adv_field_display_name( $key ) . ':'), $value );
+							}
+						}
+						echo '</ul>';
 					}
-					foreach ( (array) $details_instance->extended_property_details['col2'] as $label => $key ) {
-						$detail_value = esc_html( get_post_meta($post->ID, $key, true) );
-						if (! empty( $detail_value ) ) :
-							printf( $pattern, $key, esc_html( $label ), $detail_value );
-						endif;
-					}
-					echo '</ul>';
+				}
 
 				if(get_the_term_list( get_the_ID(), 'features', '<li>', '</li><li>', '</li>' ) != null) {
 					echo '<h5>' . __('Tagged Features:', 'wp-listings') . '</h5><ul class="tagged-features">';
