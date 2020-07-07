@@ -35,6 +35,13 @@ if ( ! get_theme_mod( 'footer_widgets' ) ) {
 // Remove header right widget area.
 remove_action( 'after_setup_theme', 'equity_register_header_right_widget_area' );
 
+// Add class to body for easy theme identification.
+add_filter( 'body_class', 'add_theme_body_class' );
+function add_theme_body_class( $classes ) {
+	$classes[] = 'home-theme--first-impression';
+	return $classes;
+}
+
 // Add large square size image for featured pages on homepage.
 add_image_size( 'huge-square', '800', '800', true );
 add_image_size( 'large-square', '500', '500', true );
