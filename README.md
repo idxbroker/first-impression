@@ -2,6 +2,9 @@
 
 == Changelog ==
 
+== 1.0.3 ==
+* New: Theme identifying class added to body
+
 == 1.0.2 ==
 * New: Advanced field support for the "First Impression" listing template when using IMPress Listings v2.5.0+
 
