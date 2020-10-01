@@ -70,7 +70,7 @@ body.first-impression-map-results {
 
 /*! =Listings Details
 ------------------------------------------------------------------------- */
-.IDX-wrapper-standard #IDX-saveProperty, .IDX-wrapper-standard #IDX-newSearch, .IDX-wrapper-standard #IDX-modifySearch, .IDX-wrapper-standard #IDX-backToResults {
+.IDX-wrapper-standard #IDX-saveProperty, .IDX-wrapper-standard .IDX-removeProperty, .IDX-wrapper-standard #IDX-newSearch, .IDX-wrapper-standard #IDX-modifySearch, .IDX-wrapper-standard #IDX-backToResults {
 	line-height: 36px;
 	border-radius: 3px;
 	text-transform: uppercase;
@@ -147,7 +147,7 @@ body.first-impression-map-results {
 
 @media only screen and (max-width: 840px) and (min-width: 641px) {
 	.IDX-wrapper-standard {
-		#IDX-saveProperty, #IDX-newSearch, #IDX-modifySearch, #IDX-backToResults {
+		#IDX-saveProperty, #IDX-newSearch, #IDX-modifySearch, #IDX-backToResults, .IDX-removeProperty {
 			font-size: rem-calc(12px);
 			padding: 0 13px;
 		}
@@ -162,7 +162,7 @@ body.first-impression-map-results {
 
 @media only screen and (max-width: 640px) {
 	.IDX-wrapper-standard {
-		#IDX-saveProperty, #IDX-newSearch, #IDX-modifySearch, #IDX-backToResults {
+		#IDX-saveProperty, #IDX-newSearch, #IDX-modifySearch, #IDX-backToResults, .IDX-removeProperty {
 			margin: 8px 0;
 		}
 		.IDX-detailsHotAction {
