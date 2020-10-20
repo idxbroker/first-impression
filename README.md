@@ -2,6 +2,9 @@
 
 == Changelog ==
 
+== 1.0.4 ==
+* Fix: Resolved jQuery error
+
 == 1.0.3 ==
 * New: Theme identifying class added to body
 
