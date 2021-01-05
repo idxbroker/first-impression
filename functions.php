@@ -259,7 +259,7 @@ function social_icons() {
 add_action( 'equity_before_footer', 'first_impression_before_footer', 1 );
 function first_impression_before_footer() {
 	$widgets = wp_get_sidebars_widgets();
-	if( empty( $widgets['contact-us'] ) ) {
+	if( empty( $widgets['contact-us'] ) || ! is_home() ) {
 		return false;
 	}
 	?>
