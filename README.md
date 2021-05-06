@@ -2,6 +2,8 @@
 
 == Changelog ==
 
+== 1.0.6 ==
+
 == 1.0.5 ==
 * New: Completed Font Awesome 5 transition
 * Fix: Resolves issue with duplicated widget area
