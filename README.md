@@ -3,6 +3,7 @@
 == Changelog ==
 
 == 1.0.6 ==
+* Fix: Compatibility update for IMPress for IDX Broker 3.0+
 
 == 1.0.5 ==
 * New: Completed Font Awesome 5 transition

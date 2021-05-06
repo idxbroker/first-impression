@@ -1,7 +1,8 @@
 <?php
 // Start the engine.
 include_once( get_template_directory() . '/lib/init.php' );
-
+// Include helper functions file from core IMPress plugin.
+include_once IMPRESS_IDX_DIR . 'idx/widgets/impress-widget-helper.php';
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'First Impression', 'first-impression' ) );
 define( 'CHILD_THEME_URL', 'https://support.idxbroker.com/' );
@@ -376,7 +377,7 @@ function first_impression_equity_idx_carousel_property_html( $output, $prop, $in
 			</a>
 			%10$s
 		</div>',
-		$prop['listingPrice'],
+		price_selector( $prop ),
 		$url,
 		$prop_image_url,
 		(isset($prop['address']) && $prop['address'] != null) ? $prop['address'] : '',
