@@ -67,6 +67,16 @@ function first_impression_register_scripts() {
 	// Use jQuery matchHeight for carousel images and header height.
 	wp_enqueue_script( 'jquery-matchheight', get_stylesheet_directory_uri() . '/lib/js/jquery.matchHeight-min.js', array( 'jquery', 'equity-theme-js' ), null, true );
 
+	// Custom listing template script.
+	wp_register_script( 'wp-listings-single-fi', get_stylesheet_directory_uri() . '/lib/js/single-listing-fi.js', [ 'jquery', 'jquery-ui-tabs', 'jquery-validate' ], null, true );
+	
+	// Add nonce to wp-listing-single script.
+	wp_localize_script(
+		'wp-listings-single-fi',
+		'impressSingleListing',
+		[ 'nonce-listing-inquiry' => wp_create_nonce( 'impress_listing_inquiry_nonce' ) ]
+	);
+
 	// Enable fadeup script if enabled.
 	if ( get_theme_mod( 'home_fadeup_effect', true ) ) {
 		wp_enqueue_script( 'fadeup', get_stylesheet_directory_uri() . '/lib/js/fadeup.js', array( 'jquery' ), null, true );
